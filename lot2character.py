@@ -815,6 +815,16 @@ class Character:
             level += 1
         return total
     #
+    def level_if_able(self):
+        needed = self.get_xp_to_next(self.level+1)
+        if (self.exp > needed):
+            self.exp -= needed
+            self.level += 1
+            self.unused_bonus_points += 1
+            self.unused_skill_points += 1
+            return True
+        return False
+    #
     def get_total_xp(self):
         """Calculates the total amount of XP this character has earned 
         (equivalent to resetting their level back to 1).
