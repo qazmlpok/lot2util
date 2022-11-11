@@ -1,0 +1,210 @@
+Character,CharID,Name,ID,awakening,MP,Cost,Max Lvl,Target,Element,Damage Formula,Delay,Special,Notes
+Reimu Hakurei,1,Yin-Yang Orb,30,False,2,5,5,Enemy,Spirit,123%(ATK + MAG) - 70% T.DEF,6000,SLv2+ adds PAR(4000),"PAR rate: (60+5*SLv)%, no PAR at level 1"
+Reimu Hakurei,1,Fantasy Seal,31,False,5,5,5,Enemies,Spirit,180%(ATK + MAG) - 75% T.MND,5000,,
+Reimu Hakurei,1,Exorcising Border,32,False,8,5,5,Allies,Spirit,66% MAG,3200,Healing,Powerful MT Heal
+Reimu Hakurei,1,Great Hakurei Barrier,33,False,7,5,5,Allies,Spirit,,4800,DEF MND +42%,Buff: (38+4*SLv)%
+Marisa Kirisame,2,Magic Missile,30,False,2,5,5,Enemy,Mystic,192% MAG - 60% T.MND,5800,,
+Marisa Kirisame,2,Asteroid Belt,31,False,6,5,5,Enemies,Mystic,193% MAG - 87.5% T.MND,4000,,
+Marisa Kirisame,2,Master Spark,32,False,27,5,5,Enemies,Mystic,480% MAG - 120% T.MND,0,Uses up all MP to increase damage,Final damage increased by: ((Spent MP - 27) * 2)%
+Marisa Kirisame,2,Concentration,33,False,3,5,5,Self,Mystic,,8800,MAG +24%,Buff: (21+3*SLv)%
+Rinnosuke Morichika,3,First Aid,30,False,1,5,5,Ally,Physical,20%(ATK + MAG),7000,Cures PSN and TRR Cures more ailments with higher SLv,SLv2 cures HVY; SLv3 cures SIL
+Rinnosuke Morichika,3,Battle Command,31,False,2,5,5,Ally,Physical,,6600,ATK DEF MAG MND SPD +10%,Buff: (8+2*SLv)%
+Rinnosuke Morichika,3,Precise Diagnosis,32,True,8,5,5,Allies,Physical,12% T.Max HP,4000,"Percentage heal, 50% chance of removing each status ailment and/or all debuffs.",Unusable at Lv0 Unaffected by Efficient Treatment Heal: (10+2*SLv)% of target max HP
+Keine Kamishirasawa,4,Ancient History -Old History-,30,False,5,5,5,Enemies,Dark,164% MAG - 64% T.DEF,5120,,
+Keine Kamishirasawa,4,New History -Next History-,31,False,5,5,5,Enemies,Spirit,164% MAG - 64% T.MND,5120,,
+Keine Kamishirasawa,4,Three Treasures - Sword,32,False,5,5,5,Allies,Physical,,6000,ATK MAG +24%,Buff: (21+3*SLv)%
+Keine Kamishirasawa,4,Three Treasures - Mirror,33,False,5,5,5,Allies,Physical,,6000,DEF MND +24%,Buff: (21+3*SLv)%
+Momiji Inubashiri,5,Rabies Bite,30,False,3,5,5,Enemy,Physical,225% ATK - 75% T.DEF,6000,,
+Momiji Inubashiri,5,Expellee's Canaan,31,False,4,5,5,Enemies,Wind,202% ATK - 90% T.DEF,5000,,
+Youmu Konpaku,6,Present Life Slash,30,False,4,5,9,Enemy,Physical,196% ATK - 70% T.DEF,5670,,Max Level 9 in Plus Disk
+Youmu Konpaku,6,Slash of Eternity,31,False,10,5,9,Enemy,Physical,252% ATK - 70% T.DEF,1800,,Max Level 9 in Plus Disk
+Youmu Konpaku,6,God's Slash of Karma Wind,32,False,11,5,9,Enemies,Wind,234% ATK - 90% T.DEF,5600,,Max Level 9 in Plus Disk
+Youmu Konpaku,6,Slash Clearing the Six Senses,33,False,9,5,9,Enemies,Nature,200% ATK - 100% T.DEF,4000,,High DEF factor Max Level 9 in Plus Disk
+Kogasa Tatara,7,Karakasa Surprising Flash,30,False,5,5,5,Enemies,Nature,154% ATK - 70% T.DEF,4200,TRR(11200 + 800*Slv) SHK(1),TRR rate: 40% SHK rate: 40%
+Kogasa Tatara,7,A Rainy Night's Ghost Story,31,False,4,5,5,Enemy,Dark,256% ATK - 80% T.DEF,5950,TRR(18800 + 1200*Slv) MND (-27-3*SLv)%,TRR rate: 55% Debuff rate: 100%
+Kogasa Tatara,7,Drizzling Large Raindrops,32,False,3,5,5,Row,Cold,188% ATK - 75% T.DEF,6620,,
+Rumia,8,Moonlight Ray,30,False,3,5,5,Enemy,Mystic,324% MAG - 90% T.MND,6600,,
+Rumia,8,Dark Side of the Moon,31,False,3,5,5,Enemies,Dark,100% MAG,6000,,Ignores MND
+Rumia,8,Demarcation,32,False,6,5,5,Allies,Dark,33% MAG,4000,Heals and reduces debuffs,MT Healing Debuff reduction: (55+5*SLv)%
+Cirno,9,Icicle Fall,30,False,3,5,5,Enemy,Cold,128%(ATK + MAG) - 80% T.DEF,5300,SPD -44%,Debuff rate: (82+6*SLv)%
+Cirno,9,Diamond Blizzard,31,False,6,5,5,Enemies,Cold,224% ATK - 56% T.DEF,3800,PAR(6000) (5550+250*SLv),PAR rate: (80+5*SLv)% PAR effect scales with SLv in Plus Disk
+Cirno,9,Perfect Freeze,32,False,5,5,5,Enemies,Cold,96%(ATK + MAG) - 60% T.DEF,4600,SPD -32%,Debuff rate: (70+5*SLv)%
+Cirno,9,White Album,33,False,5,5,5,Self,Cold,,7000,DEF MND +50% (+54%),Plus Disk: (50+4*SLv)%
+Minoriko Aki,10,Autumn Sky,30,False,3,5,5,Enemy,Nature,(168% MAG + 84% MND) - 70% T.MND,7000,,Low Delay
+Minoriko Aki,10,Warm Colour Harvest,31,False,10,5,5,Enemies,Nature,(256% MAG + 115.2% MND) - 80% T.MND,5500,,
+Minoriko Aki,10,Sweet Potato Room,32,False,4,5,5,Ally,Nature,120% MAG + 60% MND,5400,Healing,
+Minoriko Aki,10,Owotoshi Harvester,33,False,4,5,5,Ally,Nature,,7000,DEF MND +45%,Buff: (42+3*SLv)%
+Komachi Onozuka,11,Short Life Expectancy,30,False,2,5,5,Enemy,Physical,195% ATK - 66% T.DEF,5800,DTH(100),DTH rate: (36+4*SLv)%
+Komachi Onozuka,11,Ferriage in the Deep Fog,31,False,5,5,5,Row,Cold,250% ATK - 125% T.DEF,5400,DTH(100),DTH rate: (33+3*SLv)% (Plus: DTH Rate: (34+6*SLv)%)
+Komachi Onozuka,11,Narrow Confines of Avici,32,False,6,5,5,Enemies,Spirit,400% MAG - 100% T.MND,4000,"ATK DEF MAG MND SPD -16% DTH(100), PAR(3333), TRR(16000)",Debuff rate: 60% DTH rate: (29+3*SLv)% PAR rate: (36+4*SLv)% TRR rate: (56+4*SLv)%
+Komachi Onozuka,11,Scythe that Chooses the Dead,33,False,6,5,5,Enemy,Spirit,255% ATK - 75% T.DEF,4000,,
+Chen,12,Flight of Idaten,30,False,2,5,5,Enemy,Physical,156.25% ATK - 62.5% T.DEF,8800,,Low Delay
+Chen,12,Phoenix Spread Wings,31,False,3,5,5,Row,Fire,312.5% ATK - 125% T.DEF,6600,,Exactly 2x Idaten's dmg
+Chen,12,Kimontonkou,32,False,4,5,5,Self,Spirit,,9500,ATK +80% MND DEF (-90+10*SLv)%,Buff: (70+10*SLv)% Unresistable self-debuffs
+Nitori Kawashiro,13,Kappa's Illusionary Waterfall,30,False,4,5,5,Enemies,Cold,209% ATK - 95% T.DEF,5000,DEF -24%,Debuff rate: (56+4*SLv)%
+Nitori Kawashiro,13,Exteeeending Aaaaarm,31,False,4,5,5,Enemies,Nature,196% ATK - 70% T.DEF,4000,,
+Nitori Kawashiro,13,Super Scope 3D,32,False,15,5,5,Enemy,Physical,552% ATK - 117.5% T.DEF,0,,(Plus Disk stats)
+Nitori Kawashiro,13,Portable Versatile Machine,33,False,2,5,5,Self,Physical,,8320,ATK DEF MAG MND SPD +16%,Self buff: (15+SLv)%
+Parsee Mizuhashi,14,Large Box and Small Box,30,False,5,5,5,Enemy,Physical,196% ATK - 70% T.DEF,5500,Has a chance to deal 3x damage,+2% chance for each ailment/debuff on allies +4% chance for each ailment/debuff on target +8% chance if >1 enemy left
+Parsee Mizuhashi,14,Midnight Anathema Ritual,31,False,3,5,5,Enemy,Dark,200% ATK - 100% T.DEF,6500,TRR(50000) SIL(40000),TRR chance: (63+3*SLv)% SIL chance: (63+3*SLv)%
+Parsee Mizuhashi,14,Grudge Returning,32,False,4,5,5,Enemies,Dark,210% ATK - 82% T.DEF,4800,TRR(9000) (TRR:14000),TRR rate: (95+5*SLv)% (TRR+ in Plus Disk)
+Parsee Mizuhashi,14,Jealousy of the Kind and Lovely,33,False,6,5,5,Enemies,Dark,625% ATK - 125% T.DEF,3200,"Only damages enemies with TRR, removes TRR","TRR is removed even if the attack misses, also removes TRR from allies (Plus Disk: increase final damage by ~5% for every 10000 TRR)"
+Wriggle Nightbug,15,Comet on Earth,30,False,3,5,5,Enemy,Nature,150% ATK - 50% T.DEF,6000,PSN(40000),PSN rate: (97+3*SLv)%
+Wriggle Nightbug,15,Firefly Phenomenon,31,False,4,5,5,Enemies,Nature,210% ATK - 82% T.DEF,4800,PSN(24000),PSN rate: (85+3*SLv)%
+Wriggle Nightbug,15,Nightbug Tornado,32,False,6,5,5,Enemies,Nature,182% ATK - 67.5% T.DEF,3600,Deals more damage to Poisoned enemies,Poison Bonus: (50+SLv*10)%
+Kaguya Houraisan,16,Dragon's Neck Jewel,30,False,4,5,5,Enemies,Mystic,174% MAG - 72.5% T.MND,4000,,
+Kaguya Houraisan,16,Buddha's Stone Bowl,31,False,7,5,5,Enemies,Spirit,165% MAG - 75% T.MND,3200,DEF MND (-15.5-1.5*SLv)% ATK DEF MAG MND SPD +14%,Debuff rate: (75+5*SLv)% Self Buff: (13+SLv)%
+Kaguya Houraisan,16,Swallow's Cowrie Shell,32,False,5,5,5,Enemies,Nature,185% MAG - 66% T.MND,3700,Halves Kaguya's debuffs and ailments,
+Kaguya Houraisan,16,Bullet Branch of Hourai,33,False,8,5,5,Enemies,Spirit,317% MAG - 89% T.MND,1500,,
+Fujiwara no Mokou,17,Fire Bird -Flying Phoenix-,30,False,2,5,5,Enemy,Fire,174% ATK - 66% T.DEF,5900,,
+Fujiwara no Mokou,17,Tsuki no Iwakasa's Curse,31,False,4,5,5,Enemies,Wind,164% ATK - 64% T.DEF,5000,ATK MAG (-11-SLv)%,Debuff rate: (87+3*SLv)%
+Fujiwara no Mokou,17,Fujiyama Volcano,32,False,7,5,5,Enemies,Fire,263% ATK - 94% T.DEF,2000,,
+Aya Shameimaru,18,Wind God's Fan,30,False,2,5,5,Row,Wind,169% ATK - 65% T.DEF,5400,ACC +12,(Plus Disk stats)
+Aya Shameimaru,18,Peerless Wind God,31,False,4,5,5,Enemy,Wind,225% ATK - 75% T.DEF,6600,SPD +20%,Self Buff: (17+3*SLv)%
+Aya Shameimaru,18,Sarutahiko's Guidance,32,False,3,5,5,Ally,Wind,,7500,SPD +40%,SPD buff: (37+3*SLv)%
+Aya Shameimaru,18,Divine Grandson's Advent,33,False,6,5,5,Ally,Wind,,4000,Instantly fills an ally's timebar,Timebar value is set to (0+10000*SLv) Plus: (5000+5000*SLv) Costs 6 MP in Plus Disk
+Mystia Lorelei,19,Ill-Starred Dive,30,False,2,5,7,Enemy,Wind,192% ATK - 80% T.DEF,6500,ACC +20,Max Level 7 in Plus Disk
+Mystia Lorelei,19,Poisonous Moth's Dark Dance,31,False,6,5,7,Enemies,Nature,196% ATK - 70% T.DEF,4000,PSN(15000) PAR(5000),PSN rate: (60+4*SLv)% PAR rate: (60+4*SLv)% Max Level 7 in Plus Disk
+Mystia Lorelei,19,Midnight Chorus Master,32,False,5,5,7,Enemies,Wind,313% ATK - 125% T.DEF,600,"ACC +30, SIL(32000)",SIL rate: (85+5*SLv)% Max Level 7 in Plus Disk
+Mystia Lorelei,19,Mysterious Song,33,False,4,5,5,Allies,Wind,(35+5*SLv)% T.Max HP,5000,"Cures SIL, sometimes PAR HVY Heals on status cure",PAR HVY cure rate: (60+4*SLv)% Unaffected by Efficient Treatment
+Kasen Ibaraki,20,Higekiri's Cursed Arm,30,False,5,5,5,Enemy,Dark,272% ATK - 82.5% T.DEF,5800,"ACC +40, TRR(16000) ATK SPD -18%",TRR rate: 100% Debuff rate: 100%
+Kasen Ibaraki,20,Echo of the Nine Forest Gods,31,False,5,5,5,Enemies,Nature,197% ATK - 74.5% T.DEF,4000,ACC +24,
+Kasen Ibaraki,20,Diving Waltz of the Raijuu,32,False,4,5,5,Enemy,Wind,220% ATK - 100% T.DEF,6000,PAR(5500) MND-24%,PAR rate: 100% Debuff rate: 100%
+Kasen Ibaraki,20,Breath of the Hermit,33,False,4,5,5,Self,Spirit,,7600,ATK DEF MAG MND SPD +30%,Self buff: (28+2*SLv)%
+Kasen Ibaraki,20,Summon Dragon and Tiger,34,True,8,5,5,Self,Spirit,,7000,"Gives effects ""Tiger of the Front"" and ""Dragon of the Back""",Tiger doubles damage 25% of the time Dragon reduces incoming damage by 25% Each effect may disappear when activated
+Nazrin,21,Gold Rush,30,False,3,5,5,Enemy,Physical,240% MAG - 60% T.MND,5500,"If this spellcard defeats an enemy, it drops 66% more gold",Lowish MND factor
+Nazrin,21,Rare Metal Detector,31,False,3,5,5,Enemy,Wind,196% MAG - 70% T.MND,6800,"If this spellcard defeats an enemy, its item drop rate is doubled",Low delay
+Nazrin,21,Nazrin Pendulum,32,False,3,5,5,Enemy,Cold,242% MAG - 110% T.MND,5500,"If this spellcard defeats an enemy, its EXP value is increased by 66%",High MND factor
+Hina Kagiyama,22,Misfortune God's Biorhythm,30,False,3,5,5,All,Dark,,6000,ATK DEF MAG MND SPD -33% for all allies and enemies.,Debuff rate: (96+4*SLv)% Plus Disk debuff rate: (87+3*SLv)%
+Hina Kagiyama,22,Pain Flow,31,False,5,5,5,Enemies,Dark,150% MAG - 50% T.MND,4000,Damage Up from Hina's DBFs Removes all Hina's DBFs,Damage increased by total magnitude of debuffs*1.5
+Hina Kagiyama,22,Old Lady Ohgane's Fire,32,False,4,5,5,Row,Fire,196% MAG - 70% T.MND,4500,"ATK, DEF, MAG, MND and/or SPD -25% (1/3 chance for each)",Debuff rate: (75+5*SLv)%
+Rin Kaenbyou,23,Cat's Walk,30,False,1,5,7,Enemy,Physical,132% ATK - 57.5% T.DEF,8400,SHK(10000),SHK rate: (36+4*SLv)% (Plus Disk stats) Max Level 7 in Plus Disk
+Rin Kaenbyou,23,Vengeful Cannibal Spirit,31,False,4,5,7,Enemy,Dark,120%(ATK + MAG) - 60% T.DEF,6000,TRR(10000) DEF -25%,TRR rate: (36+4*SLv)% Debuff rate: (46+4*SLv)% Max Level 7 in Plus Disk
+Rin Kaenbyou,23,Former Hell's Needle Hill,32,False,4,5,7,Row,Physical,225% ATK - 75% T.DEF,5200,DEF -25%,Debuff rate: (56+4*SLv)% Max Level 7 in Plus Disk
+Rin Kaenbyou,23,Blazing Wheel,33,False,6,5,7,Enemies,Fire,126%(ATK + MAG) - 70% T.MND,3000,,30% Delay in Plus Max Level 7 in Plus Disk
+Utsuho Reiuji,24,Giga Flare,30,False,10,5,5,Enemies,Mystic,243% MAG - 8% T.MND,1800,,Nearly ignores MND (Plus Disk stats)
+Utsuho Reiuji,24,Intense Nuclear Reaction,31,False,4,5,5,Enemies,Fire,154% MAG - 62% T.MND,4800,"MAG +20%, DEF MND (-13+1*SLv)%, SPD (-9+1*SLv)%",MAG buff: (19+1*SLv)% Self-debuffs ignore DBF resistance
+Utsuho Reiuji,24,Hell's Tokamak,32,False,5,5,5,Enemies,Fire,211% MAG - 120% T.MND,4000,MND (-18-2*SLv)%,Debuff rate: (110+2*SLv)% (Plus Disk stats)
+Satori Komeiji,25,Brain Fingerprint,30,False,4,5,5,Enemies,Mystic,164% MAG - 64% T.MND,4000,SIL(20000) Cannot miss,SIL rate: (36+4*SLv)%
+Yuugi Hoshiguma,26,Supernatural Phenomenon,30,False,2,5,5,Enemy,Nature,249% ATK - 75% DEF,5800,,(Plus Disk stats)
+Yuugi Hoshiguma,26,Knockout in Three Steps,31,False,7,5,5,Enemy,Physical,375% ATK - 37.5% DEF,0,ACC -25,"Inaccurate Plus Disk: DMG up, ignore half DEF"
+Yuugi Hoshiguma,26,Irremovable Shackles,32,False,3,5,5,Enemy,Spirit,125% ATK - 62.5% T.DEF,5500,"ACC +25, PAR(3000), HVY(10000), SIL(10000)",PAR rate: (82+4*SLv)% HVY/SIL rate: (62+4*SLv)%
+Hong Meiling,27,Brilliant Light Gem,30,False,2,5,5,Enemy,Spirit,216% ATK - 90% T.DEF,8000,,Low delay
+Hong Meiling,27,Mountain Breaker,31,False,3,5,5,Enemy,Physical,320% ATK - 40% T.DEF,4800,ACC +32,Ridiculous
+Hong Meiling,27,Colourful Rain,32,False,4,5,5,Self,Spirit,40% ATK + 40% MAG,3600,Healing,
+Hong Meiling,27,Healer,33,False,1,5,5,Ally,Spirit,16% ATK + 16% MAG,6500,"Healing, cures PSN PAR SIL",
+Alice Margatroid,28,Artful Sacrifice,30,False,4,5,7,Enemy,Fire,225% MAG - 75% T.DEF,5000,,Targets DEF Max level 7 in Plus Disk
+Alice Margatroid,28,Little Legion,31,False,6,5,7,Enemies,Physical,192% MAG - 60% T.DEF,4000,ACC +10,Targets DEF Max level 7 in Plus Disk
+Alice Margatroid,28,Hanged Hourai Doll,32,False,5,5,7,Row,Mystic,240% MAG - 100% T.MND,3600,ACC +20,Max level 7 in Plus Disk
+Alice Margatroid,28,Trip Wire,33,False,5,5,7,Enemies,Physical,192% MAG - 120% T.MND,4000,"ACC +100, PAR(4000) HVY(16000) SPD (-16-4*Slv)%",Status rate: 80% Debuff rate: 100% Max level 7 in Plus Disk
+Patchouli Knowledge,29,Royal Flare,30,False,6,5,7,Enemies,Fire,218% MAG - 70% T.MND,3200,ACC +60,Max Level 7 in Plus Disk
+Patchouli Knowledge,29,Princess Undine,31,False,5,5,7,Enemies,Cold,187% MAG - 55% T.MND,4400,ACC +10,Max Level 7 in Plus Disk
+Patchouli Knowledge,29,Djinn Gust,32,False,5,5,7,Enemies,Wind,202% MAG - 90% T.MND,4400,ACC +20,Max Level 7 in Plus Disk
+Patchouli Knowledge,29,Satellite Himawari,33,False,5,5,7,Enemies,Nature,185% MAG - 68% T.MND,4400,ACC +20,Max Level 7 in Plus Disk
+Patchouli Knowledge,29,Silent Selene,34,False,6,5,7,Enemy,Mystic,289% MAG - 85% T.MND,5000,,Max Level 7 in Plus Disk
+Eirin Yagokoro,30,Mercury Sea,30,False,5,5,5,Enemies,Cold,179% MAG - 70% T.MND,4000,ATK -20%,Debuff rate: 100%
+Eirin Yagokoro,30,Omoikane's Device,31,False,5,5,5,Enemies,Mystic,180% MAG - 75% T.MND,4000,MAG -20%,Debuff rate: 100%
+Eirin Yagokoro,30,Hourai Elixir,32,False,5,5,5,Ally,Dark,50% T.Max HP,3700,Cures all ailments/debuffs,Healing doesn't increase with SLv Unaffected by Efficient Treatment Plus Disk Delay: (34+3*SLv)%
+Eirin Yagokoro,30,Astronomical Entombing,33,False,8,5,5,Enemies,Dark,265% MAG - 94.5% T.MND,1800,HVY(20000),HVY rate: 100%
+Reisen Udongein Inaba,31,Lunatic Red Eyes,30,False,4,5,5,Enemies,Mystic,231% MAG - 105% T.MND,5000,"ACC +60, MND -40%, TRR(12000),SIL (12000)",Debuff rate: (96+4*SLv)% Status rate: (62+4*SLv)%
+Reisen Udongein Inaba,31,Mind Starmine,31,False,6,5,5,Enemies,Mystic,256% MAG - 80% T.MND,3600,"ACC +20, SHK(100)",SHK rate: (52+4*SLv)%
+Reisen Udongein Inaba,31,Discarder,32,False,4,5,5,Enemy,Dark,196% MAG - 70% T.MND,5400,ATK DEF MAG MND SPD (-11-SLv)%,Debuff rate: 100%
+Reisen Udongein Inaba,31,Gas-Woven Orb,33,False,1,5,5,Enemies,Nature,88% MAG - 50% T.MND,6600,PSN(6600),PSN rate: 100% Plus Disk: lower delay.
+Reisen Udongein Inaba,31,Grand Patriot's Elixir,34,False,5,5,5,Self,Nature,,9800,ATK DEF MAG MND SPD +32%,Stat buff: (30+2*SLv)%
+Sanae Kochiya,32,Night of Bright Guest Stars,30,False,4,5,9,Enemies,Spirit,242% MAG - 100% T.MND,4800,Cannot miss,High MND factor Max Level 9 in Plus Disk
+Sanae Kochiya,32,Moses's Miracle,31,False,3,5,9,Row,Cold,197% MAG - 60% T.MND,5800,,Max Level 9 in Plus Disk
+Sanae Kochiya,32,Yasaka's Divine Wind,32,False,4,5,5,Ally,Wind,128% MAG,4000,"Healing, cures all ailments and debuffs",
+Sanae Kochiya,32,Miracle Fruit,33,False,4,5,5,Ally,Nature,,5000,ATK DEF MAG MND SPD +30%,Stat buff: (27+3*SLv)%
+Iku Nagae,33,Elekiter Dragon Palace,30,False,4,5,5,Enemy,Wind,256% MAG - 80% T.MND,5000,PAR(5000) DEF (-45-5*SLv)%,PAR rate: (68+4*SLv)% Debuff rate: 100%
+Iku Nagae,33,Light Dragon's Sigh,31,False,5,5,5,Enemies,Wind,196% MAG - 70% T.MND,4500,"ACC +40, DEF (-34-2*SLv)%",Debuff rate: 100%
+Iku Nagae,33,Thundercloud Stickleback,32,False,4,5,5,Ally,Wind,,6600,"ATK, MAG +52%, PAR(6500-500*Slv)",Buff: (48+4*SLv)% PAR rate: (128-8*SLv)%
+Iku Nagae,33,Whiskers of the Dragon God,33,False,3,5,5,Ally,Wind,,6000,"SPD +56%, DEF MND (-52-8*Slv)%",SPD buff: (52+4*SLv)% Debuff rate: (150-10*SLv)%
+Suika Ibuki,34,Throwing Mt.Togakushi,30,False,3,5,5,Enemy,Nature,225% ATK - 75% T.DEF,6200,ACC +20,
+Suika Ibuki,34,Throwing Atlas,31,False,7,5,5,Enemy,Wind,324% ATK - 90% T.DEF,2000,ACC -12,(Plus Disk stats)
+Suika Ibuki,34,Gathering and Dissipating,32,False,4,5,5,Row,Wind,400% MAG - 100% T.MND,4750,ATK MAG -25%,Debuff rate: (84+4*SLv)%
+Suika Ibuki,34,Missing Power,33,False,6,5,5,Self,Dark,,2000,"ATK +80%, DEF, MND +50%, SPD (-115+15*SLv)%",ATK buff: (72+8*SLv)% DEF MND buff: (45+5*SLv)% Unresistable self-debuff
+Suika Ibuki,34,Art of Segaki Binding,34,False,3,5,5,Enemy,Dark,125% ATK - 62.5% T.DEF,5500,"ACC +25, PAR(3000), HVY(10000), TRR(10000)",PAR rate: (82+4*SLv)% HVY/TRR rate: (62+4*SLv)%
+Ran Yakumo,35,Fox-Tanuki Youkai Laser,30,False,6,5,7,Enemies,Mystic,196% MAG - 70% T.MND,4000,,Max Level 7 in Plus Disk
+Ran Yakumo,35,Princess Tenko,31,False,4,5,7,Enemies,Nature,198% MAG - 90% T.MND,4400,,Max Level 7 in Plus Disk
+Ran Yakumo,35,Soaring En no Ozuno,32,False,4,5,7,Row,Physical,(150% ATK + 188% MAG) - 75% T.DEF,6880,,Low delay Max Level 7 in Plus Disk
+Ran Yakumo,35,Banquet of General Gods,33,False,5,5,5,Allies,Spirit,,4000,"ATK, MAG +24%",Buff: (22+2*SLv)%
+Ran Yakumo,35,Eighty Million Holy Boards,34,False,5,5,5,Allies,Spirit,,4000,"DEF, MND +24%",Buff: (22+2*SLv)%
+Remilia Scarlet,36,Spear the Gungnir,30,False,3,5,9,Enemy,Physical,225% ATK - 75% T.DEF,5500,ACC +24,Max level 9 in Plus Disk
+Remilia Scarlet,36,Curse of Vlad Tepes,31,False,4,5,5,Self,Dark,,5000,ATK DEF MAG MND +50% PSN(16000) PAR(8000) HVY(1600),Buff: (45+5*SLv)% Status rate: (135-7*SLv)%
+Remilia Scarlet,36,Bad Lady Scramble,32,True,5,5,9,Enemies,Dark,196% ATK - 70% T.DEF,2800,,Unusable at Lv0 Max level 9
+Sakuya Izayoi,37,Misdirection,30,False,1,5,5,Enemies,Physical,99% ATK - 75% T.DEF,8000,ACC +25,(Delay reduced in Plus Disk)
+Sakuya Izayoi,37,Killing Doll,31,False,3,5,5,Enemy,Dark,290% ATK - 165% T.DEF,4800,ACC +50,High def factor
+Sakuya Izayoi,37,Soul Sculpture,32,False,5,5,5,Enemies,Wind,(184% ATK + 59% MAG) - 74% T.DEF,3440,Cannot miss,
+Sakuya Izayoi,37,Lunar Clock,33,False,8,5,5,Allies,Mystic,,3000,SPD +32%,Buff: (29+3*SLv)%
+Sakuya Izayoi,37,Private Square,34,False,16,5,5,Enemies,Mystic,,3000,PAR(1800+SLv*200),"Ignores PAR resistance, initial duration is fixed"
+Kanako Yasaka,38,Mad Dance on Medoteko,30,False,3,5,5,Enemy,Spirit,207% MAG - 72% T.DEF,5600,HVY(10000),HVY rate: 100%
+Kanako Yasaka,38,Misayama Hunting Ritual,31,False,5,5,5,Enemies,Physical,208% MAG - 80% T.DEF,4000,ACC +30,
+Kanako Yasaka,38,Beautiful Spring like Suiga,32,False,6,5,5,Enemy,Cold,256% MAG - 80% T.MND,4800,ATK MAG -18%,Debuff rate: 100%
+Kanako Yasaka,38,Virtue of Wind God,33,False,8,5,5,Enemies,Wind,306% MAG - 87.5% T.MND,3000,,
+Suwako Moriya,39,Moriya's Iron Ring,30,False,5,5,5,Enemy,Physical,164% ATK - 82% T.DEF,5500,"ACC +20, PAR(7200)",PAR rate: (84+4*SLv)%
+Suwako Moriya,39,Long-Arm and Long-Leg,31,False,6,5,5,Enemy,Nature,289% ATK - 85% T.DEF,1600,ACC +24,
+Suwako Moriya,39,Froggy Braves the Elements,32,False,4,5,5,Enemies,Cold,190% MAG - 69% T.MND,5000,MND -36%,Debuff rate: (96+4*SLv)%
+Suwako Moriya,39,Mishaguji-sama,33,False,5,5,5,Enemies,Nature,249% MAG - 82% T.DEF,3500,"ACC +32, DEF -20%",Debuff rate: (84+4*SLv)% (Plus Disk stats)
+Tenshi Hinanawi,40,World Creation Press,30,False,3,5,5,Enemy,Nature,269% ATK - 82% T.DEF,6000,(ATK (-11-1*SLv)%),Plus Disk adds an ATK debuff Debuff Rate:(88+4*SLv)%
+Tenshi Hinanawi,40,Violent Motherland,31,False,6,5,5,Enemies,Nature,216% ATK - 90% T.DEF,5000,ACC +30 (MAG SPD (-11-1*SLv)%),Plus Disk adds a MAG/SPD debuff Debuff Rate:(88+4*SLv)%
+Tenshi Hinanawi,40,Sword of Hisou,32,False,5,5,5,Enemy,Spirit,256% ATK - 100% T.DEF,5400,"Cannot miss, may remove stat buffs from enemies",Removal chance for each buff: (20+4*SLv)%
+Tenshi Hinanawi,40,State of Enlightenment,33,False,6,5,5,Self,Nature,,4000,DEF MND +100% PAR(8000) HVY(16000),Buff: (90+10*SLv)% Status rate: (136-8*SLv)%
+Flandre Scarlet,41,Starbow Break,30,False,6,5,5,Enemy,Dark,328% ATK - 66% T.DEF,5500,"ACC -16, Flandre also loses HP",Flandre loses (42-2*Slv)% max HP Cannot kill herself (Plus Disk: ↓ T.DEF and ↓ Delay)
+Flandre Scarlet,41,Forbidden Fruit,31,False,9,5,5,Enemies,Mystic,576% MAG - 120% T.MND,4800,"ACC +40, Consumes 1 MP from other frontliners and reduces their ATB","ATB of other frontliners -10% (Plus Disk: ↑ DMG, ↑ MP cost, ↓ Delay)"
+Flandre Scarlet,41,Laveatein,32,False,13,5,5,Enemies,Fire,300%(ATK + MAG) - 96% T.DEF,0,"Consumes 2 MP from all frontliners, reduces their ATB, and debuffs all their stats by 10%","ATB of all frontliners -24% (-20% in Plus) (Plus Disk: ↓ DMG, ↑ MP cost) Unresistable debuffs"
+Yuyuko Saigyouji,42,Ghostly Dream's Butterfly,30,False,5,5,5,Enemy,Spirit,225% MAG - 75% T.MND,5400,"DTH(24000) Lower enemy ATB by 1/3, 1/6 on bosses",DTH rate: (46+SLv*4)% ATB lowered even on miss
+Yuyuko Saigyouji,42,Deadly Swallowtail Lance,31,False,4,5,5,Row,Dark,237% MAG - 40% T.MND,5000,DTH(24000),DTH rate: (30+SLv*3)% Low MND factor
+Yuyuko Saigyouji,42,Ghastly Dream,32,False,7,5,5,Enemies,Spirit,196% MAG - 70% T.MND,3000,"DTH(1000) Lower enemy ATB by 1/4, 1/12 on bosses",DTH rate: (70+SLv*4)% ATB lowered even on miss
+Yuyuko Saigyouji,42,Saigyouji Flawless Nirvana,33,False,10,5,5,Enemies,Dark,396% MAG - 150% T.MND,600,DTH(1000),DTH rate: (103+SLv*5)%
+Yuuka Kazami,43,Flower Shot,30,False,2,5,5,Enemy,Nature,180% MAG - 60% T.MND,6200,ACC +50,
+Yuuka Kazami,43,Gensokyo's Reflowering,31,False,5,5,5,Enemies,Nature,186% MAG - 79% T.MND,3000,Restore 10% MaxHP to all frontliners,Unaffected by any of the Healer passives
+Yuuka Kazami,43,Beauty of Nature,32,False,5,5,5,Enemies,Wind,174% MAG - 66% T.MND,4000,Increase duration of ailments already present by 25% (12.5% for PAR),Plus Disk: WND element
+Yuuka Kazami,43,Master Spark,33,True,24,5,5,Enemies,Mystic,400% MAG - 100% T.MND,0,,Unusable at Lv0 Does not use up all MP
+Yukari Yakumo,44,Mesh of Light and Darkness,30,False,5,5,5,Enemies,Spirit,144% MAG - 60% T.MND,5000,PAR(3800) SPD -25%,PAR rate: (50+4*SLv)% Debuff rate: (50+4*SLv)%
+Yukari Yakumo,44,Hyperactive Flying Object,31,False,5,5,5,Row,Wind,240% MAG - 50% T.MND,5000,,Low MND factor
+Yukari Yakumo,44,"Shikigami ""Ran Yakumo +""",32,False,4,5,5,Enemy,Physical,196% MAG - 70% T.DEF,5500,↑ Damage and ↓ delay for each of Ran/Chen in the party,"Chen increases MAG factor: 1.35x in the back, 1.71x in the front. Ran increases final damage: 1.35x in the back, 1.71x in the front. Delay -500 for each in back, -1000 if on the front line."
+Yukari Yakumo,44,Yukari's Spiriting Away,33,False,34,5,5,Allies,Mystic,,0,Set ATB of frontliners (except herself) to 10000,Empties MP. X is overused MP*4. Base MP cost is (35 - SLv)
+Yukari Yakumo,44,IN Quadruple Barrier,34,False,7,5,5,Allies,Spirit,,4500,"DEF, MND +42%",Buff: (38+4*SLv)%
+Byakuren Hijiri,45,Skanda's Legs,30,False,2,5,5,Enemy,Wind,144% ATK - 60% T.DEF,6000,"ACC +16, SPD +16%",Buff: (14+2*SLv)%
+Byakuren Hijiri,45,Master of the Trichiliocosm,31,False,7,5,5,Enemy,Physical,289% ATK - 85% T.DEF,6000,SHK(100),SHK rate: (45+5*SLv)%
+Byakuren Hijiri,45,Magic Milky Way,32,False,6,5,5,Enemies,Mystic,174% MAG - 66% T.MND,4000,"ACC +40, ATK MAG SPD (-21+SLv)%",Debuff rate: 88%
+Byakuren Hijiri,45,Star Sword Apologetics,33,False,5,5,5,Enemy,Spirit,173%(ATK + MAG) - 80% T.MND,4800,"ACC +32, SIL(10000) ATK DEF -24%",SIL rate: (55+5*SLv)% Debuff rate: (55+5*SLv)%
+Byakuren Hijiri,45,Sutra - Duplicating Chant,34,False,4,5,5,Ally,Spirit,,5000,Overwrittes the target's buffs and debuffs with Byakuren's (Plus Disk: Grants part of Byakuren's buffs as a buff to an ally),Ignores debuffs starting from SLv 3 Adds the buffs instead on SLv 5 (Plus Disk: grants (36+SLv*4)% of Byakuren's buffs) Unaffected by Enhancer passives or buff increasing equipment
+"Eiki Shiki, Yamaxanadu",46,Last Judgement,30,False,6,5,9,Enemy,Spirit,225% ATK,2000,ACC +20,Ignores DEF Max Level 9 in Plus Disk
+"Eiki Shiki, Yamaxanadu",46,Trial of the Ten Kings,31,False,7,5,9,Enemies,Dark,252% MAG - 70% T.MND,1200,ATK DEF MAG MND SPD (-8-2*SLv)% (ATK DEF MAG MND SPD (-4-2*SLv)%),Debuff rate: 100% Max Level 9 in Plus Disk (Plus Disk Stats)
+"Eiki Shiki, Yamaxanadu",46,Wandering Sin,32,False,6,5,9,Enemies,Dark,196% MAG - 70% T.MND,2000,"ACC +20, PAR(2000), SHK/DTH(100), PSN/HVY/SIL/TRR(8000)",Status rate:(46+4*SLv)% Max Level 9 in Plus Disk Plus Disk Status Rate: (47+3*SLv)%
+Renko Usami,47,Galaxy Stop,30,False,6,5,5,Enemies,Spirit,202% MAG - 28% T.MND,3300,"ACC+50,SHK(100) PAR(8000), SIL(12000), Reduces ATB of other frontliners",SHK rate: (84+4*SLv)% PAR/SIL rate: (76+4*SLv)% ATB of other frontliners -20%
+Renko Usami,47,Charge,31,False,9,5,5,Allies,Dark,,0,"ATK, DEF, MAG, MND, SPD +36% All frontliners lose HP",Buff: (34+2*SLv)% Current HP of frontliners -33%
+Maribel Hearn,48,Liberated Abilities,30,False,5,5,5,Enemies,Void,164% MAG - 51% T.MND,4500,Cannot miss,
+Maribel Hearn,48,Chaotic Quadruple Barrier,31,False,4,5,5,Enemy,Dark,228% MAG - 51% T.MND,5400,"ACC +8, DTH(100), TRR(12000), SHK(100)",DTH rate: 80% TRR/SHK rate: 100%
+Maribel Hearn,48,Overflowing Unnatural Power,32,False,8,5,5,Self,Dark,,5000,ATK DEF MAG MND SPD +60%,Buff: (57+3*SLv)% (Plus Disk): HP loss up.
+Maribel Hearn,48,Mari's DIY Novice Border,33,False,6,5,5,Allies,Mystic,(4*(SLv-1))% MAG,4000,"Adds damage/healing raising buff that lasts 2 actions, SLv2+ adds a heal",Boost: (14+2*SLv)%
+Shou Toramaru,49,Hungry Tiger,30,False,3,5,5,Enemy,Physical,225% ATK - 75% T.DEF,4000,"Cannot miss, Heals Self",Recovers (4+SLv)% of max HP
+Shou Toramaru,49,Radiant Treasure Gun,31,False,5,5,5,Enemies,Spirit,140% ATK - 70% T.DEF,4400,"ACC +4, Increase EXP/Drop/Gold","Pretty Weak, 1.25x Bonus on Kill"
+Shou Toramaru,49,Dazzling Gold,32,False,7,5,5,Enemies,Spirit,(163% ATK + 61% MAG) - 32% T.MND,3600,"ACC +20, PAR(4000), HVY(12000)",PAR rate:(50+4*SLv)% HVY rate:(70+4*SLv)%
+Shou Toramaru,49,Aura of Justice,33,False,7,5,5,Allies,Spirit,,3300,ATK DEF MAG MND SPD +12% Consumes entire Wrath Counter to increase Buff Strength,"Buff: (11+SLv)% +(3*Counter)% at SLv1, +(4*Counter)% at SLv2-3, +(5*Counter)% at SLv4-5"
+Mamizou Futatsuiwa,50,Frolicking Animals Scrolls,30,False,2,5,5,Enemy,Cold,168% MAG - 70% T.MND,7500,"ACC +30, SHK",SHK Rate:(63+3*Slv)%
+Mamizou Futatsuiwa,50,Futatsuiwa Clan's Curse,31,False,8,5,5,Enemy,Dark,269% MAG - 82% T.MND,3000,"ACC -30, SHK, SIL(10500+1500*SLv), ATK DEF MAG MND SPD (-10-1*SLv)%",SHK Rate: 88% SIL Rate: 100% Debuff Rate: 75%
+Mamizou Futatsuiwa,50,10 Transformations Danmaku,32,False,6,5,5,Enemies,Wind,204% MAG - 75% T.MND,4000,"Added effects from elemental infusion: [FIR: 279% MAG], [WND: SPD -24%], [CLD: HVY(16000),SIL(16000)], [NTR: PSN(24000),PAR(4000)], [MYS: Costs 4 MP], [PHY: DMG+44%], [DRK: ATK MAG -20%], [SPI: 66% Delay]",All Debuffs/Ailments Rate: 100%
+Mamizou Futatsuiwa,50,Full Moon Pompokolin,33,False,8,5,5,Enemies,Spirit,256% MAG - 80% T.MND,2800,"ACC +30, Damage increased if Reisen/Eirin/Kaguya/Suwako are in front",DMG+10% for each in front
+Mononobe no Futo,51,Mononobe's Eighty Sake Cups,30,False,3,5,5,Enemy,Physical,196% ATK - 70% T.DEF,5800,"ACC +8, Hits All with >5 Cups",
+Mononobe no Futo,51,Gate Opening For Catastrophe,31,False,4,5,5,Enemy,Dark,243% ATK - 78% T.DEF,4500,"ACC +8 Sake Cups adds ailments: 1=PSN(3200+SLv*400+x*400), 2=TRR(2550+SLv*450+x*500), 3=HVY(2450+SLv*350+x*400), 4=SIL(2600+SLv*400+x*500), 5=PAR(1850+SLv*250+x*300), 6=SHK, 7=DTH",PSN/HVY/TRR/SIL rate:66% PAR rate:50% SHK rate:(13+SLv*3+x*4)% DTH rate:(16+SLv*3+x*3)% x=Sake Cups
+Mononobe no Futo,51,Miwa Plate Storm,32,False,6,5,5,Enemies,Wind,185% ATK - 68% T.DEF,4400,ACC +24,
+Mononobe no Futo,51,Taiyi True Fire,33,False,7,5,5,Enemies,Fire,240% ATK - 100% T.DEF,3600,PSN(5000+x*500),PSN Rate:(55+x)% x=Sake Cups Doesn't raise Cups counter
+Toyosatomimi no Miko,52,Tradition of Just Rewards,30,False,5,5,5,Enemy,Mystic,200% MAG - 62.5% T.MND,5400,"ACC +20, Changes element and gets effects w/Stateswoman: Evil = DRK+can remove buffs, Good = SPI+ATK MAG DEF MND SPD (-11-SLv)%",Debuff Rate:100%
+Toyosatomimi no Miko,52,Halo of the Guse Kannon,31,False,9,5,5,Enemies,Spirit,280% MAG - 106% T.MND,1200,ACC +10,
+Toyosatomimi no Miko,52,Wishful Soul of Desire,32,False,4,5,5,Ally,Spirit,25% MAG,5000,Stronger healing+heals MP w/debuffs&ailments,Healing +20% for each debuff/ailment Heals 1 MP per debuff/ailment
+Hata no Kokoro,53,Four Humors Possession,30,False,7,5,5,Enemies,Wind,185% MAG - 68% T.MND,4000,"ACC +10, Additional effects with masks: Joy= DEF MND (-14-2*SLv)%, Anger= SHK, Pathos= SIL(24000), Cheer= SPD (-14-2*SLv)%",All Debuff/Ailments Rate: 80%
+Hata no Kokoro,53,Invigorated Kagura Lion,31,False,4,5,5,Enemy,Physical,258% ATK - 75% T.DEF,5250,"ACC +48, Raises Fighting Spirit by 1",Max Fighting Spirit is (SLv)
+Hata no Kokoro,53,Worrisome Man of Qi,32,False,8,5,5,Enemies,WND+NTR,174% (ATK + MAG) - 70% T.MND,3800,,Dual Element
+Tokiko,54,Youkai Yakuza Kick,30,False,5,5,5,Enemy,Physical,225% ATK - 75% T.DEF,6600,ACC -4,Removes Reading
+Tokiko,54,The Count of Monte Cristo,31,False,4,5,5,Enemies,Cold,144% MAG - 60% T.MND,4000,"ACC +24, SHK, DTH, Chance of Reading",SHK/DTH Rate: (46+4*SLv)% +24% [44%] for reading
+Tokiko,54,Musketeer d'Artagnan,32,False,4,5,5,Enemies,Fire,144% MAG - 60% T.MND,4000,"ACC +24, SIL(14000/ 23000 ) , MAG SPD (-9/ 17 / [23] -SLv)%, Chance of Reading","SIL Rate: (56+4*SLv)% Debuffs Rate: (66+4*SLv)% +24% [36%] SIL, +24% [34%] Debuffs for reading"
+Tokiko,54,Non-Neumann Systems,33,False,10,5,5,Allies,Mystic,10% T.Max HP,3000,Halves all ailments and debuffs Chance of Reading,Each target receives +1% Max.HP for each point of MP below max Unaffected by any of the Healer passives Gains no benefit from SLv
+Koishi Komeiji,55,The Embers of Love,30,False,4,5,5,Enemy,Fire,240% MAG - 78% T.MND,5800,ACC -10,
+Koishi Komeiji,55,Super-Ego,31,False,5,5,5,Enemies,Void,234% MAG - 90% T.MND,3000,ACC +100,
+Koishi Komeiji,55,Bedside Ancestors,32,False,6,5,5,Enemies,Mystic,199% MAG - 60% T.MND,4000,Bonus damage on enemies with TRR/SIL,"50% bonus for one ailment, 125% for both"
+Koishi Komeiji,55,Selfless Love,33,False,5,5,5,Ally,Void,(50% of de/buffs)% T.Max HP,5600,"Removes all ailments, buffs and debuffs. Percentage heal if buffs or debuffs are removed (proportional to the strength of the removed de/buffs)",De/buff multiplier: (37.5+12.5*SLv)% Unaffected by any of the Healer passives.
+Hieda no Akyuu,56,Wise Protective Art,30,False,12,5,5,Ally,Fire,,5000,"Grants ""Invincibility""","Negates damage once, removed when activated or target takes a turn (20% of the time)"
+Hieda no Akyuu,56,Wise Defensive Art,31,False,6,5,5,Ally,Cold,,5000,"Grants ""Immunity""","Negates ailment/debuff once, removed when activated or target takes a turn (10% of the time)"
+Hieda no Akyuu,56,Miare's Extensive Knowledge,32,True,11,5,5,Allies,Nature,,4000,Adds damage/healing raising buff that lasts 2 actions.,Unusable at Lv0 Boost: (30+4*SLv)%

@@ -1,0 +1,3480 @@
+Miko Board
+When used, it increase a character's equipment mass by 1. It takes 50
+to get one character's equipment mass to max. Don't even try to imagine
+the time it'll take to max it out for your entire party.
+Maximum TP +3
+
+Tin Watering Can
+Given to a collapsed traveller who requested water, in that rather famous
+prologue scene. Today's farmer life consists of methodically growing
+turnips over and over again with this as well.
+Maximum TP +5
+
+Grand Dragon Medal
+The mark of a hardcore gamer who collected all bronze and silver monster
+medals. With all those battles, the party would surely be really strong,
+but it's still disappointing that he wasn't much harder than divine dragon.
+Maximum TP +7
+
+Tokyo Metronome
+A valuable unique equip that halves environmental damage per turn.
+After mid-game, the aim is to kill all enemies each turn, so the majority
+of damage received will come from the wind, making this item invaluable.
+Maximum TP +9
+
+Cypress Stick
+A cypress rod that isn't very thick. It's not very reliable as a blunt
+weapon, but having a weapon at all gives people courage and a way to
+fight back against those trying to intimidate them. Probably.
+Maximum MP +3
+
+Source of Magic
+An offering from humans that increases the master's MaxMP by 1. Magic
+that expends MP are strong, but for a mage his MaxMP is limitingly small.
+People who are familiar with the game do just fine without magic anyway.
+Maximum MP +4
+
+Purple Orb
+It might be the item you get from doing this or that in Zipangu,
+or it might be the item that increases Max D.T. gauge for halflings.
+It's an ambiguous item like that.
+Maximum MP +6
+
+Master's Emblem
+Collect 8 of these to obtain the "Magic Bell" that gives unlimited MP. In
+the previous work, differently translated, it only increased MP by 1.
+Thus, a true god like the predecessor is in a different class... maybe.
+Maximum MP +8
+
+Eyetrack Orbitars
+Slightly slow, but it has good homing and can charge up for a double shot.
+The bullets stay upon hit, hitting multiple times. Annoying when used with
+the power of Slip Shot. Lack of power and evasion skills are its weakness.
+ACC +25
+
+Frozen Eyes
+Human technology designed to counteract JAM's EM and Optical techniques.
+An "eye" that determines position by observing air flow caused by moving
+objects. It completely nullifies any optical camouflages.
+ACC +50
+
+Long Fall Boots
+Boots that prevent Portal Devices from breaking during long falls. With
+this and the Portal Device, anyone could clear the test, one might think.
+But seeing 2's Boots PV still reaffirms the protag's athletic ability.
+EVA +20
+
+Reflex Booster Augment
+An augment pack that increases reflexes via implanting mechanical nerves.
+Mechanical augmentation pushes the limits of the human body, but it also
+brings discrimination issues between the augmented and the unaugmented.
+EVA +40
+
+Manga Meat
+Its meat you often find in gag manga. No further explanation necessary.
+It's not soft, but it stretches out a lot when you bite into it.
+ 
+HP Recovery Rate +3
+
+Recovery Armband
+Increases HP recovery speed, but also causes hunger 6 times faster. With
+the change in HP recovery speed, it's a necessary item for damage
+races against endgame foes. You need wall-walking, stealth or this.
+HP Recovery Rate +4
+
+Life Drain Tome
+A dark magic tome. The caster using it absorbs half the damage dealt. It
+was always a mainstay for 1vMany situations, but having Armsthrift
+and it being buyable made it even more broken. A must-have for Lunatic.
+HP Recovery Rate +6
+
+Elixir of Mages
+An elixir that, when used, increases maximum MP. It's annoying to use
+them one by one so people like to just drink them all right before the
+last boss, but even that gets too annoying after enough replays.
+MP Recovery Rate +1
+
+Orb of Gaia
+A divine orb guarded by a dragon. To get it, you need the Neutral Crystal
+and multiple parties, so it's quite annoying.
+ 
+MP Recovery Rate +2
+
+Midgard's Tooth
+A sword obtained from defeating a mystery heart in the Star Curtain. It's
+the only quality B-rank equip, but not really that good when you get it.
+ 
+Adds PSN effect to all attacks
+
+Modified Taser
+A dangerous stun gun held by a certain sister. It's made by
+Yakuza, which guarantees its power. Without this, "that event" in
+a certain chapter might not have happened.
+Adds PAR effect to all attacks
+
+Repulsion Orb
+A red orb that's about the size of a volleyball. Allows its user to repel
+anything he wishes. According to Rinnosuke's abilities, it can also
+attract things, but no one knows how to use it that way.
+Adds HVY effect to all attacks
+
+Great Hammer
+An item that can break statues blocking roads in the depth of Internet.
+Obtainable in postgame, but you have to do a bunch of backtracking
+and defeat a strong boss to get past a cube. Rather annoying to get.
+Adds SHK effect to all attacks
+
+Strange Meat Pie
+From a world in ruins, befriending this heartwarming and closely-knit
+family engaging in perfectly healthy activities and business gets you
+this pie. In my opinion, it was the scariest part of the whole game.
+Adds TRR effect to all attacks
+
+Sword of Singing Delusion
+A weapon that has a chance to inflict "Delusion" status when attacking.
+It has a really awesome name.
+
+Adds SIL effect to all attacks
+
+Dark Will
+Activates when the user wants something badly and it won't stop at murder
+to get it. Eventually manifests itself into the stand piercing through
+dimensions to get at the enemy. Pretty broken for a main character.
+Adds DTH effect to all attacks
+
+Violent Green Rupee
+A sentient gem on the back of a certain younger sister.
+Wearing it will probably increase your money luck.
+
+Money Acquisition Rate +4%
+
+Shoes of Happiness
+Boots that give 1 EXP per step. It should be useful, but by the time you
+get it, 1 EXP is a rounding error. By 8 onwards, it's generally used as
+a material for Happy Hat instead. Poor thing.
+EXP Acquisition Rate +6%
+
+Growth Egg
+A famous experience boosting accessory. Realize that Columbus was wrong
+to find where its hidden. In 6 and Type-0 it's easy to get at a good time,
+but otherwise, by the time it's gotten, it's not really useful any more.
+EXP Acquisition Rate +10%
+
+Pure Sake - Wild Boar
+Sake that's made with only quality materials,
+and hand-crafted with much care and effort.
+Guaranteed to smell and taste good.
+Maximum MP +2 Maximum TP +2
+
+HQ Sake - Deer
+Higher quality sake hand-crafted with even more care and effort.
+The best that can be obtained within the Human Village.
+ 
+Maximum MP +3 Maximum TP +3
+
+Pure HQ Sake - Butterfly
+Pure and top quality sake that holds prestige even amongst Gensokyo's
+most powerful entities. It has a distinctive fruity smell that rivals
+that of fruit wines. Many people use wineglasses when drinking it.
+Maximum MP +4 Maximum TP +4
+
+First Aid Kit
+Restores 80% of damage sustained. On the highest difficulty, with zombies
+faster than humans, taking 5 hits to kill and coming in mobs, any mistake
+uses these up. Once your team's out of these, the real fight begins.
+HP Recovery Rate -8 HP Base Value +4.8
+
+Exorcising Staff
+A miraculous staff that protects a certain fortress city from any and all
+evil. It protects against external threats, but not internal threats. If
+it's cursed, then it will be quickly retrieved, so don't worry about that.
+MP Recovery Rate -2 Maximum MP +16
+
+Chario Boots
+Footwear that can be found in the Time Dungeon. It's common to loiter
+around on your first time, and end up getting accosted by secret bosses.
+ 
+SPD Base Value +0.8 ATK Base Value -1.2 MAG Base Value -1.2
+
+Choice Scarf
+An item that increases speed by 50%, but locks the user into one move.
+It can be limiting once discovered, but even so it's still very powerful.
+Useful on your aces, or on slow attackers.
+SPD Base Value +1.0 Maximum MP -5 Maximum TP -5
+
+Youkai Medal Shattering Axe
+An item important to the story setting, this axe can shatter
+Medals, and even occasionally, shatter the terrifying Youkai Medals.
+He's also plenty strong without it, and when berserk, victory is 100%.
+Maximum MP -5 ATK Base Value +1.0 MAG Base Value +1.0
+
+Jogurt Doll
+Number 1.
+ 
+ 
+Maximum TP -8 Maximum MP +5 MP Recovery Rate +1
+
+Primal Armor
+A barrier that is created via sustained flow of certain particles. Its
+defensive ability is excellent, and can stop most attacks from ACs. It's
+was shocking to see the previous works' protagonist ACs become so useless.
+Maximum MP -6 DEF Base Value +1.0 MND Base Value +1.0
+
+Experimental MIRV
+A weapon that fires 8 mini-nukes once. Makes one wonder what the heck the
+inventor was thinking. The ammo is expensive, its over-elaborate effects
+slows down the game, it's suicide when indoors... "Amazing" in many ways.
+ACC -25 ATK Base Value +1.5 MAG Base Value +1.5
+
+Micron's Magic Book
+When used on field, it has a shrinking effect that unlocks new areas. In
+battle, it turns you invincible, while reducing damage to 1, like a cheat.
+The shortcuts were obvious, so that may well have been its true purpose.
+EVA +48 DEF Base Value -2.0 MND Base Value-2.0
+
+Ribbon
+It's a ribbon, so obviously it increase all status ailment resistances.
+There's no room for arguments.
+ 
+All Resistances +50
+
+Krosis
+The mask worn by a Dragon Priest near a certain dragon lair. Many have felt the
+despair from finishing a rough battle against a dragon, then being ambushed
+by a Dragon Priest right after. Raises Smithing and Alchemy considerably.
+Maximum MP +10
+
+Button of Undying
+A button given to you by someone as he unleashed his full power, having
+finally finished recharging it with his strength. ...But only Rouga can
+equip it, and you get it past the point where you can equip items. Strange.
+Maximum MP +12 MP Recovery Rate +1
+
+Judas Pain
+A key to the gates of Hell broken into 8 pieces. Supposed to be held by the
+the 7 Kings of Hell and DS, but now they're all within DS's body, with one
+exception. Brings great power, but great pain to the mind, body, and soul.
+Maximum MP +15 MP Recovery Rate +1
+
+Ethos of Bodybuilding 1
+Ethos #1: no one should stand out from the protagonist, apparently. A book
+that extols the virtues of training your body to firm your mind. Cringey.
+ 
+Maximum TP +12
+
+Ethos of Bodybuilding 2
+Ethos #2: A man never loses a 1v1 duel, apparently. A book that extols the
+virtues of training your body to help others. Still kind of cringey.
+ 
+Maximum TP +15 HP Recovery Rate +3
+
+Ethos of Bodybuilding EX
+Ethos #3: Sub-characters exist only to support the main characters from the
+shadows, apparently. A book that extols the virtues of training so hard,
+you overcome your role and become a main character. Cringey as always.
+Maximum TP +20 HP Recovery Rate +6
+
+Luck and Pluck
+The sword bequeathed by an ancient honorable hero in his dying moments.
+The sword originally had the word "LUCK" engraved into it, but the hero
+used his blood to add the P to turn it into "PLUCK."
+ATK Base Value +1.0 Drop Rate +20% when holder defeats an enemy
+
+Marquis de Sade's Joy
+One of the weapons used by vampires. A relatively normal knife compared to
+the other weapons. Most fights are won with this up close, or Caligula from
+afar. Used often in the story for angsty half-vampiric wrist-slitting.
+Increases ailment effects on enemies by 15%
+
+Egg
+The final Quell created by an once-prosperous ancient civilization.
+Contains the consciousness of the ancestors. Grants huge amounts of power,
+but turns its owner into a human-antagonistic puppet of the ancestors.
+All Stats Base Values +0.5 Occasionally heals ailments
+
+Exalted Falchion
+An unsealed sword with its true power unleashed. Deals effective damage to
+dragons and fell dragons. You'll get owned by roided grunts at Lunatic's
+last boss if you don't kill it quickly with this and the Parallel version.
+Increases damage by 20% when hitting weaknesses
+
+La Pucelle d'Orleans
+One of the Five Heavenly Swords. Boasts great stats, but has a mind of its
+own. Anyone who it doesn't acknowledge as legitimate will be damaged
+when swinging it. However, just equipping it for the stats seems to be fine.
+ATK Base Value +1.5 DEF Base Value +1.0 SPD Base Value +0.5
+
+Force Booster
+A very strong accessory that doubles the INT of its wearer. Turns anyone's
+magic genocidal, but given the stat inflation that endgame enemies undergo,
+this firepower-enhancing equipment actually ends up pretty balanced.
+MAG Base Value +1.5, MND Base Value +1.0, SPD Base Value +0.5
+
+Life Aura
+A defensive barrier that negates attacks doing less than a set amount of
+damage. Lasts a few turns except for enemies, where it even regenerates.
+Negating 200+ damage in a game where the last boss has 2,000 HP is crazy.
+Reduces damage taken by 8% of max HP, occasionally negates damage
+
+Super Drill
+A powerful and unique equip that raises the holder's critical rate by 30%.
+That 30% is also added as damage even when the enemy evades or parries.
+Useful for subsequent playthroughs where enemy armor stats keep rising.
+Ignores 25% of enemy's defenses when attacking
+
+Blood Sword
+A demonic sword that drains the life force of whoever it slashes. Has lots
+of drawbacks such as low accuracy and backfiring against undead, but
+being able to attack and heal at the same time is still really handy.
+Recovers 4% HP when attacking an enemy
+
+Angel Slime Hat
+An extremely helpful hat that multiplies your EXP when below a certain
+level. Take full advantage of it while grinding passives from all classes.
+Used to help newbie players catch up, but it's very generous nonetheless.
+Increases EXP by 10% from all enemies that the holder defeats
+
+Ancient Scepter
+An item that enhances your class's fourth skill, which is almost always the
+strongest available. Very useful, but you won't get it so easily - it's a
+random drop, and only shows up after clearing the hardest difficulty.
+Increases the holder's buff, debuff and inflicted ailment effects by 12%
+
+Tokugawa Statue
+A miraculous item that creates a new equip page, multiplying the amount of
+item slots. Dropped from Pocky Rocks - some players have went 300 hours
+without one. Later versions mitigated this somewhat, but it's still rare.
+MP/TP +12 All Base Values +1.2
+
+Avoid Ring
+A Karma Ring which removes all enemies' press turn icons if you dodge or
+negate their attacks through resistances, giving your party the initiative.
+Extremely effective at endgame, which is all about resisting attacks.
+Buffs all allies and debuffs all enemies slightly when an attack is dodged
+
+Infinity Bandana
+An ordinary-looking bandana with an infinity mark on it. Somehow gives
+all guns unlimited ammo when it is worn. Disregarding the logistics,
+this is what you get when a legendary hero with endless pride has his way.
+Occasionally prevents MP consumption
+
+Piece of Heart
+The good ol' thing which you collect four of to increase your number of
+hearts by 1. Make sure you collect lots of them to get a lot of hearts.
+ 
+HP +12%
+
+Mad Milk
+Bottled white liquid. Damage done to enemies covered in this comes back
+as healing by 60% of damage done. Just as unsettling as the Sniper's
+Jarate. Dipping figurines in it may make things advance, in many ways.
+HP +24%
+
+Energy Tank
+There are 6 in 1, 5 in 2, and about 20 in later entries.
+The first one obtained doubles your max HP. Truly a lifeline.
+But once you have several, additional tanks seem to be simply fillers.
+HP +36%
+
+Yggdrasil Dew
+A powerful item that heals all allies' HP fully. However, it's limited in
+number, doesn't revive or recover MP, and area healing spells are good
+enough. Better in spinoff, where it lets all your monsters attack at once.
+HP +48%
+
+Power Bracer
+An item that doubles attack EV gain when equipped. Also, a parent holding
+it will pass its attack IV to the offspring. A very nice item that
+greatly reduces unproductive time spent cycling back and forth.
+ATK +12%
+
+DX Mechamonkey Model
+The item that stole the Golden Bear's thunder, and hadn't been seen much
+lately... until it appeared as part of Goron's fleet.
+ 
+ATK +24%
+
+Biggest Sword Ever
+The strongest weapon that fires three huge waves of unlimited range. You
+may want to save your money for it at the last stage, but with just the
+last boss in mind, the Raging Wave Sword's wave trails are more useful.
+ATK +36%
+
+Shinai of Spirits
+Swinging it 100 times increase strength by 1. Hunger and the turn limit
+may be a problem, but it's still easy to max out strength. In the hands of
+an experienced player, the game is officially broken.
+ATK +48%
+
+Bulletproof Armor
+Armor that protects an Earth soldier's life.
+For some reason, it used to increase HP instead of defense.
+About 2000 of these will make higher difficulties safer.
+DEF +12%
+
+Armored Parasite
+Insect-like items that, when placed in body, improves toughness beyond
+cyborg levels. When equipped, one can become as strong as Ken or Kevin.
+The localization change was superfluous, no matter how you look at it.
+DEF +24%
+
+Purple Metallic Armor
+From the looks of it, it's an armor meant to protect the shoulders and
+chest, but when worn by a human, it's big enough to cover more. It has a
+lot of yellow Noisy Boys on it too. No idea what that's supposed to mean.
+DEF +36%
+
+Reinforced Leather Armor
+Bought in stores from mid-game, or won from the casino in Primm. If you
+find it unsafe to stay naked until Gun Runners, farm 2000cap and this,
+and head to New Vegas from Neil's Shack. Solves the entry fee too.
+DEF +48%
+
+Cantrip Book
+Book that records all sort of troublesome things.
+It might allow you to use all sorts of status attacks, or it might not.
+ 
+MAG +12%
+
+Light Staff
+A light-elemental weapon that is useful against that super tough boss.
+It's a pretty weapon, but doesn't really enhance the wielder's magic.
+ 
+MAG +24%
+
+Mana Flower
+An accessory created by fusing a Nature's Gift and a Mana Potion.
+Judging from its icon, it's created by just plopping the green flower
+representing the Nature's Gift on the mouth of the potion bottle.
+MAG +36%
+
+Kalar's Crystal
+A beautiful crystal embedded inside a Kalar's forehead. It gives the owner
+strong magic power, but the Kalar from whom this is taken from will die.
+If you want Craia to survive, you need to learn magic from Haniwaism.
+MAG +48%
+
+Book of Stamp Bingo
+A notebook that keep track of the Stamp Bingo Rally's stamps. It's quite
+fun looking for these throughout the entire game, but they can be really
+well hidden. Collecting these without a guide is extremely difficult.
+MND +12%
+
+Crepe Mariette
+A crepe with a caramel surface, after a flambe with Kirsch. With butter,
+vanilla, brandy, and caramel, it's truly a sophisticated and tasty crepe.
+ 
+MND +24%
+
+Symbol of Faith
+A statue placed within the Con Cave.
+Screw diplomacy, just force mysterious items on them. That's how a true
+savior of the world acts. Reimu and Sanae could learn from him... maybe.
+MND +36%
+
+Diva's Apron
+Apron wore by divas who still have ways to go. Cute. Be warned that
+wearing it will make people point fingers at you quite often.
+ 
+MND +48%
+
+Jagged Leaves
+An item that increases agility by 1 when used. A valuable item in a game
+system where agility is the difference between life and death. They tend
+to be camouflaged by other green things like grass, and are easily missed.
+SPD +12%
+
+Booster v0.8
+A booster that lets you go higher when you press jump while midair. If you
+fall from the ledge and talk to the professor, you get this normal version
+and bad things will happen later. At least its easier to master than v2.0.
+SPD +24%
+
+Pale Wing Thruster
+Thrusters equipped by Space Fighters to combat aliens. Stronger than ground
+soldiers in almost all situations, so it got nerfed in 3P. Rapiers' power
+and range were reduced to 2/3rd, yet Master Rapier is still a top weapon.
+SPD +36%
+
+Full Custom
+A chip that instantly fills the action gauge to max. It's not as broken
+in 2 when one can use multiple copies of normal chips, but now it really
+feels that in 2 there are more broken things than just Prism Combo.
+SPD +48%
+
+Chargin' Targe
+A shield that halves fire damage and enables charging attacks. It's useful
+but it's hard to discard the stickybomb launcher. Practice with the grenade
+launcher if you want to use this, or forget it if you have Medic Uber on.
+FIR +50
+
+LOVE Machine 3322
+A special machine whose effect changes depending on the combination of
+its 4 IC chips. With a 3-3-2-2 combo, fire damage is completely negated.
+Still, against that Nurse guy, even with this you're not totally safe.
+FIR +100
+
+Heater Muffler
+A treasure that reduces damage from ice-elemental field magic by half.
+Beginners neglect magic power, so minmaxing yours and spamming field
+magic can kill them wherever they move. Though it tends to piss them off.
+CLD +50
+
+Lv70 Lover Snapper's Scale
+"If you really love her, catch a 70cm one without trading. Otherwise, too
+bad." There have been reports of filling up the shipping box without a
+single one above 60cm. The tears make your cold resistance increase.
+CLD +100
+
+Spellbook - High Hurricane
+Character exclusive spellbook containing the best wind magic. Not learnable
+by levelling; you have to find it to be able to use it. Instead of buffing
+someone, they should've done something about Yuki's chest armor sprites.
+WND +50
+
+Card [Ruler of Heavens]
+With HP on the same level as attackers and unlimited range 2P attack at no
+cost, it's the best monster amongst them all. 3 copies is standard unless
+rules forbid it. In DS version its HP is reduced by 1, yet it remains uber.
+WND +100
+
+Rosebush Robe
+A strong lightweight equipment found in the Dark World. One can still
+remember how scary the place is, and how strong the Death Knights are.
+ 
+NTR +50
+
+Green Dream
+An accessory obtained by collecting tree sap after Robo spent 400 years
+transforming a desert to a forest. The scene where this item is used
+to console a friend is, in my opinion, one of the best scenes ever.
+NTR +100
+
+Stone of Hades
+To enter the lowest floor of Plane of Death, these stones are required to
+bind one's souls with their body. Post-game, collecting 30 will get you
+the best equipment and character by far, possibly just for postgame.
+MYS +50
+
+Star World Bracelet
+Bracelet that reduces mystic damage by half. You should collect all the
+chests with this item to counteract Galaxian Explosion. Even without that,
+there are still many situations where mystic resistance is handy.
+MYS +100
+
+Goriki's Charm
+A spiritual art that negates some damage from enemies. This becomes very
+useful in the second half of the game, when your healing may not be enough
+to catch up with the damage. It really makes the game quite boring though.
+SPI +50
+
+Intama
+A solemnly shining orb that is said to be a robot's soul. The catalyst for
+the miraculous restoration of Musashi's broken body for the final battle,
+after finally arriving at Hanzou after the sacrifice of many allies.
+SPI +100
+
+Shackles
+Shackles that you might think are worn by zombies. A version update nerfed
+its reason to exist by preventing mass-equipping multiples of it, but it
+was resurrected after another update added cheap and strong reforges to it.
+DRK +50
+
+Dark Magic Grimoire
+A proof of one somehow linking up with 100 friends. Making that a condition
+for this item, certain dungeons and certain allies was plain cruel. And the
+bug in first releases that wiped your friends list... Many tears were shed.
+DRK +100
+
+Lucky Horseshoe
+Accessory that negates damage of falling from high places. Falling from up
+to 50 feet will not do a single point of damage normally, yet 1 inch more
+results in grievous damage. Definitely equip this to prevent accidents.
+PHY +50
+
+Button of Aegis
+Increases HP by 100, gives type advantage against White B and Black B, and
+negates weaknesses. Combine this with Senna for an unbreakable wall, but
+She's strong enough already, so you may want to give it to others.
+PHY +100
+
+Poison Resistance Ring
+A ring that decreases poison damage to 1/3, and radiation damage to 2/5.
+Without this, radiation items can permanently change parameters,
+or cause freakish mutations suddenly. Try to get this before mid-game.
+PSN +50
+
+Nitroglycerin
+An item that lifts Paralysis from one ally. Can be used repeatedly. If you
+get it too late you might have deaths, and killing the shopkeeper to get
+this results in other items becoming unobtainable. Somewhat troubling.
+PAR +50
+
+Talaria
+A pair of shoes that enable the wearer to float in air. Those who try it
+on right after finding it tend to hit themselves in the head.
+ 
+HVY +50
+
+Steadfast Ring
+A ring that decreases knockback from damage. The game has an excellent
+system that offers good customization and collecting fun, but it's not
+present in other titles. Quite a shame.
+SHK +50
+
+Two-Face's Coin
+A two-faced coin that allows one to dictate their own fortune.
+It's scarred on one side.
+ 
+TRR +50
+
+Yamabiko Necklace
+When you're Silenced and can no longer speak, this necklace somehow lets
+you hear Yamabiko, thereby restoring your speech. Sometimes it can make
+you hear things too. Kind of scary.
+SIL +50
+
+Courtesan's Sorrow
+An item that inflicts instant death on the opposition.
+Very useful for killing those high-endurance mobs in the final floor.
+Can't be bought after 7th floor, so hoard them when you can.
+DTH +50
+
+Kazu's Amulet
+A charm that Kazu's mother asks you to hand over to her son guarding the
+watchhouse. A consumable that uses special radio waves to repel encounters
+but given when you get it, you'll hesitate when using it, in many ways.
+DBF +50
+
+Bludgeon
+A bludgeon created from the trunk of the Great Tree. Might have some
+mysterious power within. The girls thought it too heavy, so they scraped
+at it until it was thin enough to work as a staff. Poor bludgeon.
+ATK/DEF +10% PHY +12 SHK +12
+
+Piche's Bauble
+A key item that can be obtained from the very beginning of the game.
+An item that reminds you of a kind prince and a pitiable maiden.
+The first boss's reaction to this item is quite sad.
+MAG/MND +8% NTR +20 TRR +16
+
+Light Crystal
+Gems that was originally searched for to cure the plague, but as he
+enters the Tower of Illusions, he will turn evil. No matter what you do,
+there's no escaping it. Poor guy.
+HP +10% MND +10% DRK +25 DTH +20
+
+Purple Dragon Crystal
+A crystal that's large enough to grip, and shines with rainbow colors when
+raised. Obtaining it allows one to transform into a dragon, but it's
+worrisome whether that's really alright with this world's settings.
+All Stats +8%
+
+Super-Hard Rye Bread
+Leave a Rye Bread in your room for a long time, and you get this. For
+whatever reason, using the item deals skills-like damage to a large area.
+Thus, lots of bread tend to get left all over her house. What a witch.
+ATK/MAG +16% ACC +10 PSN +20
+
+Sirloin
+A high quality meat that, when tossed, can sometimes convince foe monsters
+to join your side. Makes your own monsters more loyal to you too.
+ 
+HP +24% DEF/MND +8% PAR +20
+
+Uniform of Exorcism
+The winter uniform of the demon hunter. Due to magic inherited down from
+generations of exorcists, it has powerful defenses despite what its
+appearance may lead you to believe.
+DEF/MND +20% EVA +10 MYS/SPI/DRK +24
+
+Glow Crystal
+When used in tempering, it gives the "Nymph of Dawn" power to weapons.
+Weapons imbued with Nymph of Dawn requires less energy to increase
+essence levels, which is vitally important to weapon tempering in general.
+HP +10% MAG/MND +20% FIR/CLD/WND/NTR+24
+
+Bone Stake
+A completely featureless weapon. Quite dangerous. If one forgets to buy
+it at the beginning, it won't be obtained until much later, after one
+completes the Faerie Palace.
+TP +1 SPD +20% ACC/EVA +8 SHK/TRR/SIL +20
+
+Blade Cusinart
+A disastrous blade that shreds enemies to pieces. With its high-speed
+revolving tip, an innumerable amount of meat for cooking was cut by it.
+This terrifying power is the loyal ally of today's housewives.
+MP +1 ATK +24% DEF/MAG/MND/SPD +6% All Affinities +12
+
+Flipskirt Dagger
+A weapon that increases both attack and magic. It's the strongest dagger
+in the original, but few characters use both stats, and in Magnum it's
+it's completely outclassed by the Ultra Sword. The poor thing.
+ATK +24% MAG +20% SPD +10% DBF +20
+
+Ultrafast Granite Keystone
+Just place it, and it will emit a special field that totally draws out the
+potential of anything and make it much more awesome and stuff. It involves
+so much breakthrough technology that everything about it is a mystery.
+All Stats +12% ACC/EVA +8 All Resistances +12
+
+Luster Candy
+A candy that boosts all stats at once, so named because everyone lusts
+after it, but you can-die before you ever see one. A skill that took the
+buffing role from Makakaja, but you can expect greater things from now on.
+HP +32% ATK/DEF +24%  ACC/EVA +16
+
+Getitup V
+A medicine that makes a certain part of your body extremely healthy.
+It seems like something vampires drink when they want to show their true
+form, but this kind of true form is desired only by that vampire anyway.
+TP +2 All Stats +20%
+
+Water Cutting Sword
+A weapon effective against aquatic enemies. It's so important that one
+must obtain it before 20F, no matter what the cost is. Basically it's all
+those Gyazaas' fault. Because of this, Gyazaas are hugely nerfed in nequel.
+HP/ATK/MAG +20% CLD +60 PAR/SIL +20
+
+Hero's Medal
+A medal that heroes of the world are allowed to carry. It has bronze,
+silver and gold versions. The antag having a Gold one makes one wonder what
+kind of hijinks he was up to when he was younger.
+MP +1 ATK/MAG +12% MND +40% FIR/PHY +30
+
+Happy Hat
+How one uses lucky equipment. An item that recovers MP by walking in a
+game where MP recovery is scarce. Since MP doesn't really go up in this
+game, even 1 MP remains important, adding to this equipment's usefulness.
+TRR/SIL/DTH/DBF +10 Recover 1 MP if at the front at end of battle
+
+Big Bang Waganizer
+Special level 4 equipment that uses a lot of Battery to clear the screen.
+A useful technique in a game where the player lacks much means to remove
+enemies, but the amount of Battery expended for this is quite overcharged.
+MAG +30% SPD +16% FIR/WND/SPI/DRK +32
+
+Scouter
+A gadget that measures your opponent's battle power. It always does its
+job perfectly, yet it constantly gets accused of not working correctly
+and gets broken to pieces as a result. The poor thing.
+MP +1 TP +1 +10% damage when targeting the enemy's weakness
+
+Toadstoolshed
+A most valuable fruit that increases all of a pet's stats. "I've heard of
+it but I've never seen it", is what most say of it. Combining a Spiny Seed
+with a neutral colour seed results in a small chance of getting one.
+All Affinities +24 All Resistances +12
+
+Demon Core
+A chunk of plutonium that was used in the prototype atomic bomb after all
+kinds of experiments. So named after it killed two scientists after going
+critical in experiments. But really, the methodology was like a bad joke.
+HP/MAG +24% TRR/SIL/DTH/DBF +20
+
+Pride
+Head parts that can emit a super 77-power beam. It can only hold one shot,
+but if carefully used, it can be used to snipe tough enemy leaders with its
+critically high damage. Gets you through the worst situations late-game.
+ATK +48% MND +24% FIR +48 SHK +24
+
+Damascus Dread Shield
+The strongest shield created from the strongest material, Damascus. Get 32
+Damascus Casserole Shields by 32 playthroughs, or spend about 300 wooden
+shields making it from scratch. For me, I think 32 playthroughs is quicker.
+DEF +32% MND +30% EVA +12 PHY +30
+
+T-45d Power Armor
+Power Armor developed by America for defending Alaska in the Sino-American
+War. Lost some of its defensive abilities from the 200 years, but Capital
+Wasteland still regards it as a symbol of its previously powerful culture.
+DEF +30% ATK/MAG/MND +16% FIR/CLD/WND/PHY +24
+
+Tisiphone Edge
+A weapon that can hit up to seven times with its unleash, Vengeance.
+With equipment that increase critical to 100% it can do really high damage,
+but with those equipment, Sol Blade actually has better average damage.
+ATK +16% MAG +40% SPD +24% WND/MYS+40
+
+Forbidden Tablet
+A tablet containing forbidden magic. Even amongst hardcore gamers, tales
+of obtaining one is rare. A nightmarish difficult item to obtain.  Sadly,
+their practical worth doesn't make up for the difficulty of obtaining one.
+MP+1 MAG +56% MND +26% MYS/SPI/DRK +40
+
+The Arch
+It is shaped like a bow, but the frame part is actually a rapidly spinning
+buzz-saw-like blade of light. With a brilliant white glow, she's truly a
+work of art. Not a seam on her.
+MP +1 TP +1 HP +32% SPD +24% ACC/EVA +24
+
+Lambda Driver
+A system that converts emotion and willpower into physical energy.
+An important mechanism that is instrumental in that punch scene
+that even got used in that robot crossover game.
+All Stats +20% All Affinities +20
+
+Portable Oscillation Cannon
+Powerful armament equipped by the Kazu'uchi Tsurugi 00-Dragoon Armor.
+Strong enough that a direct hit destroys a Shin'uchi Tsurugi. With stealth
+as well, it marks the end of the era of the Shin'uchi "Samurai" caste.
+ATK/MAG +50%
+
+Century's End Jacket
+Jacket with the aura of the end of the century. Females wear these to look
+wild and sexy. A definite must for those with large chests.
+ 
+TP +2 HP/MND +36% DEF +24% EVA +20
+
+Glaive of Pain
+An easy to use weapon with no special abilities, but extremely high power.
+However, it has no disenchant resistance, so without due care, it becomes
+no stronger than store-bought weapons. Use disenchant resist armor with it.
+ATK +76% DRK +32
+
+Asura Blade
+A truly ultimate weapon that has the highest attack, doesn't decay, and
+hits 1-3 times per attack. The protagonist isn't actually good enough to
+make use of it. Let Ryu handle attacking, and have the protag use items.
+ATK +40% SPD +30% ACC +16
+
+Wallbreaker Armband
+A huge help and drag in the extra dungeon. Move diagonally at
+corners to enter walls. 10 damage is taken every turn within the wall, but
+it's nothing compared to the foes. This + Sense is a guaranteed clear.
+SPD +56% ACC +40 EVA +20
+
+Energy Pack
+Obtained by delivering the capsules to Dr. Matsushita. Despite its
+simple name, it actually fully heals everyone's HP and BP. BP is used for
+pretty much all actions, making BP recovery a veritable lifeline.
+MP +1 TP +3 HP +50% DEF/MND +20%
+
+Drum
+...Push push! Push those drums! Ain't it nostalgic!? Actually though, in
+that tower, this is both mandatory and kind of annoying. If you touch
+the wrong chests, those drums will definitely give you hell.
+TP +4 DEF/MND +48% FIR/WND/PHY +32
+
+Regenerador's Heart
+The heart of everyone's favourite idol monster. It's actually not a
+heart, but the parasite core within the body. Their first scene, the map
+structure and their "cuteness" made quite the impact on most players.
+HP +128% MYS/DRK +50 PSN/PAR/TRR +50
+
+The Bee
+The most powerful of Amplifier Shields, which gives "Amp Damage" bonuses
+when the shield is undamaged. Unlike other Amp Shields, it has 0 amp shot
+drain. A really obvious game-breaker, but outdated by the 3rd playthrough.
+HP/DEF/MND +20%  +12% damage when at full HP
+
+Star of Elendil
+A shining gemstone that is the symbol of the status of Arnor throne.
+Its starlight brightens all around it.
+ 
+All Stats +20% All Affinities +30 All Resistances +15
+
+Blue Saber
+Known as the "Crazy Sword", because one'd have to be crazy to endure
+getting it. Using stat tables to figure out its mods, using poison damage to
+figure out map ranks, people still do research even now. Crazies.
+MP +1 ATK +50% DEF/MAG/MND/SPD +25%
+
+Wash Basin Set
+Perhaps they look like garbage, but complete the whole set and it gives
+all stats +50, which is good enough for even a little into post-game.
+Manipulating the RNG to get a lot of these early makes the game boring.
+ATK/DEF/MAG/MND/SPD +50%
+
+Meteor Drive
+The best engine, obtainable mid-game, dropped rarely by Speed King. It
+makes the rest of the game easy, but Speed King is tough and the drop rate
+is awful.
+DEF/MND +24% SPD +72% EVA +12 WND +64 HVY +32
+
+Olzhas Shamshir
+An illusionary sword. It's even stronger than the STR+28801 Sun Sword,
+but you can't get it without Kettai in your party. Since Kettai is a late
+bloomer, having Kettai wielding this sword is quite a sight to behold.
+ATK +64% DEF +48% FIR/MYS +48
+
+War Mask of the Butcher
+The mask of the commander of several tribes, united under the "Legion"
+name. If you think human bosses in the series are all fodder, this
+guy will prove you wrong. Even NCR would have problems with him.
+ATK/DEF/MND +72% TRR/SIL/DTH/DBF +24
+
+Divine Barrier
+A property that reduces all damage. Angels and Demons tend to have this.
+Higher Demons tend to have very strong Divine Barriers that make them
+essentially invulnerable, so make sure you have Exorcism weapons for them.
+DEF/MND +88% FIR/CLD/WND/NTR +40
+
+Lilium's Panties
+The panties of the "324KB Death God." No human alive could win against
+that thing one-on-one... or so you would think, but apparently such people
+do actually exist. The world sure is big.
+MP +2 TP +2 MAG +50% MND/SPD +80% ACC/EVA +20
+
+Megasphere
+A dream-like item that instantly increases health and armor to 200%. If you
+see this in end-game, you can bet that all hell will be breaking loose.
+Even with both maxed out to 200%, you can and will still die in an instant.
+HP +160% DEF/MND +32% HP Recovery Rate +2
+
+Costume - Ninja Lord
+The last of the thief progression. Has the highest speed, strong attacks and
+regeneration. Although the game suggests character costumes, thanks to the
+difficulty and growth rates, only this and last boss's costume are viable.
+ATK/MAG +20% SPD +120% EVA +25 DTH +40
+
+Grand Master Breaker Title
+The proof of the being strongest Riskbreaker who conquered the dark city.
+The score requirement is tough; getting all the other titles is even tougher,
+especially the ones which involve hunting dragons and phantoms.
+TP +3 All Stats +50% All Affinities +40 All Resistances +24
+
+Astral Dominae
+The highest artifact hidden in the heart of new planet. The entire
+universe is recorded in it. An event which led to it being found and fought
+over by several groups was controversial due to its worldview changing.
+MAG +100% MND +66% MP Recovery Rate +1 SPI/DRK +50
+
+Cinderforge Sword
+Legendary katana created in the 7th century, held by the sage of the dead.
+The strongest sword normally, but the sword character has fixed equips,
+and others get a serious JP penalty using it, so it's not really used much.
+ATK +120% DEF +80% PHY +60 HVY/DBF +30
+
+Holy Sword Gran Centurio
+A giant holy sword that can only be used by a certain royal family.
+It's as big and heavy as a human, but to the royal family it is light as a
+feather. It'll cut you down whether you come close or not.
+ATK/MAG +64% SPD +100% MYS/SPI/DRK +48 HP Recovery Rate +2
+
+Ame-no-Murakumo
+One of the three sacred treasures. Found in Yamata-no-Orochi's tail, and
+also called the Kusanagi. After Susanoo offered it to Amaterasu, it passed
+to the hand of Ninigi, but with the demise of Taira it sunk to the ocean.
+All Stats +160%
+
+Compact Arm
+Also known as Salmon Eggs, due to its bullets. SR+3 and H+3, and feared
+due to playing dead then striking fast with rapid-fire and homing bullets.
+Great at close-mid ranges, and a serious force with the Homing Eye.
+HP +44% MAG +88% SPD +66% ACC +24
+
+Flamelong Sword
+A sword needed to create the powerful Lightlong Sword. It only has a low
+chance to drop from the event battle after clearing the Save Point-less
+Barrier Dungeon, and it's lost forever after a certain point. Annoying.
+MP +2 ATK +88% FIR +80 FIR Damage dealt +10%
+
+Angel Ring
+A head equipment to die for, so much that you want to keep it on for life.
+You need it to enter that Heaven-like place you'll never want to leave, and
+it can't be removed until after. And it still remains at 1 DEF.
+DEF +1% MND +128% WND +100 PAR/SHK/TRR +60
+
+Angelic Armor
+An armor that allows you to fly for a few seconds after a jump. It
+increases your movement range by a lot, but the spawn frequency and hitbox
+generation of enemies is so fast, "accidents" tend to strip it off quickly.
+DEF +88% MND/SPD +44% SPI/DRK/PHY +44
+
+Cyber Elf - Grandie
+The best effect in all of the Cyber Elves, doubling Zero's vitality. But it
+and all other Elves have a mission points penalty after use, so no one uses
+it. And apparently, the Elf dies after using it too. What a bad aftertaste.
+HP +240% HP Recovery Rate +1
+
+Lenderbaffe's Dragon Scale
+Scale of a dragon faster than even "that". Good for defiling princesses
+with. Blowing up the Church of Memories with Inspire is a standard by now.
+
+ATK/DEF/MAG/MND +40% SPD +80%
+
+AGC Warhead
+Officially the Anti-Generator Chemical Warhead. A thermonuclear warhead
+that was used to destroy mankind's greatest enemy, the Accumulated
+Crystal Form. Of course, Gensokyo doesn't have the facilities to use it.
+HP/MAG +102%
+
+The Katana of Anubis
+It's base power is low, but it boasts a miraculous +4 number of attacks.
+Its leans more to mages than warriors, but with Anti-Teleport, Anti-Sense
+and Chaos affinity, it messes with mages' situation controlling skills.
+ATK/SPD +102%
+
+Cobra Sniper Rifle
+Blue unique sniper rifles dropped -sometimes- by DLC-only enemies have a
+0.88% chance to be transformed into a Cobra type. Because of the chance of
+it dropping, it can make any player weep in desperation from farming it.
+ATK/MAG +88% MND +48% ACC +48 EVA +24
+
+HEV Suit
+A hazard suit with high protection. Its effectiveness increases even more
+when a mustache'd physicist wears it. Goes especially well with crowbars,
+boasting otherworldly monster and special forces-dispatching powers.
+DEF +144% All Affinities +24 All Resistances +24
+
+Star Pendant
+An equipment for the body which boasts the highest defense, and gives
+high resistances against Fire, Freeze, Flash and Paralysis. It's a rare drop,
+of course. Everyone can equip it, which is both a blessing and a curse.
+MND +144% FIR/CLD/WND +60 PAR/SHK +60
+
+Genji Glove
+It was equipped by Elmdore, who appears in Limberry Castle. The Genji
+Armor set only shows up this one time. Although the steal rate displays as
+0%, the display doesn't count decimals, so its really just a low % chance.
+ATK/MND/SPD +128%  Occasionally deals double damage
+
+Zeus' Armor
+The strongest armor that can be worn. Found near a port at the start with
+no explanation. With this and the 220mm Gaia, they must like to do this to
+their best equips. It doesn't guarantee wins from midgame onwards though.
+HP/DEF/MAG +128%  Ocasionally nulls damage taken
+
+Shuttle Body
+The strongest equipment, made from 2 special protectors given to you by an
+your allies near death. Has high defense and resists all ailments.
+Couldn't they do something about the 'Give it to the Hag' message, though?
+DEF/MND +100% All Resistances +56
+
+Smasher "Mjolnir"
+A lightning warhammer made for the famous blonde-haired hero. Often
+written as "Mjollner," but "Mjolnir" is from the source. Hard-to-pronounce
+divine weapon that summons thunder and returns to the user when thrown.
+MP +2 TP +8 All Stats +72% WND +150 WND Damage dealt +10%
+
+Great Question's Mask
+A mask from an event that no one cares about, gotten by beating a boss
+at the top of an annoying tower no one cares about. It seems like a
+joke item, but its stats are great, and the boost to Papillon form is huge.
+All Stats +100%
+
+Chinchirorin Custom Dice
+A dice with its dots carved by a t-bone from a steak, and painted red with
+blood such that all sides show "1" only. If you point out that dried blood
+should be black, then you should learn a little something called "tact."
+HP/ATK/DEF +128% TRR/SIL +40 HP Recovery Rate +2
+
+Nodachi "Kotetsu"
+The main weapon of Seishuu Uemonnojou Muramasa the Third. The original
+form of the Nodachi with all 7 "Eggs" broken by Ginseigou. Restored,
+it gained Ginseigou's gravity control, and a bit of Chachamaru's power.
+ATK +188% DEF/SPD +48% PAR/SHK/HVY/TRR/DTH +32
+
+Quartz Charm
+Your reward for defeating the secret boss. Increases offense and defense by
+50%, and gives immunity to Instant Death. The inconsistency in his dialogue
+before and during battle is kinda funny. His crystals are oddly unpopular.
+Damage dealt +20% Damage taken -20% DTH +100
+
+Large Macaron Collider
+This grand device was built in order to study the basis of all in the world
+AKA the cookie. Various phenomena were observed by colliding ultra high
+speed macarons, and the energy generated is used to create more cookies.
+MP +6 TP +12 HP Rec. Rate +2 MP Rec. Rate +1 All Affinities +40
+
+Silver Cat Statue
+A Piece of Heart, basically. Collecting them not only increases your
+survivability, but getting them all is also needed for the true ending.
+Makes it a pain when some of them are behind points of no return.
+HP +160%
+
+Vitality Seed
+Increases the selected character's vitality stat by 1-3 points. Use it
+when vitality is at 255 to make it buffer overflow to 0, causing HP to
+rise like crazy. Otherwise, it's just a trap that lowers your HP growth.
+HP +240%
+
+Health Tablets
+These folks used to heal injuries from zombie bites by munching on herbs,
+but they've moved on to herb tablets instead. To prevent the spread of the
+C-Virus, they should probably research herbs instead of doing blood tests.
+HP +320%
+
+Ambrosia
+A miraculous artifact that increases an ally's max DME by 6,000. Most
+suited for mages with low DME for a survivability boost, though two
+Bracelets of Zoe at each level-up is enough to cap every character's DME.
+HP +400%
+
+Sword of Nex
+A sword equippable by Warriors. Quite powerful for when you can get it,
+and it even has accuracy+10. Very useful indeed.
+ 
+ATK +160%
+
+Super Sledge
+Known as the better Sledgehammer. Best damage per hit in the game, and
+does respectable damage to armored foes at endgame. Can be gotten early
+by going north, but you likely won't meet the STR and skill reqs then.
+ATK +240%
+
+Burst Laser Mark II
+Spaceship weapon that fires 3 lasers at 1 damage each. Boasts strong cost
+performance with only 2 power required and a decent charge time for 3
+lasers. A strong weapon said to be the most efficient of all available.
+ATK +320%
+
+Holy Sword Virdalik
+The strongest physical weapon available to Holy Knights and Mage Knights.
+However, it may get lost via inheritance, and by the latter half of the
+game, character base stats are so high that weapons don't really matter.
+ATK +400%
+
+Buzz Buzz's Shell
+Shell of a hero who traveled back in time to inform the Chosen One of the
+coming crisis before meeting an honorable death. May grant latent psychic
+powers and is likely pretty solid given the damage done via a mere tackle.
+DEF +160%
+
+Arhat Vajra
+Best arm equipped dagger. It boasts good stats and hit counts,
+but you can only find it from Cheap Tricks deep in the last dungeon at a
+low drop rate. Get it when you're doing your third playthrough for that MA.
+DEF +240%
+
+Outlaw's Bandanna
+Head equip of the Outlaw series, wearable at Lv50 onwards. You might get
+heckled for wearing something that looks like it came from Uniqlo, but
+it was actually very good with Lv80-worthy DEF and many jobs can equip it.
+DEF +320%
+
+Barrier Glove
+Arm equip gotten at endgame. It doesn't provide much DEF, but having it
+equipped on anyone automatically removes 500 BP at the start of battle and
+reduces damage taken for the first turn. Useful for offense and defense.
+DEF +400%
+
+Nanna
+An ice bow boasting a Mesopotamian goddess's name. Good against flyers
+and the only bow with +ATK. You can get all the jewels from the last boss
+just by keeping away and firing, but its not great against multiple foes.
+MAG +160%
+
+White Soul Music Sheet
+A music sheet needed to learn the final song. "Terrible stats"
+for an endgame skill, but needed to trigger the special victory condition
+at the final battle. Sakura's tearful screaming cut-in was wonderful.
+MAG +240%
+
+Rhapsody in Rose
+One of big sis Lightning's costumes. Very showy and garish - Yukari or
+Hijiri should try wearing it. A color change makes it more tasteful though.
+Default 100 ATB, Energized status and one locked ability - useful indeed.
+MAG +320%
+
+Ether Doubler
+Accessory that doubles EP cost and effectiveness. A trap item of sorts,
+as it's relatively useless at the start when Ether skills aren't great,
+and stores stop selling them by mid-game when they become worthwhile.
+MAG +400%
+
+Kigny Seed
+An item thrown by the strongest radish monster, also known as "Fuck
+Radishes." Puts you in a Berserk state for 30 turns. Appears around 90F,
+where Berserk is a death sentence. In 4 and below, just don't get close.
+MND +160%
+
+Princess's ???
+An item receivable under differing situations, but mostly from checking
+Yoyo's bed. Rush and the merchant makes the ??? sound like an amulet, but
+that doesn't sound like something she'd have. Also heals full party HP.
+MND +240%
+
+Helix Fossil
+A device bestowed by the gods to bless the holder with the voices of
+100,000 otherworldly guests. Entrust it to your brow to learn about life,
+the universe, and everything... but it doesn't ensure a smooth playthrough.
+MND +320%
+
+Schwarzschild Horizon
+A kind of barrier that might actually protect Maud more than you. Maybe.
+It definitely has a high DEF stat. Maybe. The surface of a Schwarzschild
+Radius may be known as this, so it's likely impossible to penetrate. Maybe.
+MND +400%
+
+Zenithian's Wing
+Wing from a Zenithian causing a stir at a tall tree. Keep her in your
+wagon, or else she leaves and gives you a weaker dragon than the one in 6.
+High chances of useful actions makes her better than the Thwackdemon.
+SPD +160%
+
+Infringer
+The first serious Tsurugi submitted by Tomoi for the yearly Armor Battle
+Tournament sponsored by Tamura and co. Complete with a center-def double
+deck yootz steel frame and a torque splitter belt drive. Probably fast.
+SPD +240%
+
+Kicker Skeleton's Soul
+The famous soul that allows you to perform a downward kick with Down+A
+during a double-jump. Acquiring this turns you abnormal. You can't do kicks
+as quickly in a normal playthrough, but using it still speeds things up.
+SPD +320%
+
+Quick Boost
+A NEXT-generation mechanism that uses particles to give an instant
+speed boost, matching speeds that their forbearers needed all their energy
+to reach. Use sparingly - the particles are bad for the skin and ecosystem.
+SPD +400%
+
+Sleep DX
+A human-only tool that puts an enemy to sleep. Insanely powerful as no
+enemy or boss, including the last boss, has 100% sleep resist except for
+machine enemies. But in that case, why does it work on AIs?
+MND +100% PSN/PAR +50
+
+Blue Dragon Wok
+The Wok's ultimate form. Who knows what exactly Blue Dragons have to do
+with woks, but it sure looks weird. It's a surprisingly strong weapon with
+no frills, but it doesn't get much use as its wielder is weak and ugly.
+ATK +100% PSN/DBF +50
+
+Time Cap
+A key item which, when equipped, allows you to deal effective damage to
+the last boss. You'd think there'd be other ways, but there isn't. The item
+allows you to stop time and perform actions without reply for 5 turns.
+HP+100% PAR/SHK +50
+
+Nerve Shells
+Bullet used by guns. Deals damage and inflicts Sleep. Given the Almighty
+element to deal DEF-ignoring damage. Truly heinous. Same effect as Magic
+Shells, but more famous due to how early and easily you can get them.
+SPD +100%, HVY/SIL +50
+
+Sky Armor
+Armor forgable from the scales dropped by the strongest random enemy, Sky
+Dragon. ...Or it was supposed to be, but all armor shops are unavailable
+when they appear. You have to farm the armor itself off Dragon Masters.
+DEF +100% HVY/DTH +50
+
+Hyakutaro's Chi Manual
+A book with the teachings of the Chi master who appears mid-game as a
+a hostage. He may seem strong with invincibility and homing Hadoukens, but
+they only do 1 bullet's damage each. Still good to have him around, mind.
+ATK +100% SHK/TRR +50
+
+Paladin's Necklace
+A necklace that reflects all spells. Win Antokiba's monthly tournament to
+get it. Wearing it uncurses all equips and gives constant Survey status,
+displaying all visible enemy's stats and making next playthroughs easier.
+MAG +100% TRR/DBF +50
+
+Nunchucks of Sokuromoto
+The beloved nunchucks of the legendary Bunroku, a compassionate ninja with
+a heartbreaking past. Allows mastery over ice and holds enough power to
+pierce Professor Chaos's titanium alloy cloak. Let's fighting love...
+SPD +100% SIL/DTH +50
+
+Portable Makoto
+The guy returns once again in a portable size! Caress him tenderly, put
+him in your bag, grow him in a flowerpot, or even hug him while on top of
+a boat! Find your own way to give him the love only you can provide.
+HP +144% PSN/PAR/HVY/SHK +50
+
+Meld Technique Manual
+A book with teachings that unlocks the power to make full use of items,
+allowing you the puzzling ability to equip armor, potions, and so on all
+over yourself. Use this ability to take down Chaos.
+ATK +144% TRR/SIL/DTH/DBF +50
+
+Earth Armor
+Valuable armor which you get several of from chests. Less DEF than other
+body gear like Silver Armor, but being wearable by light and heavy armor
+classes and status immunity (...supposedly) makes it very useful still.
+DEF +172% All Resistances +50
+
+Ignigarde
+Can be gotten by giving exchanging a boss drop with someone else, or by
+beating him. Can be traded for Cyclone Shoes. Both are sold in the giants'
+village, so you can get both easily while doing a 3 ending quests run.
+DEF +100% FIR/CLD +172
+
+Gaia Beam
+One of the six infamously rare items in EB, and an ultimate weapon.
+Not too useful as its user does more damage by using items, but the joy of
+getting a rare ultimate weapon drop is always an emotional ride.
+MAG +100% WND/NTR +172
+
+Dhylec
+A blade sealed deep within a certain temple. Can amplify magic power, but
+is normally supressed by prayer beads. As a netherworldlian, it has other
+abilities too. The way it pouts and sleeps if left alone is kind of cute.
+MND +100% MYS/SPI +172
+
+Magnus Club
+A melee divine weapon. Very short range, but has very short charge times,
+activates quickly and a large horizontal AOE. Its hype died down after the
+release, but skill synergy discovered later brought the hype right back.
+ATK +100% DRK/PHY +172
+
+Burned Man's Headwrap
+Bandages worn by the Legion's "Living Legend." The person himself lives up
+to the fear shown towards him by that battle-crazed group. May look light,
+but it gives more DT than power armor made before the apocalypse.
+HP +128% FIR/WND/MYS +144
+
+Anima Crystal
+A rare item that a surprising amount of players miss. Gives large SP Def
+and bonuses when equipped, making its other use as a consumable full heal
+unpalatable, unless you're near-wiped close to the last boss.
+MAG +128% CLD/NTR/PHY +144
+
+Windspun Armor
+A piece of armor with no weaknesses - highest DEF, wind resist and even
+a speed boost. Its one issue is that only heavy armor classes can wear it.
+Give it to someone in 1 and he'll come with it in 2 after importing data.
+DEF +128% WND/SPI/DRK +144
+
+Hirami Lemon
+A fruit defying its divine providence by holding a secret unusual effect -
+it can suppress the power of the Archfiend. Probably doesn't work on an
+awakened one, though. Supposedly sour and thankfully grows everywhere.
+MND +128% NTR/DRK/PHY +144
+
+Romancing Stone
+The ultimate Romancing Stone made from combining the four others. Loses
+the effects of the 4 stones, but reduces MP consumption for skills to 0 in
+return. Give it to characters with high-MP skills and watch the havoc.
+MAG +144% FIR/CLD/WND/NTR +128
+
+Younger Brother's Mushrooms
+The mushroom set sold by the younger brother, who was apparently already an
+adult before the harem event. Stuff your dragons with them for big stat
+boosts, but also in the ? stat, sending them down the Black Dragon path.
+MND +144% MYS/SPI/DRK/PHY +128
+
+Seven Stars Sword
+A sword with seven stars engraved in it, a symbol of the cosmic forces in
+Taoism. Said to be able to banish evil and seal demons. It not only shows
+the seven stars, but further three-star constellations and clouds as well.
+All Stats +128% All Affinities +128
+
+Destroy Decomposer
+The highest-output form of the gun-shaped enforcement system.
+This form is meant for drones and to create entry points into buildings.
+For the most part, only other forms are allowed to be used against humans.
+ATK +156% MAG/MND/SPD +64% TRR/SHK +24
+
+Fusion
+The thinner of the swordmaster's swords. This sword's normal attack and
+setup moves make it generally more used, but it just can't get the
+spotlight no matter what - the cutscenes tend to focus on Lumina instead.
+HP +64% ATK +100% SPD +188% WND/PHY +48
+
+More Mysterious Scroll
+An extremely rare scroll from the More Magical Dungeon. It can't be seen
+without things like a Shadow Ring, though you can still pick it up, which
+shows a "Picked up ." message and your item list will have a blank space.
+MAG +188% MND +124% EVA +24 DBF +60
+
+Transforman
+An item that allows you access to all the jobs at the start of a new game.
+Having access to all 90 jobs and their respective skills sounds strong, but
+there are several jobs which need link cabling or quest items first.
+All Stats +80%
+
+Mark2 Lancer Assault Rifle
+Staple assault rifle of the army ...Which makes it sound normal, except for
+the chainsaw where the bayonet should be. As dynamic as it sounds.
+Slicing up stomachs works decently even on Insane, so get chainsawing!
+HP +199% ATK/DEF +124% TRR/DTH +48
+
+Zero-Shift Program
+A program which was essentially made to implant certain things into the
+main heroine. ...Which is what half the main game is about, more or
+less. Zero-Shift is so strong that it changes the game once you get it.
+HP/ATK/MAG +72% SPD/MND +164% EVA +36
+
+Copy Ability "Smash"
+A copy ability acquired by eating the strongest hand. Efficient and useful,
+allowing access to three different kinds of weapons. Also helpful for
+exploration by pounding stakes, cutting strings, etc with just one copy.
+HP/ATK +144% DEF/MND/SPD +72% SHK +64
+
+SwifteRock Hammer
+Hammer forged from SwifteRock. Only hammers and axes should use it
+over DiorWood as the primary material. Full freedom in naming weapons was
+good fun as a kid - just don't look back on it again when you're an adult.
+ATK +256% DEF +120% SHK/DTH +32
+
+Dragon God Sword
+A sword with the power of Thunder God and Wind God, enhanced by an inserted
+Dragon Orb. Besides amplifying the power of the God Swords, it also
+enhances the other six orbs, giving the holder even more abilities to use.
+MAG +244% ATK/MND +64% FIR/CLD/WND/NTR/MYS/SPI/DRK +32
+
+Noon Queen
+A miraculous shield that can reduce damage taken during daytime by
+60%. Very strong. It does increase damage taken at night, but most of those
+are instant KOs anyway, and there's no night in the Tunnel of Origins too.
+DEF/MND +144% SPI +100 PSN/DBF +40
+
+Breach Bomb
+A weapon that self-teleports over short distances and ignores shields to
+damage the enemy's systems and create a breach, causing crew suffocation
+deaths. Fire another one when the repair squad arrives for more carnage.
+HP/MAG +176% MP +1 TP +3 EVA +32 DRK +88
+
+D-Ratio 1/4
+Used to denote ability to link with dragons. Original is 1/1, dragon copy
+is 1/2, and a human's highest possible ratio is 1/4. 1/64 and above are
+basically elites. Going for 1/4 means preparing from the first playthrough.
+HP +256%, ATK/DEF/MAG/MND +64%
+
+Robe of Lords
+The best robe. Grants Wind immunity, and more vitally, increases Speed,
+Strength, Spirit and Magic by 1. The only body equip that raises Strength
+and Speed for casters. If you want maxed stats, don't level without these.
+MP +2 MAG +288% SPD +100% WND +128 HVY +60
+
+Noblesse Oblige Cellphone
+Special cellphone with \10b stored in digital credit form. Use it to talk
+with a concierge to spend credits for wishes. Wishes can cause accidents at
+airports or assist murders, but don't go bankrupt before you "save Japan."
+HP +160% TP +2 SPD +144% EVA +20 All Affinities +36 All Resistances +16
+
+Rhododendron Dress
+The dress worn by the world famous brand's top model, who emerged
+victorious in 3 straight Cloth Roads. Tailored with specialities to make
+full use of her combat sense and physical strengths. Pure beauty and brawn.
+MAG +222% HP/ATK/SPD +112% WND/NTR/DRK +64 HP Recovery Rate +1
+
+Ancient Overlord
+The short sword wielded by the king as he fell into madness and started
+slaughtering subjects and countrymen alike. High power, combo hits and
+surprising reach. Only lacking in magic, but still overall the best weapon.
+ATK/SPD +199% DEF/MAG +66% DRK +72 TRR/DTH +40 DBF +20
+
+Demonica
+A futuristic composite device worn by ordinary people during special
+missions. Known as the "Gold Bucket" for its polished and beautiful form.
+Has a learning AI, making itself progressively stronger with each battle.
+DEF +144%, HP/ATK/MAG/MND/SPD +100%
+
+Hub.BAT
+A key item that allows transformation into the ultimate Navi. Gives access
+to four different styles at the same time, and powerful special effects
+as well. Has a large HP penalty attached though. Hard to get in all games.
+MP +2 TP+2 SPD +210% DEF/MND +144% EVA +24 FIR/CLD/WND/NTR +50
+
+Deity Emperor's Uniform
+The white school uniform worn by a student who gained all sorts of powers
+and suddenly proclaimed himself as the "Deity Emperor." Not that he used it
+well - he's easy to beat in battle. Should've used them to fix his complex.
+MAG/MND +200% HP/DEF +150% MYS/SPI/DRK +50 SIL/DBF +25
+
+Hrathnir
+A sword with its own will. Its holder becomes recognized as a legendary
+knight. Casts LORTO with no limits, but its faster to just
+whack them with the sword. The only item with a single non-generic name.
+ATK/DEF +232% MND/SPD +144% WND/PHY +64
+
+Rasklapanje's Parasite
+The leech-like controller inside the body of the lovable mascot.
+Can detach its body parts to attack you even after you destroy its innards,
+and comes in packs. Even if you kill all of one, it just resurrects later.
+HP +322% HP Recovery Rate +2 ATK/DEF/MAG/MND +56% TRR/DTH +24
+
+TNT Paranoia
+A brutal Soldier-only weapon. Fires large amounts of explosives upwards,
+bringing a rain of explosions. Not that strong against a single enemy, but
+great against groups. Almost required to clear the endgame no-tanks areas.
+ATK +300% HP/SPD +132% FIR +50
+
+Excalibolg
+A weapon with a name that was obviously two famous you-know-whats
+mashed together. Looks like a spiked club. Often smashes a human's upper
+body into tiny bits, but no one knows if it's due to the weapon or user.
+HP/ATK/MAG +216% SPI/PHY +64
+
+Fatima
+A computer displayed in human form, embedded in a robot's head. Used to
+eclipse Haro as the highest mobility item, but with its series rarely
+appearing and its own lore retconned, it hasn't been used any more.
+MAG +188% MND/SPD +277% EVA +24 FIR/CLD/WND +40
+
+Philosopher's Stone
+The ultra-rare item with so many depictions finally appears in Gensokyo.
+It may be mercury, a red light, a blue stone, or even an item that casts
+healing magic. Given its name, it must enhance magic power somehow.
+HP +164% MP +2 MAG/MND +278% MYS +64 DBF +32
+
+National Defense Divinity
+Demons summoned from the Imperial Army in WW2. They're more like
+divine or heroic spirits, each one representing a powerful being in eastern
+legend. They have a way with words - some of their lines are very quotable.
+ATK/DEF/MAG/MND +188% CLD/WND/DRK +56
+
+Uruncel Blade
+A dagger that raises ATK and MAG, gives +10% to all stats, gives an extra
+hit per attack, and has a hidden Growth R effect. The more you use it, the
+stronger it gets. Possibly the strongest weapon in the game. Poor Chaos.
+MP +1 TP +2 ATK +278% MAG/SPD +188% PHY +50
+
+Arturos Gem
+A diamond named after the King of the Knights of the Round Table. Gotten
+from an enemy who only appears when you're at low HP in the Iron Maiden.
+Increases damage greatly against pretty much everything. Basically broken.
+All Stats +156% All Affinities +36
+
+Unknowns
+Unmanned suicide weapons created using ancient technology. Devestated the
+land after ending Destroyboy. Proves strength in numbers. The mood created
+by the fade-out and BGM as your mecha gets whittled down was incredible.
+ATK/SPD +312% EVA +20 HVY/SHK/TRR +32
+
+Dark Knight's Armor
+The armor of the poor cactus, who turns into the Dark Knight if you game
+over, or if you beat the game. Its appearance makes it look strong, but
+given how unwieldy his controls are, wearing this may not actually help.
+HP +128% DEF +300% MND +156% MYS/DRK/PHY +72 DTH +36
+
+Zenith Dragon's Heart
+The heart of the "almighty" dragon who gets on the player's nerves in 4 and
+shows how useless he is in 5. Can be (difficultly) gotten by dealing 50k HP
+damage within 30T. May or may not be related to the Alabast Dragon.
+HP/DEF/MAG/MND +199% FIR/WND/SPI +50 All Resistances +20
+
+Rubiss Sword
+The strongest sword with a fitting name for the curtain-closer of the first
+trilogy. Gotten from a secret boss whose conditions are harder to meet than
+the actual boss fight. Casts Thordain and is equippable by all classes.
+MP +2 MAG +250% HP/ATK/MND +200% FIR/CLD/SPI +40 WND +100
+
+Bathus's Claymore
+The sword of the world's strongest man. Unleashes a defenses-ignoring AOE
+every turn. Evadable, so reaching the final floor means crazy EVA training.
+Get Regalias and Ultimas ready for the 4 equally strong bosses ahead too.
+ATK +399% DEF +199% PHY +88 PSN/PAR/TRR +32
+
+Gun del Sol - Infinite
+A solar energy gun with the best battery equipped. A wonderful piece of
+equipment that does what it says on the tin, letting you use the Gun Del
+Sol freely, but it's far from simple to actually get.
+HP +444% MP +2 TP +2 ATK/DEF/MAG/MND/SPD +99% SPI/DRK +99
+
+Destructive Falcon Sword
+A sword created by abusing a famous bug. A crazy weapon that removes the
+curse while keeping the power and even hitting twice per turn. Just don't
+let it revert. Even with it, the endgame is still gonna be tough.
+ATK/SPD +375% DTH +50
+
+Paladin's Shield
+A strong shield, gotten by equipping the Cursed Shield for 256 battles. Can
+teach Ultima, perhaps as a backup if you chose the Ragnarok sword. Can't
+be said to be THE best shield pre-remake thanks to the Evade bug, sadly.
+DEF +450% MND +225% EVA +12 FIR/CLD/SPI/DRK/PHY +70 DBF +50
+
+Andreal Claws
+The strongest claw. As strong as dad's weakest weapons, but some
+monsters can only be recruited using these claws with its high rates. Hard
+to get a second pair, so don't lose the story-mandated ones.
+TP +4 ATK +177% MAG/SPD +277% TRR/SIL +64
+
+Fairy "Navi"
+Hey! Listen! Listen! Watch out! Hey! Heeeey!  ...Your fairy partner who
+hovers around self-explanatory objects and makes an annoying fuss. Whines
+in English in every version. Hated across the land and beyond the seas.
+MP +2 HP/DEF/SPD +166% MND +422% EVA +24 SPI +100 SIL +72
+
+Fanelia
+A powerful weapon described in ancient tomes from the era of the gods. Has
+different stats across games, but it's generally a very strong 1-use item,
+especially in Episode 1 where it turned the final battle into dead rubber.
+MAG +524% HP/MND +128% DRK +100
+
+Muramasa Blade!
+Unquestionably the strongest weapon, far ahead of the others, but now that
+its strength is so famous, its drop rate has been reduced or even removed
+entirely in recent versions. Still the top or near the top when it appears.
+ATK +599% MYS/DRK/PHY +56
+
+Tera Bomb
+Use it to deal incredible amounts of AOE damage. Emphasis on AOE. Using it
+just because you made one and seeing your own party die too is like a rite
+of passage. Give it the Narrow Range trait to make it simply a strong item.
+MAG +344% ATK/SPD +222% FIR +128 SHK +40
+
+WH04HL-KRSW
+A laser rifle which overwhelms with its powerful yet voiceless cries. Its
+stats change with each game, but it's usually a strong secret weapon that
+bzzt-bzzt-bzzt-boom-boom-boom's you towards 100% parts completion.
+All Stats +240%
+
+Crimson Lotus Princess
+The pitiable endgame "* Longsword" that players treat as the booby prize
+while hoping for Ringil. Despite that, 4d5 damage, Chaos and Evil Slayer,
+Sharpness, and Bloodsuck makes it top-tier for 1v1s against named demons.
+HP/ATK +412% MAG/SPD +199% FIR +144 DRK +72 PAR/TRR/DTH +40
+
+Blue Crystal Rod
+A staff symbolizing peace for the kingdom. Also called the Pride of God.
+Nowadays, more people know about it from a reference than its own series.
+Not as great in GBC, where it has many equals and even betters.
+MP +2 MAG +400% HP/DEF/MND +200% CLD +100 PAR/HVY +25
+
+Prism Specs
+The strongest accessory, giving +50% damage to physical and magic attacks.
+...Though the effect doesn't show up in the status screen. Many grade
+schoolers probably went for other accessories because of this discrepancy.
+ATK/MAG +428%
+
+Type-99 Fortified Suit
+A super-skintight pilot suit. The Japan Empire put these to official use
+in 1999. The trainee one even has things stuck in weird spots and can turn
+invisible, reminding you after several hours that this is an 18+ VN.
+TP +3 HP/DEF/MND +300% SHK/TRR/SIL +30
+
+Gran Grimoire
+A "grimoire" with the power to change the world. The magic to change St.
+Ivalice into a parallel world, as well as the whole of the Magic Capital
+Lea Monde is hidden within. Said to be a myth - but one worth dying for.
+MP +4 MAG +600% MND +360% All Affinities +48
+
+Necronomicon
+A forbidden grimoire holding knowledge from the ancients. Reading it might
+throw your sanity points out the window, or saddle you with a 1000-year-old
+proud loli, or do other crazy things. Not good for your mental health.
+TP +6 HP +360% MAG/MND +480% All Ailments +24
+
+Chaos the Darksword
+A demonic sword with a potty mouth that can nullify the Invincibility Field
+that Fiends and the Archfiend possess. Formerly a perverted thief. A must
+for fighting the demon army, but its owner barely gives a damn about it.
+ATK +1680% ACC +32
+
+Fundoshi Dimension Coupler
+A fundoshi with power accrued from "Antimatter Worlds" from all parallel
+dimensions, given form via the potential of all of their living beings. Why
+it's in a fundoshi shape is unknown. At least it's not a female skeleton.
+MP/TP +8 MAG/MND/SPD +720%
+
+King's Reason
+The Reason held by the Demi-Fiend with the King race title, feared as the
+the hardest boss in RPG history. Pity the poor heroes constantly dying to
+him. In fact, they're probably asleep and out of MP against him right now.
+HP +880% ATK/MAG/DEF +560% DRK +240 DBF +100
+
+Parallel Dimension Truth
+A lump of mystery power dropped by the mystery meat triplets in postgame.
+Once imbibed, it grants mysterious power upon the owner. However, if you
+want to give it to another, you'd have to wait for it be puked out. Horror!
+HP +640% ATK +480% DEF +880% MND +400% ACC +39 SHK/DTH/TRR +80
+
+Flower Blade Kikuryusei
+A self-regenerating vibroblade made under orders from the Kyomei emperor
+to fight the Planeriums. Contains lots of hidden tech. The 27 manufactured
+blades were mostly held by Scenario 11 participants. Now, only 3 remain.
+HP/ATK/DEF/MAG +368% SPD+256% PHY +50 DTH +50
+
+Ame-no-Habakiri
+One of Japan's three legendary swords, used to slay the Yamata-no-Orochi.
+Also known as Worochi-no-Aramasa or Futsushimitama-no-Tsurugi.
+ 
+All Stats +400%
+
+Winner's Rags
+The tattered clothing worn by strange people as they train in the depths of
+the dungeon. Emits a distinctly abnormal aura of sorts. It's hard to tell
+if it's supposed to be worn as a cloak or as normal clothes.
+HP/ATK +720% DEF/SPD +540% ACC/EVA +16 PSN/PAR/HVY/SHK +32
+
+Regalia
+Amongst the top-tier accessories forgable with orichalcum and adamantite,
+this one stands out as the best of all. Effects vary with the game, but it
+generally decreases all damage drastically. Even making one is a pain.
+HP +600% All Affinities +172
+
+Slayer Robe
+Armor gotten by defeating that original guy somehow in a hopeless boss fight.
+Only (sometimes) winnable by abusing Ether Doublers and raising stats
+as high as they can go. Fortunately, it's not the best armor in the game.
+ATK/SPD +377% ACC/EVA +24 DRK/PHY +80 TRR +64
+
+Codex of Ultimate Wisdom
+Incorporates all existing knowledge. 4's Avatar drew it from the Underworld
+and caused its collapse. The game often makes you wonder if what you do is
+really okay, and it usually isn't. In this case, you pay for it in 6.
+DEF +400% MAG +240% MND +560% WND/MYS/SPI +88
+
+Power Dragon Scalemail
+The ultimate armor made from the scales of powerful and ancient
+dragons who could crush stars and can murder the final boss as pets.
+HP/ATK/MND +330% DEF +660% FIR/CLD/WND/NTR +100
+MYS/SPI/DRK/PHY +40
+
+Machine God Lucifer
+A techno-organic magical armor created by the Twelve Wise Men of Europa
+as a counter against the Augoeides of angels and devils. Often referred to
+as "Dragon Knight." A last resort only usable by people with dragon affinity.
+All Stats +666% MYS/SPI/DRK/PHY +66
+
+Scourge 
+A sword wielded in the name of punishment. Brings calamity to its foes.
+Has a high chance of draining 16 levels, inflicting petrify, confusion,
+paralysis, dizzy, or death, but it mostly just overkills via pure damage.
+ATK +800% DEF +400% PHY +100
+
+Potion of Life
+The ultimate HP healing medicine. Heals all stat downs and status effects.
+It also heals 5000 HP, but even at max level, HP is not likely to exceed
+1500 or so, and status are usually resisted anyways. Surprisingly useless.
+HP +1280% PSN/PAR/SIL/DTH +128
+
+Platinum Yendorian Card
+A tourist-only artifact. Increases all stats and speed, gives slayer
+effects, and +25 to AC. Also charges valuable staves and wands with nearly
+no risk of breaking. Can make tourists even stronger at range than mages.
+MP/TP +4 HP/ATK/DEF/MAG/SPD +299% MND +600% EVA +20
+
+BFG9000
+A weapon that shoots explosive green plasma with a wide AOE. Takes down
+swarms of enemies well. The plasma is not the only damaging part, so skill
+is needed for minmaxing. Its full name, "Big Fucking Gun," is awesome too.
+ATK/MAG/SPD +480% FIR +120
+
+Ringil
+Strongest weapon for fighters on par with Vorpal. A legendary sword wielded
+by High King Fingolfin to inflict seven unhealable wounds and render the
+Dark Lord lame for eternity. Wonderful attack power and gives +10 to speed.
+MP +4 ATK +360% MND/SPD +560% ACC +32 CLD/MYS +100
+
+Tupsimati
+The ruler's staff, shaped like a horn. Also called the Tablet of Destinies,
+it allows control of fate itself. The few holders of this ultra-rare item
+will defend against all calamities. May make your smiles more wonderful.
+MP +6, HP/DEF/MND +300% MAG +800% MYS/SPI/DRK +99
+
+Majestic Crown of Chaos
+The iron crown atop the head of the Serpent of Chaos, who brings ruin to
+the entire world. Does have great stats, but anti-teleport and eternal
+curse makes it pretty much a sad bragging rights reward for all roles.
+HP/DEF +1080% ATK/MAG +400% ACC +66 DRK +300 DTH +150
+
+Jewel of Judgement
+The eye of the Serpent of Chaos, torn from it during a deathly duel with
+the Unicorn of Order. A magic item with untold power, but only usable by
+masters of The Pattern, which has claimed many adept dimension travelers.
+MP +8 HP +999% MAG +1440% TRR/SIL/DTH/DBF +50
+
+Underworld Hammer "Grond" 
+The great warhammer wielded by the being known as the "Dark Lord." Boasts
+astounding damage and enchantment, slays Evil and *slays* Dragons, but its
+massive weight makes it hard to use. Yep, another bragging rights reward.
+TP +8 HP +999% ATK +999% PSN/PAR/HVY/SHK +50
+
+"The One Ring"
+Three rings for the Elven-kings under the sky, Seven for the Dwarf-lords
+in their halls of stone, Nine for Mortal Men doomed to die. Within all the
+Rings of Power, this is the One Ring to rule them all.
+HP/DEF/MND +999% EVA +40 CLD/WND/NTR +144
+
+Liquid Metal Mind
+An item that allows access to everyone's most desired class, the Liquid
+Metal Slime. So strong that you won't even care about how it works. Resists
+everything and learns the strongest magic and skills. Utterly broken.
+DEF/MND +640% All Affinities +100 All Resistances +48
+
+Will of Gensokyo
+A power that you get for failing and failing until you finally beat up all
+the fakers. It feels insulting for some fakers' drop to be called "Will of
+Gensokyo", but the power is the real thing. Useful in all situations.
+TP +8 All Stats +500% ACC/EVA +16 All Resist +32 HP Recovery +2 MP Recovery +1
+
+True Ame-no-Murakumo
+True Divine Sword that became stronger from absorbing vengeful spirits
+underground. Now both its grip and whiskers have improved... or so it thinks.
+According to Satori, at least.
+All Stats +999%
+
+Dragon God's Power Source
+The origin of the power of the true Dragon God, who travels thousands of
+worlds and created Gensokyo as we know it today. ...Well, a fragment of the
+power anyway. It's still ridiculously strong, so equip it with gratitude.
+All Stats +600% All Affinities +100 All Resistances +50
+
+Fragment of Refined Metal
+Smelt 2 weapons of the same class to get a scrap metal; combine 3 scrap
+metals to get reclaimed metal. Combine 3 of those and you get this. You
+need 3-4 of this to make headgear, though they don't give any bonuses.
+Even so, if you want a hat, the quickest way is to just fork over some cash.
+
+Fragment of Double Steel
+A metal that is effective at refining weapons, armors and accessories.
+When you use Double Steel, the material used immediately before will have
+its effects increased twofold. Handy, but also rare.
+ 
+
+Piece of Alexandrite
+Ore involved in the quest to obtain a Mythic Weapon. 50,000 were needed,
+and since they were usually divided among the party, it was known as the
+"Alexandrite Life Imprisonment" trial. Later updates made them easier to
+get, such that hardcore gamers now "only" take a year to get a Mythic.
+
+Fragment of Mithril
+Mithril means "grey glitter" in Sindarin. It shines like silver,
+but it never tarnishes. It's found in the dwarven mines of Moria.
+It was common during the Third Age, but due to dwarves' over-mining,
+they awakened the "Durin's Bane," and Moria was annihilated with it.
+
+Fragment of Scarlet Gold
+The metal either just has a scarlet aura, or maybe shines with the light of
+the sun, the records aren't very consistent on it. Anything that was made
+out of scarlet gold completely disappeared by about World War II.
+One of Marisa's Hakkero's materials. Probably also the Kusanagi's, too.
+
+Evil Spirit's Soul
+A mysterious object that shines with light, born when an evil spirit is
+sealed. Since whether a soul is evil or not is completely subjectively
+judged by Reimu and co., a lot of innocent souls wrongly get sealed up.
+ 
+
+Fairy's Soul
+Occasionally fly out of a fairy's mouth when you strike one at the back of
+their head. The fairy doesn't die after, but generally runs instead, so
+it's likely not a soul. In other games, "Fairy's etc" tend to be midgame
+equips that increase agility and such, making Touhou's fairies a bit odd.
+
+Fighter's Soul
+As a fighter ends a fight, scare them from behind as they pause for breath
+and this may come out. They don't die, so it's likely not their real soul.
+ 
+ 
+
+Hero's Soul
+Strange white fuzzies that drop from heroes, by kicking them from behind
+after they've saved the world. Rare, since you have to find a hero first.
+ 
+ 
+
+Shining Dragon's Soul
+Souls from the strongest of Dragons, the strongest of species in Gensokyo.
+When a strong Dragon yawns in the morning, these precious things come out.
+So they're not souls after all. Wonder what they are.
+ 
+
+Concept of Attributes
+A handy mixture of concepts of all kinds of attributes.
+ 
+ 
+ 
+
+Concept of Everything
+A handy mixture of concepts of all kinds of things.
+It shines bright purple, and looks pretty useful.
+ 
+ 
+
+Scarlet Light
+Chunks filled with the enmity and power of strong enemies.
+You won't find these dropping from fodder, that's for sure.
+ 
+ 
+
+Lapis Lazuli Light
+Chunks filled with the enmity and power of even stronger enemies.
+Place it in the middle of the room, and it will glow beautifully.
+ 
+ 
+
+Azure Light
+Chunks of enmity from extremely strong enemies that shines azure.
+It's as bright as daylight even during the night.
+A good light source that doesn't use up fuel.
+ 
+
+Rainbow Light
+Chunks of enmity from fearsomely strong enemies.
+Since it looks so charmingly shiny,
+you can definitely make good equipment from them.
+ 
+
+Strong Rugged Horns
+A horn so sharp and rugged, it makes you wonder whether they
+really are supposed to look so sinister.
+Often found on animal pack leaders.
+ 
+
+Hard Husk
+Some husk that's rather hard.
+They came from some rather hard things, probably.
+ 
+ 
+
+Magic-Filled Parchment
+Well-used parchments that were used in ancient magic books. If you try
+really hard, you might be able to erase and write over the original text.
+ 
+ 
+
+Piece of Magic Armor
+Fragments of weapons and armors used by enemies.
+Although they're damaged, they might be recyclable.
+ 
+ 
+
+Strange Mechanical Part
+Some mechanical parts with all sorts of complicated shapes.
+Maybe you'll make the kappa happy by collecting a lot of them.
+ 
+ 
+
+Great Tree Thread
+Thread harvested from insects that live in the Great Tree.
+Normal spider threads are already more durable than iron of same weight,
+but these are even stronger. Maybe it's a result of the Great Tree's powers.
+According to Yamame, this will eventually be mass produced.
+
+Beautiful Crystal Piece
+It's a piece of beautiful, but not exactly rare granite crystal.
+Aside from being used in accessories, it's also piezoelectric.
+So perhaps it can be used for that effect as well.
+ 
+
+Colorful Rainbow Flower
+A flower that blooms with seven colors, unseen in either Gensokyo or the
+outside world. Apparently it has ultraviolet colors on it too, though we
+can't see it either way. Wriggle might be able to though.
+ 
+
+Sea of Trees' Fish's Fin
+Fins from fishes that "swims" in the sea of trees. No one knows why they're
+there though. Perhaps swimming there makes their fins grow larger.
+ 
+ 
+
+Glittering Jewel
+A mysterious jewel that distorts the air around it like a mirage. It's
+breathtakingly beautiful, but staring at it is probably bad for your eyes.
+ 
+ 
+
+Stone of Power
+An unknown stone that radiates heat when you hold it tightly.
+Tends to be held by strong enemies, so it must be strong itself.
+Or at least, that's the lame reason Marisa gives for hoarding these.
+ 
+
+Fine Metal Piece
+A whole bunch of weirdly-shaped metal pieces.
+Handy for making small accessories.
+ 
+ 
+
+Viscous Liquid
+If you ask what kind of things can this be used for, it apparently can
+used in place of any kind of lubricant or glue. It's unexpectedly handy,
+or so the kappa folks say.
+ 
+
+Mysterious Structure
+A mysterious structure composed of mysterious materials with a mysterious
+shape. These things that no one can explain really tickles Marisa's fancy.
+ 
+ 
+
+Curse-Whispering Shell
+A cursed shell from which you can hear the sound of curses when placed
+against your ear. Amongst curse maniacs, the curses you hear apparently
+may be good or bad. It's a really strange world out there.
+ 
+
+Light Needle
+A needle that might be made with the light of the sun. Details are unknown.
+It shines brightly so it's very hard to sew things with it. If you
+collect 100 of them, you might be able to use them as an always-lit lamp.
+ 
+
+Shining Black Stone
+"Shining Black," an extremely odd stone.
+It gives a very trompe-l'oeil feeling when looked at.
+Rinnosuke says that there's some sort of dark power involved somehow.
+ 
+
+Bottle of Hyperspace
+A sealed-up bottle that contains hyperspace air, dropped by a monster that
+originated from hyperspace. Apparently shouldn't be opened, lest the air
+inside escapes to the atmosphere outside. How very suspicious.
+ 
+
+Angel Wing
+A brilliant feather that looks like it came from an angel,
+but it actually was from some holy-looking monsters.
+It's a rather blasphemous action, but Reimu and co. don't care.
+ 
+
+Dull Light Water
+Mysterious water that emits a dull, blue light.
+Not much is known about it, but it's very heavy.
+ 
+ 
+
+Spirit's Orb
+A brilliant piece of crystal used in magic rituals. Marisa really wants
+them, so don't take your eyes off the party's stock of them.
+ 
+ 
+
+Ancient Fragment
+A mysterious item that looks like some sort of rusted metal. It's not
+certain whether this is really metal, but at least it feels ancient.
+ 
+ 
+
+Charred Ashes
+Stuff that resulted from burning various things. Although it's just ashes
+now, many kinds of different things may have burned to make them.
+ 
+ 
+
+Blazing Igneous Rock
+An igneous rock that still holds some heat.
+Might be handy as a body warmer.
+ 
+ 
+
+Hard-To-Melt Ice
+A piece of ice that, for some reason, is harder to melt than normal.
+Well, at least it doesn't melt easily when placed openly,
+but human touch seems to melt it instantly.
+ 
+
+Eternal Ice
+A piece of ice that, for some reason, doesn't melt no matter what.
+At least, it never melts when placed openly, but human touch
+seems to melt it instantly. Kind of awesome, except it's kind of not.
+ 
+
+Wind Sand
+Sand that seems to summon wind when you throw it in the air. Can be handy
+when you want to cool off, but then you'd get sand on your body and hair.
+ 
+ 
+
+Stormy Selenite
+A piece of stone that seems to be able to summon wind when held strongly.
+Resists with wind when you try to break it with a hammer. How annoying.
+ 
+ 
+
+Nature Fragment
+Apparently a fragment of nature somehow, though details are unclear.
+Maybe it's formed from solidified tree sap.
+ 
+ 
+
+Shining Sprout
+A sprout that's very shiny.
+Commonly appreciated as a good luck symbol.
+ 
+ 
+
+Worn-out Magic Wand
+A worn-out wand that was might have been used by someone in prayers.
+Even now, faint magic can be felt from the tip's decoration.
+ 
+ 
+
+Priest's Crystal Ball
+Tiny crystal balls used by unsavory priests.
+When used in an unsavory manner, it can contain unsavory magic power.
+ 
+ 
+
+Slightly Purifying Salt
+Purifying salt that can be seen in the Great Tree. Youkai or humans from
+outside may have placed them, or perhaps there are faithful monsters
+inside. Reimu and co. took them without a thought though. How faithless.
+ 
+
+Purifying Amulet
+A holy amulet with the prayer of exorcism depicted on it.
+It glitters with a faint light. and looks quite effective.
+ 
+ 
+
+Black Sticky Paste
+It's some sticky thing with evil power, or so Rinnosuke says.
+It might go well with some sort of dark weapon. Sticky.
+ 
+ 
+
+Cursed Straw Doll
+A straw doll used by someone to curse someone else.
+It's covered with negative human emotions.
+ 
+ 
+
+Thorny Seed
+Perhaps this is some kind of plant seed, but it's really quite big and
+very spiky. In fact, it's spiky enough that it could probably kill some
+unsuspecting plumber that stepped on it.
+ 
+
+Rugged Seed
+Rinnosuke identified this as a seed, but no matter how you look at it,
+it looks more like a rock than a seed. It's so big and hard that you
+can probably kill someone by throwing it at them.
+ 
+
+Hemp Amulet
+Amulet that was forcibly taken from a defeated enemy. It may not seem like
+it's worth taking, but it is the adventurer's creed to take everything
+that's not nailed down or on fire.
+ 
+
+Satin-Woven Purse
+Purse that was forcibly taken from a defeated enemy.
+It has a very stylish pattern.
+ 
+ 
+
+Youkai's Jar
+A jar that was held by a youkai.
+They seem to generally like alcohol.
+ 
+ 
+
+Youkai's Fire Blowgun
+Fire blowgun that was held by a youkai. Perhaps for youkai,
+fire blowgun usage is moderated under cooking appliance laws.
+ 
+ 
+
+Ghost's Tail
+The tail of a ghost. It was forcibly cut off while the ghost was knocked
+out. Might be cursed.
+ 
+ 
+
+Ghost's Eboshi
+The thing that you find on the head of a ghost. This was also forcibly
+taken while the previous owner was knocked out. Poor thing.
+ 
+ 
+
+Great Tree's Leaf
+A leaf that's beautiful even amongst all the leaves from the Great Tree
+that suddenly appeared. Since it's grown on this rather mysterious Great
+Tree, it might contain mysterious powers within too.
+ 
+
+Great Tree's Sap
+The delicious parts of the Great Tree's sap, collected in a bottle.
+Just drinking it makes you feel re-energized.
+ 
+ 
+
+Tanned Hide
+Skin from animals, tanned for various kinds of uses.
+It's soft and feels good to the touch.
+ 
+ 
+
+Huge Beast's Claw
+Claws used by large carnivores to kill other beasts.
+It's shaped for the sake of intimidation.
+ 
+ 
+
+Steady Wings
+Wings of some monsters that nest in large trees. It's well designed for
+capturing wind, as it needs to keep a large body afloat.
+ 
+ 
+
+Magic Bird's Crest
+A piece of feather found on the head of a magic bird, larger than any other
+feather on its body. Used for intimidation, wooing the opposite sex, but
+mostly as an appeal for its existence. Thus, they are often quite colorful.
+ 
+
+Insect's Exoskeleton
+Insect's exoskeleton that's somewhat hard.
+The fur that grows along the surface is kind of disgusting.
+ 
+ 
+
+Insect's Rainbow Wings
+Thin insect wings that can be folded along the exoskeleton. It's flexible
+and very light, and gives a colorful shine when exposed to sunlight.
+
+ 
+
+Aquatic Creature's Scales
+Scales of creatures that live in water.
+They're leptoid scales, composed of only enamel and collagen,
+so even if they're eaten by accident, the mouth can safely handle them.
+ 
+
+Ancient Fish's Scale
+A type of scale commonly found on species of fish that are long extinct.
+Extremely hard, and far thicker and larger than modern fish scales.
+ 
+ 
+
+Chitin Shell
+A really large piece of shell composed of chitin.
+
+ 
+ 
+
+Magic Iron Shield
+It's some unidentifiable shield used by some unidentifiable monsters, made
+out of unidentified metal. It's really hard, so refining it is difficult.
+ 
+ 
+
+Oni's Panties
+Oni's panties, apparently of good quality, and made from tiger skin. Those
+who want to steal them lose interest as the oni don't really care.
+ 
+ 
+
+Oni's Long Horn
+The horn of an oni, as it says on the tin.
+For Reimu and co. who'd steal the symbol and identify of an oni like that,
+they're rather like oni themselves.
+ 
+
+Dragon's Whiskers
+A small bunch of whiskers grown on a dragon. Make fun of whiskers if you
+want, but it's an easy material to use for making into strings or a whips.
+ 
+ 
+
+Dragon's Mane
+A mane that is said to be the symbol of dragons' power.
+Makes for a heroic-looking decoration.
+ 
+ 
+
+Divine Feather
+A piece of feather dropped by a messenger from Heaven.
+Furthermore, even the wingless ones can drop them.
+Perhaps for them, carrying feathers is an obligation.
+ 
+
+Celestial's Hagoromo
+A hagoromo with Heaven's power residing within. An annoying piece of cloth
+that tries to float back to the heaven whenever you're not looking.
+ 
+ 
+
+Kedama's Fur Bundle
+A bundle of fur taken from a kedama.
+It's surprisingly furry and soft to the touch.
+ 
+ 
+
+Kedama's Core
+This is, according to Rinnosuke's ability, the core of a kedama.
+But he can't tell what a Kedama's core is supposed to be, nor how it works.
+ 
+ 
+
+Orichalcum
+A legendary metal mentioned in the Critias of Plato. Lots of tales have
+been written to explain its origins, ranging from the walls of Atlantis
+to being a gift from Hephaestus, the god of blacksmiths.
+
+
+Adamantite
+The general term for extremely hard metals which can bind the gods. Its
+meaning has changed over the years, from ancient texts describing it merely
+as steel, to being called a diamond in the Middle Ages, and even being
+defined as a magnet at some point.
+
+Damascus Steel
+Metal made from wootz steel imported from India. Named after the Syrian
+capital where it was created. Has many intricate patterns on it, similar to
+wood grains. Modern attempts to duplicate the metal have not been entirely
+successful due to differences in materials and manufacturing techniques.
+
+Legendary Soul
+The result of several powerful souls finally getting their act together and
+uniting themselves into one - a reflection of the progress of Reimu's own
+party. A top-class material - go and make really strong items with this.
+ 
+
+Emerald Tablet
+A stone tablet made of emerald. A great alchemist inscribed the secrets of
+alchemy onto it. The means to extract the Elixir of Life is written on it.
+Many countries have their own different interpretations of the writings.
+ 
+
+Paracelsus's Azoth
+The sword, or more accurately, the hilt carried by the famous alchemist who
+reasoned that Aristotle's 4 element theory appeared in bodies as the 3
+metallic principles. Many rumors surround it, such as it housing a purified
+Philosopher's Stone, or it being able to transform anything into gold.
+
+Ultra Alloy M
+A premier alloy sealed within Morita Capsules. Bring this to the laboratory
+to allow creation of the best armor for everyone except the main character.
+Having said that, they don't increase defense by all that much and have no
+resists, so the Gaia Armor set you can buy from stores is actually better.
+
+Hippocampus Herbal Tonic
+An item that brings your dragon back to life. Harder to obtain than a
+Phoenix Down, but not quite as rare as a Yggdrasil Leaf. The name is
+probably a mix of traditional Chinese medicine and a fictional tonic, but
+given how it's displayed in the game, it's pretty hard to tell.
+
+Metacinnabar
+A substance believed by the ancient Chinese to cure sicknesses and grant
+longevity. Known as "Red" in Japan, and mercury sulfide in modern science.
+Appears in texts everywhere as it produces alchemy's favorite element,
+mercury, when heated. Red in its base form, but both red and black are HgS.
+
+Phosphophyllite
+An extremely rare mineral, formed when phosphate and pegmatite react to
+other metals under special circumstances. Especially valuable now as all
+supplies have been exhausted, and its Mohs scale rating and unique cleavage
+makes it hard to cut. 1 carat of unset stones can fetch $10k on the market.
+
+Holy Tree's White Gem
+A mysterious gem which seems to have formed from the divinity all over the
+upper floors due to Heaven, the Dragon God, et al. Not particularly hard or
+beautiful. Play catch with it, or just create something useful from it.
+ 
+
+Brilliant Divine Jewel
+A jewel exposed to the sheer divinity at the top of the Great Tree, making
+it even more holy than the Holy Tree's White Gem. Always glowing due to
+mysterious powers, driving away gloom. May make for a decent room light.
+ 
+
+Black Stone of Malice
+Formed when a stone at the lower echleons of the Great Tree gets
+bombarded with malicious grumblings constantly. Emits a rebellious aura.
+Pay your respects for it even as you convert it into a powerful item.
+ 
+
+Dark Boulder of Disaster
+Formed when a stone at the lowest level of the Great Tree gets bombarded
+with tortured malicious whispers, and finally ends up turning to the
+dark side, which apparently makes it heavier. Makes people depressed just
+by being near it. Put it in the room of someone you dislike.
+
+Golden Swordfish Statue
+The mysterious statue of a monster who somehow accrued an insane cult of
+masochists worshipping it. Offerings are made to it at home or at museums,
+and one experienced WINNER even managed to trap one inside a Pokeball.
+Famous around the community for blessing its devotees with item luck.
+
+Iron Man's Headband
+The headband worn by a powerful man as he runs far into the distance. The
+blood, sweat and tears this item has accumulated is not to be sniffed at.
+ 
+ 
+
+Otherworldly Stone
+A mysterious stone which has absorbed the special magic swirling around
+the Infinity Corridor. Looks like any other stone. According to Rinnosuke, it
+"has the property of emitting space," but he doesn't know what that means.
+ 
+
+Otherworldly Sand Stars
+Mysterious sand which has absorbed the special magic swirling around the
+Infinity Corridor. Looks like white sand, but glows violet in the dark.
+
+ 
+
+Otherworldly Light
+A mysterious light born from the special magic swirling around the Infinity
+Corridor. Changes color depending on the element around it. Gives you an
+electric shock if you try to touch it, so bring a net when you go hunting.
+ 
+
+Otherworldly Black Hole
+A mysterious "hole" born from the special magic swirling around the
+Infinity Corridor. Terrifyingly swallows everything it can in greed. A
+certain kappa is scheming to market these as a container for absolutely and
+completely unneeded trash.
+
+Treasure Chest Key
+A key occasionally found within the Great Tree, designed to open chests 
+that require keys. Note that it disappears upon use.
+ 
+ 
+
+Stone of Awakening
+A stone of miracles that awakens new abilities within the subconscious.
+Bring it to the Great Library to teach a character a new subclass.
+ 
+ 
+
+Money-Growing Tree
+Increases money gained after battle by 1% just by being carried.
+The effect will stack up to 25% increase.
+ 
+ 
+
+Mr. Midnight Oil Set
+Increases experience gained after battle by 1% just by being carried.
+The effect will stack up to 25% increase.
+ 
+ 
+
+Items Discovery Weekly
+Increases item drop rate by 1.6% just by being carried.
+The effect will stack up to 40% increase.
+ 
+ 
+
+Jewel of Greater Awakening
+A jewel of miracles that awakens new abilities within the subconscious.
+Learning subclasses will no longer consume Stones of Awakening.
+ 
+ 
+
+Tome of Reincarnation
+This item is used when resetting a character's skills. It will reset the
+parameter levels of that character, and returns all money used. If base 
+value increasing items, Training Manuals, and Tomes of Insight were
+used on the character, those items will be returned as well.
+
+Training Manual
+A consumable item that increases a character's skill points by 1 when used.
+You can use it at the Hakurei Shrine.
+ 
+ 
+
+Life Gem
+An item that increases a character's HP base value slightly when used.
+You can use it at the Hakurei Shrine.
+Up to 10 may be used per character.
+ 
+
+Magic Gem
+An item that increases a character's maximum MP when used.
+You can use it at the Hakurei Shrine.
+Up to 10 may be used per character.
+ 
+
+Energy Gem
+An item that increases a character's maximum TP when used.
+You can use it at the Hakurei Shrine.
+Up to 10 may be used per character.
+ 
+
+Fighting Gem
+An item that increases a character's ATK base value slightly when used.
+You can use it at the Hakurei Shrine.
+Up to 10 may be used per character.
+ 
+
+Protection Gem
+An item that increases a character's DEF base value slightly when used.
+You can use it at the Hakurei Shrine.
+Up to 10 may be used per character.
+ 
+
+Wisdom Gem
+An item that increases a character's MAG base value slightly when used.
+You can use it at the Hakurei Shrine.
+Up to 10 may be used per character.
+ 
+
+Affection Gem
+An item that increases a character's MND base value slightly when used.
+You can use it at the Hakurei Shrine.
+Up to 10 may be used per character.
+ 
+
+Swiftness Gem
+An item that increases a character's SPD base value slightly when used.
+You can use it at the Hakurei Shrine.
+Up to 10 may be used per character.
+ 
+
+Hakurouken
+A blade that belongs to Youmu Konpaku, the half-ghost swordmaster and 
+gardener of Hakugyokurou. Circumstances led to Cirno stealing it.
+ 
+ 
+
+Kogasa's Umbrella (Broken)
+The umbrella said to be the true form of the umbrella youkai Kogasa Tatara.
+Its shaft is badly damaged, so it can't really be used as an umbrella.
+ 
+ 
+
+Kogasa's Umbrella (Fixed)
+The umbrella said to be the true form of the umbrella youkai Kogasa Tatara.
+The umbrella's shaft has been fixed. It'll defend you from any rainstorm.
+The design is obviously untouched, though, so it still gives off the mood
+of an unpopular umbrella.
+
+Lamprey Serpent's Meat
+Meat obtained from defeating the Lamprey Serpent
+FOE. It looks a lot like lamprey eel meat.
+Therefore, it is lamprey eel meat. Probably.
+ 
+
+Mysterious Scrap of Iron - 1
+A scrap of iron Marisa picked up on a whim.
+It looks like some sort of narrow and long iron rod.
+ 
+ 
+
+Mysterious Scrap of Iron - 2
+A scrap of iron Marisa picked up on a whim.
+It looks like some sort of curved steel wire.
+ 
+ 
+
+Mysterious Scrap of Iron - 3
+A scrap of iron Marisa picked up on a whim.
+It looks like some sort of black wire bent into a looping shape.
+ 
+ 
+
+Gland of Super Hemotoxin
+Poisonous gland extracted from some poisonous-looking insect.
+Reason #1 of Wriggle's paralysis. Since even Wriggle was affected like 
+this, we can assume that direct exposure to this is extremely
+dangerous to both humans and Youkai.
+
+Gland of Super Neurotoxin
+Poisonous gland extract from some evil-looking insect.
+Reason #2 of Wriggle's paralysis.
+It is said to be stronger than even Tetrodotoxin.
+ 
+
+Great Tree Insect Antidote
+A super-antidote that is mixed by a super skilled medic, and created by
+analyzing super hemotoxin and super neurotoxin. Super-effective on super 
+strong poison. By the way, it's poisonous to drink if you're not poisoned.
+ 
+
+Tome of Insight - Vitality
+A strange book that enlightens its reader to a new level.
+You can use it at the Hakurei Shrine.
+Used to teach HP Boost to a character.
+ 
+
+Tome of Insight - Sense
+A strange book that enlightens its reader to a new level.
+You can use it at the Hakurei Shrine.
+Used to teach MP Boost to a character.
+ 
+
+Tome of Insight - Energy
+A strange book that enlightens its reader to a new level.
+You can use it at the Hakurei Shrine.
+Used to teach TP Boost to a character.
+ 
+
+Tome of Insight - Attack
+A strange book that enlightens its reader to a new level.
+You can use it at the Hakurei Shrine.
+Used to teach ATK Boost to a character.
+ 
+
+Tome of Insight - Defense
+A strange book that enlightens its reader to a new level.
+You can use it at the Hakurei Shrine.
+Used to teach DEF Boost to a character.
+ 
+
+Tome of Insight - Magic
+A strange book that enlightens its reader to a new level.
+You can use it at the Hakurei Shrine.
+Used to teach MAG Boost to a character.
+ 
+
+Tome of Insight - Mind
+A strange book that enlightens its reader to a new level.
+You can use it at the Hakurei Shrine.
+Used to teach MND Boost to a character.
+ 
+
+Tome of Insight - Speed
+A strange book that enlightens its reader to a new level.
+You can use it at the Hakurei Shrine.
+Used to teach SPD Boost to a character.
+ 
+
+Tome of Insight - Evasion
+A strange book that enlightens its reader to a new level.
+You can use it at the Hakurei Shrine.
+Used to teach EVA Boost to a character.
+ 
+
+Tome of Insight - Accuracy
+A strange book that enlightens its reader to a new level.
+You can use it at the Hakurei Shrine.
+Used to teach ACC Boost to a character.
+ 
+
+Tome of Insight - Affinity
+A strange book that enlightens its reader to a new level.
+You can use it at the Hakurei Shrine.
+Used to teach Affinity Boost to a character.
+ 
+
+Tome of Insight - Resist
+A strange book that enlightens its reader to a new level.
+You can use it at the Hakurei Shrine.
+Used to teach Resistance Boost to a character.
+ 
+
+Seaweed of Serenity
+A naturally grown seaweed from the mysterious sea level in the middle of 
+the Great Tree. If boiled, it can calm one's spirit when imbibed.
+ 
+ 
+
+Coral of Silence
+A naturally grown coral from the mysterious sea level in the middle of 
+the Great Tree. If made into a pill, it can dull one's senses when imbibed.
+ 
+ 
+
+Philosopher's Stone - Fire
+Patchy's Philosopher's Stone... that seemed to have gained auto-movement 
+somehow. They snuck out into the Great Tree without Patchy noticing,
+until they got beaten into submission by Reimu's party.
+ 
+
+Philosopher's Stone - Water
+Patchy's Philosopher's Stone... that seemed to have gained auto-movement 
+somehow. They snuck out into the Great Tree without Patchy noticing,
+until they got beaten into submission by Reimu's party.
+ 
+
+Philosopher's Stone - Wind
+Patchy's Philosopher's Stone... that seemed to have gained auto-movement 
+somehow. They snuck out into the Great Tree without Patchy noticing,
+until they got beaten into submission by Reimu's party.
+ 
+
+Philosopher's Stone - Earth
+Patchy's Philosopher's Stone... that seemed to have gained auto-movement 
+somehow. They snuck out into the Great Tree without Patchy noticing,
+until they got beaten into submission by Reimu's party.
+ 
+
+Philosopher's Stone - Mystic
+Patchy's Philosopher's Stone... that seemed to have gained auto-movement 
+somehow. They snuck out into the Great Tree without Patchy noticing,
+until they got beaten into submission by Reimu's party.
+ 
+
+Byakuren's Scroll #1
+A rainbow glyph floating around Byakuren. Called a Sorcerer's Sutra Scroll. 
+Scroll. Buried in the sand, but wasn't damaged since it's a scroll of air.
+ 
+ 
+
+Byakuren's Scroll #2
+A rainbow glyph floating around Byakuren. Called a Sorcerer's Sutra Scroll. 
+It has a lot of features, but automatic recollection when lost isn't one.
+ 
+ 
+
+Byakuren's Scroll #3
+A rainbow glyph floating around Byakuren. Called a Sorcerer's Sutra Scroll. 
+Left inside the hellfire, but having no substance meant it's undamaged.
+ 
+ 
+
+Byakuren's Scroll #4
+A rainbow glyph floating around Byakuren. Called a Sorcerer's Sutra Scroll. 
+Monsters were carrying it, but no one can use it other than Byakuren.
+If you were to take it, its best use would be as a shining flag.
+ 
+
+Platycodon Seal
+A mysterious seal obtained from defeating an enemy on 14F.
+You can't enter certain areas without it.
+ 
+ 
+
+Iris Seal
+A mysterious seal obtained from defeating an enemy on 15F.
+You can't enter certain areas without it.
+ 
+ 
+
+Dianthus Seal
+A mysterious seal obtained from defeating an enemy on 16F.
+You can't enter certain areas without it.
+ 
+ 
+
+Mikagami Seal
+A mysterious seal obtained from defeating an enemy on 20F.
+You can't enter certain areas without it.
+ 
+ 
+
+Ara-Mitama Seal
+A mysterious seal obtained from defeating an enemy on 20F.
+You can't enter certain areas without it.
+ 
+ 
+
+Magician's Proof
+A book that records the methods to effectively make use of mana.
+Unlocks the subclass "Magician."
+Mana is something you can now just throw away.
+ 
+
+Herbalist's Proof
+A book that records all the medicinal herbs throughout the world's history.
+Unlocks the subclass "Herbalist."
+Eventually you can use a Stand to open up your own Italian restaurant too.
+ 
+
+Strategist's Proof
+A book that records the basic knowledge of tactics and strategies.
+Unlocks the subclass "Strategist."
+Specially made for those who want to be strategists without working for it.
+ 
+
+Gambler's Proof
+A book that records the burning hot spirit of the gambler.
+Unlocks the subclass "Gambler."
+You may start your journey by collecting emblems from expensive cars.
+ 
+
+Diva's Proof
+A book that records all charming songs and dances.
+Unlocks the subclass "Diva."
+You're going to need a lot of training.
+ 
+
+Transcendent's Proof
+A book that records ways of effective training and diet.
+Unlocks the subclass "Transcendent."
+Danmaku is all about power. Everything else is all about power too.
+ 
+
+Dark Fragment
+A fragment of the power of darkness dropped by the fakes of Gensokyo's
+girls. Rinnosuke's diagnosis calls it a "piece of scarlet gold tainted by
+darkness." Occasionally reduces TP loss after a character is defeated in
+battle. The reduction rate is based on the amount of Dark Fragments held.
+
+Infinity Gem
+A dull-colored gem with a tinge of rainbow light peeking out, found in the
+Infinity Corridor. A dangerous item with the power of malice leaking from
+it, but someone seems to want them. Gather loads and trade them for items.
+ 
+
+Weapon Recipe Set 1
+A conveniently-arranged set of recipes detailing how to make all types of
+equipment. You can create more equipment with this. Nitori will be pleased.
+ 
+ 
+
+Weapon Recipe Set 2
+The second conveniently-arranged set of recipes detailing how to make all
+types of equipment. You can create even more equipment with this.
+ 
+ 
+
+Weapon Recipe Set 3
+The third conveniently-arranged set of recipes detailing how to make all
+types of equipment. You can create far more equipment with this.
+ 
+ 
+
+Weapon Recipe Set 4
+The fourth conveniently-arranged set of recipes detailing how to make all
+types of equipment. You can create extremely strong equipment with this.
+ 
+ 
+
+Life Jewel
+An item that increases a character's HP base value slightly when used.
+You can use a maximum of 10 per character at the Hakurei Shrine.
+Only characters who have already maxed on "Life Gems" can use it.
+ 
+
+Magic Jewel
+An item that increases a character's maximum MP when used.
+You can use a maximum of 10 per character at the Hakurei Shrine.
+Only characters who have already maxed on "Magic Gems" can use it.
+ 
+
+Energy Jewel
+An item that increases a character's maximum TP when used.
+You can use a maximum of 10 per character at the Hakurei Shrine.
+Only characters who have already maxed on "Energy Gems" can use it.
+ 
+
+Fighting Jewel
+An item that increases a character's ATK base value slightly when used.
+You can use a maximum of 10 per character at the Hakurei Shrine.
+Only characters who have already maxed on "Fighting Gems" can use it.
+ 
+
+Protection Jewel
+An item that increases a character's DEF base value slightly when used.
+You can use a maximum of 10 per character at the Hakurei Shrine.
+Only characters who have already maxed on "Protection Gems" can use it.
+ 
+
+Wisdom Jewel
+An item that increases a character's MAG base value slightly when used.
+You can use a maximum of 10 per character at the Hakurei Shrine.
+Only characters who have already maxed on "Wisdom Gems" can use it.
+ 
+
+Affection Jewel
+An item that increases a character's MND base value slightly when used.
+You can use a maximum of 10 per character at the Hakurei Shrine.
+Only characters who have already maxed on "Affection Gems" can use it.
+ 
+
+Swiftness Jewel
+An item that increases a character's SPD base value slightly when used.
+You can use a maximum of 10 per character at the Hakurei Shrine.
+Only characters who have already maxed on "Swiftness Gems" can use it.
+ 
+
+Moneybag-Growing Tree
+Increases money gained after battle by 1% just by being carried.
+The effect will stack up to 25% increase.
+The effect of this item stacks with "Money-Growing Trees."
+ 
+
+Mr. Dawnbreak Oil Set
+Increases experience gained after battle by 1% just by being carried.
+The effect will stack up to 25% increase.
+The effect of this item stacks with "Mr. Midnight Oil Sets."
+ 
+
+Explorer King's Legend
+Increases item drop rate by 1.6% just by being carried.
+The effect will stack up to 40% increase.
+The effect of this item stacks with "Item Discovery Weeklys."
+ 
+
+Great Elemental Barrier
+The power of the Great Elemental Barrier erected around the Great Tree with
+the help of Ame-no-Murakumo. Allows learning of the new Subclass "Ame no"
+Murakumo's Blessing." Only 1 character can have this subclass at a time.
+ 
+
+Spartan's Tome - Vitality
+A suspicious tome addressed to those who want to optimize their training.
+Only characters who have maxed the "HP Boost" skill can use it.
+The item itself overwrites "HP Boost" with "HP Boost 2."
+You can use it at the Hakurei Shrine.
+
+Spartan's Tome - Sense
+A suspicious tome addressed to those who want to optimize their training.
+Only characters who have maxed the "MP Boost" skill can use it.
+The item itself overwrites "MP Boost" with "MP Boost 2."
+You can use it at the Hakurei Shrine.
+
+Spartan's Tome - Energy
+A suspicious tome addressed to those who want to optimize their training.
+Only characters who have maxed the "TP Boost" skill can use it.
+The item itself overwrites "TP Boost" with "TP Boost 2."
+You can use it at the Hakurei Shrine.
+
+Spartan's Tome - Attack
+A suspicious tome addressed to those who want to optimize their training.
+Only characters who have maxed the "ATK Boost" skill can use it.
+The item itself overwrites "ATK Boost" with "ATK Boost 2."
+You can use it at the Hakurei Shrine.
+
+Spartan's Tome - Defense
+A suspicious tome addressed to those who want to optimize their training.
+Only characters who have maxed the "DEF Boost" skill can use it.
+The item itself overwrites "DEF Boost" with "DEF Boost 2."
+You can use it at the Hakurei Shrine.
+
+Spartan's Tome - Magic
+A suspicious tome addressed to those who want to optimize their training.
+Only characters who have maxed the "MAG Boost" skill can use it.
+The item itself overwrites "MAG Boost" with "MAG Boost 2."
+You can use it at the Hakurei Shrine.
+
+Spartan's Tome - Mind
+A suspicious tome addressed to those who want to optimize their training.
+Only characters who have maxed the "MND Boost" skill can use it.
+The item itself overwrites "MND Boost" with "MND Boost 2."
+You can use it at the Hakurei Shrine.
+
+Spartan's Tome - Speed
+A suspicious tome addressed to those who want to optimize their training.
+Only characters who have maxed the "SPD Boost" skill can use it.
+The item itself overwrites "SPD Boost" with "SPD Boost 2."
+You can use it at the Hakurei Shrine.
+
+Veteran's Tome - Vitality
+A very suspicious tome which only veterans of many battles can comprehend.
+Only characters who have maxed the "HP Boost 2" skill can use it.
+The item itself overwrites "HP Boost 2" with "Mega HP Boost."
+You can use it at the Hakurei Shrine.
+
+Veteran's Tome - Sense
+A very suspicious tome which only veterans of many battles can comprehend.
+Only characters who have maxed the "MP Boost 2" skill can use it.
+The item itself overwrites "MP Boost 2" with "Mega MP Boost."
+You can use it at the Hakurei Shrine.
+
+Veteran's Tome - Energy
+A very suspicious tome which only veterans of many battles can comprehend.
+Only characters who have maxed the "TP Boost 2" skill can use it.
+The item itself overwrites "TP Boost 2" with "Mega TP Boost."
+You can use it at the Hakurei Shrine.
+
+Veteran's Tome - Attack
+A very suspicious tome which only veterans of many battles can comprehend.
+Only characters who have maxed the "ATK Boost 2" skill can use it.
+The item itself overwrites "ATK Boost 2" with "Mega ATK Boost."
+You can use it at the Hakurei Shrine.
+
+Veteran's Tome - Defense
+A very suspicious tome which only veterans of many battles can comprehend.
+Only characters who have maxed the "DEF Boost 2" skill can use it.
+The item itself overwrites "DEF Boost 2" with "Mega DEF Boost."
+You can use it at the Hakurei Shrine.
+
+Veteran's Tome - Magic
+A very suspicious tome which only veterans of many battles can comprehend.
+Only characters who have maxed the "MAG Boost 2" skill can use it.
+The item itself overwrites "MAG Boost 2" with "Mega MAG Boost."
+You can use it at the Hakurei Shrine.
+
+Veteran's Tome - Mind
+A very suspicious tome which only veterans of many battles can comprehend.
+Only characters who have maxed the "MND Boost 2" skill can use it.
+The item itself overwrites "MND Boost 2" with "Mega MND Boost."
+You can use it at the Hakurei Shrine.
+
+Veteran's Tome - Speed
+A very suspicious tome which only veterans of many battles can comprehend.
+Only characters who have maxed the "SPD Boost 2" skill can use it.
+The item itself overwrites "SPD Boost 2" with "Mega SPD Boost."
+You can use it at the Hakurei Shrine.
+
+Water Lily Seal
+A mysterious seal obtained from defeating an enemy on B1F.
+Clears the blockade on 22F.
+ 
+ 
+
+Valley Lily Seal
+A mysterious seal obtained from defeating an enemy on B2F.
+Clears the blockade on 27F.
+ 
+ 
+
+Rhododendron Seal
+A mysterious seal obtained from defeating an enemy on B3F.
+Where can it be used...?
+ 
+ 
+
+Bodhi Tree Seal
+A mysterious seal obtained from defeating an enemy on B4F.
+Where can it be used...?
+ 
+ 
+
+Pagoda Part A
+An item picked up in the Great Tree that evokes a strange sense of virtue.
+It's obviously the upper half of Shou's pagoda.
+ 
+ 
+
+Pagoda Part B
+An item picked up in the Great Tree that evokes a strange sense of virtue.
+It's obviously the lower half of Shou's pagoda.
+ 
+ 
+
+Kokoro's Mask - Joy
+A mysterious mask. Feels like one of the masks which float around Kokoro.
+The expression on the mask's face seems to signify "Joy."
+ 
+ 
+
+Kokoro's Mask - Anger
+A mysterious mask. Feels like one of the masks which float around Kokoro.
+The expression on the mask's face seems to signify "Anger."
+ 
+ 
+
+Kokoro's Mask - Pathos
+A mysterious mask. Feels like one of the masks which float around Kokoro.
+The expression on the mask's face seems to signify "Pathos."
+ 
+ 
+
+Kokoro's Mask - Cheer
+A mysterious mask. Feels like one of the masks which float around Kokoro.
+The expression on the mask's face seems to signify "Cheer."
+ 
+ 
+
+Non-Neumann Systems 9
+An incomprehensible book that explains about the future of certain complex
+tech. Rinnosuke seems to have heard of it before.
+ 
+ 
+
+Non-Neumann Systems 10
+An incomprehensible book that explains about the future of certain complex
+tech. Goes into painstaking detail about watering cans.
+ 
+ 
+
+Non-Neumann Systems 11
+An incomprehensible book that explains about the future of certain complex
+tech. Goes into quantum physics, which is so hot right now.
+ 
+ 
+
+Non-Neumann Systems 12
+An incomprehensible book that explains about the future of certain complex
+tech. Goes into pros and cons about homosexuality amongst mathematicians.
+ 
+ 
+
+Miko's 7-Star Charm
+The charm given by Futo and Miko to seal the giant hole in the
+underground. Combines with the power of the Ame-no-Murakumo to allow 
+the party to safely explore the mysteries within the giant hole.
+ 
+
+Elemental Circle - Wood
+A giant elemental circle prepared by Miko to banish the evil aura at the
+top of the Great Tree. Made more powerful with the help of the 
+Ame-no-Murakumo. Controls the concept of the "Wood" element.
+ 
+
+Elemental Circle - Fire
+A giant elemental circle prepared by Miko to banish the evil aura at the
+top of the Great Tree. Made more powerful with the help of the 
+Ame-no-Murakumo. Controls the concept of the "Fire" element.
+ 
+
+Elemental Circle - Earth
+A giant elemental circle prepared by Miko to banish the evil aura at the
+top of the Great Tree. Made more powerful with the help of the 
+Ame-no-Murakumo. Controls the concept of the "Earth" element.
+ 
+
+Elemental Circle - Metal
+A giant elemental circle prepared by Miko to banish the evil aura at the
+top of the Great Tree. Made more powerful with the help of the 
+Ame-no-Murakumo. Controls the concept of the "Metal" element.
+ 
+
+Elemental Circle - Water
+A giant elemental circle prepared by Miko to banish the evil aura at the
+top of the Great Tree. Made more powerful with the help of the 
+Ame-no-Murakumo. Controls the concept of the "Water" element.
+ 
+
+Blue Ballistic Talisman
+A talisman holding incredible ballistic force.
+Can destroy blue-colored ice which blocks your path.
+ 
+ 
+
+Purple Ballistic Talisman
+A talisman holding incredible ballistic force.
+Can destroy purple-colored ice which blocks your path.
+ 
+ 
+
+Swordmaster's Proof
+A book that records the secret arts of all kinds of combat styles.
+Unlocks the subclass "Swordmaster."
+Don't worry about the name - non-sword-wielders can learn it too.
+ 
+
+Archmage's Proof
+A book that records black magic literature from all areas and eras.
+Unlocks the subclass "Archmage."
+Dump 'em in water. If they sink, it's a human. If they float, it's a witch.
+ 
+
+Appraiser's Proof
+A book that records negotiation and judgment skills for all kinds of items.
+Unlocks the subclass "Appraiser."
+You won't be terrified by sudden sensations during appraisals anymore.
+The females of Gensokyo sure are courageous.
+
+Elementalist's Proof
+A book that records musings about the 4 elements from Empedocles and co.
+Unlocks the subclass "Elementalist."
+This game actually has 8 elements, but it's fine. Just a rounding error.
+ 
+
+Ninja's Proof
+A book that records some pretty shady stuff.
+Unlocks the subclass "Ninja."
+Includes a note that going nude will give you similar AC to an M4 Sherman.
+ 
+
+Oracle's Proof
+A book that records the way to hear the voices of gods and natural spirits.
+Unlocks the subclass "Oracle."
+Honestly, you can just make stuff up but sound as confident as a writer
+for a "For Dummies" book and still get away with it.
+
+Dragon God's Scale
+A large scale gotten from the Dragon God, serving as proof of your victory.
+Unlocks the subclass "Dragon God's Power."
+ 
+ 
+
+*WINNER* Title
+Gotten by beating up some weird old fart at the top of the Great
+Tree. Unlocks the subclass "*WINNER*." How many hundreds of hours did it 
+take to get this for the first time? It must feel so terrible when a
+lovingly-raised character dies at endgame and your save file gets erased.
+
+Shrine Maiden's Arrow
+Might be more useful in Eirin's hands rather than Reimu's.
+Unlocks new skills for Reimu, increases Reimu's damage dealt by 
+(quantity)% and reduces Reimu's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Phantasmal Mushroom
+Seems to hold strong magical power. Too dangerous to eat.
+Unlocks new skills for Marisa, increases Marisa's damage dealt by 
+(quantity)% and reduces Marisa's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Gensokyo Rarities Catalog
+An encyclopedia of all kinds of rare and strange items found in Gensokyo.
+Unlocks new skills for Rinnosuke, increases Rinnosuke's damage dealt by 
+(quantity)% and reduces Rinnosuke's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Ancient History Textbook
+A book with records of ancient times where society had barely progressed.
+Unlocks new skills for Keine, increases Keine's damage dealt by 
+(quantity)% and reduces Keine's damage taken by (quantity / 2)%
+The damage bonuses of the item caps at 50.
+
+High-Quality Tengu Shield
+A shield made with the finest material. Not meant for lower-class Tengu.
+Unlocks new skills for Momiji, increases Momiji's damage dealt by 
+(quantity)% and reduces Momiji's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Top-Class Whetstone
+A whetstone of the highest quality. Prevents Youmu's swords from dulling.
+Unlocks new skills for Youmu, increases Youmu's damage dealt by 
+(quantity)% and reduces Youmu's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Scaring for Dummies
+A book explaining the various ways to scare others.
+Unlocks new skills for Kogasa, increases Kogasa's damage dealt by 
+(quantity)% and reduces Kogasa's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Powered Ribbon Charm
+Rumia's ribbon, which looks like a charm, seems to have been powered up.
+Unlocks new skills for Rumia, increases Rumia's damage dealt by 
+(quantity)% and reduces Rumia's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Absolute-0 Ice Fragment
+Pretty cold. Absolute zero ice is actually scary, but no one here cares.
+Unlocks new skills for Cirno, increases Cirno's damage dealt by 
+(quantity)% and reduces Cirno's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Shining Ear of Rice
+A glowing ear of rice blessed with good harvest prayers. Effective vs gods.
+Unlocks new skills for Minoriko, increases Minoriko's damage dealt by 
+(quantity)% and reduces Minoriko's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Bronze Four-Letter Coin
+Ancient coins that Komachi collects. Heiji Zenigata throws these around.
+Unlocks new skills for Komachi, increases Komachi's damage dealt by 
+(quantity)% and reduces Komachi's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Captivating Catnip
+Cats are all about catnip. That's just common sense.
+Unlocks new skills for Chen, increases Chen's damage dealt by 
+(quantity)% and reduces Chen's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+State-Of-The-Art Circuit
+Some bleeding-edge tech gadget, apparently. No one else knows what it is.
+Unlocks new skills for Nitori, increases Nitori's damage dealt by 
+(quantity)% and reduces Nitori's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Symbol of Jealousy
+An extremely unpleasant item that fills all who sees it with jealousy.
+Unlocks new skills for Parsee, increases Parsee's damage dealt by 
+(quantity)% and reduces Parsee's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Insect Leader's Proof
+It may sound cool, but it's just a bag of pheromones that attract insects.
+Unlocks new skills for Wriggle, increases Wriggle's damage dealt by 
+(quantity)% and reduces Wriggle's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Shining Bamboo
+A glowing bamboo from the princess of the moon... which may be unrelated.
+Unlocks new skills for Kaguya, increases Kaguya's damage dealt by 
+(quantity)% and reduces Kaguya's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Jug of Hourai Elixir
+The jug that was discarded somewhere has somehow been unearthed again.
+Unlocks new skills for Mokou, increases Mokou's damage dealt by 
+(quantity)% and reduces Mokou's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Crow Tengu's Notebook
+Aya finally realized she can just get scoops from other tengu's notebooks.
+Unlocks new skills for Aya, increases Aya's damage dealt by 
+(quantity)% and reduces Aya's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Chirper's Honey
+Drinking it gives you a clear and beautiful voice. A certain poet's secret.
+Unlocks new skills for Mystia, increases Mystia's damage dealt by 
+(quantity)% and reduces Mystia's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Box of 100 Medicines
+That item that caused lots of trouble. ...Or a replica of it, perhaps?
+Unlocks new skills for Kasen, increases Kasen's damage dealt by 
+(quantity)% and reduces Kasen's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Black Pendulum
+A new pendulum with hidden powers. Looks like it can be used for dowsing.
+Unlocks new skills for Nazrin, increases Nazrin's damage dealt by 
+(quantity)% and reduces Nazrin's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Worn-Out Nagashi-bina
+With its duty done, it flowed all over and eventually washed up here.
+Unlocks new skills for Hina, increases Hina's damage dealt by 
+(quantity)% and reduces Hina's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Fine Skull
+A skeleton with a visibly pleasant shape. In Orin's eyes, at least.
+Unlocks new skills for Orin, increases Orin's damage dealt by 
+(quantity)% and reduces Orin's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Extra Control Rod
+Insert it for more control. As deep as you can.
+Unlocks new skills for Utsuho, increases Utsuho's damage dealt by 
+(quantity)% and reduces Utsuho's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Mind-Reading Crystal Eye
+A crafted eye that sees right through all within its gaze.
+Unlocks new skills for Satori, increases Satori's damage dealt by 
+(quantity)% and reduces Satori's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Oni's Gold Sake Cup
+A cup that Yuugi seems to use to drink sake. Makes your room look refined.
+Unlocks new skills for Yuugi, increases Yuugi's damage dealt by 
+(quantity)% and reduces Yuugi's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Dragon-Embroidered Dress
+Meiling's new clothes. She wanted them for a while, but refrained till now.
+Unlocks new skills for Meiling, increases Meiling's damage dealt by 
+(quantity)% and reduces Meiling's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Frictionless Ball Joint
+Ball joints with an astounding lack of friction. Skillfully crafted.
+Unlocks new skills for Alice, increases Alice's damage dealt by 
+(quantity)% and reduces Alice's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Otherworldly Grimoire
+A renowned black magic grimoire. Lots of nasty things are written in it.
+Unlocks new skills for Patchouli, increases Patchouli's damage dealt by 
+(quantity)% and reduces Patchouli's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Hourai Elixir Ingredient
+Eirin's trying to make it again. More trouble than it's worth, honestly.
+Unlocks new skills for Eirin, increases Eirin's damage dealt by 
+(quantity)% and reduces Eirin's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Mind-Piercing Bullet
+A bullet that damages your psyche instead of your body.
+Unlocks new skills for Reisen, increases Reisen's damage dealt by 
+(quantity)% and reduces Reisen's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Modern School Uniform
+Sanae should wear it sometimes. Lotsa people would like to see her in one.
+Unlocks new skills for Sanae, increases Sanae's damage dealt by 
+(quantity)% and reduces Sanae's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Silver Hagoromo
+a flexible hagoromo that shines with silver. Pleasant to touch.
+Unlocks new skills for Iku, increases Iku's damage dealt by 
+(quantity)% and reduces Iku's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Ultra HQ Sake - Ghosts
+HQ sake made extreme by brewing it with vengeful spirit powers.
+Unlocks new skills for Suika, increases Suika's damage dealt by 
+(quantity)% and reduces Suika's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+HQ Juicy Fried Tofu
+This slop! Why do I crave it!?
+Unlocks new skills for Ran, increases Ran's damage dealt by 
+(quantity)% and reduces Ran's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Bloodlike Tomato Juice
+Remilia sometimes settles for this. Yes, she is capable of self-restraint.
+Unlocks new skills for Remilia, increases Remilia's damage dealt by 
+(quantity)% and reduces Remilia's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Royals' Ceramics Set
+From cute little teacups to large vases. Raises the SDM's nobility.
+Unlocks new skills for Sakuya, increases Sakuya's damage dealt by 
+(quantity)% and reduces Sakuya's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Battle Onbashira
+A massive and extremely heavy onbashira has manifested right here.
+Unlocks new skills for Kanako, increases Kanako's damage dealt by 
+(quantity)% and reduces Kanako's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Frog Badge
+A cute little froggy badge. Absorbs water, fire, earth and wind... maybe.
+Unlocks new skills for Suwako, increases Suwako's damage dealt by 
+(quantity)% and reduces Suwako's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+HQ Peach From Heaven
+"Far better than the surface's yucky peaches." - Delinquent Celestial
+Unlocks new skills for Tenshi, increases Tenshi's damage dealt by 
+(quantity)% and reduces Tenshi's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Jewel of Insanity
+A jewel that emits a mysterious spectrum-ignoring light. Causes madness.
+Unlocks new skills for Flan, increases Flan's damage dealt by 
+(quantity)% and reduces Flan's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Saigyou Akashi's Petal
+Yuyuko still seems to be curious about the corpse buried under the tree.
+Unlocks new skills for Yuyuko, increases Yuyuko's damage dealt by 
+(quantity)% and reduces Yuyuko's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Rainbow Sunflower
+A rainbow-tint flower. Said to appear once out of a million sunflowers.
+Unlocks new skills for Yuuka, increases Yuuka's damage dealt by 
+(quantity)% and reduces Yuuka's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Gap Shard
+Collects lots for a TM... Wait, wrong shard. Holds a strange power anyway.
+Unlocks new skills for Yukari, increases Yukari's damage dealt by 
+(quantity)% and reduces Yukari's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Newly-Made Sutra Scroll
+Bykauren's new Sutra Scroll. She aims to be a more muscley monk.
+Unlocks new skills for Byakuren, increases Byakuren's damage dealt by 
+(quantity)% and reduces Byakuren's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Ebony Pagoda
+Made by human hands as a symbol of their own deaths.
+Unlocks new skills for Eiki, increases Eiki's damage dealt by 
+(quantity)% and reduces Eiki's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Complex Science Textbook
+Renko's the only one who understands its contents, probably.
+Unlocks new skills for Renko, increases Renko's damage dealt by 
+(quantity)% and reduces Renko's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Illusionary Specs
+Makes barriers visible - not exactly helpful. Gives the Glasses attribute.
+Unlocks new skills for Mari, increases Mari's damage dealt by 
+(quantity)% and reduces Mari's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Forged Spear
+Shou's not too happy about this item - she not a fan of melee combat.
+Unlocks new skills for Shou, increases Shou's damage dealt by 
+(quantity)% and reduces Shou's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Magical Racoon Leaf
+Allows a moustached plumber to grow extra ears and a tail.
+Unlocks new skills for Mamizou, increases Mamizou's damage dealt by 
+(quantity)% and reduces Mamizou's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Sharp Star Dragon Bow
+What Futo uses to fire those light arrows happily into the air.
+Unlocks new skills for Futo, increases Futo's damage dealt by 
+(quantity)% and reduces Futo's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Crimson Court Dress
+An orangey kimono and headdress. A symbol of power in a bygone era.
+Unlocks new skills for Miko, increases Miko's damage dealt by 
+(quantity)% and reduces Miko's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Emotion Mask: Extra
+You're getting more emotions! Way to go, Kokoro!
+Unlocks new skills for Kokoro, increases Kokoro's damage dealt by 
+(quantity)% and reduces Kokoro's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Bulky Brown Western Book
+Hopefully Tokiko doesn't lose it or let it get stolen this time...
+Unlocks new skills for Tokiko, increases Tokiko's damage dealt by 
+(quantity)% and reduces Tokiko's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Proof of Koishi's Existence
+Koishi has more friends now. Maybe things will be different this time.
+Unlocks new skills for Koishi, increases Koishi's damage dealt by 
+(quantity)% and reduces Koishi's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+
+Miare Memories
+Having more than nine would break lore? Don't sweat the small stuff.
+Unlocks new skills for Akyuu, increases Akyuu's damage dealt by 
+(quantity)% and reduces Akyuu's damage taken by (quantity / 2)%.
+The damage bonuses of the item caps at 50.
+

@@ -1,0 +1,802 @@
+﻿Character,CharID,Name,ID,awakening,Cost,Max Lvl,Description,HP,MP,TP,ATK,DEF,MAG,MND,SPD,EVA,ACC,AFF,RES
+Reimu Hakurei,1,HP Boost,0,False,2,5,Increase base HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Reimu Hakurei,1,MP Boost,1,False,2,5,Increase maximum MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Reimu Hakurei,1,Magic Boost,5,False,2,5,Increase Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Reimu Hakurei,1,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Reimu Hakurei,1,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Reimu Hakurei,1,Main Character: Reimu,20,False,5,2,"When a party member is KO'd, buff all stats by (SLv * 6)%. Can activate even when Reimu is in reserve. (Plus Disk: No longer buffs ACC and EVA)",0,0,0,0,0,0,0,0,0,0,0,0
+Reimu Hakurei,1,Grand Incantation,21,False,5,2,"After using Concentrate, the next action's damage or healing will be multiplied by (1.6 + SLv * 0.4).",0,0,0,0,0,0,0,0,0,0,0,0
+Reimu Hakurei,1,Hakurei's Divine Protection,22,False,5,2,"At the end of battle, gives a (SLv * 33)% chance to restore 1 MP to all four active members. This can take effect even if Reimu is not on the front line.",0,0,0,0,0,0,0,0,0,0,0,0
+Reimu Hakurei,1,Final Prayer,23,False,5,2,"When Reimu gets KO'd, she restores (SLv * 50)% HP to all other frontline members.",0,0,0,0,0,0,0,0,0,0,0,0
+Reimu Hakurei,1,Armored Yin-Yang Orb,24,False,5,2,"When Reimu is on the front line, all allies on the front line take (SLv * 15)% less Spirit damage. (Plus Disk: No longer bugged to reduce Reimu's SPI healing power)",0,0,0,0,0,0,0,0,0,0,0,0
+Reimu Hakurei,1,Youkai Buster,25,False,5,2,Damage against Youkai-Type enemies is increased by (SLv * 10)% if Reimu is on the front line. The bonus doesn’t stack with similar effects.,0,0,0,0,0,0,0,0,0,0,0,0
+Reimu Hakurei,1,Fantasy Seal -Blink-,26,True,16,10,"When the user receives a turn, increase ""Fantasy Seal -Blink-"" counter by 1. While the user is at the front, the user's all stats are increased by (counter * 5)%, and all other frontliners' SPD is increased by (counter * 3)%. The counter maxes out at (SLv).",0,0,0,0,0,0,0,0,0,0,0,0
+Reimu Hakurei,1,Barrier Expert,27,True,50,1,"Add medium chance and power PAR to all attacks (~30% infliction chance, 3000 strength). This effect stacks with spell or equipment effects.",0,0,0,0,0,0,0,0,0,0,0,0
+Reimu Hakurei,1,Super Youkai Buster,28,True,40,2,Youkai Buster's damage bonus against Youkai enemies increases by a further (SLv * 8)% (stacks multiplicatively with Youkai Buster's bonus). This effect extends to the entire frontline.,0,0,0,0,0,0,0,0,0,0,0,0
+Marisa Kirisame,2,MP Boost,1,False,2,5,Increase Maximum MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Marisa Kirisame,2,Magic Boost,5,False,2,5,Increase Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Marisa Kirisame,2,Speed Boost,7,False,2,5,Increase Speed.,0,0,0,0,0,0,0,0,0,0,0,0
+Marisa Kirisame,2,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Marisa Kirisame,2,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Marisa Kirisame,2,MAlice Cannon (Marisa),20,False,5,2,Marisa's Speed is increased by (SLv * 15)% when Alice is on the reserve party. This can only take effect if at least one ally or enemy has performed an action in the battle.,0,0,0,0,0,0,0,0,0,0,0,0
+Marisa Kirisame,2,Main character - Marisa,21,False,5,2,"When more than five characters are KO'd, Marisa will recover (SLv) MP and receive a (SLv * 10%) buff to all her stats every time she takes a turn . (Fixed in Plus Disk.)",0,0,0,0,0,0,0,0,0,0,0,0
+Marisa Kirisame,2,Sheer Force,22,False,15,1,"When attacking with an element the enemy resists, reduce enemy's elemental affinity to (100 + (affinity - 100) / 2). Additionally, pierce 1/3 of the enemy's ailment and debuff resistances when attacking.",0,0,0,0,0,0,0,0,0,0,0,0
+Marisa Kirisame,2,Sudden Impulse,23,False,5,2,"Increase damage variance (-5% to minimum damage and +10% to maximum damage per level, averaging a +2.5% damage increase per level).",0,0,0,0,0,0,0,0,0,0,0,0
+Marisa Kirisame,2,Lively and Healthy,24,False,5,2,Recovers (100 + Lv * 150)% faster from ailments and debuffs. (Bug: doesn't actually speed up recovery from debuffs),0,0,0,0,0,0,0,0,0,0,0,0
+Marisa Kirisame,2,Magic Training,25,False,5,2,"When Marisa is on the front line, increase Mystic damage output by (SLv * 15)% for all frontliners.",0,0,0,0,0,0,0,0,0,0,0,0
+Marisa Kirisame,2,Hakkero Charge Mode,26,True,80,1,"When the user receives a turn either in front or in back, increase Hakkero Charge counter by 1. All attacks receive a damage bonus of (counter * 4)%. The counter maxes at 25, and cannot be reduced in battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Marisa Kirisame,2,Hakkero Custom Mode,27,True,70,1,Marisa's personal spellcards will inflict 25% more damage. This skill does not work if Hakkero Charge Mode is learned.,0,0,0,0,0,0,0,0,0,0,0,0
+Marisa Kirisame,2,Magic Drain Missile,28,True,10,7,"When Magic Missile inflicts damage to an enemy, restore the user's MP by (SLv).",0,0,0,0,0,0,0,0,0,0,0,0
+Rinnosuke Morichika,3,MP High Boost,1,False,3,5,Greatly increase maximum MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Rinnosuke Morichika,3,TP High Boost,2,False,6,5,Greatly increase maximum TP.,0,0,0,0,0,0,0,0,0,0,0,0
+Rinnosuke Morichika,3,Attack High Boost,3,False,6,5,Greatly increase Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Rinnosuke Morichika,3,Defense High Boost,4,False,6,5,Greatly increase Defense.,0,0,0,0,0,0,0,0,0,0,0,0
+Rinnosuke Morichika,3,Magic High Boost,5,False,6,5,Greatly increase Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Rinnosuke Morichika,3,Mind High Boost,6,False,6,5,Greatly increase Mind.,0,0,0,0,0,0,0,0,0,0,0,0
+Rinnosuke Morichika,3,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Rinnosuke Morichika,3,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Rinnosuke Morichika,3,Gensokyo's Shopkeeper,20,False,1,10,Increase item drop rate by (SLv * 4)%. Only works if he's in the party. Effect is reduced to (SLv)% if Rinnosuke is in the back row.,0,0,0,0,0,0,0,0,0,0,0,0
+Rinnosuke Morichika,3,Keen-eyed Shop Owner Saga,21,False,1,10,Increase money drop rate by (SLv * 2)%. Only works if he's in the party. Effect is reduced to (SLv * 0.66)% if Rinnosuke is in the back row.,0,0,0,0,0,0,0,0,0,0,0,0
+Rinnosuke Morichika,3,Effective Formation Change,22,False,5,2,"When Rinnosuke performs a Form Change command to swap a reserve member into the active party, that member's ATB will be set at (7500 + SLv * 800).",0,0,0,0,0,0,0,0,0,0,0,0
+Rinnosuke Morichika,3,Weird Creatures Knowledge,23,False,5,2,Damage against Other-Type enemies is increased by (SLv * 10%) if Rinnosuke is on the front line. The bonus doesn’t stack with similar effects.,0,0,0,0,0,0,0,0,0,0,0,0
+Rinnosuke Morichika,3,Attack Debuff Add-On,24,False,5,2,"When Rinnosuke takes a turn, he has a chance to inflict a (SLv * 4)% ATK debuff on each enemy.",0,0,0,0,0,0,0,0,0,0,0,0
+Rinnosuke Morichika,3,Magic Debuff Add-on,25,False,5,2,"When Rinnosuke takes a turn, he has a chance to inflict a (SLv * 4)% MAG debuff on each enemy.",0,0,0,0,0,0,0,0,0,0,0,0
+Rinnosuke Morichika,3,Murakumo's Previous Owner,26,True,10,10,"Add a (SLv)% all stat debuff to all attacks, and a (SLv * 1.5)% all stat buff to all healing spells. (Debuff rate:65%)",0,0,0,0,0,0,0,0,0,0,0,0
+Rinnosuke Morichika,3,Guts,27,True,5,2,"If Rinnosuke gets knocked out, there is a (SLv * 25) % chance that 10 TP will get consumed and he will stay alive with 1 HP.",0,0,0,0,0,0,0,0,0,0,0,0
+Keine Kamishirasawa,4,MP Boost,1,False,2,5,Increase maximum MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Keine Kamishirasawa,4,TP Boost,2,False,2,5,Increase maximum TP.,0,0,0,0,0,0,0,0,0,0,0,0
+Keine Kamishirasawa,4,Magic Boost,5,False,2,5,Increase Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Keine Kamishirasawa,4,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Keine Kamishirasawa,4,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Keine Kamishirasawa,4,With Mokou,20,False,5,2,"When Mokou is active, Keine's Attack and Magic increase by (SLv * 15)% ((SLv * 21)% in Plus Disk).",0,0,0,0,0,0,0,0,0,0,0,0
+Keine Kamishirasawa,4,Organized Formation,21,False,10,1,"When Keine is active and a Form Change command is performed, all characters involved (switcher and the two switched characters) will recover 1 MP.",0,0,0,0,0,0,0,0,0,0,0,0
+Keine Kamishirasawa,4,Firm Defense,22,False,5,2,"When receiving damage from an enemy attack, Defense and Mind are buffed by (SLv * 5)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Keine Kamishirasawa,4,Teacher's Command,23,False,6,2,"When Keine receives a turn, all active members receive a (SLv * 6)% Mind buff.",0,0,0,0,0,0,0,0,0,0,0,0
+Keine Kamishirasawa,4,Historian's School,24,False,10,1,All party members receive 6% more exp. Only takes effect if Keine is in the party of 12.,0,0,0,0,0,0,0,0,0,0,0,0
+Keine Kamishirasawa,4,History Accumulation,25,False,16,3,"(Plus Disk only) When Keine uses a Three Treasures spell, increase an appropriate counter by 1. The user's ATK and MAG are increased by (Sword counter * 10)%, and the user's DEF and MND are increased by (Mirror counter * 12)%. The combined maximum of both counters is (SLv).",0,0,0,0,0,0,0,0,0,0,0,0
+Keine Kamishirasawa,4,Impervious Formation Change,26,True,50,1,"When the user switches a character from the back to the front while having at least 1 TP, the switched in character will have 9999 ATB, while the user's TP is reduced by 1.",0,0,0,0,0,0,0,0,0,0,0,0
+Keine Kamishirasawa,4,Were-Hakutaku Form,27,True,7,10,Increase all of user's base stats by (SLv * 1).,1,0,0,1,1,1,1,1,0,0,0,0
+Keine Kamishirasawa,4,Ability to Create History,28,True,25,3,The maximum stacks of History Accumulation increases by (SLv).,0,0,0,0,0,0,0,0,0,0,0,0
+Momiji Inubashiri,5,HP Boost,0,False,2,5,Increase base HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Momiji Inubashiri,5,Attack Boost,3,False,2,5,Increase Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Momiji Inubashiri,5,Defense Boost,4,False,2,5,Increase Defense.,0,0,0,0,0,0,0,0,0,0,0,0
+Momiji Inubashiri,5,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Momiji Inubashiri,5,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Momiji Inubashiri,5,Ability to See Far Distances,20,False,5,2,"When Momiji is on the front line, all active members' accuracy is increased by (SLv * 25)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Momiji Inubashiri,5,Tengu's Watchful Eye,21,False,5,2,Damage against Flying-Type enemies is increased by (SLv * 10)% if Momiji is on the front line. The bonus doesn’t stack with similar effects.,0,0,0,0,0,0,0,0,0,0,0,0
+Momiji Inubashiri,5,Accelerate,22,False,10,1,"When Momiji receives a turn, she will gain a 10% Speed buff.",0,0,0,0,0,0,0,0,0,0,0,0
+Momiji Inubashiri,5,Eyes that Perceive Reality,23,False,7,1,"When Momiji attacks or is attacked by an enemy with stat buffs, damage is calculated as if the enemy's buffs were non-existant.",0,0,0,0,0,0,0,0,0,0,0,0
+Momiji Inubashiri,5,Instant Attack,24,False,12,1,"When Momiji is brought to the front line from the reserve party, her ATB bar is set to 10000. Plus Disk also makes it cost 1 TP, not activating if the user doesn't have enough TP.",0,0,0,0,0,0,0,0,0,0,0,0
+Momiji Inubashiri,5,White Wolf's Sword and Shield,25,True,16,8,"When the user attacks an enemy with a normal Attack or a spellcard, buff user's ATK by (SLv * 3)%. When the user Concentrates or uses Formation Change, buff user's DEF and MND by (SLv * 3)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Momiji Inubashiri,5,Youkai Mountain Alliance?,26,True,25,2,"When at least 2 of Aya, Momiji, Nitori and Hina are in front, the user's all stats are increased by (SLv * 7)% for each member in front excluding herself. This can only take effect if at least one ally or enemy has acted in battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Momiji Inubashiri,5,Encounter with a Strong Foe,27,True,10,1,"If the user does not defeat an enemy after attacking it, give a 7% buff to all of the user's stats (Bug: works even when the user doesn't attack the enemy, such as with Auxiliary spells or Concentrating, though it doesn't work with Form Change)",0,0,0,0,0,0,0,0,0,0,0,0
+Youmu Konpaku,6,Attack Boost,3,False,2,5,Increase Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Youmu Konpaku,6,Defense Boost,4,False,2,5,Increase Defense.,0,0,0,0,0,0,0,0,0,0,0,0
+Youmu Konpaku,6,Mind Boost,6,False,2,5,Increase Mind.,0,0,0,0,0,0,0,0,0,0,0,0
+Youmu Konpaku,6,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Youmu Konpaku,6,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Youmu Konpaku,6,Regeneration,20,False,10,1,Restores 10% of max HP every time Youmu takes an action.,0,0,0,0,0,0,0,0,0,0,0,0
+Youmu Konpaku,6,Those Who Live in the Underworld,21,False,5,2,Damage against Ghost-Type enemies is increased by (SLv * 10)% if Youmu is on the front line. The bonus doesn’t stack with similar effects.,0,0,0,0,0,0,0,0,0,0,0,0
+Youmu Konpaku,6,Dexterity,22,False,7,1,"When Youmu receives an Attack/Magic debuff, that debuff is instead calculated as a buff of the same magnitude.",0,0,0,0,0,0,0,0,0,0,0,0
+Youmu Konpaku,6,Mental Concentration,23,False,4,4,Increases MP regained by Concentrate by (SLv * 1).,0,0,0,0,0,0,0,0,0,0,0,0
+Youmu Konpaku,6,Meikyo Shisui,24,False,5,2,"Whenever Youmu takes a turn and her MP is full, she receives a (SLv * 6)% buff to all her stats.",0,0,0,0,0,0,0,0,0,0,0,0
+Youmu Konpaku,6,Desperation,25,False,5,2,"When Youmu's HP is less than (20 + SLv * 20)%, all her stats are increased by 25%.",0,0,0,0,0,0,0,0,0,0,0,0
+Youmu Konpaku,6,Sword Spirit,26,False,20,1,"When Youmu concentrates, gain the ""Sword Spirit"" effect. If she attacks while having full HP and this effect, remove the effect and reduce her HP by 20% to increase the damage by 50%. (Plus Disk only)",0,0,0,0,0,0,0,0,0,0,0,0
+Youmu Konpaku,6,Asura's Blood,27,True,75,1,"The user receives a damage bonus depending on her current HP %. The bonus increases as her HP decreases, to a maximum of 110%. (bonus is 10% at max HP, and then increases per each % of lost HP)",0,0,0,0,0,0,0,0,0,0,0,0
+Youmu Konpaku,6,As the Silent Nirvana,28,True,50,3,"When the user receives fatal damage while having ""Sword Spirit"" effect, there's a (SLv * 33)% chance to remove the effect and reduce the user's TP by 10 to endure with 1 HP.",0,0,0,0,0,0,0,0,0,0,0,0
+Youmu Konpaku,6,Mistress & Servant,29,True,25,2,"If Youmu and Yuyuko are in the party of 12, increase the user's all stats by (SLv * 10)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Kogasa Tatara,7,TP Boost,2,False,2,5,Increase Maximum TP.,0,0,0,0,0,0,0,0,0,0,0,0
+Kogasa Tatara,7,Attack Boost,3,False,2,5,Increase Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Kogasa Tatara,7,Evasion Boost,8,False,2,5,Increase Evasion.,0,0,0,0,0,0,0,0,0,0,0,0
+Kogasa Tatara,7,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Kogasa Tatara,7,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Kogasa Tatara,7,Ability to Surprise Humans,20,False,10,1,"All attacks can now inflict Terror, and attacks that already inflicted Terror have their effect increased.(25% infliction rate, 5000 strength).",0,0,0,0,0,0,0,0,0,0,0,0
+Kogasa Tatara,7,Easygoing,21,False,5,1,Regenerate HP when using Concentrate. The recovery rate is twice as much as from backline HP recovery.,0,0,0,0,0,0,0,0,0,0,0,0
+Kogasa Tatara,7,Sheer Force,22,False,15,1,"When attacking with an element the enemy resists, reduce enemy's elemental affinity to (100 + (affinity - 100) / 2). Additionally, pierce 1/3 of the enemy's ailment and debuff resistances when atttacking.",0,0,0,0,0,0,0,0,0,0,0,0
+Kogasa Tatara,7,Heart of Perseverance,23,False,5,2,Gives (SLv * 66)% chance of recovering (SLv) MP when taking damage from an enemy attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Kogasa Tatara,7,Troubled Forgotten Item,24,False,6,2,"Restores (SLv) MP every time Kogasa attacks an enemy affected by Terror, and buffs all her stats by (SLv * 10)%. (Does not stack for multiple enemies)",0,0,0,0,0,0,0,0,0,0,0,0
+Kogasa Tatara,7,Waterproof Ghost Umbrella,25,False,24,1,Increase damage dealt to targets affected by Terror by 33%. (Plus Disk only),0,0,0,0,0,0,0,0,0,0,0,0
+Kogasa Tatara,7,Astonishing Ghost Umbrella,26,False,24,1,Decrease damage taken from enemies affected by Terror by 40%. Has no effect if Waterproof Ghost Umbrella is learned. (Plus Disk only),0,0,0,0,0,0,0,0,0,0,0,0
+Kogasa Tatara,7,Angstfreude,27,True,60,1,"When the user receives a turn, slightly restore HP for all frontliners. The restoration is increased in proportion to the number of characters or enemies under Terror. It is also increased in battles which cannot be fled from. (2% max HP regen in random battles, +4% for each TRRed unit; 10% regen in event fights, +16% per TRRed unit.)",0,0,0,0,0,0,0,0,0,0,0,0
+Kogasa Tatara,7,The Terror Unto Death,28,True,10,10,"When the user attacks with a personal spell card on enemies under Terror, increase damage inflicted by (SLv * 10)%. When this effect activates, remove the Terror effect (SLv * 2)% of the time.",0,0,0,0,0,0,0,0,0,0,0,0
+Kogasa Tatara,7,Speedy Formation Change,29,True,5,2,"When the user uses ""Formation Change"" command, her delay is set to (7500 + SLv * 800).",0,0,0,0,0,0,0,0,0,0,0,0
+Rumia,8,Magic Boost,5,False,2,5,Increase Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Rumia,8,Speed Boost,7,False,2,5,Increase Speed.,0,0,0,0,0,0,0,0,0,0,0,0
+Rumia,8,Affinity Boost,10,False,2,5,Increase all Elemental Resistances.,0,0,0,0,0,0,0,0,0,0,0,0
+Rumia,8,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Rumia,8,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Rumia,8,Team ⑨,20,False,5,2,"While Rumia is in the front line, Rumia's stats are increased by (SLv * 8) for each member of Team ⑨ that's also in the front line not including herself. This can only take effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Rumia,8,Realm of Eternal Darkness,21,False,5,2,"When Rumia is on the front line, all allies on the front line take (SLv * 15)% less Dark damage. (Plus Disk: No longer bugged to reduce Rumia's DRK healing power)",0,0,0,0,0,0,0,0,0,0,0,0
+Rumia,8,Youkai’s Knowledge,22,False,5,2,Damage against Human-Type enemies is increased by (SLv * 10)% if Rumia is on the front line. The bonus doesn’t stack with similar effects.,0,0,0,0,0,0,0,0,0,0,0,0
+Rumia,8,Piercing Attack,23,False,5,2,"Whenever an attack deals 0 damage due to the enemies' defenses, (SLv * 20)% of the attack's pre-defense, pre-multiplier damage will be dealt instead.",0,0,0,0,0,0,0,0,0,0,0,0
+Rumia,8,Darkness Manipulation,24,False,5,2,Decreases the rate at which the encounter rate counter increases by (SLv * 12). Stacks with similar skills but caps at 75% reduction.,0,0,0,0,0,0,0,0,0,0,0,0
+Rumia,8,Great Piercing Attack,25,True,60,1,"When both Piercing Attack and this skill are learned, Piercing Attack's minimum defense-igoring damage is increased. (A further 20% of damage pre-multiplier is added, making Moonlight Ray ~108% MAG at minimum for any skill level, slighter weaker than a lv5 Dark Side of the Moon)",0,0,0,0,0,0,0,0,0,0,0,0
+Rumia,8,Robes of Engulfing Darkness,26,True,60,1,"Moonlight Ray will inflict all status ailments other than debuffs. Dark Side of the Moon will debuff all stats. (Proc Rate is 66% on all effects, with 5000 strength on all ailments and -14% on all debuffs)",0,0,0,0,0,0,0,0,0,0,0,0
+Rumia,8,Darkness-Lurking Youkai,27,True,10,10,Increase the user's Evade by (SLv * 8) and Magic by (SLv * 1.2).,0,0,0,0,0,1.2,0,0,8.0,0,0,0
+Rumia,8,Proof of Kinship,28,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Rumia,8,Going it Alone,29,True,50,1,"If no character in the party of 12 has learned Team ⑨, increase the user's all stats by 16%.",0,0,0,0,0,0,0,0,0,0,0,0
+Cirno,9,TP Boost,2,False,2,5,Increase TP.,0,0,0,0,0,0,0,0,0,0,0,0
+Cirno,9,Speed Boost,7,False,2,5,Increase Speed.,0,0,0,0,0,0,0,0,0,0,0,0
+Cirno,9,Affinity Boost,10,False,2,5,Increase all Elemental Resistances.,0,0,0,0,0,0,0,0,0,0,0,0
+Cirno,9,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Cirno,9,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Cirno,9,Team ⑨,20,False,5,2,"While Cirno is in the front line, Cirno's stats are increased by (SLv * 8) for each member of Team ⑨ that's also in the front line not including herself. This can only takes effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Cirno,9,Always Rising after Falling,21,False,4,3,The amount of TP lost after combat is reduced by (SLv). The amount of TP lost after dying is reduced by (SLv * 3). Cannot reduce TP loss below 1 and doesn't work if you Escape.,0,0,0,0,0,0,0,0,0,0,0,0
+Cirno,9,Beloved Tomboyish Girl,22,False,5,2,"When Cirno receives a turn, she has a chance to inflict a (SLv * 4)% Speed debuff to all enemies.",0,0,0,0,0,0,0,0,0,0,0,0
+Cirno,9,Lively and Healthy,23,False,5,2,Recovers (100 + Lv * 150)% faster from ailments and debuffs. (Bug: doesn't actually speed up recovery from debuffs),0,0,0,0,0,0,0,0,0,0,0,0
+Cirno,9,Ability to Manipulate Ice,24,False,5,2,"When Cirno is on the front line, all allies on the front line take (SLv * 15)% less Cold damage.",0,0,0,0,0,0,0,0,0,0,0,0
+Cirno,9,Blizzard Blowout,25,False,8,5,"When the user is KO'd, inflict a (SLv * 10)% SPD debuff on all enemies regardless of resistance. (Plus Disk Only)",0,0,0,0,0,0,0,0,0,0,0,0
+Cirno,9,Tomboyish Girl's Vengeance,26,True,70,1,"When the user uses a spell with a SPD debuffing effect and the debuff fails, inflict the debuff anyways at 1/5 strength regardless of resistance. Increases damage dealt with personal spellcards on speed debuffed enemies by Debuff*2.5 (max 125%).",0,0,0,0,0,0,0,0,0,0,0,0
+Cirno,9,Acrobatic Tomboyish Fairy,27,True,9,8,"Increase the user's base SPD by (SLv), and the user's Evade by (SLv * 4).",0,0,0,0,0,0,0,1.0,4.0,0,0,0
+Cirno,9,Proof of Kinship,28,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Cirno,9,Going it Alone,29,True,50,1,"If no character in the party of 12 has learned Team ⑨, increase the user's all stats by 16%.",0,0,0,0,0,0,0,0,0,0,0,0
+Minoriko Aki,10,Magic Boost,5,False,2,5,Increase Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Minoriko Aki,10,Speed Boost,7,False,2,5,Increase Speed.,0,0,0,0,0,0,0,0,0,0,0,0
+Minoriko Aki,10,Resistance Boost,11,False,2,5,Increase all Ailment resistances.,0,0,0,0,0,0,0,0,0,0,0,0
+Minoriko Aki,10,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Minoriko Aki,10,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Minoriko Aki,10,Symbol of Harvest,20,False,5,2,Damage against Plant-Type enemies is increased by (SLv * 10)% if Minoriko is on the front line. The bonus doesn’t stack with similar effects.,0,0,0,0,0,0,0,0,0,0,0,0
+Minoriko Aki,10,Desire to Rest,21,False,5,2,"When Minoriko retreats to the reserve party, she will recover (SLv * 8)% HP and MP.",0,0,0,0,0,0,0,0,0,0,0,0
+Minoriko Aki,10,Regeneration,22,False,10,1,Restores 10% of max HP every time Minoriko takes an action.,0,0,0,0,0,0,0,0,0,0,0,0
+Minoriko Aki,10,Ability to Control Harvests,23,False,6,2,"When Minoriko receives a turn, all active members receive a (SLv * 4)% Magic buff.",0,0,0,0,0,0,0,0,0,0,0,0
+Minoriko Aki,10,Emergency Recovery,24,False,10,1,"If Minoriko uses Concentrate while under 66% HP, it will consume 3 TP and regenerate 66% HP, in addition to the usual effect. Does not work if the skill holder doesn’t have enough TP.",0,0,0,0,0,0,0,0,0,0,0,0
+Minoriko Aki,10,Rapid Charge,25,False,10,1,"If Minoriko uses Concentrate while under 33% MP, it will consume 5 TP and regenerate 50% MP, in addition to the usual effect. Does not work if the skill holder doesn’t have enough TP.",0,0,0,0,0,0,0,0,0,0,0,0
+Minoriko Aki,10,Myriad Goddess of Harvest,26,True,75,1,Using either Sweet Potato Room or Owotoshi Harvester will activate the other spell's effect. The additional spell is treated as Lv1.,0,0,0,0,0,0,0,0,0,0,0,0
+Minoriko Aki,10,Plantation's Blessing,27,True,15,8,"When the user receives a turn, restore (SLv * 1)% of her HP. This effect can overheal to a maximum of 150% of her normal maximum HP.",0,0,0,0,0,0,0,0,0,0,0,0
+Minoriko Aki,10,Symbol of Abundance and Harvest,28,True,40,2,Ability to Control Harvest's MAG buff is increased by an additional (SLv * 4)%.,0,0,0,0,0,0,0,0,0,0,0,0
+Komachi Onozuka,11,HP Boost,0,False,2,5,Increase maximum HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Komachi Onozuka,11,Attack Boost,3,False,2,5,Increase Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Komachi Onozuka,11,Mind Boost,6,False,2,5,Increase Mind.,0,0,0,0,0,0,0,0,0,0,0,0
+Komachi Onozuka,11,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Komachi Onozuka,11,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Komachi Onozuka,11,The Shinigami's Work,20,False,10,1,"All attacks can now inflict Death, and attacks that already inflicted Death have their effect increased.(25% infliction rate).",0,0,0,0,0,0,0,0,0,0,0,0
+Komachi Onozuka,11,Ferry Wages of Sanzu River,21,False,1,10,Increase the amount of money earned after a battle by (SLv * 2)%. Effect is reduced to (SLV * 0.66)% if Komachi is in the back row.,0,0,0,0,0,0,0,0,0,0,0,0
+Komachi Onozuka,11,Flexibility,22,False,7,1,"When Komachi receives a Defense/Mind debuff, that debuff is instead calculated as a buff of the same magnitude.",0,0,0,0,0,0,0,0,0,0,0,0
+Komachi Onozuka,11,Regeneration Ability,23,False,10,1,Restores 10% of max HP every time the character takes an action.,0,0,0,0,0,0,0,0,0,0,0,0
+Komachi Onozuka,11,Edokko God of Death,24,False,5,1,"When Komachi takes damage from an attack, she has a 25% chance to counterattack all enemies with a Spirit attack. If the attack either had a Death effect or was multi target and kills another frontliner, the counterattack chance becomes 100% and the power of the counterattack is increased (name of the counterattack changes to ""Wrath of Edokko God of Death"")",0,0,0,0,0,0,0,0,0,0,0,0
+Komachi Onozuka,11,An Eye for an Eye,25,False,5,2,"When Komachi takes damage from an enemy’s attack, she receives a (SLv * 5) buff to her Attack.",0,0,0,0,0,0,0,0,0,0,0,0
+Komachi Onozuka,11,Enma & Shinigami,26,True,25,2,"If Komachi and Eiki are in the party of 12, increase the user's all stats by (SLv * 10)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Komachi Onozuka,11,Shinigami's Scythe,27,True,12,8,"Adds a (SLv * 10)% ATK factor into Narrow Confines of Avici's base formula, along with a (SLv * 10)% MAG factor into Short Life Expectancy, Ferriage in the Deep Fog, and Scythe that Chooses the Dead's base formulas.",0,0,0,0,0,0,0,0,0,0,0,0
+Komachi Onozuka,11,Slacker's Motivation,28,True,10,5,"User's PAR, HVY and DTH resistances are increased by (SLv * 12).",0,0,0,0,0,0,0,0,0,0,0,12.0
+Chen,12,Attack Boost,3,False,2,5,Increase Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Chen,12,Speed Boost,7,False,2,5,Increase Speed.,0,0,0,0,0,0,0,0,0,0,0,0
+Chen,12,Evasion Boost,8,False,2,5,Increase Evasion.,0,0,0,0,0,0,0,0,0,0,0,0
+Chen,12,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Chen,12,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Chen,12,Yakumo Clan,20,False,5,2,"While Chen is on the front line, if Ran and/or Yukari are on the front line, Chen's stats will be increased by (SLv * 8) % per members on the front line, excluding Chen.",0,0,0,0,0,0,0,0,0,0,0,0
+Chen,12,Instant Attack,21,False,12,1,"When Chen is brought to the front line from the reserve party, her ATB bar is set to 10000. Plus Disk also makes it cost 1 TP, not activating if the user doesn't have enough TP.",0,0,0,0,0,0,0,0,0,0,0,0
+Chen,12,Beat Down,22,False,6,2,"When Chen defeats an enemy, she recovers (SLv) MP and receives a (SLv * 8)% buff to all stats. Does not stack if 2 or more enemies are defeated at the same time.",0,0,0,0,0,0,0,0,0,0,0,0
+Chen,12,Accelerate,23,False,10,1,"When Chen gets a turn, she receives a 10% Speed buff.",0,0,0,0,0,0,0,0,0,0,0,0
+Chen,12,Idaten,24,False,5,2,"When Chen is on the front line, allies have a (SLv * 20)% reduced chance of being inflicted with the Heavy status, if any ally gets inflicted with the Heavy status, its duration is also reduced by (SLv * 20)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Chen,12,"Screw This, I'm Outta Here",25,False,7,1,"When Chen is in the party, the TP penalty from using the Escape Command is lowered from 3x to 2x TP.",0,0,0,0,0,0,0,0,0,0,0,0
+Chen,12,Shikigami's Heavy Accel Attack,26,True,75,1,"When the user gets a turn, increase Heavy Accel counter by 2. The user's ATK is increased by (counter * 5)%. Whenever a frontliner gets a turn, there's a 30% chance of the counter being reduced by 1 (this applies even if the user is in the back). The counter maxes at 10.",0,0,0,0,0,0,0,0,0,0,0,0
+Chen,12,Indiscernible Monster Cat,27,True,6,10,"Increase the user's Evade by (SLv * 6), Attack by (SLv * 1) and Speed by (SLv * 1).",0,0,0,1.0,0,0,0,1.0,6.0,0,0,0
+Chen,12,Proof of Kinship,28,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Nitori Kawashiro,13,Defense Boost,4,False,2,5,Increases Defense.,0,0,0,0,0,0,0,0,0,0,0,0
+Nitori Kawashiro,13,Mind Boost,6,False,2,5,Increases Mind.,0,0,0,0,0,0,0,0,0,0,0,0
+Nitori Kawashiro,13,Affinity Boost,10,False,2,5,Increases all Elemental Resistances.,0,0,0,0,0,0,0,0,0,0,0,0
+Nitori Kawashiro,13,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Nitori Kawashiro,13,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Nitori Kawashiro,13,Maintenance,20,False,15,1,Doubles stat bonuses on wearer's Main and Sub equipment.,0,0,0,0,0,0,0,0,0,0,0,0
+Nitori Kawashiro,13,Ability to Manipulate Water,21,False,5,2,"When Nitori is on the front line, increase Cold damage output by (SLv * 15)% for all frontliners.",0,0,0,0,0,0,0,0,0,0,0,0
+Nitori Kawashiro,13,Kappa's Ecology Observation,22,False,5,2,Damage against Aquatic-Type enemies is increased by (SLv * 10)% if Nitori is on the front line. The bonus doesn’t stack with similar effects.,0,0,0,0,0,0,0,0,0,0,0,0
+Nitori Kawashiro,13,Overheating,23,False,10,1,"Whenever Nitori uses an offensive ability, she gains an ""Overheating"" buff that increases her next spell card's MP cost by 1 and damage done by 15%. This can keep stacking as long as the holder remains active. Wears off if holder switches out. Has a maximum level of 5 in Plus Disk.",0,0,0,0,0,0,0,0,0,0,0,0
+Nitori Kawashiro,13,Cooling Down,24,False,12,2,"If Nitori concentrates with full HP, the amount of MP recovered is multiplied by (1 + SLv).",0,0,0,0,0,0,0,0,0,0,0,0
+Nitori Kawashiro,13,Enhanced Versatile Machine,25,True,50,1,"Portable Versatile Machine's delay is reduced (83.2% -> 93.2%). Additionally, increases Overheat's damage boost to 20% per stack.",0,0,0,0,0,0,0,0,0,0,0,0
+Nitori Kawashiro,13,Youkai Mountain Alliance?,26,True,25,2,"When at least 2 of Aya, Momiji, Nitori and Hina are in front, the user's all stats are increased by (SLv * 7)% for each member in front excluding herself. This can only take effect if at least one ally or enemy has acted in battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Nitori Kawashiro,13,Kappa's Material Aesthetica,27,True,75,1,"If the user is in the front at the end of battle, increase item drop rate by 20%. Additionally, if the user defeats an enemy, that enemy's item drop rate is increased by 40%.",0,0,0,0,0,0,0,0,0,0,0,0
+Parsee Mizuhashi,14,MP Boost,1,False,2,5,Increase maximum MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Parsee Mizuhashi,14,Mind Boost,6,False,2,5,Increase Mind.,0,0,0,0,0,0,0,0,0,0,0,0
+Parsee Mizuhashi,14,Resistance Boost,11,False,2,5,Increase all Ailment Resistances.,0,0,0,0,0,0,0,0,0,0,0,0
+Parsee Mizuhashi,14,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Parsee Mizuhashi,14,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Parsee Mizuhashi,14,Two-Way Curse,20,False,5,2,"If Parsee is affected by a status effect, her damage done is increased by (SLv * 12)% and her damage taken is reduced by (SLv * 12)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Parsee Mizuhashi,14,Final Blow,21,False,5,2,"When Parsee attacks an enemy affected by an ailment, that attack's damage is increased by (SLv * 16)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Parsee Mizuhashi,14,Jealousy Manipulation,22,False,10,1,Parsee's stats will increase the more units (allies and enemies) are affected by Debuffs (5% stat increase per Debuffed unit).,0,0,0,0,0,0,0,0,0,0,0,0
+Parsee Mizuhashi,14,Flames of Jealousy,23,False,5,2,"When Parsee is on the front line, increase Dark damage output by (SLv * 15)% for all frontliners.",0,0,0,0,0,0,0,0,0,0,0,0
+Parsee Mizuhashi,14,Emergency Recovery,24,False,10,1,"If Parsee uses Concentrate while under 66% HP, it will consume 3 TP and regenerate 66% HP, in addition to the usual effect. Does not work if the skill holder doesn’t have enough TP.",0,0,0,0,0,0,0,0,0,0,0,0
+Parsee Mizuhashi,14,Jealousy Bomber,25,True,40,1,Large Box and Small Box will inflict 3x damage more often.,0,0,0,0,0,0,0,0,0,0,0,0
+Parsee Mizuhashi,14,Green Eyed Monster,26,True,80,1,The strength of all of the user's status ailments and debuffs are increased by 50%.,0,0,0,0,0,0,0,0,0,0,0,0
+Parsee Mizuhashi,14,Jealousy-Fueled Final Blow,27,True,66,1,Final Blow's effect is doubled.,0,0,0,0,0,0,0,0,0,0,0,0
+Wriggle Nightbug,15,Defense Boost,4,False,2,5,Increases Defense.,0,0,0,0,0,0,0,0,0,0,0,0
+Wriggle Nightbug,15,Mind Boost,6,False,2,5,Increases Mind.,0,0,0,0,0,0,0,0,0,0,0,0
+Wriggle Nightbug,15,Evasion Boost,8,False,2,5,Increases Evasion.,0,0,0,0,0,0,0,0,0,0,0,0
+Wriggle Nightbug,15,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Wriggle Nightbug,15,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Wriggle Nightbug,15,Team ⑨,20,False,5,2,"While Wriggle is in the front line, Wriggle's stats are increased by (SLv * 8) for each member of Team ⑨ that's also in the front line not including herself. This can only take effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Wriggle Nightbug,15,Inhale Poison,21,False,5,2,"When Wriggle receives a turn, if any allies on the front line are poisoned, Wriggle recovers (SLv * 12)% of her max HP per Poisoned ally.",0,0,0,0,0,0,0,0,0,0,0,0
+Wriggle Nightbug,15,Kodoku Queen,22,False,10,1,Wriggle's stats will increase the more units (allies and enemies) are affected by Poison (5% stat increase per Poisoned unit).,0,0,0,0,0,0,0,0,0,0,0,0
+Wriggle Nightbug,15,Toxic Vaccine,23,False,5,2,"When Wriggle is on the front line, allies have a (SLv * 20)% reduced chance of being inflicted with the Poison status, if any ally gets inflicted with the Poison status, its duration is also reduced by (SLv * 20)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Wriggle Nightbug,15,Insect's Commander,24,False,5,2,Damage against Insect-Type enemies is increased by (SLv * 10)% if Wriggle is on the front line. The bonus doesn’t stack with similar effects.,0,0,0,0,0,0,0,0,0,0,0,0
+Wriggle Nightbug,15,Poison Touch,25,False,5,2,"When Wriggle is hit by a physical attack, she has a (SLv * 35)% chance to counter with a normal Attack that can inflict Poison and Paralysis. (Infliction rate: 90%, PSN:10000 / PAR:4000)",0,0,0,0,0,0,0,0,0,0,0,0
+Wriggle Nightbug,15,Firefly Swarm,26,True,50,1,"When at least one ally or enemy is poisoned, increase Wriggle's DEF and MND by 25%.",0,0,0,0,0,0,0,0,0,0,0,0
+Wriggle Nightbug,15,Nightbug Carnival,27,True,40,1,"Increase Nightbug Tornado's power and damage bonus on poisoned enemies. (Formula changes to 223% ATK - 67.5% T.DEF, Poison damage bonus changes to (75+SLv*15)%)",0,0,0,0,0,0,0,0,0,0,0,0
+Wriggle Nightbug,15,Proof of Kinship,28,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Wriggle Nightbug,15,Going it Alone,29,True,50,1,"If no character in the party of 12 has learned Team ⑨, increase the user's all stats by 16%.",0,0,0,0,0,0,0,0,0,0,0,0
+Kaguya Houraisan,16,MP Boost,1,False,2,5,Increases Maximum MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Kaguya Houraisan,16,Magic Boost,5,False,2,5,Increases Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Kaguya Houraisan,16,Mind Boost,6,False,2,5,Increases Mind.,0,0,0,0,0,0,0,0,0,0,0,0
+Kaguya Houraisan,16,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Kaguya Houraisan,16,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Kaguya Houraisan,16,Residents of Eientei,20,False,5,2,"While Kaguya is on the front line and if Reisen and/or Eirin are also on the front line, Kaguya's stats are increased by (SLv * 7) for each not including herself. This can only take effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Kaguya Houraisan,16,Royal People of the Moon,21,False,12,1,"Kaguya's attacks will ignore 90% of the enemy's defenses. When she takes a turn, there is a 75% chance to consume 1 MP.",0,0,0,0,0,0,0,0,0,0,0,0
+Kaguya Houraisan,16,Robe of Fire Rat,22,False,5,2,"When Kaguya is on the front line, all allies on the front line take (SLv * 15)% less Fire damage.",0,0,0,0,0,0,0,0,0,0,0,0
+Kaguya Houraisan,16,Desire to Rest,23,False,5,2,"When the skill holder retreats to the reserve, she recovers (SLv * 6)% HP and MP.",0,0,0,0,0,0,0,0,0,0,0,0
+Kaguya Houraisan,16,Thousand Year Exile,24,False,10,1,"Kaguya's Speed is increased by 66% when on the reserve party, increasing her HP and MP recovery rate.",0,0,0,0,0,0,0,0,0,0,0,0
+Kaguya Houraisan,16,Lunar Power,25,True,50,1,"When the user is in the front, all other frontliners ignore 25% of enemy defense when attacking.",0,0,0,0,0,0,0,0,0,0,0,0
+Kaguya Houraisan,16,Lunar Ilmenite,26,True,20,5,"Rarely, when the user receives a turn, restore all of user's MP. The skill's activation chance increases with skill level. (~10% rate at max level)",0,0,0,0,0,0,0,0,0,0,0,0
+Kaguya Houraisan,16,Five Impossible Requests,27,True,75,1,"When Kaguya uses a personal spell card, increase Five Impossible Request counter by 1. When she attacks while the counter is at 5, remove the effect to increase the attack's damage by 150%.",0,0,0,0,0,0,0,0,0,0,0,0
+Kaguya Houraisan,16,Proof of Kinship,28,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Fujiwara no Mokou,17,HP Boost,0,False,2,5,Increases HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Fujiwara no Mokou,17,TP Boost,2,False,2,5,Increases TP.,0,0,0,0,0,0,0,0,0,0,0,0
+Fujiwara no Mokou,17,Attack Boost,3,False,2,5,Increases Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Fujiwara no Mokou,17,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Fujiwara no Mokou,17,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Fujiwara no Mokou,17,With Keine,20,False,5,2,"While Keine is on the front line, Mokou's Defense and Mind are increased by (SLv * 15)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Fujiwara no Mokou,17,Regeneration,21,False,8,2,Recovers (SLv * 10)% of max HP whenever Mokou takes an action.,0,0,0,0,0,0,0,0,0,0,0,0
+Fujiwara no Mokou,17,Resurrection,22,False,5,3,"When Mokou is defeated, there is a (SLv * 30)% chance to consume 6 TP and revive her. She revives with 33% max HP and her timebar at 0. Cannot activate if she doesn't have enough TP.",0,0,0,0,0,0,0,0,0,0,0,0
+Fujiwara no Mokou,17,Blazing,23,False,5,2,"When Mokou is on the front line, increase Fire damage output by (SLv * 15)% for all frontliners.",0,0,0,0,0,0,0,0,0,0,0,0
+Fujiwara no Mokou,17,Fighting Spirit,24,False,5,2,"Whenever the skill holder takes an action, she gains a ""Fighting Spirit level"" that reduces damage taken and increases damage dealt by (Fighting Spirit level * 5)%, up to a maximum of (SLv * 3) stacks. Wears off if she switches out.",0,0,0,0,0,0,0,0,0,0,0,0
+Fujiwara no Mokou,17,Morale Maintenance,25,True,60,1,"When the user is switched to the back, Fighting Spirit counter will be reduced by 1 instead of disappearing entirely.",0,0,0,0,0,0,0,0,0,0,0,0
+Fujiwara no Mokou,17,Sheer Force,26,True,15,1,"When attacking with an element the enemy resists, reduce enemy's elemental affinity to (100 + (affinity - 100) / 2). Additionally, pierce 1/3 of the enemy's ailment and debuff resistances when attacking.",0,0,0,0,0,0,0,0,0,0,0,0
+Fujiwara no Mokou,17,Desperation,27,True,5,2,"When the user's HP is less than (20 + SLv * 20)%, all stats are increased by 25%.",0,0,0,0,0,0,0,0,0,0,0,0
+Fujiwara no Mokou,17,Imperishable Shooting,28,True,80,1,"Increase ATK commensurate with TP lost. For each TP missing, increase ATK by 1%.",0,0,0,0,0,0,0,0,0,0,0,0
+Aya Shameimaru,18,HP Boost,0,False,2,5,Increases HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Aya Shameimaru,18,Attack Boost,3,False,2,5,Increases Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Aya Shameimaru,18,Evasion Boost,8,False,2,5,Increases Evasion.,0,0,0,0,0,0,0,0,0,0,0,0
+Aya Shameimaru,18,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Aya Shameimaru,18,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Aya Shameimaru,18,Quickwitted,20,False,7,1,"When Aya receives a Speed debuff, that debuff is instead calculated as a buff of the same magnitude.",0,0,0,0,0,0,0,0,0,0,0,0
+Aya Shameimaru,18,Gensokyo's Fastest Lessons,21,False,5,2,"When entering a battle, Aya has a (SLv * 50)% chance to start with her timebar at 20000 (effectively giving her a free turn at the start).",0,0,0,0,0,0,0,0,0,0,0,0
+Aya Shameimaru,18,Tengu's Wind,22,False,6,2,"When Aya receives a turn, all allies on the front line gain a (SLv * 4)% Speed buff.",0,0,0,0,0,0,0,0,0,0,0,0
+Aya Shameimaru,18,Ability to Manipulate Wind,23,False,5,2,"When Aya is on the front line, all allies on the front line take (SLv * 15)% less Wind damage.",0,0,0,0,0,0,0,0,0,0,0,0
+Aya Shameimaru,18,Extra Steps,24,False,12,1,"When Aya kills an enemy, she will be able to act again immediately.",0,0,0,0,0,0,0,0,0,0,0,0
+Aya Shameimaru,18,Proof of the Fastest,25,True,80,1,"When the user evades an attack, increase Proof of the Fastest counter by 1. Increase the user's SPD by (counter * 4)% and ATK by (counter * 10)%. The counter maxes at 10.",0,0,0,0,0,0,0,0,0,0,0,0
+Aya Shameimaru,18,Crow Tengu's Watchful Eyes,26,True,15,4,Increase the user's Evade by (SLv * 10).,0,0,0,0,0,0,0,0,10.0,0,0,0
+Aya Shameimaru,18,Youkai Mountain Alliance?,27,True,25,2,"When at least 2 of Aya, Momiji, Nitori and Hina are in front, the user's all stats are increased by (SLv*7)% for each member in front excluding herself. This can only take effect if at least one ally or enemy has acted in battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Mystia Lorelei,19,MP Boost,1,False,2,5,Increases Maximum MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Mystia Lorelei,19,Attack Boost,3,False,2,5,Increases Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Mystia Lorelei,19,Speed Boost,7,False,2,5,Increases Speed.,0,0,0,0,0,0,0,0,0,0,0,0
+Mystia Lorelei,19,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Mystia Lorelei,19,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Mystia Lorelei,19,Team ⑨,20,False,5,2,"While Mystia is in the front line, Mystia's stats are increased by (SLv * 8) for each member of Team ⑨ that's also in the front line not including herself. This can only take effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Mystia Lorelei,19,Diva of Darkness,21,False,5,2,"When Mystia is on the front line, allies have a (SLv * 20)% reduced chance of being Silenced, if any ally gets inflicted with the Silence status, its duration is also reduced by (SLv * 20)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Mystia Lorelei,19,Silent Singing Voice,22,False,10,1,"Mystia's stats will increase the more units (allies and enemies) are affected by Silence. (5% stat increase per Silenced unit, increased to ~7% in Plus Disk)",0,0,0,0,0,0,0,0,0,0,0,0
+Mystia Lorelei,19,Soothing Type?,23,False,6,1,"When Mystia uses Concentrate, all allies on the front line recover 1 MP.",0,0,0,0,0,0,0,0,0,0,0,0
+Mystia Lorelei,19,Instant Attack,24,False,12,1,"When Mystia is brought to the front line from the reserve party, her ATB bar is set to 10000. Plus Disk also makes it cost 1 TP, not activating if the user doesn't have enough TP.",0,0,0,0,0,0,0,0,0,0,0,0
+Mystia Lorelei,19,Tunnel Vision,25,True,66,1,"When the user is in the front, increase all frontliners' Evade by 20%. When an attack is evaded, the attacker receives a 7% All-stat debuff (ignores DBF resistance), even if the user is in the back.",0,0,0,0,0,0,0,0,0,0,0,0
+Mystia Lorelei,19,Deaf to All but the Song,26,True,66,1,Singing in the Silence's bonus will have a minimum of Lv4 if at least one ally or enemy is Silenced. (Currently maxes at 5 from a single silenced unit for ~35% stat increase),0,0,0,0,0,0,0,0,0,0,0,0
+Mystia Lorelei,19,Proof of Kinship,27,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Mystia Lorelei,19,Going it Alone,28,True,50,1,"If no character in the party of 12 has learned Team ⑨, increase the user's all stats by 16%.",0,0,0,0,0,0,0,0,0,0,0,0
+Kasen Ibaraki,20,HP Boost,0,False,2,5,Increase base HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Kasen Ibaraki,20,TP Boost,2,False,2,5,Increase maximum TP.,0,0,0,0,0,0,0,0,0,0,0,0
+Kasen Ibaraki,20,Speed Boost,7,False,2,5,Increase Speed.,0,0,0,0,0,0,0,0,0,0,0,0
+Kasen Ibaraki,20,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Kasen Ibaraki,20,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Kasen Ibaraki,20,Ability to Guide Animals,20,False,5,2,Damage against Beast-Type enemies is increased by (SLv * 10%) if Kasen is on the front line. The bonus doesn’t stack with similar effects.,0,0,0,0,0,0,0,0,0,0,0,0
+Kasen Ibaraki,20,Guts,21,False,5,2,"If Kasen gets knocked down, there is a (SLv * 25)% chance that 10 TP will get consumed and she will stay alive with 1 HP",0,0,0,0,0,0,0,0,0,0,0,0
+Kasen Ibaraki,20,Fighting Spirit,22,False,5,2,"Whenever the skill holder takes an action, she gains a ""Fighting Spirit level"" that reduces damage taken and increases damage dealt by (Fighting Spirit level * 5)%, up to a maximum of (SLv * 3) stacks. Wears off if she switches out.",0,0,0,0,0,0,0,0,0,0,0,0
+Kasen Ibaraki,20,Adversity,23,False,5,2,"While Kasen is affected by an ailment or debuff, her damage will be increased by (SLv * 10)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Kasen Ibaraki,20,Thankful Preaching,24,False,10,1,"Adds a Silence effect to all attacks, and attacks that already inflicted Silence have their effect increased. (25% infliction rate, 5000 strength).",0,0,0,0,0,0,0,0,0,0,0,0
+Kasen Ibaraki,20,Impact Attack,25,False,10,1,"Adds a Shock effect to all attacks, and attacks that already inflicted Shock have their effect increased.(25% infliction rate).",0,0,0,0,0,0,0,0,0,0,0,0
+Kasen Ibaraki,20,Adversity+,26,True,25,2,Adversity will increase damage by an additional (SLv * 10)%.,0,0,0,0,0,0,0,0,0,0,0,0
+Kasen Ibaraki,20,Healthy Spirit,27,True,70,1,"When the user is not suffering from any ailments or debuffs, increase ATK, DEF, MAG and MND by 10%.",0,0,0,0,0,0,0,0,0,0,0,0
+Kasen Ibaraki,20,Four Deva of Mt. Ooe?,28,True,25,2,"When at least 2 of Kasen, Yuugi and Suika are in front, the user's all stats are increased by (SLv*7)% for each member in front excluding herself. This can only take effect if at least one ally or enemy has acted in battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Nazrin,21,Mind Boost,6,False,2,5,Increases Mind.,0,0,0,0,0,0,0,0,0,0,0,0
+Nazrin,21,Speed Boost,7,False,2,5,Increases Speed.,0,0,0,0,0,0,0,0,0,0,0,0
+Nazrin,21,Evasion Boost,8,False,2,5,Increases Evasion.,0,0,0,0,0,0,0,0,0,0,0,0
+Nazrin,21,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Nazrin,21,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Nazrin,21,Myouren Temple Personnel,20,False,7,1,"If Byakuren is on the front line when Nazrin takes a turn, she will copy Byakuren's current buffs. (Plus Disk)If Byakuren is on the front line when Nazrin takes a turn, Nazrin will receive the same buff and HP regeneration effects from Byakuren's learned Sutra skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Nazrin,21,Bishamonten's Blessing,21,False,5,2,Damage against Divine-Type enemies is increased by (SLv * 10)% if Nazrin is on the front line. The bonus doesn’t stack with similar effects.,0,0,0,0,0,0,0,0,0,0,0,0
+Nazrin,21,Dowsing,22,False,12,1,Increases item drop rates by 20%. Effect is reduced to 5% if Nazrin is in the back row.,0,0,0,0,0,0,0,0,0,0,0,0
+Nazrin,21,Eyes that Perceive Reality,23,False,7,1,"When Nazrin attacks or is attacked by an enemy with stat buffs, damage is calculated as if the enemy's buffs were non-existant.",0,0,0,0,0,0,0,0,0,0,0,0
+Nazrin,21,Extra Steps,24,False,12,1,"When Nazrin kills an enemy, she will be able to act again immediately.",0,0,0,0,0,0,0,0,0,0,0,0
+Nazrin,21,Bishamonten's Protection - MAG,25,False,12,4,(Plus Disk only) Increase the user's base MAG by (SLv * 3).,0,0,0,0,0,3.0,0,0,0,0,0,0
+Nazrin,21,Bishamotnen's Protection - SPD,26,False,12,4,(Plus Disk only) Increase the user's base SPD by (SLv * 4). Has no effect if Bishamonten's Protection - MAG is learned.,0,0,0,0,0,0,0,0,0,0,0,0
+Nazrin,21,Extra Attack,27,True,12,2,"When the user uses Attack, Spell or Concentrate, there is a (SLv * 16)% chance to immediately repeat the action. If the original action consumed MP, the repeat action will consume half of the original MP cost. The activation rate for subclass spells is 2/3 of the base chance.",0,0,0,0,0,0,0,0,0,0,0,0
+Nazrin,21,Effective Formation Change,28,True,5,2,"When the user performs a Form Change command to swap a reserve member into the active party, that member's ATB will be set at (7500 + SLv*800).",0,0,0,0,0,0,0,0,0,0,0,0
+Nazrin,21,Tiny Commander's Wisdom,29,True,4,33,"When the user attacks, double damage done (SLv)% of the time.",0,0,0,0,0,0,0,0,0,0,0,0
+Hina Kagiyama,22,HP Boost,0,False,2,5,Increases HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Hina Kagiyama,22,Defense Boost,4,False,2,5,Increases Defense.,0,0,0,0,0,0,0,0,0,0,0,0
+Hina Kagiyama,22,Mind Boost,6,False,2,5,Increases Mind.,0,0,0,0,0,0,0,0,0,0,0,0
+Hina Kagiyama,22,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Hina Kagiyama,22,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Hina Kagiyama,22,Warding Away Bad Luck,20,False,5,2,"When Hina is on the front line, allies have a (SLv * 20)% reduced chance of being debuffed, if any ally gets inflicted with a debuff, its magnitude is also reduced by (SLv * 20)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Hina Kagiyama,22,Two-Way Curse,21,False,5,2,"If Hina is affected by a status effect, her damage done is increased by (SLv * 12)% while her damage taken is reduced by (SLv * 12)%",0,0,0,0,0,0,0,0,0,0,0,0
+Hina Kagiyama,22,Curse Reversal,22,False,8,1,"When Hina is inflicted by a debuff, it counts as a buff equal to twice the debuff's effect.",0,0,0,0,0,0,0,0,0,0,0,0
+Hina Kagiyama,22,Misfortune Stockpilling,23,False,5,2,"When Hina uses Concentrate, she will transfer (SLv * 33)% of the debuffs on your other front line characters to herself.",0,0,0,0,0,0,0,0,0,0,0,0
+Hina Kagiyama,22,Spinning More than Usual,24,False,12,1,"When Hina takes a turn and she has either a Heavy, Silence or Terror effect on her, those effects will be removed, she will recover 10 MP and all stats are buffed by 33%.",0,0,0,0,0,0,0,0,0,0,0,0
+Hina Kagiyama,22,Role of Nagashi-bina,25,False,6,2,"When Hina takes a turn, any stat which does not have a buff on it will receive a (Slv * 6)% debuff.",0,0,0,0,0,0,0,0,0,0,0,0
+Hina Kagiyama,22,Sorrowful Exiled Doll,26,True,50,1,"When the user receives a turn while at least one character is affected by an ailment other than debuffs, halve the effect of those ailments.",0,0,0,0,0,0,0,0,0,0,0,0
+Hina Kagiyama,22,Youkai Mountain Alliance?,27,True,25,2,"When at least 2 of Aya, Momiji, Nitori and Hina are in front, the user's all stats are increased by (SLv*7)% for each member in front excluding herself. This can only take effect if at least one ally or enemy has acted in battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Hina Kagiyama,22,Cursed Hina Doll,28,True,120,1,"When Hina attacks with a personal spell card on debuffed enemies, increase damage done, with the bonus being equal to the total magnitude of their debuffs.",0,0,0,0,0,0,0,0,0,0,0,0
+Rin Kaenbyou,23,Attack Boost,3,False,2,5,Increases Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Rin Kaenbyou,23,Magic Boost,5,False,2,5,Increases Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Rin Kaenbyou,23,Speed Boost,7,False,2,5,Increases Speed.,0,0,0,0,0,0,0,0,0,0,0,0
+Rin Kaenbyou,23,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Rin Kaenbyou,23,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Rin Kaenbyou,23,Earth Spirits Palace Party,20,False,5,2,"While Rin is on the front line, if Utsuho and/or Satori are on the front line, Rin's stats will be increased by (SLv * 8) % per members on the front line, excluding Rin. This can only take effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Rin Kaenbyou,23,Hell's Necromancer,21,False,5,2,"When Rin is on the front line, allies have a (SLv * 20)% reduced chance of being inflicted with Terror, if any ally gets inflicted with Terror, its duration and MP drain effect are also reduced by (SLv * 20)%, and the all stat reduction effect is nullified.",0,0,0,0,0,0,0,0,0,0,0,0
+Rin Kaenbyou,23,Speedy Formation Change,22,False,5,2,"When Rin performs a Formation Change, her timebar is set to (7000 + SLv * 1000).",0,0,0,0,0,0,0,0,0,0,0,0
+Rin Kaenbyou,23,Two-Way Curse,23,False,5,2,"If Rin is affected by a status effect, her damage done is increased by (SLv * 12)% and her damage taken is reduced by (SLv * 12)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Rin Kaenbyou,23,Final Blow,24,False,5,2,"When Rin attacks an enemy affected by an ailment, that attack's damage is increased by (SLv * 16)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Rin Kaenbyou,23,Extra Attack,25,False,7,2,"When Rin attacks, uses a spellcard, or Concentrates, she has a (SLv * 16)% chance to immediately repeat that action. If the original action consumed MP, the repeat action will not. Plus Disk increases the cost from 7 to 12, makes the repeated action consume half of the original MP cost and reduces the activation rate for subclass spells to 2/3 of the base chance.",0,0,0,0,0,0,0,0,0,0,0,0
+Rin Kaenbyou,23,Apparition Carrier,26,False,15,1,"When Rin defeats an enemy, she recovers 33% HP and 1 MP, and receives a 20% buff to all her stats. This bonus doesn't increase if she defeats multiple enemies at once.",0,0,0,0,0,0,0,0,0,0,0,0
+Rin Kaenbyou,23,Vengeful Cat's Erratic Step,27,True,120,1,Increase the activation rate of Extra Attack by 10%.,0,0,0,0,0,0,0,0,0,0,0,0
+Rin Kaenbyou,23,Ash Rekindling,28,True,66,1,The user ignores 30% of enemy defenses when attacking.,0,0,0,0,0,0,0,0,0,0,0,0
+Rin Kaenbyou,23,Proof of Kinship,29,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Utsuho Reiuji,24,HP Boost,0,False,2,5,Increases HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Utsuho Reiuji,24,MP Boost,1,False,2,5,Increases MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Utsuho Reiuji,24,Magic Boost,5,False,2,5,Increases Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Utsuho Reiuji,24,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Utsuho Reiuji,24,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Utsuho Reiuji,24,Earth Spirits Palace Party,20,False,5,2,"While Utsuho is on the front line, if Rin and/or Satori are on the front line, Utsuho's stats will be increased by (SLv * 8) % per members on the front line, excluding Utsuho. This can only take effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Utsuho Reiuji,24,Blazing,21,False,5,2,"When Utsuho is on the front line, increase Fire damage output by (SLv * 15)% for all frontliners.",0,0,0,0,0,0,0,0,0,0,0,0
+Utsuho Reiuji,24,Overheating,22,False,10,1,"Whenever Utsuho uses an offensive ability, she gains an ""Overheating"" buff that increases her next spellcard's MP cost by 1 and damage done by 15%. This can keep stacking as long as the Utsuho remains on the front line. Wears off if she switches out. Has a maximum level of 5 in Plus Disk.",0,0,0,0,0,0,0,0,0,0,0,0
+Utsuho Reiuji,24,Fighting Spirit,23,False,5,2,"Whenever the skill holder takes an action, she gains a ""Fighting Spirit level"" that reduces damage taken and increases damage dealt by (Fighting Spirit level * 5)%, up to a maximum of (SLv * 3) stacks. Wears off if she switches out.",0,0,0,0,0,0,0,0,0,0,0,0
+Utsuho Reiuji,24,Sheer Force,24,False,15,1,"When attacking with an element the enemy resists, reduce enemy's elemental affinity to (100 + (affinity - 100) / 2). Additionally, pierce 1/3 of the enemy's ailment and debuff resistances when attacking.",0,0,0,0,0,0,0,0,0,0,0,0
+Utsuho Reiuji,24,Self-Tokamak,25,True,88,1,Overheat will no longer increase MP cost. Uncontainable Nuclear Reation will no longer self-debuff.,0,0,0,0,0,0,0,0,0,0,0,0
+Utsuho Reiuji,24,High Blazing,26,True,12,5,"When the user is under the effect of Fighting Spirit, increase user's FIR damage by (Fighting Spirit level * SLv)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Utsuho Reiuji,24,Proof of Kinship,27,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Satori Komeiji,25,MP Boost,1,False,2,5,Increases MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Satori Komeiji,25,Attack Boost,3,False,2,5,Increases Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Satori Komeiji,25,Magic Boost,5,False,2,5,Increases Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Satori Komeiji,25,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Satori Komeiji,25,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Satori Komeiji,25,Earth Spirits Palace Party,20,False,5,2,"While Satori is on the front line, if Utsuho and/or Rin are on the front line, Satori's stats will be increased by (SLv * 8) % per members on the front line, excluding Satori. This can only take effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Satori Komeiji,25,Eyes that Perceive Reality,21,False,7,1,"When Satori attacks or is attacked by an enemy with stat buffs, damage is calculated as if the enemy's buffs were non-existant.",0,0,0,0,0,0,0,0,0,0,0,0
+Satori Komeiji,25,Small MP Recovery,22,False,10,1,Satori recovers 25% of her max MP when she retreats to the reserve party.,0,0,0,0,0,0,0,0,0,0,0,0
+Satori Komeiji,25,Trauma Recollection,23,False,5,2,"As long as Satori is in the front line, all enemies take (SLv * 12)% increased damage from attacks they are elementally vulnerable to.",0,0,0,0,0,0,0,0,0,0,0,0
+Satori Komeiji,25,Spell Card Recollection,24,False,5,5,Satori has access to all personal spellcards her active allies possess. Spellcards cast in this way are treated as Lv0 and induces an extra MP cost of (6 - SLv).,0,0,0,0,0,0,0,0,0,0,0,0
+Satori Komeiji,25,Trauma Recreation,25,True,70,1,"When the user receives a turn, inflict fixed damage equal to (user's current HP / 2) to all enemies. This damage will never kill any enemies.",0,0,0,0,0,0,0,0,0,0,0,0
+Satori Komeiji,25,Terrifying Hypnotism,26,True,40,3,Trauma Recollection's damage bonus is increased by (SLv * 12)% only for the user (stacks multiplicatively with Trauma Recollection's bonus).,0,0,0,0,0,0,0,0,0,0,0,0
+Satori Komeiji,25,Proof of Kinship,27,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Yuugi Hoshiguma,26,HP Boost,0,False,2,5,Increases HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Yuugi Hoshiguma,26,Attack Boost,3,False,2,5,Increases Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Yuugi Hoshiguma,26,Defense Boost,4,False,2,5,Increases Defense.,0,0,0,0,0,0,0,0,0,0,0,0
+Yuugi Hoshiguma,26,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Yuugi Hoshiguma,26,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Yuugi Hoshiguma,26,Physical Counter,20,False,4,3,(SLv * 33)% chance to counter direct enemy attacks with a Normal Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Yuugi Hoshiguma,26,Last Fortress,21,False,10,1,Increases Yuugi's stats for every character downed in battle. (~4% stat increase per character),0,0,0,0,0,0,0,0,0,0,0,0
+Yuugi Hoshiguma,26,Beat Down,22,False,6,2,"When Yuugi defeats an enemy, she recoverss (SLv) MP and receives a (SLv * 8)% buff to all stats. Does not stack if 2 or more enemies are defeated at the same time.",0,0,0,0,0,0,0,0,0,0,0,0
+Yuugi Hoshiguma,26,Ruinous Super Strength,23,False,5,2,"When Yuugi is on the front line, increases Physical damage output by (SLv * 15)% for all frontline members.",0,0,0,0,0,0,0,0,0,0,0,0
+Yuugi Hoshiguma,26,Hoshiguma Dish,24,False,10,1,"If there are more than two enemies when Yuugi takes an action, SPD is buffed proportional to the number of enemies. If there are fewer than four, ATK is buffed inversely proportional to the number of enemies. (up to +12% SPD buff if there are 5 enemies, and up to +12% ATK buff if there's only 1 enemy)",0,0,0,0,0,0,0,0,0,0,0,0
+Yuugi Hoshiguma,26,Adamant Helix,25,False,12,1,"Yuugi deals increased damage proportional to her missing HP. The bonus will go up to a maximum of 66%. No damage bonus when Yuugi is at, or above, max HP.",0,0,0,0,0,0,0,0,0,0,0,0
+Yuugi Hoshiguma,26,Dreadful Raging Waves,26,True,40,1,"When the user receives a turn, all frontliners with full HP receive a 7% buff to ATK and DEF.",0,0,0,0,0,0,0,0,0,0,0,0
+Yuugi Hoshiguma,26,Ability to Cause Phenomena,27,True,30,2,"When the user attacks while having full MP, increase damage done by (SLv * 15)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Yuugi Hoshiguma,26,Last Fortress+,28,True,50,1,Last Fortress's effect is doubled.,0,0,0,0,0,0,0,0,0,0,0,0
+Yuugi Hoshiguma,26,Four Deva of Mt. Ooe?,29,True,25,2,"When at least 2 of Kasen, Yuugi and Suika are in front, the user's all stats are increased by (SLv * 7)% for each member in front excluding herself. This can only take effect if at least one ally or enemy has acted in battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Hong Meiling,27,TP Boost,2,False,2,5,Increases Maximum TP.,0,0,0,0,0,0,0,0,0,0,0,0
+Hong Meiling,27,Defense Boost,4,False,2,5,Increases Defense.,0,0,0,0,0,0,0,0,0,0,0,0
+Hong Meiling,27,Mind Boost,6,False,2,5,Increases Mind.,0,0,0,0,0,0,0,0,0,0,0,0
+Hong Meiling,27,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Hong Meiling,27,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Hong Meiling,27,SDM Residents,20,False,5,2,"While Meiling is on the front line, if any other residents of the Scarlet Devil Mansion are on the front line, Meiling's stats will be increased by (SLv * 5) % per members on the front line, excluding herself. This can only takes effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Hong Meiling,27,Gatekeeper’s Duty,21,False,6,2,"When Meiling receives a turn, all active members receive a (SLv * 6)% Defense buff.",0,0,0,0,0,0,0,0,0,0,0,0
+Hong Meiling,27,Guts,22,False,5,2,"If Meiling gets knocked out, there is a (SLv * 25) % chance that 10 TP will get consumed and she will stay alive with 1 HP",0,0,0,0,0,0,0,0,0,0,0,0
+Hong Meiling,27,Natural,23,False,5,2,"When Meiling receives a heal, the HP recovered by the spell is increased by (SLv * 33) %.",0,0,0,0,0,0,0,0,0,0,0,0
+Hong Meiling,27,Gatekeeper Nap,24,False,5,2,"When there are 4 members on the front line and Meiling is not on the utmost left, she will gain (SLv * 20) % Speed and take (SLv * 16) % less damage. (Fixed in Plus Disk, all effects now work)",0,0,0,0,0,0,0,0,0,0,0,0
+Hong Meiling,27,China Qigong,25,False,8,5,"(Plus Disk only) When the user receives a turn, increase ""China Qigong"" counter by 1, up to a maximum of (SLv). When the user attacks, remove the effect to increase damage by (counter * 10)%. When the user concentrates, remove the effect to heal (counter * 10)% of user's HP.",0,0,0,0,0,0,0,0,0,0,0,0
+Hong Meiling,27,Roc-Killing Fist,26,True,70,1,Occasionally counters enemy attacks with an Attack that inflicts an unresistable PAR effect (~3300 strength). Activation rate is increased commensurate with number of SDM residents in the front.,0,0,0,0,0,0,0,0,0,0,0,0
+Hong Meiling,27,Spiral Light Step,27,True,45,1,Reduce damage received by 10%.,0,0,0,0,0,0,0,0,0,0,0,0
+Hong Meiling,27,Chinese Girl's Super Qigong,28,True,70,1,China Qigong's damage bonus is doubled.,0,0,0,0,0,0,0,0,0,0,0,0
+Hong Meiling,27,Proof of Kinship,29,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Alice Margatroid,28,HP Boost,0,False,2,5,Increase base HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Alice Margatroid,28,Magic Boost,5,False,2,5,Increase Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Alice Margatroid,28,Mind Boost,6,False,2,5,Increase Mind.,0,0,0,0,0,0,0,0,0,0,0,0
+Alice Margatroid,28,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Alice Margatroid,28,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Alice Margatroid,28,Manipulation of Dolls,20,False,5,2,Damage against Inorganic-Type enemies is increased by (SLv * 10)% if Alice is on the front line. The bonus doesn’t stack with similar effects.,0,0,0,0,0,0,0,0,0,0,0,0
+Alice Margatroid,28,Doll Guard,21,False,5,2,Increases Evasion by (SLv * 32).,0,0,0,0,0,0,0,0,32.0,0,0,0
+Alice Margatroid,28,MAlice Cannon (Alice),22,False,5,2,Alice's Magic is increased by (SLv * 15)% when Marisa is on the reserve party. This can only take effect if at least one ally or enemy has performed an action in the battle.,0,0,0,0,0,0,0,0,0,0,0,0
+Alice Margatroid,28,Final Blow,23,False,5,2,"When Alice attacks an enemy affected by an ailment, that attack's damage is increased by (SLv * 16)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Alice Margatroid,28,Rapid Charge,24,False,10,1,"If Alice uses Concentrate while under 33% MP, it will consume 5 TP and regenerate 50% MP, in addition to the usual effect. Does not work if the skill holder doesn’t have enough TP.",0,0,0,0,0,0,0,0,0,0,0,0
+Alice Margatroid,28,Enhanced Doll Mobility,25,False,8,4,"When the user attacks, ignore (SLv * 10)% of enemy defenses. (Plus Disk Only)",0,0,0,0,0,0,0,0,0,0,0,0
+Alice Margatroid,28,Precisely Controlled Dolls,26,True,15,8,"When the user attacks, there is a (SLv * 10)% chance to use the lower of enemy's defenses for damage calculations. (if the spell uses both T.DEF and T.MND, the higher of the 2 is completely ignored in the damage calculation).",0,0,0,0,0,0,0,0,0,0,0,0
+Alice Margatroid,28,First-Aid Dolls,27,True,50,1,"When Alice takes a turn, she will recover 1/3 of her missing HP.",0,0,0,0,0,0,0,0,0,0,0,0
+Alice Margatroid,28,Additional Doll Guards,28,True,60,1,Further increase the user's Evasion by (SLv * 32).,0,0,0,0,0,0,0,0,32.0,0,0,0
+Patchouli Knowledge,29,MP Boost,1,False,2,5,Increases Maximum MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Patchouli Knowledge,29,Magic Boost,5,False,2,5,Increases Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Patchouli Knowledge,29,Affinity Boost,10,False,2,5,Increases Elemental Resistances.,0,0,0,0,0,0,0,0,0,0,0,0
+Patchouli Knowledge,29,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Patchouli Knowledge,29,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Patchouli Knowledge,29,SDM Residents,20,False,5,2,"While Patchouli is on the front line, if any other residents of the Scarlet Devil Mansion are on the front line, Patchouli's stats will be increased by (SLv * 5) % per members on the front line, excluding herself. This can only take effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Patchouli Knowledge,29,Grand Incantation,21,False,5,2,"After using Concentrate, the next attack's damage or healing will be multiplied by (1.6 + SLv * 0.4).",0,0,0,0,0,0,0,0,0,0,0,0
+Patchouli Knowledge,29,Girl of Knowledge and Shade,22,False,10,1,"When attacking with an element the enemy resists, reduce enemy's elemental affinity to (100 + (affinity - 100) / 3).",0,0,0,0,0,0,0,0,0,0,0,0
+Patchouli Knowledge,29,Passive Philosopher's Stone,23,False,4,2,"When Patchouli uses a spell card, Attack or Concentrate, she receives (SLv * 35%) less damage from that spell or command's element (including VOI) until her next turn (if the spell had multiple elements, the damage reduction will be applied for all of them).",0,0,0,0,0,0,0,0,0,0,0,0
+Patchouli Knowledge,29,Rapid Charge,24,False,10,1,"If Patchouli uses Concentrate while under 33% MP, it will consume 5 TP and regenerate 50% MP, in addition to the usual effect. Does not work if the skill holder doesn’t have enough TP.",0,0,0,0,0,0,0,0,0,0,0,0
+Patchouli Knowledge,29,The Unmoving Great Library,25,False,5,2,"If Patchouli is placed on the furthermost right position on the front line, she will recover (SLv) MP every time she takes an action.",0,0,0,0,0,0,0,0,0,0,0,0
+Patchouli Knowledge,29,Infinite Book Collection,26,True,50,1,"Halve the MP cost of all spells. Additionally, reduces the activation threshold of Girl of Knowledge and Shade, making it reduce affinity to (50 + (affinity - 50) / 3) as long as the target has more than 52 affinity to the element.",0,0,0,0,0,0,0,0,0,0,0,0
+Patchouli Knowledge,29,Asthma Medicine,27,True,35,3,Increase user's base HP by (SLv * 10).,10.0,0,0,0,0,0,0,0,0,0,0,0
+Patchouli Knowledge,29,Speedy Incantation,28,True,20,5,"When Patchouli uses a personal spell card, there's a (SLv * 12)% chance to halve its delay.",0,0,0,0,0,0,0,0,0,0,0,0
+Patchouli Knowledge,29,Proof of Kinship,29,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Eirin Yagokoro,30,HP Boost,0,False,2,5,Increases HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Eirin Yagokoro,30,Magic Boost,5,False,2,5,Increases Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Eirin Yagokoro,30,Resistance Boost,11,False,2,5,Increases Ailment Resistances.,0,0,0,0,0,0,0,0,0,0,0,0
+Eirin Yagokoro,30,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Eirin Yagokoro,30,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Eirin Yagokoro,30,Residents of Eientei,20,False,5,2,"While Eirin is on the front line, if Reisen and/or Kaguya are also on the front line, Eirin's stats are increased by (SLv * 7) for each not including herself. This can only takes effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Eirin Yagokoro,30,People of the Moon,21,False,8,1,"Eirin's attacks will ignore 50% of the enemy's defenses. When she takes a turn, there is a 75% chance to consume 1 MP.",0,0,0,0,0,0,0,0,0,0,0,0
+Eirin Yagokoro,30,Healing Limit Break,22,False,20,1,"When the skill holder heals a character, it's possible to heal over their maximum HP. This will not take effect if the target is already over their maximum HP.",0,0,0,0,0,0,0,0,0,0,0,0
+Eirin Yagokoro,30,Cooling Down,23,False,12,2,"If the skill holder concentrates with full HP, The amount of MP recovered is multiplied by (1 + SLv)",0,0,0,0,0,0,0,0,0,0,0,0
+Eirin Yagokoro,30,Pharmacist's Poison Mixing,24,False,10,1,"Adds a Poison effect to all of the user's attacks, and attacks that already inflicted Poison have their effect increased. (25% infliction rate, 5000 strength)",0,0,0,0,0,0,0,0,0,0,0,0
+Eirin Yagokoro,30,Thousand Year Exile,25,False,10,1,"Eirin's Speed is increased by 66% when on the reserve party, increasing her HP and MP recovery rate.",0,0,0,0,0,0,0,0,0,0,0,0
+Eirin Yagokoro,30,Special Endurance Medicine,26,True,10,10,"Increase all of the user's elemental affinities by (SLv * 6), and ailment resistances by (SLv * 4).",0,0,0,0,0,0,0,0,0,0,6.0,4.0
+Eirin Yagokoro,30,Lunar Sage's Wisdom,27,True,8,10,"Mercury Sea and Omoikane's Device will do (SLv * 10)% more damage to enemies under PSN, PAR or TRR.",0,0,0,0,0,0,0,0,0,0,0,0
+Eirin Yagokoro,30,Fatal Poison Mixing,28,True,56,1,Pharmacist's Poison Mixing's Poison effect is stronger. (increased to 70% infliction rate and 10000 strength),0,0,0,0,0,0,0,0,0,0,0,0
+Eirin Yagokoro,30,Proof of Kinship,29,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Reisen Udongein Inaba,31,MP Boost,1,False,2,5,Increases Maximum MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Reisen Udongein Inaba,31,Magic Boost,5,False,2,5,Increases Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Reisen Udongein Inaba,31,Speed Boost,7,False,2,5,Increases Speed.,0,0,0,0,0,0,0,0,0,0,0,0
+Reisen Udongein Inaba,31,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Reisen Udongein Inaba,31,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Reisen Udongein Inaba,31,Residents of Eientei,20,False,5,2,"While Reisen is on the front line, if Kaguya and/or Eirin are on the front line, Reisen's stats will be increased by (SLv * 7) % per members on the front line, excluding Reisen. This can only takes effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Reisen Udongein Inaba,31,People of the Moon,21,False,8,1,"Reisen's attacks will ignore 50% of the enemy's defenses. When she takes a turn, there is a 75% chance to consume 1 MP.",0,0,0,0,0,0,0,0,0,0,0,0
+Reisen Udongein Inaba,31,Final Blow,22,False,5,2,"When Reisen attacks an enemy affected by a status effect, that attack's damage is increased by (SLv * 16)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Reisen Udongein Inaba,31,Broad Mind Modulation,23,False,5,2,"When Reisen takes a turn, she has a chance to inflict a (SLv * 6)% MND debuff on each enemy.",0,0,0,0,0,0,0,0,0,0,0,0
+Reisen Udongein Inaba,31,Wavelength of Insanity,24,False,5,2,"When Reisen is on the front line, all allies on the front line take (SLv * 15)% less Mystic damage.",0,0,0,0,0,0,0,0,0,0,0,0
+Reisen Udongein Inaba,31,Intense Vertigo,25,False,10,1,"While Reisen is on the front line, all ally attacks will ignore 20% of the enemies' ailment and debuff resistances.",0,0,0,0,0,0,0,0,0,0,0,0
+Reisen Udongein Inaba,31,Mountain Vaporous Red Eyes,26,True,50,1,"If People of the Moon is learned, there is a 20% chance to completely ignore enemy Mind and ailment/debuff resistances (other than DTH) when attacking.",0,0,0,0,0,0,0,0,0,0,0,0
+Reisen Udongein Inaba,31,Enhanced Mind Modulation,27,True,60,1,Broad Mind Modulation's MND debuffing effect is further increased by 6%.,0,0,0,0,0,0,0,0,0,0,0,0
+Reisen Udongein Inaba,31,Grand Vertigo,28,True,80,1,Improves Intense Vertigo to pierce enemy resistance even further (~30%).,0,0,0,0,0,0,0,0,0,0,0,0
+Reisen Udongein Inaba,31,Proof of Kinship,29,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Sanae Kochiya,32,Defense Boost,4,False,2,5,Increases Defense.,0,0,0,0,0,0,0,0,0,0,0,0
+Sanae Kochiya,32,Magic Boost,5,False,2,5,Increases Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Sanae Kochiya,32,Mind Boost,6,False,2,5,Increases Mind.,0,0,0,0,0,0,0,0,0,0,0,0
+Sanae Kochiya,32,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Sanae Kochiya,32,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Sanae Kochiya,32,Believers of Moriya,20,False,5,2,"While Sanae is on the front line, if Suwako and/or Kanako are on the front line, Sanae's stats will be increased by (SLv * 8) % per members on the front line, excluding herself. This can only take effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Sanae Kochiya,32,Expansion of Conciousness,21,False,12,2,Increase MP Recovery Rate by (SLv * 1),0,0,0,0,0,0,0,0,0,0,0,0
+Sanae Kochiya,32,Last Wish,22,False,5,2,"If Sanae gets KO'd, all other characters on the front line will receive a (SLv * 33)% buff to all their stats.",0,0,0,0,0,0,0,0,0,0,0,0
+Sanae Kochiya,32,Moriya's Divine Protection,23,False,5,2,"At the end of battle, gives a (SLv * 14)% chance to restore 1 TP to all four active members. This can take effect even if Sanae is not on the front line.",0,0,0,0,0,0,0,0,0,0,0,0
+Sanae Kochiya,32,Power of the Living God,24,False,5,2,"When Sanae is on the front line, increase Spirit damage output by (SLv * 15)% for all frontliners.",0,0,0,0,0,0,0,0,0,0,0,0
+Sanae Kochiya,32,Youkai Buster,25,False,5,2,Damage against Youkai-Type enemies is increased by (SLv * 10)% if Sanae is on the front line. The bonus doesn’t stack with similar effects.,0,0,0,0,0,0,0,0,0,0,0,0
+Sanae Kochiya,32,Miracle of Fafrotskies,26,True,60,1,"When the user receives a turn, restore 1 MP to all frontliners. For every two frontliners whose MP is below 50%, the MP recovery is increased by 1.",0,0,0,0,0,0,0,0,0,0,0,0
+Sanae Kochiya,32,Sacrificial Shrine Maiden,27,True,40,1,"When Last Wish activates, backliners will receive half of its buffing effect as well. Also, Moriya's Protection's activation rate is slightly increased.",0,0,0,0,0,0,0,0,0,0,0,0
+Sanae Kochiya,32,Super Youkai Buster,28,True,40,2,Youkai Buster's damage bonus against Youkai enemies increases by a further (SLv * 8)% (stacks multiplicatively with Youkai Buster's bonus). This effect extends to the entire frontline.,0,0,0,0,0,0,0,0,0,0,0,0
+Sanae Kochiya,32,Proof of Kinship,29,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Iku Nagae,33,HP Boost,0,False,2,5,Increase base HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Iku Nagae,33,Defense Boost,4,False,2,5,Increase Defense.,0,0,0,0,0,0,0,0,0,0,0,0
+Iku Nagae,33,Magic Boost,5,False,2,5,Increase Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Iku Nagae,33,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Iku Nagae,33,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Iku Nagae,33,Hisouten Guard,20,False,5,2,"While Tenshi is on the front line, Iku's Defense and Mind are increased by (SLv * 20)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Iku Nagae,33,Magic Counter,21,False,4,3,(SLv * 33)% chance to counter magical enemy attacks with an empowered Normal Attack (156.25% MAG - 62.5% T.MND).,0,0,0,0,0,0,0,0,0,0,0,0
+Iku Nagae,33,Hagoromo Like Sky,22,False,4,2,"Normal attacks will bypass (SLv * 40) % of the enemy's Defense/Mind, and deal (SLv * 20) % more damage (also affects Magic Counter).",0,0,0,0,0,0,0,0,0,0,0,0
+Iku Nagae,33,Flexibility,23,False,7,1,"When Iku receives a Defense/Mind debuff, that debuff is instead calculated as a buff of the same magnitude.",0,0,0,0,0,0,0,0,0,0,0,0
+Iku Nagae,33,Supple Hagoromo,24,False,5,2,"When Iku is on the front line, allies have a (SLv * 20)% reduced chance of being inflicted with the Paralysis status, if any ally gets inflicted with the Paralysis status, its duration is also reduced by (SLv * 20)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Iku Nagae,33,Heavenly Maiden's Blow,25,False,7,1,"If Iku attacks an enemy affected by a Mind Debuff, the damage will be calculated as if the debuff was doubled.",0,0,0,0,0,0,0,0,0,0,0,0
+Iku Nagae,33,Lightning Fish,26,False,10,6,(Plus Disk only) Increase the user's base SPD by (SLv * 4).,0,0,0,0,0,0,0,4.0,0,0,0,0
+Iku Nagae,33,Magic Counter+,27,True,80,1,Magic Counter will deal more damage (formula changed to: 272.25% MAG - 82.5% T.MND).,0,0,0,0,0,0,0,0,0,0,0,0
+Iku Nagae,33,Thunder in the Abtruse Clouds,28,True,40,1,"Increase the user's PAR resistance by 128. When the user takes a turn while a frontliner is paralyzed, remove the paralysis and buff both that frontliner and the user's all stats by 20%. (Bug: Iku gets the additional PAR resistance when she awakens even if she hasn't learned the skill)",0,0,0,0,0,0,0,0,0,0,0,0
+Iku Nagae,33,Pearl of the 5-Clawed Dragon,29,True,66,3,The user's base MAG is increased by (SLv * 8).,0,0,0,0,0,8.0,0,0,0,0,0,0
+Suika Ibuki,34,Attack Boost,3,False,2,5,Increases Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Suika Ibuki,34,Mind Boost,6,False,2,5,Increases Mind.,0,0,0,0,0,0,0,0,0,0,0,0
+Suika Ibuki,34,Resistance Boost,11,False,2,5,Increases Ailment Resistances.,0,0,0,0,0,0,0,0,0,0,0,0
+Suika Ibuki,34,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Suika Ibuki,34,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Suika Ibuki,34,Ibuki Gourd,20,False,8,2,"Every time Suika takes a turn, she will either recover (SLv * 10)% HP, recover (SLv) MP or have either her Attack, Defense, Mind or Speed buffed by (SLv * 10)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Suika Ibuki,34,Free-Spirited Oni,21,False,12,1,"The more the enemy gets on low health, the more damage Suika will do to the enemy. The damage bonus will go up to 66% proportionally to the health of the enemy, no damage bonus will be given when the enemy is at full HP.",0,0,0,0,0,0,0,0,0,0,0,0
+Suika Ibuki,34,Fog Labyrinth,22,False,5,2,"While Suika is on the front line, all active party members will have their Evasion and Accuracy increased by (SLv * 10)%",0,0,0,0,0,0,0,0,0,0,0,0
+Suika Ibuki,34,Art of Oni Binding,23,False,4,3,"When Suika takes a turn, she has a 60% chance to inflict a (SLv * 500) strength Paralysis on all enemies. Chance increased to 100% and strength to (SLv * 800) against Oni-Type enemies.",0,0,0,0,0,0,0,0,0,0,0,0
+Suika Ibuki,34,Encounter with a Strong Foe,24,False,10,1,"If the user does not defeat an enemy after attacking it, give a 7% buff to all of the user's stats.(Bug: works even when the user doesn't attack the enemy, such as with Auxiliary spells or Concentrating, though it doesn't work with Form Change)",0,0,0,0,0,0,0,0,0,0,0,0
+Suika Ibuki,34,Earth Spirit -Dense-,25,True,40,1,"When the user receives a turn, all frontliners with full HP receive a 7% buff to MAG, MND, and SPD.",0,0,0,0,0,0,0,0,0,0,0,0
+Suika Ibuki,34,Pandemonic Sprinkle,26,True,30,8,"When the user attacks while having full HP, increase damage done by (SLv * 5)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Suika Ibuki,34,Four Deva of Mt. Ooe?,27,True,25,2,"When at least 2 of Kasen, Yuugi and Suika are in front, the user's all stats are increased by (SLv * 7)% for each member in front excluding herself. This can only take effect if at least one ally or enemy has acted in battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Ran Yakumo,35,MP Boost,1,False,2,5,Increases Maximum MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Ran Yakumo,35,Magic Boost,5,False,2,5,Increases Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Ran Yakumo,35,Speed Boost,7,False,2,5,Increases Speed.,0,0,0,0,0,0,0,0,0,0,0,0
+Ran Yakumo,35,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Ran Yakumo,35,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Ran Yakumo,35,Yakumo Clan,20,False,5,2,"While Ran is on the front line, if Chen and/or Yukari are on the front line, Ran's stats will be increased by (SLv * 8) % per members on the front line, excluding herself.",0,0,0,0,0,0,0,0,0,0,0,0
+Ran Yakumo,35,Ability to Use Shikigamis,21,False,7,1,"If Ran uses Concentrate while Chen is on the front line, Chen will have all her stats (including ACC and EVA) buffed by 66%.",0,0,0,0,0,0,0,0,0,0,0,0
+Ran Yakumo,35,Super-Fast Hard Arithmetic,22,False,20,1,"Banquet of General Gods and Eighty Million Holy Boards will have their MP cost doubled, but they will affect all party members, including those in the back. The strength of the buffs, and any healing attached to them will be halved for the characters in the back (buffs on the reserve characters won't be increased by buff strengthening passives or equipment).",0,0,0,0,0,0,0,0,0,0,0,0
+Ran Yakumo,35,Expansion of Conciousness,23,False,12,2,Increase MP Recovery Rate by (SLv * 1),0,0,0,0,0,0,0,0,0,0,0,0
+Ran Yakumo,35,Cooling Down,24,False,12,2,"If the skill holder Concentrates with full HP, the amount of MP recovered is multiplied by (1 + SLv)",0,0,0,0,0,0,0,0,0,0,0,0
+Ran Yakumo,35,Shikigami Defense,25,False,25,1,"(Plus Disk only) When the user is attacked, there is a 50% chance to halve the received damage. When this effect activates, remove 1 MP.",0,0,0,0,0,0,0,0,0,0,0,0
+Ran Yakumo,35,Hermit Fox Thoughts,26,True,6,10,Increase the user's maximum MP by (SLv * 1).,0,1.0,0,0,0,0,0,0,0,0,0,0
+Ran Yakumo,35,Kokkuri's Contract,27,True,4,40,Super-Fast Hard Arithmetic will have a (SLv)% chance of not halving the effects of Banquet of General Gods or Eighty Million Holy Boards on the back row.,0,0,0,0,0,0,0,0,0,0,0,0
+Ran Yakumo,35,Fried Tofu Power-Up,28,True,15,8,Increase the user's all base stats by (SLv * 2).,2,0,0,2,2,2,2,2,0,0,0,0
+Ran Yakumo,35,Proof of Kinship,29,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Remilia Scarlet,36,HP Boost,0,False,2,5,Increases Maximum HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Remilia Scarlet,36,Attack Boost,3,False,2,5,Increases Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Remilia Scarlet,36,Speed Boost,7,False,2,5,Increases Speed.,0,0,0,0,0,0,0,0,0,0,0,0
+Remilia Scarlet,36,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Remilia Scarlet,36,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Remilia Scarlet,36,SDM Residents,20,False,5,2,"While Remilia is on the front line, if any other residents of the Scarlet Devil Mansion are on the front line, Remilia's stats will be increased by (SLv * 5) % per members on the front line, excluding herself. This can only takes effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Remilia Scarlet,36,Majesty,21,False,5,2,"When Remilia takes a turn, she will have her Attack, Defense, Magic, Mind and Speed buffed by (SLv * 3) %",0,0,0,0,0,0,0,0,0,0,0,0
+Remilia Scarlet,36,Beat Down,22,False,6,2,"When Remilia defeats an enemy, she recovers (SLv) MP and receives a (SLv * 8)% buff to all stats. Does not stack if 2 or more enemies are defeated at the same time.",0,0,0,0,0,0,0,0,0,0,0,0
+Remilia Scarlet,36,Last Fortress,23,False,10,1,Increases Remilia's stats for every character downed in battle. (~4% stat increase per character),0,0,0,0,0,0,0,0,0,0,0,0
+Remilia Scarlet,36,Impact Attack,24,False,10,1,"Adds a Shock effect to all attacks, and attacks that already inflicted Shock have their effect increased.(25% infliction rate)",0,0,0,0,0,0,0,0,0,0,0,0
+Remilia Scarlet,36,Adversity,25,False,5,2,"While Remilia is affected by an ailment or debuff, her damage will be increased by (SLv * 10)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Remilia Scarlet,36,Mental Concentration,26,False,4,4,Increases MP regained from Concentrate by (SLv * 1).,0,0,0,0,0,0,0,0,0,0,0,0
+Remilia Scarlet,36,Bloodsuck,27,True,50,1,"When the user attacks, restore 16% of user's HP. Additionally, if the attack was single-target, buff user's all stats by 8% and increase the damage done by 16%.",0,0,0,0,0,0,0,0,0,0,0,0
+Remilia Scarlet,36,Proof of Kinship,28,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Remilia Scarlet,36,Piercing Attack,29,True,5,2,"Whenever an attack deals 0 damage due to the enemies' defenses, (SLv * 20)% of the attack's pre-defence, pre-multiplier damage will be dealt instead.",0,0,0,0,0,0,0,0,0,0,0,0
+Sakuya Izayoi,37,MP Boost,1,False,2,5,Increases Maximum MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Sakuya Izayoi,37,Attack Boost,3,False,2,5,Increases Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Sakuya Izayoi,37,Speed Boost,7,False,2,5,Increases Speed.,0,0,0,0,0,0,0,0,0,0,0,0
+Sakuya Izayoi,37,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Sakuya Izayoi,37,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Sakuya Izayoi,37,SDM Residents,20,False,5,2,"While Sakuya is on the front line, if any other residents of the Scarlet Devil Mansion are on the front line, Sakuya's stats will be increased by (SLv * 5) % per members on the front line, excluding herself. This can only take effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Sakuya Izayoi,37,An Eye for an Eye,21,False,5,2,"When Sakuya takes damage from an enemy’s attack, she receives a (SLv * 5) buff to her Attack.",0,0,0,0,0,0,0,0,0,0,0,0
+Sakuya Izayoi,37,Flashing Murder,22,False,10,1,"All attacks will be able to inflict Paralysis, and attacks that already inflict Paralysis have their effect increased. (25% infliction rate, 5000 strength).",0,0,0,0,0,0,0,0,0,0,0,0
+Sakuya Izayoi,37,Piercing Attack,23,False,5,2,"Whenever an attack deals 0 damage due to the enemies' defenses, (SLv * 20)% of the attack's pre-defense, pre-multiplier damage will be dealt instead.",0,0,0,0,0,0,0,0,0,0,0,0
+Sakuya Izayoi,37,Dexterity,24,False,7,1,"When Sakuya receives an Attack/Magic debuff, that debuff is instead calculated as a buff of the same magnitude.",0,0,0,0,0,0,0,0,0,0,0,0
+Sakuya Izayoi,37,Extra Attack,25,False,7,2,"When Sakuya attacks, uses a spellcard, or Concentrates, she has a (SLv * 16)% chance to immediately repeat that action. If the original action consumed MP, the repeat action will not. Plus Disk increases the cost from 7 to 12, makes the repeated action consume half of the original MP cost and reduces the activation rate for subclass spells to 2/3 of the base chance.",0,0,0,0,0,0,0,0,0,0,0,0
+Sakuya Izayoi,37,Jack the Ludo Bile,26,False,30,1,"(Plus Disk only) If the user has a SPD buff, her ATK is increased by 1/3 of the magnitude of her SPD buff.",0,0,0,0,0,0,0,0,0,0,0,0
+Sakuya Izayoi,37,Jack the Ripper's Silver Knife,27,True,60,1,"When the user receives a turn, increase Jack the Ripper counter by 1. When attacking, the damage is increased by (counter * 5)%. When the user is attacked, the existing counter is halved. The counter maxes at 20.",0,0,0,0,0,0,0,0,0,0,0,0
+Sakuya Izayoi,37,Sakuya's World,28,True,128,1,"Private Square's PAR effect is increased to (3300+SLv*300) (goes from 3600 at level 1 to 4800 at level 5). Also, when the user is in the front, the duration of enemy irresistable PAR-inducing attacks will be greatly reduced (PAR duration is reduced by ~90%).",0,0,0,0,0,0,0,0,0,0,0,0
+Sakuya Izayoi,37,Proof of Kinship,29,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Kanako Yasaka,38,HP Boost,0,False,2,5,Increases Maximum HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Kanako Yasaka,38,Defense Boost,4,False,2,5,Increases Defense.,0,0,0,0,0,0,0,0,0,0,0,0
+Kanako Yasaka,38,Magic Boost,5,False,2,5,Increases Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Kanako Yasaka,38,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Kanako Yasaka,38,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Kanako Yasaka,38,Believers of the Moriya,20,False,5,2,"While Kanako is on the front line, if Suwako and/or Sanae are on the front line, Kanako's stats will be increased by (SLv * 8) % per members on the front line, excluding herself. This can only take effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Kanako Yasaka,38,Majesty,21,False,5,2,"When Kanako takes a turn, she will have her Attack, Defense, Magic, Mind and Speed buffed by (SLv * 3) %",0,0,0,0,0,0,0,0,0,0,0,0
+Kanako Yasaka,38,Strong Faith,22,False,4,3,"If Kanako's HP is lower than 66% when her turn comes, she will gain (SLv) MP.",0,0,0,0,0,0,0,0,0,0,0,0
+Kanako Yasaka,38,Sky Creation,23,False,5,2,"If there are 4 party members on the front line and Kanako is placed on the far right, her damage will be increased by (SLv * 16) %.",0,0,0,0,0,0,0,0,0,0,0,0
+Kanako Yasaka,38,Desperation,24,False,5,2,"When Kanako's HP is less than (20 + SLv * 20)%, all stats are increased by 25%.",0,0,0,0,0,0,0,0,0,0,0,0
+Kanako Yasaka,38,Sacred Authority of the Gods,25,True,25,5,"When the user uses Mad Dance on Medoteko, increase Onbashira counter by 1. Increase user's damage output by (counter * 10)% and decrease user's damage intake by (counter * 5)%. The counter maxes at 5.",0,0,0,0,0,0,0,0,0,0,0,0
+Kanako Yasaka,38,Majesty+,26,True,20,3,Majesty's all buff will be increased by (SLv)%.,0,0,0,0,0,0,0,0,0,0,0,0
+Kanako Yasaka,38,Proof of Kinship,27,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Suwako Moriya,39,MP Boost,1,False,2,5,Increases Maximum MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Suwako Moriya,39,Attack Boost,3,False,2,5,Increases Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Suwako Moriya,39,Magic Boost,5,False,2,5,Increases Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Suwako Moriya,39,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Suwako Moriya,39,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Suwako Moriya,39,Believers of the Moriya,20,False,5,2,"While Suwako is on the front line, if Kanako and/or Sanae are on the front line, Suwako's stats will be increased by (SLv * 8) % per members on the front line, excluding herself. This can only take effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Suwako Moriya,39,Earth Creation,21,False,4,3,"If there are 4 party members on the front line and Suwako is placed on the far left, her damage will be increased by (SLv * 12) %.",0,0,0,0,0,0,0,0,0,0,0,0
+Suwako Moriya,39,Froggy Power!,22,False,5,2,"When Suwako is on the front line, increase Nature damage output by (SLv * 15)% for all frontliners.",0,0,0,0,0,0,0,0,0,0,0,0
+Suwako Moriya,39,Native God of Earth,23,False,10,1,"If Suwako retreats to the reserve party with less than 66% HP, she will consume 1 TP to fully recover her HP. This effect doesn't happen if she doesn't have enough TP.",0,0,0,0,0,0,0,0,0,0,0,0
+Suwako Moriya,39,Quickwitted,24,False,7,1,"When Suwako receives a Speed debuff, that debuff is instead calculated as a buff of the same magnitude.",0,0,0,0,0,0,0,0,0,0,0,0
+Suwako Moriya,39,Froggy's Hibernation,25,True,30,5,"When the user receives a turn in the back, increase Hibernation counter by 1. When the user attacks, receive a damage bonus of (counter * 20)%, and remove the counter. The counter maxes at SLv.",0,0,0,0,0,0,0,0,0,0,0,0
+Suwako Moriya,39,Chytridiomycosis Resistance,26,True,8,10,Increase the user's ailments resistance by (SLv * 5) and HP by (SLv * 1.5).,1.5,0,0,0,0,0,0,0,0,0,0,5.0
+Suwako Moriya,39,Proof of Kinship,27,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Tenshi Hinanawi,40,TP Boost,2,False,2,5,Increases Maximum TP.,0,0,0,0,0,0,0,0,0,0,0,0
+Tenshi Hinanawi,40,Affinity Boost,10,False,2,5,Increases Elemental Resistances.,0,0,0,0,0,0,0,0,0,0,0,0
+Tenshi Hinanawi,40,Resistance Boost,11,False,2,5,Increases Ailment Resistances.,0,0,0,0,0,0,0,0,0,0,0,0
+Tenshi Hinanawi,40,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Tenshi Hinanawi,40,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Tenshi Hinanawi,40,Girl of Bhava-agra,20,False,5,2,"While Iku is on the front line, Tenshi's Attack and Magic are increased by (SLv * 20)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Tenshi Hinanawi,40,Always Rising after Falling,21,False,4,3,The amount of TP lost after combat is reduced by (SLv). The amount of TP lost after dying is reduced by (SLv * 3). Cannot reduce TP loss below 1 and doesn't work if you Escape.,0,0,0,0,0,0,0,0,0,0,0,0
+Tenshi Hinanawi,40,Keystone Formation,22,False,10,1,"If Tenshi is on the left most position on the front line and performs a ""Form Change"", every member on the front line will gain a 10% DEF and MND buff (Plus Disk: changed to a 7% buff to all stats instead).",0,0,0,0,0,0,0,0,0,0,0,0
+Tenshi Hinanawi,40,Sword of Hisou's Owner,23,False,5,2,"When Tenshi attacks an enemy, she has a (SLv * 20) % chance to remove each stat buff present on that enemy.",0,0,0,0,0,0,0,0,0,0,0,0
+Tenshi Hinanawi,40,Murakumo's Former Owner,24,False,10,1,"When Tenshi takes a turn, if she is affected by an ailment or a stat debuff effect, she will restore 5% HP to all members on the front line.",0,0,0,0,0,0,0,0,0,0,0,0
+Tenshi Hinanawi,40,Free from Worldly Thoughts,25,False,5,2,"When Tenshi is on the front line, all allies on the front line take (SLv * 15)% less Physical damage.",0,0,0,0,0,0,0,0,0,0,0,0
+Tenshi Hinanawi,40,Enduring Celestial,26,False,15,1,(Plus Disk only) Tenshi starts each battle with a 33% buff to DEF and MND. This effect activates even if she is in the back.,0,0,0,0,0,0,0,0,0,0,0,0
+Tenshi Hinanawi,40,High-Spirited Sword,27,True,60,1,"If the user has DEF or MND buffs, her ATK is increased by 1/5 of the total magnitude of her DEF and MND buffs.",0,0,0,0,0,0,0,0,0,0,0,0
+Tenshi Hinanawi,40,Huge Temperament Keystone,28,True,10,15,"When the user hits a weakness, increase Temperament Keystone counter by 3. Increase the user's all stats by (counter * 2)%. When the user takes a turn, reduce the counter by 1. The counter maxes at (SLv).",0,0,0,0,0,0,0,0,0,0,0,0
+Tenshi Hinanawi,40,7 Peaches of Immortality,29,True,30,7,Increase the user's base HP by (SLv * 7).,7.0,0,0,0,0,0,0,0,0,0,0,0
+Flandre Scarlet,41,MP Boost,1,False,2,5,Increases Maximum MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Flandre Scarlet,41,Attack Boost,3,False,2,5,Increases Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Flandre Scarlet,41,Magic Boost,5,False,2,5,Increases Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Flandre Scarlet,41,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Flandre Scarlet,41,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Flandre Scarlet,41,SDM Residents,20,False,5,2,"While Flandre is on the front line, if any other residents of the Scarlet Devil Mansion are on the front line, Flandre's stats will be increased by (SLv * 5) % per members on the front line, excluding herself. This can only take effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Flandre Scarlet,41,Smoldering Madness,21,False,6,2,"When Flandre receives a turn, all active members receive a (SLv * 4)% Attack buff.",0,0,0,0,0,0,0,0,0,0,0,0
+Flandre Scarlet,41,Impact Attack,22,False,10,1,"Adds a Shock effect to all attacks, and attacks that already inflicted Shock have their effect increased.(25% infliction rate)",0,0,0,0,0,0,0,0,0,0,0,0
+Flandre Scarlet,41,Beat Down,23,False,6,2,"When Flandre defeats an enemy, she recovers (SLv) MP and receives a (SLv * 8)% buff to all stats. Does not stack if 2 or more enemies are defeated at the same time.",0,0,0,0,0,0,0,0,0,0,0,0
+Flandre Scarlet,41,Vampiric Wrath,24,False,10,1,"If Flandre takes damage from an attack she is weak against, all her stats will be buffed by 25%.",0,0,0,0,0,0,0,0,0,0,0,0
+Flandre Scarlet,41,Control of Madness,25,True,60,1,The negative side-effects of Flandre's personal spells will be negated 50% of the time.,0,0,0,0,0,0,0,0,0,0,0,0
+Flandre Scarlet,41,Bloodsuck,26,True,60,1,"When the user attacks, restore 16% of user's HP. Additionally, if the attack was single-target, buff user's all stats by 8% and increase the damage dealt by 16%.",0,0,0,0,0,0,0,0,0,0,0,0
+Flandre Scarlet,41,Propagating Madness,27,True,40,2,Smoldering Madness' ATK buff is increased by an additional (SLv * 4)%.,0,0,0,0,0,0,0,0,0,0,0,0
+Flandre Scarlet,41,Proof of Kinship,28,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Flandre Scarlet,41,Destruction Roulette,29,True,66,1,"When the user receives a turn, randomly receives one of ""Destruction Bow"", ""Destruction Fruits"" and ""Destruction Flames"" effects. The corresponding personal spell will receive a damage bonus of 25%. The effect lasts one turn.",0,0,0,0,0,0,0,0,0,0,0,0
+Yuyuko Saigyouji,42,MP Boost,1,False,2,5,Increases Maximum MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Yuyuko Saigyouji,42,Magic Boost,5,False,2,5,Increases Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Yuyuko Saigyouji,42,Speed Boost,7,False,2,5,Increases Speed.,0,0,0,0,0,0,0,0,0,0,0,0
+Yuyuko Saigyouji,42,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Yuyuko Saigyouji,42,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Yuyuko Saigyouji,42,Hakugyokurou's Mistress,20,False,5,2,"When Yuyuko is on the front line, allies have a (SLv * 20)% reduced chance of being affected by a Death effect.",0,0,0,0,0,0,0,0,0,0,0,0
+Yuyuko Saigyouji,42,Netherworld Dweller,21,False,5,2,Damage against Ghost-Type enemies is increased by (SLv * 10)% if Yuyuko is on the front line. The bonus doesn’t stack with similar effects.,0,0,0,0,0,0,0,0,0,0,0,0
+Yuyuko Saigyouji,42,Majesty,22,False,5,2,"When Yuyuko takes a turn, she will have her Attack, Defense, Magic, Mind and Speed buffed by (SLv * 3) %",0,0,0,0,0,0,0,0,0,0,0,0
+Yuyuko Saigyouji,42,Banquet of Regrets,23,False,12,1,"If Yuyuko kills an enemy with a Death effect, she will recover 1 MP, 12% HP and receive a 12% buff to all stats per defeated enemy (does not activate if the damage of the attack is enough to kill the enemy, even if DTH was simultaneously inflicted).",0,0,0,0,0,0,0,0,0,0,0,0
+Yuyuko Saigyouji,42,Ticket to the Ageless Land,24,False,10,1,"If you have less than 12 members in the party when Yuyuko takes a turn, she will recover 2% of her max HP per empty slot.",0,0,0,0,0,0,0,0,0,0,0,0
+Yuyuko Saigyouji,42,Saigyou Ayakashi Seal,25,True,30,4,Increase the user's base HP by (SLv * 10).,10.0,0,0,0,0,0,0,0,0,0,0,0
+Yuyuko Saigyouji,42,The Mistress Gets Serious,26,True,40,1,"Hakugyokurou's Mistress will further decrease the chance of being affected by DTH by 30%. Also increases Yuyuko's damage dealt to enemies with high DTH resistance. 100+ resistance is 20%(?) damage increase, and 150+ (nearly all bosses) is 30% increase.",0,0,0,0,0,0,0,0,0,0,0,0
+Yuyuko Saigyouji,42,Majesty+,27,True,20,3,Majesty's all buff will be increased by (SLv)%.,0,0,0,0,0,0,0,0,0,0,0,0
+Yuyuko Saigyouji,42,Mistress & Servant,28,True,25,2,"If Youmu and Yuyuko are in the party of 12, increase the user's all stats by (SLv * 10)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Yuuka Kazami,43,HP Boost,0,False,2,5,Increases Maximum HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Yuuka Kazami,43,MP Boost,1,False,2,5,Increases MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Yuuka Kazami,43,Magic Boost,5,False,2,5,Increases Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Yuuka Kazami,43,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Yuuka Kazami,43,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Yuuka Kazami,43,Extra Attack,20,False,7,2,"When Yuuka attacks, uses a spellcard, or Concentrates, she has a (SLv * 16)% chance to immediately repeat that action. If the original action consumed MP, the repeat action will not. Plus Disk increases the cost from 7 to 12, makes the repeated action consume half of the original MP cost and reduces the activation rate for subclass spells to 2/3 of the base chance.",0,0,0,0,0,0,0,0,0,0,0,0
+Yuuka Kazami,43,Majesty,21,False,5,2,"When Yuuka takes a turn, she will have her Attack, Defense, Magic, Mind and Speed buffed by (SLv * 3) %",0,0,0,0,0,0,0,0,0,0,0,0
+Yuuka Kazami,43,Encounter with a Strong Foe,22,False,10,1,"If the user does not defeat an enemy after attacking it, give a 7% buff to all of the user's stats.(Bug: works even when the user doesn't attack the enemy, such as with Auxiliary spells or Concentrating, though it doesn't work with Form Change)",0,0,0,0,0,0,0,0,0,0,0,0
+Yuuka Kazami,43,Gensokyo's Eternal Flower,23,False,16,1,"When Yuuka takes a turn, she will recover a small amount of HP and MP. The lower her HP is the more MP she will recover and the lower her MP the more HP she recovers. If her HP is full she won't recover any MP.",0,0,0,0,0,0,0,0,0,0,0,0
+Yuuka Kazami,43,Tormenting Nature,24,False,12,1,Yuuka will deal bonus damage the lower the target's health is. The damage bonus maxes at 40%. No damage bonus will be given when the target is at full HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Yuuka Kazami,43,Perilous Blossom Spring,25,True,150,1,"When the user Concentrates while having learned Extra Attack, the user's next action is guaranteed to activate its effect. If this skill is learned, Concentrate will not activate Extra Attack.",0,0,0,0,0,0,0,0,0,0,0,0
+Yuuka Kazami,43,Plantation's Blessing,26,True,15,8,"When the user receives a turn, restore (SLv * 1)% of her HP. This effect can overheal to a maximum of 150% of her normal maximum HP.",0,0,0,0,0,0,0,0,0,0,0,0
+Yukari Yakumo,44,HP Boost,0,False,2,5,Increases Maximum HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Yukari Yakumo,44,MP Boost,1,False,2,5,Increases Maximum MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Yukari Yakumo,44,Mind Boost,6,False,2,5,Increases Mind.,0,0,0,0,0,0,0,0,0,0,0,0
+Yukari Yakumo,44,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Yukari Yakumo,44,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Yukari Yakumo,44,Yakumo Clan,20,False,5,2,"While Yukari is on the front line, if Chen and/or Ran are on the front line, Yukari's stats will be increased by (SLv * 8) % per members on the front line, excluding herself.",0,0,0,0,0,0,0,0,0,0,0,0
+Yukari Yakumo,44,Manipulation of Boundaries,21,False,5,2,"When Yukari takes a turn, she has a chance to inflict a (SLv * 6)% DEF debuff on each enemy.",0,0,0,0,0,0,0,0,0,0,0,0
+Yukari Yakumo,44,Border of Power and Magic,22,False,24,1,"When an ally is defending with the lesser of her Defense or Mind stat, the ally character's defense becomes (Defense+Mind)/2. This skill only takes effect if the skill holder is in the front line, and extends to all frontline characters.",0,0,0,0,0,0,0,0,0,0,0,0
+Yukari Yakumo,44,Border of Wounds and Cures,23,False,12,1,"When Yukari takes a turn, she will recover 1/2 of her missing HP.",0,0,0,0,0,0,0,0,0,0,0,0
+Yukari Yakumo,44,Phenomenal Force of Will,24,False,8,1,"When Yukari takes a turn, she will recover 1 MP.",0,0,0,0,0,0,0,0,0,0,0,0
+Yukari Yakumo,44,Majesty,25,False,5,2,"When Yukari takes a turn, she will have her Attack, Defense, Magic, Mind and Speed buffed by (SLv * 3) %",0,0,0,0,0,0,0,0,0,0,0,0
+Yukari Yakumo,44,Perpetual Motion Device,26,True,70,1,The user's buffs will decay more slowly (reduces buff decay from 20% to 12%).,0,0,0,0,0,0,0,0,0,0,0,0
+Yukari Yakumo,44,Enhanced Shikigami Control,27,True,60,1,"Shikigami ""Ran Yakumo +"" will receive the same damage boost and delay reduction from Ran and Chen in the back as if they were in the front.",0,0,0,0,0,0,0,0,0,0,0,0
+Yukari Yakumo,44,Enhanced Boundary Control,28,True,40,2,Boundary Manipulation's DEF debuff is further increased by (SLv * 6)%.,0,0,0,0,0,0,0,0,0,0,0,0
+Yukari Yakumo,44,Proof of Kinship,29,True,100,1,The user's synergy skill will grant half of its bonus for every synergy partner who is in the backline.,0,0,0,0,0,0,0,0,0,0,0,0
+Byakuren Hijiri,45,HP Boost,0,False,2,5,Increases Maximum HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Byakuren Hijiri,45,MP Boost,1,False,2,5,Increases Maximum MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Byakuren Hijiri,45,Speed Boost,7,False,2,5,Increases Speed.,0,0,0,0,0,0,0,0,0,0,0,0
+Byakuren Hijiri,45,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Byakuren Hijiri,45,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Byakuren Hijiri,45,Sutra - Herculean Strength,20,False,18,1,"When Byakuren takes a turn, her Attack will be buffed by 14%. Plus Disk: buff is now 12%.",0,0,0,0,0,0,0,0,0,0,0,0
+Byakuren Hijiri,45,Sutra - Vajra Shield,21,False,18,1,"When Byakuren takes a turn, her Defense will be buffed by 14%. Plus Disk: buff is now 12%.",0,0,0,0,0,0,0,0,0,0,0,0
+Byakuren Hijiri,45,Sutra - Enhanced Chant,22,False,18,1,"When Byakuren takes a turn, her Magic will be buffed by 14%. Plus Disk: buff is now 12%.",0,0,0,0,0,0,0,0,0,0,0,0
+Byakuren Hijiri,45,Sutra - Mental Focus,23,False,18,1,"When Byakuren takes a turn, her Mind will be buffed by 14%. Plus Disk: buff is now 12%.",0,0,0,0,0,0,0,0,0,0,0,0
+Byakuren Hijiri,45,Sutra - Sturm und Drang,24,False,18,1,"When Byakuren takes a turn, her Speed will be buffed by 14%. Plus Disk: buff is now 12%.",0,0,0,0,0,0,0,0,0,0,0,0
+Byakuren Hijiri,45,Sutra - Ultra Recovery,25,False,18,1,"When Byakuren takes a turn, she will recover 14% of her HP. Plus Disk: regeneration is now 12%.",0,0,0,0,0,0,0,0,0,0,0,0
+Byakuren Hijiri,45,Sutra - Infinite Mana,26,True,25,3,"When the user receives a turn, restore (SLv) MP.",0,0,0,0,0,0,0,0,0,0,0,0
+Byakuren Hijiri,45,Sutra - Perfect Resistance,27,True,7,10,"The user's elemental affinities are increased by (SLv * 6). If Sutra - Infinite Mana is learned, this skill will have no effect.",0,0,0,0,0,0,0,0,0,0,0,0
+Byakuren Hijiri,45,Sutra - Enhanced Immunity,28,True,7,10,"The user's ailment resistances are increased by (SLv * 4). If either Sutra - Infinite Mana or Sutra - Perfect Resistance is learned, this skill will have no effect.",0,0,0,0,0,0,0,0,0,0,0,0
+Byakuren Hijiri,45,Superhuman Lineage,29,True,120,1,"When the user is healed by a friendly spell, she will be restored to full HP regardless of the spell's strength. All of Byakuren's stats will also permanently increase by 5% every time she gets healed, to a cap of 50%.",0,0,0,0,0,0,0,0,0,0,0,0
+"Eiki Shiki, Yamaxanadu",46,Attack Boost,3,False,2,5,Increases Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+"Eiki Shiki, Yamaxanadu",46,Magic Boost,5,False,2,5,Increases Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+"Eiki Shiki, Yamaxanadu",46,Mind Boost,6,False,2,5,Increases Mind.,0,0,0,0,0,0,0,0,0,0,0,0
+"Eiki Shiki, Yamaxanadu",46,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+"Eiki Shiki, Yamaxanadu",46,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+"Eiki Shiki, Yamaxanadu",46,Cleansed Crystal Mirror,20,False,5,2,Reduces all elemental damage taken by (SLv * 5)% if Eiki is on the front line (includes VOI damage).,0,0,0,0,0,0,0,0,0,0,0,0
+"Eiki Shiki, Yamaxanadu",46,Majesty,21,False,5,2,"When Eiki takes a turn, she will have her Attack, Defense, Magic, Mind and Speed buffed by (SLv * 3) %",0,0,0,0,0,0,0,0,0,0,0,0
+"Eiki Shiki, Yamaxanadu",46,Supreme Judge of Paradise,22,False,10,1,"If there's 3 or more enemies on the battlefield when Eiki takes a turn, all frontliners will recover 1 MP.",0,0,0,0,0,0,0,0,0,0,0,0
+"Eiki Shiki, Yamaxanadu",46,Thankful Preaching,23,False,10,1,"Adds a Silence effect to all attacks, and attacks that already inflicted Silence have their effect increased. (25% infliction rate, 5000 strength).",0,0,0,0,0,0,0,0,0,0,0,0
+"Eiki Shiki, Yamaxanadu",46,Rod of Remorse,24,False,12,1,"If Eiki kills an enemy, all her stats will be buffed by 15%. If she doesn't kill an enemy with an attack, she will recover 1 MP. Neither effect stacks for multiple enemies.",0,0,0,0,0,0,0,0,0,0,0,0
+"Eiki Shiki, Yamaxanadu",46,Strong Faith,25,False,4,3,"If Eiki's HP is lower than 66% when her turn comes, she will gain (SLv) MP.",0,0,0,0,0,0,0,0,0,0,0,0
+"Eiki Shiki, Yamaxanadu",46,Ability to Judge Morality,26,True,80,1,"Cleansed Crystal Mirror will activate from the back, and Rod of Remorse will extend its effect to the entire front line if the user is in the front. The user will receive double the benefits from Rod of Remorse.",0,0,0,0,0,0,0,0,0,0,0,0
+"Eiki Shiki, Yamaxanadu",46,Enma & Shinigami,27,True,25,2,"If Komachi and Eiki are in the party of 12, increase the user's all stats by (SLv*10)%.",0,0,0,0,0,0,0,0,0,0,0,0
+"Eiki Shiki, Yamaxanadu",46,Moral Inversion,28,True,66,1,"When the user Concentrates, she will obtain the effects ""Boost 150%"" and ""Moral Inversion"". When she has Moral Inversion effect, Last Judgement will derive its damage from MAG, while Bar of the Ten Kings and Wandering Sins will derive their damage from ATK. Concentrating with ""Moral Inversion"" active will remove it.",0,0,0,0,0,0,0,0,0,0,0,0
+"Eiki Shiki, Yamaxanadu",46,Super-Thankful Preaching,29,True,40,1,Thankful Preaching's Silence effect is stronger.(increased to 60% infliction rate and 10000 strength).,0,0,0,0,0,0,0,0,0,0,0,0
+Renko Usami,47,Speed Boost,7,False,2,5,Increases Speed.,0,0,0,0,0,0,0,0,0,0,0,0
+Renko Usami,47,Evasion Boost,8,False,2,5,Increases Evasion.,0,0,0,0,0,0,0,0,0,0,0,0
+Renko Usami,47,Resistance Boost,11,False,2,5,Increases Ailment Resistances.,0,0,0,0,0,0,0,0,0,0,0,0
+Renko Usami,47,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Renko Usami,47,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Renko Usami,47,Sealing Club,20,False,10,2,"If Maribel and Renko are both on the front line, Renko will have her overall stats increased by (SLv * 12)%. When Renko takes a turn, she will recover (SLv * 6)% HP and (SLv) MP. This can only take effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Renko Usami,47,Ability to Read the Stars,21,False,8,3,"Increases Poison, Paralysis, Heavy and Shock resistances for everyone except Renko by (SLv*8)%. These effects are still active if Renko is in the reserve party, but are halved.",0,0,0,0,0,0,0,0,0,0,0,0
+Renko Usami,47,Ability to Read the Moon,22,False,8,3,"Increases Terror, Silence, Death and Debuff resistances for everyone except Renko by (SLv*8)%. These effects are still active if Renko is in the reserve party, but are halved.",0,0,0,0,0,0,0,0,0,0,0,0
+Renko Usami,47,Maintenance,23,False,15,1,Doubles stat bonuses on wearer's Main and Sub equipment.,0,0,0,0,0,0,0,0,0,0,0,0
+Renko Usami,47,Astronomical Observation Position,24,False,6,2,Decreases the rate at which the encounter rate counter increases by (SLv * 10). Stacks with similar skills but caps at 75% reduction.,0,0,0,0,0,0,0,0,0,0,0,0
+Renko Usami,47,Easygoing,25,False,5,1,Regenerate HP when using Concentrate. The recovery rate is twice as much as from backline HP recovery.,0,0,0,0,0,0,0,0,0,0,0,0
+Renko Usami,47,Assault Point,26,True,70,1,"When the user inflicts damage on an enemy, inflict the special effect ""Assault Point"". Enemies with this effect suffer 25% more damage from allies. This effect has a 50% chance of wearing off when the afflicted enemy takes a turn.",0,0,0,0,0,0,0,0,0,0,0,0
+Renko Usami,47,Ability to Read More Stars,27,True,75,1,Ability to Read the Stars is now twice as effective.,0,0,0,0,0,0,0,0,0,0,0,0
+Renko Usami,47,Ability to Read More Moons,28,True,75,1,Ability to Read the Moon is now twice as effective.,0,0,0,0,0,0,0,0,0,0,0,0
+Maribel Hearn,48,MP Boost,1,False,2,5,Increases Maximum MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Maribel Hearn,48,TP Boost,2,False,2,5,Increases Maximum TP.,0,0,0,0,0,0,0,0,0,0,0,0
+Maribel Hearn,48,Magic Boost,5,False,2,5,Increases Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Maribel Hearn,48,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Maribel Hearn,48,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Maribel Hearn,48,Sealing Club,20,False,5,2,"If Maribel and Renko are both on the front line, Maribel will have her overall stats increased by (SLv * 12)%. When Maribel takes a turn, she will recover (SLv * 6)% HP and (SLv) MP. This can only take effect if at least one ally or enemy has performed an action in the battle. (Fixed in Plus Disk.)",0,0,0,0,0,0,0,0,0,0,0,0
+Maribel Hearn,48,Manipulation of Boundaries,21,False,5,2,"When Maribel takes a turn, she has a chance to inflict a (SLv * 6)% DEF debuff on each enemy.",0,0,0,0,0,0,0,0,0,0,0,0
+Maribel Hearn,48,Ability to See Boundaries,22,False,18,1,"When Maribel attacks or is attacked by an enemy with stat buffs, damage is calculated as if the enemy's buffs were debuffs of the same magnitude instead.",0,0,0,0,0,0,0,0,0,0,0,0
+Maribel Hearn,48,Ability to Meddle with Boundaries,23,False,15,1,"Buff effects decay slower on Maribel. (Fixed in Plus Disk, reduces buff decay from 20% to 14%)",0,0,0,0,0,0,0,0,0,0,0,0
+Maribel Hearn,48,Rapid Charge,24,False,10,1,"If Maribel uses Concentrate while under 33% MP, it will consume 5 TP and regenerate 50% MP, in addition to the usual effect. Does not work if the skill holder doesn’t have enough TP.",0,0,0,0,0,0,0,0,0,0,0,0
+Maribel Hearn,48,Grand Incantation,25,False,5,2,"After using Concentrate, the next attack's damage or healing will be multiplied by (1.6 + SLv * 0.4).",0,0,0,0,0,0,0,0,0,0,0,0
+Maribel Hearn,48,Share Vision,26,True,150,1,"When the user has any buffs on her, all frontliners other than the user receive a (buff / 4)% increase in the corresponding stats. If the user is in the back, the effect is halved. Renko receives twice the benefits from this skill.",0,0,0,0,0,0,0,0,0,0,0,0
+Maribel Hearn,48,Control of Liberation,27,True,10,10,Liberated Abilities will deal double damage (SLv * 10)% of the time.,0,0,0,0,0,0,0,0,0,0,0,0
+Maribel Hearn,48,Control of the Unnatural,28,True,6,10,Overflowing Unnatural Power will cause (SLv * 5)% less HP loss.,0,0,0,0,0,0,0,0,0,0,0,0
+Shou Toramaru,49,HP Boost,0,False,2,5,Increases Maximum HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Shou Toramaru,49,Defense Boost,4,False,2,5,Increases Defense.,0,0,0,0,0,0,0,0,0,0,0,0
+Shou Toramaru,49,Mind Boost,6,False,2,5,Increases Mind.,0,0,0,0,0,0,0,0,0,0,0,0
+Shou Toramaru,49,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Shou Toramaru,49,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Shou Toramaru,49,Myouren Temple Personnel,20,False,7,1,"If Byakuren is on the front line when Shou takes a turn, Shou will receive the same buffs and HP regeneration effects from Byakuren's learned Sutra skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Shou Toramaru,49,Fight Starter,21,False,7,2,"When Nazrin is at the front, the user's DEF and MND increases by (SLv * 12)%. When Rinnosuke is at the front, the user's ATK and MAG increases by (SLv * 12)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Shou Toramaru,49,Ability to Gather Treasures,22,False,32,1,Increases EXP received by 4%. Increases money received and enemy item drop rate by 10%. The effect is reduced to 2% for EXP and 3% for money/drops if the user is not at the front when the battle ends.,0,0,0,0,0,0,0,0,0,0,0,0
+Shou Toramaru,49,Pagoda's Light of Dharma,23,False,16,1,"When the user gets a turn, one of these effects occurs to all frontline allies: recover 8% HP, recover 2 MP, buff all stats by 10%, recover from all ailments; or instead debuff all enemy stats by 6% (ignores DBF resistance).",0,0,0,0,0,0,0,0,0,0,0,0
+Shou Toramaru,49,Physical Counter,24,False,4,3,(SLv * 33)% chance to counter direct enemy attacks with a Normal Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Shou Toramaru,49,Bishamonten's Wrath,25,False,16,1,"When the user takes damage, the user's Bishamonten's Wrath counter increases by 1. When the counter is at 1 or more, the user will receive a (counter * 5)% increase in ATK. The counter is halved when the user is switched to the back. The counter maxes at 50. (The counter doesn't seem to increase if Shou doesn't take at least 2 damage)",0,0,0,0,0,0,0,0,0,0,0,0
+Shou Toramaru,49,Personification of Effort,26,True,15,12,"At the start of each battle, the Bishamonten's Wrath counter is set to a random number between 0 and (SLv).",0,0,0,0,0,0,0,0,0,0,0,0
+Shou Toramaru,49,True Bishamonten's Wrath,27,True,60,1,Bishamonten's Wrath counter will no longer get halved when the user moves to the back.,0,0,0,0,0,0,0,0,0,0,0,0
+Shou Toramaru,49,More and More Treasures,28,True,60,1,"Enhance Ability to Gather Treasures by increasing the EXP bonus to 6%, and money and item drop rate bonus to 15% (3% and 5% if not in front). Also, increase Radiant Treasure Gun's reward bonus to 1.4x on kill.",0,0,0,0,0,0,0,0,0,0,0,0
+Shou Toramaru,49,Piercing Attack,29,True,5,2,"Whenever an attack deals 0 damage due to the enemies' defenses, (SLv * 20)% of the attack's pre-defense, pre-multiplier damage will be dealt instead.",0,0,0,0,0,0,0,0,0,0,0,0
+Mamizou Futatsuiwa,50,MP Boost,1,False,2,5,Increases Maximum MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Mamizou Futatsuiwa,50,TP Boost,2,False,2,5,Increases TP.,0,0,0,0,0,0,0,0,0,0,0,0
+Mamizou Futatsuiwa,50,Evasion Boost,8,False,2,5,Increases Evasion.,0,0,0,0,0,0,0,0,0,0,0,0
+Mamizou Futatsuiwa,50,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Mamizou Futatsuiwa,50,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Mamizou Futatsuiwa,50,7-Elemental Transformations,20,False,25,1,"When the user uses the Attack command, they will be infused with a random element (not including VOI). When infused, the element is added to all attack skills. If already infused, using Attack again will randomize the infusion to a new element.",0,0,0,0,0,0,0,0,0,0,0,0
+Mamizou Futatsuiwa,50,Monster Tanuki Prankster,21,False,8,2,"If the user is at the front and an enemy is inflicted with SHK, that enemy has all their stats debuffed by 10% (ignores DBF resistance) and all frontliners recover 6% of their max HP and 1 MP; the recovery stacks for each Shocked enemy. (doesn't get any benefit from SLv)",0,0,0,0,0,0,0,0,0,0,0,0
+Mamizou Futatsuiwa,50,Slippery Tanuki Disguiser,22,False,5,3,"If the user is at the front and an enemy is inflicted with SHK, that enemy will be inflicted with a medium-strength DTH effect. The chance of the DTH effect occurring is affected by the enemy's DTH resistance.",0,0,0,0,0,0,0,0,0,0,0,0
+Mamizou Futatsuiwa,50,High-Speed Normal Attack,23,False,12,1,Consumes 1 MP when a normal Attack is used. The ATB bar will be set at 8600 instead of 7000 when using a normal Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Mamizou Futatsuiwa,50,Elder Tanuki's Wisdom,24,False,10,1,"Adds a Heavy effect to all of the user's attacks, and attacks that already inflicted Heavy have their effect increased. (25% infliction rate, 5000 strength).",0,0,0,0,0,0,0,0,0,0,0,0
+Mamizou Futatsuiwa,50,Heart of Perseverance,25,False,5,2,Gives (SLv * 66)% chance of recovering (SLv) MP when taking damage from an enemy attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Mamizou Futatsuiwa,50,Monster Tanuki's Wisdom,26,True,70,1,"When the user uses a normal Attack, increase Monster Tanuki Wisdom counter by 1. Increase user's damage dealt by (counter * 8)%, and reduce the user's damage intake by (counter * 4)%. When the user moves to the back, remove the counter. The counter maxes at 5.",0,0,0,0,0,0,0,0,0,0,0,0
+Mamizou Futatsuiwa,50,Monster Tanuki's Wiles,27,True,50,1,"When the user moves to the back, instead of removing Monster Tanuki Wisdom counter, reduce it by 1.",0,0,0,0,0,0,0,0,0,0,0,0
+Mamizou Futatsuiwa,50,Majesty,28,True,5,2,"When Mamizou takes a turn, she will have her Attack, Defense, Magic, Mind and Speed buffed by (SLv * 3) %",0,0,0,0,0,0,0,0,0,0,0,0
+Mononobe no Futo,51,TP Boost,2,False,2,5,Increases TP.,0,0,0,0,0,0,0,0,0,0,0,0
+Mononobe no Futo,51,Attack Boost,3,False,2,5,Increases Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Mononobe no Futo,51,Evasion Boost,8,False,2,5,Increases Evasion.,0,0,0,0,0,0,0,0,0,0,0,0
+Mononobe no Futo,51,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Mononobe no Futo,51,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Mononobe no Futo,51,Kodoku Plate Pileup,20,False,5,10,"Using Futo-only spells will increase the Sake Cups counter by 2. The counter maxes out at (SLv). Damage dealt is raised by (counter * 3)%. When the user is hit, the counter will be decreased by 1 and damage taken is reduced by 16%.",0,0,0,0,0,0,0,0,0,0,0,0
+Mononobe no Futo,51,Royals' Chaotic Dance (Futo),21,False,12,1,"When Miko is at the front, Futo gets 1 additional Sake Cups counter when using her spells.",0,0,0,0,0,0,0,0,0,0,0,0
+Mononobe no Futo,51,Offering - Mikoto Nigihayahi,22,False,32,1,"When the user gets a turn, recovers MP in proportion to the Sake Cups counter (1 MP recovery at <7 cups, 2 MP recovery at 7 cups or above). Counter's damage reduction is changed to 40%. When KO'd, there is a (Counter * 8)% chance of consuming 16 TP to survive with 1 HP and set the counter to 0.",0,0,0,0,0,0,0,0,0,0,0,0
+Mononobe no Futo,51,Offering - Okami Omononushi,23,False,32,1,"When the user gets a turn, recovers HP in proportion to the Sake Cups counter (recovery is Counter%). When a Futo-only spell is used, damage is raised by a further (Counter * 5)%. This skill will not take effect if Offering - Mikoto Nigihayahi is also learned.",0,0,0,0,0,0,0,0,0,0,0,0
+Mononobe no Futo,51,Spirit Mausoleum Desires,24,False,12,1,"If the Sake Cups counter is at 1 or more and the Concentrate command is used, all stats will be buffed and HP recovered by (Counter * 6%), and the counter will be reset to 0.",0,0,0,0,0,0,0,0,0,0,0,0
+Mononobe no Futo,51,Giving You Wings,25,False,5,2,Greatly increases recovery from debuffs and status ailments. (Bug: does not speed up recovery from debuffs),0,0,0,0,0,0,0,0,0,0,0,0
+Mononobe no Futo,51,Leyline to a Dragon's Nest,26,True,160,1,"When the user has learned both ""Offering - Mikoto Nigihayahi"" and ""Offering - Okami Omononushi"", both skills will take effect.",0,0,0,0,0,0,0,0,0,0,0,0
+Mononobe no Futo,51,Lightning Sake Cups,27,True,24,5,The user starts each battle with the Sake Cup counter at (SLv).,0,0,0,0,0,0,0,0,0,0,0,0
+Mononobe no Futo,51,Accelerate,28,True,10,1,"When Futo receives a turn, she will gain a 10% Speed buff.",0,0,0,0,0,0,0,0,0,0,0,0
+Toyosatomimi no Miko,52,HP Boost,0,False,2,5,Increases Maximum HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Toyosatomimi no Miko,52,Magic Boost,5,False,2,5,Increases Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Toyosatomimi no Miko,52,Affinity Boost,10,False,2,5,Increases elemental affinities.,0,0,0,0,0,0,0,0,0,0,0,0
+Toyosatomimi no Miko,52,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Toyosatomimi no Miko,52,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Toyosatomimi no Miko,52,Asuka Heritage Attack,20,False,15,1,"When the user is at full HP, all attacks will ignore 40% of the enemies' defenses.",0,0,0,0,0,0,0,0,0,0,0,0
+Toyosatomimi no Miko,52,Royals' Chaotic Dance (Miko),21,False,12,1,"When Futo is at the front, the effects of the skill ""Asuka Heritage Attack"" will always be active, and the skill will ignore 66% of the enemies' defenses instead of 40%.",0,0,0,0,0,0,0,0,0,0,0,0
+Toyosatomimi no Miko,52,True Administrator,22,False,15,1,"If the frontliners' combined current HP % is at 300% or more, the user receives ""True Administrator - Good"" and a 16% increase in ATK and MAG. If the frontliners' combined current HP % is at 200% or less, the user receives ""True Administrator - Evil"" and a 24% increase in DEF, MND and SPD.",0,0,0,0,0,0,0,0,0,0,0,0
+Toyosatomimi no Miko,52,Prince Shotoku's Out-of-Place Artifact,23,False,20,1,Doubles stat bonuses on wearer's Main and Sub equipment.,0,0,0,0,0,0,0,0,0,0,0,0
+Toyosatomimi no Miko,52,Sage of Toyosatomimi,24,False,40,1,"Any buffs casted on the user get their initial strength multiplied by 1.2x. Additionally, the user's stat buff cap is increased from 100% to 120%.",0,0,0,0,0,0,0,0,0,0,0,0
+Toyosatomimi no Miko,52,Meikyo Shisui,25,False,5,2,"Whenever Miko takes a turn and her MP is full, she receives a (SLv * 6)% buff to all her stats.",0,0,0,0,0,0,0,0,0,0,0,0
+Toyosatomimi no Miko,52,Prince Lesson,26,True,144,1,"When the skill holder is in the front, all other frontliners receive 16% more benefit from buffs. When the skill holder is in the back, all frontliners receive 8% more benefit from buffs.",0,0,0,0,0,0,0,0,0,0,0,0
+Toyosatomimi no Miko,52,Transcendental Administrator,27,True,100,1,Both effects of True Administrator will always be active. Tradition of Just Rewards will take on both morphed elements and additional effects.,0,0,0,0,0,0,0,0,0,0,0,0
+Toyosatomimi no Miko,52,Mega Asuka Heritage Attack,28,True,50,1,"Asuka Heritage Attack's activation condition becomes ""when HP is above 50%"" instead.",0,0,0,0,0,0,0,0,0,0,0,0
+Hata no Kokoro,53,Attack Boost,3,False,2,5,Increases Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Hata no Kokoro,53,Defense Boost,4,False,2,5,Increases Defense.,0,0,0,0,0,0,0,0,0,0,0,0
+Hata no Kokoro,53,Magic Boost,5,False,2,5,Increases Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Hata no Kokoro,53,Mind Boost,6,False,2,5,Increases Mind.,0,0,0,0,0,0,0,0,0,0,0,0
+Hata no Kokoro,53,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Hata no Kokoro,53,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Hata no Kokoro,53,Myouren Temple Disciple?,20,False,12,1,"If the user receives a turn while Byakuren is in the front, copy 1/3 of Byakuren's stat buffs. (Only if the user's current buff is lower)",0,0,0,0,0,0,0,0,0,0,0,0
+Hata no Kokoro,53,Phantasmal Emotion Transfer,21,False,20,1,"When using Concentrate, receives an ""Emotion Mask"" effect which applies stat modifiers to all enemies and allies. The mask effect can be rotated by Concentrate, and will always be received in this order: Joy( ↑ ATK/DEF, ↓ MAG/MND), Anger( ↑ ATK/MAG, ↓ DEF/MND), Pathos( ↑ MAG/MND, ↓ ATK/DEF), Cheer( ↑ SPD, ↓ ATK/MAG).",0,0,0,0,0,0,0,0,0,0,0,0
+Hata no Kokoro,53,Power of the Mask's Creator,22,False,12,1,"When Miko is at the front, the stat decrease from Kokoro's current ""Emotion Mask"" is halved for allies.",0,0,0,0,0,0,0,0,0,0,0,0
+Hata no Kokoro,53,66 Emotions Convergence,23,False,12,1,"Kokoro receives 2.5x the effect of the stat changes granted by her ""Emotion Mask"".",0,0,0,0,0,0,0,0,0,0,0,0
+Hata no Kokoro,53,Manipulation of Emotions,24,False,18,1,"If the user attacks with ""Emotion Mask"" active, the Emotion's stat decreases will be inflicted as an additional debuff. If the user uses a healing move with the effect active, the Emotion's stat increases will be added as an additional buff. (Buffs by 32%, 48% for speed, debuffs for 24%)",0,0,0,0,0,0,0,0,0,0,0,0
+Hata no Kokoro,53,The Lost Emotion,25,False,10,1,"When using the Concentrate command, the ATB bar is set to 8500 instead of 5000, but the MP recovered will become 1/3 of normal (rounded down). If the skill ""Efficient Concentration"" is also learned, the MP recovered will be increased to 1/2 of normal.",0,0,0,0,0,0,0,0,0,0,0,0
+Hata no Kokoro,53,Empty-Hearted Masks Dance,26,True,128,1,"Reduce Emotion Mask's stat decrease aspect on allies by half. If Power of the Emotion Mask Creator also activates, allies will suffer no stat decrease from Emotion Mask instead.",0,0,0,0,0,0,0,0,0,0,0,0
+Hata no Kokoro,53,Mask - Hope,27,True,66,1,"When the skill holder receives a turn, regenerate 10% of max HP.",0,0,0,0,0,0,0,0,0,0,0,0
+Hata no Kokoro,53,Morale Maintenance,28,True,60,1,"When the user is switched to the back, Fighting Spirit counter will be reduced by 1 instead of disappearing entirely.",0,0,0,0,0,0,0,0,0,0,0,0
+Tokiko,54,Attack Boost,3,False,2,5,Increases Attack.,0,0,0,0,0,0,0,0,0,0,0,0
+Tokiko,54,Defense Boost,4,False,2,5,Increases Defense.,0,0,0,0,0,0,0,0,0,0,0,0
+Tokiko,54,Magic Boost,5,False,2,5,Increases Magic.,0,0,0,0,0,0,0,0,0,0,0,0
+Tokiko,54,Mind Boost,6,False,2,5,Increases Mind.,0,0,0,0,0,0,0,0,0,0,0,0
+Tokiko,54,Speed Boost,7,False,2,5,Increases Speed.,0,0,0,0,0,0,0,0,0,0,0,0
+Tokiko,54,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Tokiko,54,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Tokiko,54,Nameless Bookworm Youkai,20,False,8,4,"When the user takes damage from an element with less than 200 affinity, restore (SLv * 4)% HP and (SLv) MP. (currently bugged and doesn't work)",0,0,0,0,0,0,0,0,0,0,0,0
+Tokiko,54,Reimu & Marisa's Abuse Victim,21,False,10,2,"When Reimu or Marisa is at the front, the user's ATK and DEF increase by (SLv * 10)%.",0,0,0,0,0,0,0,0,0,0,0,0
+Tokiko,54,Crested Ibis's Feather,22,False,20,1,"When the user receives a turn while under Reading, slightly decrease all enemies' buff effects and slightly increase all enemies' debuff effects. (Changes [de]buffs by 10% of current value, rounded down)",0,0,0,0,0,0,0,0,0,0,0,0
+Tokiko,54,Sugari no Ontachi Ornament,23,False,25,1,"When the user receives a turn while under Reading, slightly increase all allies' buff effects and slightly decrease all allies' debuff effects. (Changes [de]buffs by 10% of current value, rounded down)",0,0,0,0,0,0,0,0,0,0,0,0
+Tokiko,54,Crossovered Endangered Bird,24,False,20,1,"When the user is at the front while under Reading, slightly increase effects of PSN's HP Drain (~12% more damage), HVY's DEF and SPD debuff (-60% DEF and -18% SPD), TRR's all stat debuff (-13.5% to all stats) and SIL's MND and MAG debuff (-60% MND and -25% MAG) on enemies.",0,0,0,0,0,0,0,0,0,0,0,0
+Tokiko,54,An Eye for An Eye,25,False,5,2,"When Tokiko takes damage from an enemy’s attack, she receives a (SLv * 5) buff to her Attack.",0,0,0,0,0,0,0,0,0,0,0,0
+Tokiko,54,Love the Way You Read,26,False,10,4,The user's appropriate spell cards have increased chances of giving the Reading status.,0,0,0,0,0,0,0,0,0,0,0,0
+Tokiko,54,Tokiko's Thick Book CQC,27,True,50,1,"If the skill holder is under the effect of ""Reading"", increase DEF and MND by 25%. If the skill holder is not under the effect of ""Reading"", increase ATK and MAG by 25%.",0,0,0,0,0,0,0,0,0,0,0,0
+Tokiko,54,Bookworm Youkai's Ardor,28,True,80,1,"When the skill holder is under the effect of ""Reading"", ""The Count of Monte Cristo"" and ""Musketeer d'Artagnan""'s special effects are further strengthened, and the spells' power is also increased. When this effect activates, there is a low chance that ""Reading"" effect will disappear.",0,0,0,0,0,0,0,0,0,0,0,0
+Tokiko,54,Bookworm Youkai's Grudge,29,True,60,1,"In battle, if Reimu or Marisa is in the back, ""Reimu & Marisa's Abuse Victim"" will activate at half strength.",0,0,0,0,0,0,0,0,0,0,0,0
+Koishi Komeiji,55,MP Boost,1,False,2,5,Increases MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Koishi Komeiji,55,Evasion Boost,8,False,2,5,Increases Evasion.,0,0,0,0,0,0,0,0,0,0,0,0
+Koishi Komeiji,55,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Koishi Komeiji,55,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Koishi Komeiji,55,Earth Spirits Palace Party,20,False,5,2,"While the user is on the front line, if Utsuho, Rin and/or Satori are on the front line, the user's stats will be increased by (SLv * 8) % per members on the front line, excluding themselves. This can only takes effect if at least one ally or enemy has performed an action in the battle.",0,0,0,0,0,0,0,0,0,0,0,0
+Koishi Komeiji,55,Myouren Temple Disciple?,21,False,12,1,"If the user receives a turn while Byakuren is in the front, copy 1/3 of Byakuren's stat buffs. (Only if the user's current buff is lower)",0,0,0,0,0,0,0,0,0,0,0,0
+Koishi Komeiji,55,Super-Responsive Senses,22,False,25,1,"When the user evades an attack, increase ATB by 3000.",0,0,0,0,0,0,0,0,0,0,0,0
+Koishi Komeiji,55,Subconscious Manipulation,23,False,12,3,"When an enemy is using an attack that targets all party members, increase the user's DEF, MND and Evasion by (SLv * 8)%. (This is only factored per attack, and is not a persistent buff)",0,0,0,0,0,0,0,0,0,0,0,0
+Koishi Komeiji,55,Subconscious Genetics,24,False,10,3,"When the user fails to evade an attack, increase Subconscious Genetics counter by 1. The user's evasion is increased by (counter * 10)%. When the user successfully evades an attack, remove the counter. (doesn't get any benefit from SLv)",0,0,0,0,0,0,0,0,0,0,0,0
+Koishi Komeiji,55,Expansion of Consciousness,25,False,12,2,Increase MP Recovery Rate by (SLv * 1).,0,0,0,0,0,0,0,0,0,0,0,0
+Koishi Komeiji,55,Embryo's Dream,26,True,70,1,"When the user evades an attack, there's a 33% chance of increasing the ""Embryo's Dream"" counter by 1 (the counter maxes at 5). When attacking, using a spell, or using Concentrate while Embryo's Dream counter is present, reduce the counter by 1 and repeat the action. This will use MP as normal, and won't activate if the user doesn't have enough MP.",0,0,0,0,0,0,0,0,0,0,0,0
+Koishi Komeiji,55,Super-responsive Senses+,27,True,70,1,"When Super-responsive Senses activate, action gauge is increased by 10000 instead.",0,0,0,0,0,0,0,0,0,0,0,0
+Koishi Komeiji,55,"Embryo, Why Do You Dance?",28,True,128,1,"When evading an attack, the chance of ""Embryo's Dream"" counter increasing is doubled.",0,0,0,0,0,0,0,0,0,0,0,0
+Hieda no Akyuu,56,HP Boost,0,False,2,5,Increases HP.,0,0,0,0,0,0,0,0,0,0,0,0
+Hieda no Akyuu,56,MP Boost,1,False,2,5,Increases MP.,0,0,0,0,0,0,0,0,0,0,0,0
+Hieda no Akyuu,56,TP Boost,2,False,2,5,Increases TP.,0,0,0,0,0,0,0,0,0,0,0,0
+Hieda no Akyuu,56,Motivated Heart,18,False,5,2,"Skill holder receives (SLv * 6)% more experience. Only takes effect when in party (active or reserve). Does not stack with ""Hands-on Experience"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Hieda no Akyuu,56,Hands-on Experience,19,False,5,2,"Skill holder receives (SLv * 12)% more experience. Only takes effect when in active party at end of battle. Does not stack with ""Motivated Heart"", but does stack with all other modifying skills.",0,0,0,0,0,0,0,0,0,0,0,0
+Hieda no Akyuu,56,Hyperthymestic Memory,20,False,25,1,"If the user is in the party, the ""View Ally/Enemy Information"" menu will display enemies' current HP.",0,0,0,0,0,0,0,0,0,0,0,0
+Hieda no Akyuu,56,Gensokyo Chronicles Wisdom,21,False,20,1,"When the user is in front, all frontliners inflict 16% more damage when targeting a weakness.",0,0,0,0,0,0,0,0,0,0,0,0
+Hieda no Akyuu,56,Memories of Gensokyo,22,False,15,1,"When the user takes a turn, remove one negative status ailment or debuff from all frontliners. Ailments will be prioritized over stat debuffs.",0,0,0,0,0,0,0,0,0,0,0,0
+Hieda no Akyuu,56,Miare Descendant's Power,23,False,4,9,"If the user's HP becomes 0 while having at least 1 TP, there is a (SLv * 9)% chance to consume 15 TP to fully restore HP. This effect does not activate if the user doesn't have enough TP.",0,0,0,0,0,0,0,0,0,0,0,0
+Hieda no Akyuu,56,Ultra Incantation,24,False,10,5,"After using Concentrate, the next action's damage or healing will be multiplied by (1.8 + SLv * 0.3).",0,0,0,0,0,0,0,0,0,0,0,0
+Hieda no Akyuu,56,Phenomenal Force of Will,25,False,8,1,"When the user receives a turn, restore 1 MP.",0,0,0,0,0,0,0,0,0,0,0,0
+Hieda no Akyuu,56,In Search of More Wisdom,26,True,50,1,"Occasionally ""Wise Protection Art"" and ""Wise Defensive Art"" will affect all frontliners.",0,0,0,0,0,0,0,0,0,0,0,0
+Hieda no Akyuu,56,Protector of Knowledge,27,True,75,1,"""Invincibility"" and ""Immunity"" will naturally disappear half as often.",0,0,0,0,0,0,0,0,0,0,0,0
+Hieda no Akyuu,56,True Maiden of Miare,28,True,50,1,"""Miare Descendant's Power"" will occasionally not consume TP when it activates.",0,0,0,0,0,0,0,0,0,0,0,0
