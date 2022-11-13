@@ -251,7 +251,8 @@ class Character:
         #Everything left over is equipment.
     #
 
-
+    #NOTE - this is the up-to-date copy, and probably the only one used.
+    #I think the other two are experiments, and not in-use.
     def character_sheet(self):
         """Returns a string of all of the character stats formatted into a table.
         Suitable for printing to the console to see everything at once.

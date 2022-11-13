@@ -167,6 +167,7 @@ if __name__ == "__main__":
         print("Converts input value of Type (either [in-game] 'Speed' or 'Ticks' to the alternate type.")
         print(f"Example: '{sys.argv[0]} speed 1000'")
         print(f"Or:      '{sys.argv[0]} Ticks=300'")
+        exit()
     elif (len(sys.argv) == 2):
         text = sys.argv[1].lower()
         if text == 'test' or text == 'tests':

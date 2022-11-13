@@ -14,6 +14,14 @@ from lot2speed import Speed
 LITTLE_ENDIAN = 'little'
 BIG_ENDIAN = 'big'
 
+#for Steam files
+xorkey = b''
+for i in range(0, 256):
+    xorkey += i.to_bytes(1, 'little')
+    #The decryption key is just 00..FF
+assert len(xorkey) == 256
+assert xorkey[0] == 0
+
 def converttoint(bytes, size=4, endian=BIG_ENDIAN):
     result = 0
     for i in range(size):
