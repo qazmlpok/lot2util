@@ -310,6 +310,19 @@ class Character:
         skp_stock = str(self.unused_skill_points).rjust(9)
         tms = str(self.training_manuals).rjust(9)
         
+        items = []
+        for i in self.items:
+            i = int(i)
+            if i == 0:
+                items.append('None'.rjust(30))
+                continue
+            if i not in item_stats:
+                raise Exception(f"Strange equipped item with id {i}")
+            item_name = item_stats[i]['Name']
+            item_type = item_stats[i]['Type']       #'main' or 'sub'
+            #Longest item name is 27 characters (tied); Portable Oscillation Cannon
+            items.append(item_name.rjust(30))
+        
         ret = [
             "=" * 80,
             f"....NAME:...{name}.Exp:.{exp}.Lv:.{level}........",
@@ -334,13 +347,11 @@ class Character:
             f"..Battle Points:.{bp}....Lv Bonus stock:...{bonus_stock}.......................",
             f"..Skill points:..{skp_stock}....Training Manuals:.{tms}.......................",
             "=" * 80,
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",#My console is 30 lines
+            ".Equipment:.....................................................................",
+            f"...{items[0]}...............................................",
+            f"...{items[1]}...............................................",
+            f"...{items[2]}...............................................",
+            f"...{items[3]}...............................................",
         ]
 
         #I don't thiiiiink there will ever be decimals in here
