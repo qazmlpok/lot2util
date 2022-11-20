@@ -22,6 +22,17 @@ class StandaloneData:
         fullpath = os.path.join(self._folder, filename)
         f = open(fullpath, 'rb')
         return f
+    def WriteData(self, filename, func):
+        """ Opens the specified file in append mode and writes data. """
+        fullpath = os.path.join(self._folder, filename)
+        #Make sure it already exists
+        if (not os.path.exists(fullpath)):
+            raise Exception("Path doesn't already exist: " + fullpath)
+        #
+        with open(fullpath, 'r+b') as fh:
+            #Call c.saveCharacter (or whatever) on the file handle.
+            func(fh)
+            #And then that's it.
 #
 class SteamData:
     """ Manager for dealing with the Steam save data.
@@ -39,21 +50,24 @@ class SteamData:
             self._decoded_data = bytes(map(xor, raw_data, cycle(xorkey)))
         self.basepath = basepath
         self.filename_re = re.compile(r'^([a-zA-Z]+)(\d+)(?:\.ngd)?$')
-    def GetFile(self, filename):
-        """ Returns a stream of data sourced from the combined steam save file,
-        modified to look/act like a standalone file.
-        """
+    def _getSaveName(self, filename):
         m = self.filename_re.match(filename)
         if not m:
             raise Exception(f"Invalid filename: {filename}")
         (letter, number) = m.group(1, 2)
+        return (letter, int(number))
+    def GetFile(self, filename):
+        """ Returns a stream of data sourced from the combined steam save file,
+        modified to look/act like a standalone file.
+        """
+        (letter, number) = self._getSaveName(filename)
         
         #Set in the if chain
         data = None
        
         if letter == 'C':
             #Only time number matters...
-            number = int(number) - 1
+            number = number - 1
             data = self.extractCharacter(number)
         elif letter == 'EEF':
             #item discovery flags
@@ -111,6 +125,48 @@ class SteamData:
 
         return io.BytesIO(bytes(data))
     
+    def WriteData(self, filename, func):
+        """ Creates a filehandle-like object pointing to a block of memory representing
+        the DLSite-equivalent of a Steam combined save of a specific name.
+        This can then be written to as if it was a file...
+        it will then be re-converted to the Steam format,
+        and written to disk
+        """
+        with self.GetFile(filename) as fh:
+            #Call c.saveCharacter (or whatever) on the file handle.
+            func(fh)
+            #Now convert the file back to Steam format and write to disk
+            fh.seek(0)
+            data = list(fh.read())
+            self.writeToDisk(filename, data)
+    #
+    def writeToDisk(self, filename, data):
+        """Actually write the data to disk.
+        Filename is the standalone equivalent filename, e.g. C01. This is used to get the offset to use
+        data is the data to write, in standalone format. Must be a list of binary values (since it will be inverted, etc)
+        """
+        (letter, number) = self._getSaveName(filename)
+        if letter == 'C':
+            #Assert len(data)? I should know it, but I'm also ignoring a lot of junk that's normally at the end.
+            number = number - 1
+            offset = 0x9346 + 0x10F * number
+
+            #Now remove the 2 padding bytes. This is the opposite of extractCharacter.
+            data = self.storeCharacter(data)
+            dec_data = list(self._decoded_data)
+            dec_data[offset:offset+len(data)] = data[:]
+            #
+            encoded_data = bytes(map(xor, self._decoded_data, cycle(xorkey)))
+            #TODO: This will write the save 56 times, once for each character. Fix that.
+            with open(self.basepath, 'wb') as outf:
+                outf.write(encoded_data)
+            self._decoded_data = bytes(dec_data)
+            
+        elif letter == 'PEX':
+            #But it should be.
+            raise Exception("Writing not supported.")
+        else:
+            raise Exception("Writing not supported.")
     def extractCharacter(self, number):
         """ One way function; pull the data from the combined save file and create a chunk
         that looks like standalone data.
@@ -130,14 +186,35 @@ class SteamData:
         data[0xED:0xEF] = srcData[offset+0xEC:offset+0xEE]
         data[0xF0:0xF4] = srcData[offset+0xEE:offset+0xF2]
         #Everything after this is just shifted by 2
-        data[0xF4:0x10F] = srcData[offset+0xF2:offset+0x10D]
+        data[0xF4:0x111] = srcData[offset+0xF2:offset+0x10F]
         
         #Then invert the data. Reminder; when writing, invert first, then shift.
         self._invertCharacter(data)
         return data
+    def storeCharacter(self, data):
+        """ One way function; turn Character standalone data into combined data
+        This is the opposite of extractCharacter
+        The output must not include the "offset"; this will be done by the calling function
+        (this is to enable a sparse write)
+        """
+        outData = [0] * 0x10F
+        
+        #Same operation as reading; this is reversable. Modifies in-place.
+        self._invertCharacter(data)
+
+        #Offsets match for most of the early data, up to the boost2 flags.
+        outData[0:0xEC] = data[0:0xEC]
+        #0xEC maps to xED, then EE maps to F0
+        outData[0xEC:0xEE] = data[0xED:0xEF]
+        outData[0xEE:0xF2] = data[0xF0:0xF4]
+        #Everything after this is just shifted by 2
+        outData[0xF2:0x10F] = data[0xF4:0x111]
+        return outData
+    #
     def _invertCharacter(self, data):
         """ Change the endianness of various values within the character data.
         This needs to be done in both reading/writing, hence it's a separate function.
+        Modifies data in-place.
         """
         #4 bytes: level, exp, library levels, subclass
         #2 bytes: skills, subskills
@@ -265,6 +342,12 @@ class Save:
     #For steam, see https://github.com/Thurler/thlaby2-save-convert/blob/main/convert_save.py
     #for Thurler's work on getting the offsets.
     
+    #Note on characters
+    #There are three lists: original_characters, all_characters, characters
+    #original_characters should never be modified and is a deep copy. It allows resetting without re-reading the files.
+    #all_characters is every character. The contents can be modified but the list itself shouldn't.
+    #characters is initially a copy of all_characters, but is intended to be modified. The sort functions will change the order and filtering can be done.
+    
     def __init__(self, basepath):
         """Creates the Save wrapped object. The path needs to be one of the SaveX folders, i.e. all the *.ngd files must exist here"""
         self._folder = basepath
@@ -307,16 +390,7 @@ class Save:
         with self.manager.GetFile('PEX01.ngd') as f:
             self.misc_data = MiscData(f)
             self.misc_data.print_all()
-            #There's currently no other way to interact with it.
-        
-        
-        
-        #Note on characters
-        #There are three lists: original_characters, all_characters, characters
-        #original_characters should never be modified and is a deep copy. It allows resetting without re-reading the files.
-        #all_characters is every character. The contents can be modified but the list itself shouldn't.
-        #characters is initially a copy of all_characters, but is intended to be modified. The sort functions will change the order and filtering can be done.
-        
+            #There's currently no other way to interact with this file.
     #
     def write_characters(self):
         #TODO: Add an optional parameter for a filter (using get_characters semantics)
@@ -324,12 +398,8 @@ class Save:
         
         ret = []
         for c in self.characters:
-            ngdfile = os.path.join(self._folder, 'C%02d.ngd' % c.id)
-            #Make sure it already exists
-            if (not os.path.exists(ngdfile)):
-                raise Exception("Path doesn't already exist: " + ngdfile)
-            with open(ngdfile, 'r+b') as fh:
-                c.save_to_file(fh)
+            ngdfile = 'C%02d.ngd' % c.id
+            self.manager.WriteData(ngdfile, c.save_to_file)
             ret.append("Wrote save data for " + c.name + " to path: " + ngdfile)
         return ret
     #
