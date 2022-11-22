@@ -1,41 +1,48 @@
 from lot2helper import *
+from DataTemplate import *
+
+class MiscDataTemplate(DataTemplate):
+    def __init__(self):
+        self.fields = [
+            Field('total_exp', 8)           # Cumulative EXP
+            ,Field('total_money', 8)        # Cumulative Money
+            ,Field('curr_money', 8)         # Current money
+            ,Field('total_battles', 8)      # Number of battles
+            ,Field('gameovers', 4)          # Number of game overs
+            ,Field('playtime', 4)           # Play time in seconds
+            ,Field('total_treas', 4)        # Number of treasures
+            ,Field('total_craft', 4)        # Number of crafts
+            ,Field('unk_1', 4)              # Unused data
+            ,Field('highest_floor', 1)      # Highest floor
+            ,Field('locked_treas', 4)       # Number of locked treasures
+            ,Field('escape_count', 4)       # Number of escaped battles
+            ,Field('dung_count', 4)         # Number of dungeon enters
+            ,Field('item_drops', 4)         # Number of item drops
+            ,Field('foe_count', 4)          # Number of FOEs killed
+            ,Field('step_count', 8)         # Number of steps taken
+            ,Field('shop_money', 8)         # Money spent on shop
+            ,Field('sold_money', 8)         # Money sold on shop
+            ,Field('most_exp', 8)           # Most EXP from 1 dive
+            ,Field('most_money', 8)         # Most Money from 1 dive
+            ,Field('most_drops', 4)         # Most Drops from 1 dive
+            ,Field('unk_2', 1)              # Unknown data
+            ,Field('lib_enhance', 8)        # Number of library enhances
+            ,Field('most_battle', 4)        # Highest battle streak
+            ,Field('most_escape', 4)        # Highest escape streak
+            ,Field('hardmode', 1)           # Hard mode flag
+            ,Field('ic_avail', 1)           # IC enabled flag
+            ,BytesField('unk_bytes', 0x26)  # Unknown data
+            ,Field('ic_floor', 4)           # IC floor
+            ,Field('akyuu_trades', 4)       # Number of akyuu trades
+        ]
 
 class MiscData:
     """Represents data loaded from file PEX01 in the save folder. 
     Tracks various misc fields, e.g. total exp, total money, current money, steps walked, etc.
     """
+    template = MiscDataTemplate()
     def __init__(self, filedata):
-        self.total_exp = readbytes(filedata, 8)         # Cumulative EXP
-        self.total_money = readbytes(filedata, 8)       # Cumulative Money
-        self.curr_money = readbytes(filedata, 8)        # Current money
-        self.total_battles = readbytes(filedata, 8)     # Number of battles
-        self.gameovers = readbytes(filedata, 4)         # Number of game overs
-        self.playtime = readbytes(filedata, 4)          # Play time in seconds
-        self.total_treas = readbytes(filedata, 4)       # Number of treasures
-        self.total_craft = readbytes(filedata, 4)       # Number of crafts
-        readbytes(filedata, 4)   # Unused data           
-        self.highest_floor = readbytes(filedata, 1)     # Highest floor
-        self.locked_treas = readbytes(filedata, 4)      # Number of locked treasures
-        self.escape_count = readbytes(filedata, 4)      # Number of escaped battles
-        self.dung_count = readbytes(filedata, 4)        # Number of dungeon enters
-        self.item_drops = readbytes(filedata, 4)        # Number of item drops
-        self.foe_count = readbytes(filedata, 4)         # Number of FOEs killed
-        self.step_count = readbytes(filedata, 8)        # Number of steps taken
-        self.shop_money = readbytes(filedata, 8)        # Money spent on shop
-        self.sold_money = readbytes(filedata, 8)        # Money sold on shop
-        self.most_exp = readbytes(filedata, 8)          # Most EXP from 1 dive
-        self.most_money = readbytes(filedata, 8)        # Most Money from 1 dive
-        self.most_drops = readbytes(filedata, 4)        # Most Drops from 1 dive
-        readbytes(filedata, 1)  # Unknown data           
-        self.lib_enhance = readbytes(filedata, 8)       # Number of library enhances
-        self.most_battle = readbytes(filedata, 4)       # Highest battle streak
-        self.most_escape = readbytes(filedata, 4)       # Highest escape streak
-        self.hardmode = readbytes(filedata, 1)          # Hard mode flag
-        self.ic_avail = readbytes(filedata, 1)          # IC enabled flag
-        readbytes(filedata, 0x26)# Unknown data           
-        self.ic_floor = readbytes(filedata, 4)          # IC floor
-        self.akyuu_trades = readbytes(filedata, 4)      # Number of akyuu trades
-        #readbytes(filedata, ...)# Unknown data
+        MiscData.template.Read(self, filedata)
     
     def print_all(self):
         print(f'Cumulative EXP: {self.total_exp}')

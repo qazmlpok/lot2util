@@ -156,3 +156,6 @@ boost_2_stats = gem_stats
 
 #Lookup stat name to index in the array
 stat_index = {boost_stats[i]:i for i in range(len(boost_stats))}
+
+SKILL_COUNT = 40
+SUBCLASS_SKILL_COUNT = 20

@@ -3,6 +3,7 @@
 from lot2helper import *
 #from lot2data import *
 from lot2speed import Speed
+from DataTemplate import *
 
 import os
 import copy
@@ -34,9 +35,40 @@ def mods(func):
     
     return func
 
+class CharacterTemplate(DataTemplate):
+    def __init__(self):
+        self.fields = [
+            Field('level', 4)
+            ,Field('exp', 8)
+            ,ArrayField('libstats', (stats+affinities), 4)
+            ,ArrayField('levelstats', (stats), 4)
+            ,Field('subclass_id', 4, validator=lambda x: x in subclasses)
+            ,PositionAssert(0x60)
+            ,ArrayField('skills', range(SKILL_COUNT), 2)
+            ,PositionAssert(0xB0)
+            ,ArrayField('subskills', range(SUBCLASS_SKILL_COUNT), 2)
+            ,PositionAssert(0xD8)
+            ,ArrayField('boost_1s', boost_stats, 1, validator=lambda x: x in (0,1))
+            ,PositionAssert(0xE4)
+            ,ArrayField('boost_2s', boost_2_stats, 1, validator=lambda x: x in (0,2,3))
+            ,PositionAssert(0xEC)
+            ,Field('skp_sign', 1)
+            ,Field('unused_skill_points', 2)
+            ,Field('bns_sign', 1)
+            ,Field('unused_bonus_points', 4)
+            ,PositionAssert(0xF4)
+            ,ArrayField('gems', gem_stats, 2, validator=lambda x: x <= 20)
+            ,PositionAssert(0x104)
+            ,Field('training_manuals', 1)
+            ,Field('unknown', 1)
+            ,Field('BP', 3)
+            ,PositionAssert(0x109)
+            ,ArrayField('items', range(0, 4), 2, validator=lambda x: x <= 980)
+        ]
+#
 class Character:
     """Represents data loaded from a C file in the save folder. Tracks the raw data and has utility functions for dealing with it"""
-
+    template = CharacterTemplate()
     #Save data:
     #level (4)
     #exp (8)
@@ -51,6 +83,15 @@ class Character:
     #0x109 ~ 0x110 are the character's equipment, 2 bytes per slot. 0x10a is the main equip (0x109 is 0x00)
     
     #Gems should be in here too...
+    
+    #Idea:
+    #Remove all the actual reads from the constructor. Replace with descriptions of what needs to be read
+    # - or written. The intent is that the heavy lifting can be done once, not twice.
+    #Constructor adds a bunch of classes, describing the data needed.
+    #'Get' or whatever takes the bin data and uses it to populate stuff
+    #-Or I guess that's init, but the templating is in another class?
+    #Using all the fields, read the appropriate data. Use reflection to set class properties.
+    #Do some post-processing for stuff like the sign flag.
     
     #filedata should be an open file (or bytestream that behaves like a file) containing the save data.
     #Character name isn't stored in the file, so the name of the file (specifically just the number) is needed as a parameter.
@@ -69,126 +110,29 @@ class Character:
         self.full_name = character_titles[id]['Name']
         self.title = character_titles[id]['Title']
         
-        self.level = readbytes(filedata, 4)
-        self.exp = readbytes(filedata, 8)
+        Character.template.Read(self, filedata)
 
-        self.libstats = {}
-        for stat in stats:
-            #6 total
-            self.libstats[stat] = readbytes(filedata, 4)
-        for aff in affinities:
-            #8 total
-            self.libstats[aff] = readbytes(filedata, 4)
-        #pos: 0x44
-        self.levelstats = {}
-        for stat in stats:
-            #6 total
-            self.levelstats[stat] = readbytes(filedata, 4)
-        #pos: 0x5C
-        subclass = readbytes(filedata, 4)
-        if subclass not in subclasses:
-            raise Exception("Unrecognized subclass: " + str(subclass))
-        self.subclass = subclasses[subclass]
-        self.subclass_id = subclass
-        
-        SKILL_COUNT = 40
-        SUBCLASS_SKILL_COUNT = 20
-        self.skills = [None] * SKILL_COUNT
-        self.subskills = [None] * SUBCLASS_SKILL_COUNT
-        
-        #(Passive skills and spells are not separate)
-        assert filedata.tell() == 0x60
-        #pos: 0x60
-        #Fortunately, it's the same for all. The save files are fixed length. Not all skills are used.
-        for i in range(SKILL_COUNT):
-            self.skills[i] = readbytes(filedata, 2)
-        #The first 12 skills are "x Boost", which everyone has, max level 5.
-        #Except these can then be boosted to "Boost 2" or "Mega Boost", which also are level 5.
-        #And then Rinnosuke is also special and has his own set...
-        
-        assert filedata.tell() == 0xB0
-        #pos: 0xB0
-        for i in range(SUBCLASS_SKILL_COUNT):
-            self.subskills[i] = readbytes(filedata, 2)
-        #The first subclass skill is always level 0.
-    
-        assert filedata.tell() == 0xD8
-        #0xD8
+        self.subclass = subclasses[self.subclass_id]
+
+        #Combine boost skills: first, copy boost1, which is always 0 or 1.
+        #Then, if boost2 is set to 2 or 3, overwrite with that value
+        #TODO: Check if the character naturally knows the skill and set boost=1 based on that
+        #Writing this will be a pain.
         self.boosts = {}
-        #Items unlocking stat basic boost skills. 1 byte.
-        for stat in boost_stats:
-            unlocked = readbytes(filedata, 1)
-            assert unlocked in (0,1)
-            self.boosts[stat] = unlocked
-            #Note - if the skill is naturally known, this will still be 0. Fun.
-        #Resistance (last one): 0xE3
-        assert filedata.tell() == 0xE4
-        for stat in boost_2_stats:
-            unlocked = readbytes(filedata, 1)
-            assert unlocked in (0,2,3)
-            self.boosts[stat] = unlocked
-        #0xE4: Items unlocking boost 2 skills. 1 byte each. There's 4 fewer of these. - Note, these might be 0=unlocked (or basic boost), 2=boost 2, 3 = boost3
-        #Speed (last one): 0xEB
+        for f in self.boost_1s:
+            self.boosts[f] = self.boost_1s[f]
+        for f in self.boost_2s:
+            if self.boost_2s[f] > 0:
+                self.boosts[f] = self.boost_2s[f]
         
-        assert filedata.tell() == 0xEC
-        #TODO: Wait, isn't this 2 bytes for points, 4 bytes for level?
-        #What happens if you level past 65k?
-        sign = readbytes(filedata, 1)
-        self.unused_skill_points = readbytes(filedata, 2)
-        if sign:
+        #Post-process the weird sign byte.
+        if self.skp_sign:
             self.unused_skill_points *= -1
-        #0xEC: ????? (always 0? Padding byte?)
-        #0xED: Unused skill points. 2 bytes.
-        sign = readbytes(filedata, 1)
-        #if (unknown != 0):
-        #    print ("Don't know what this is at 0xF0, but value is:", unknown)
-        #This might be 2 bytes, with 2 more unknown/padding bytes
-        self.unused_bonus_points = readbytes(filedata, 4)
-        if sign:
+            self.skp_sign = 0
+        if self.bns_sign:
             self.unused_bonus_points *= -1
-        #0xEF: ????? (always 0? Padding byte?)
-        #0xF0: Unused bonus points. 2 bytes
-        #These might be 3 bytes, but that'd be weird.
+            self.bns_sign = 0
 
-        assert filedata.tell() == 0xF4
-        self.gems = {}
-        for stat in gem_stats:
-            used = readbytes(filedata, 2)
-            assert used <= 20
-            self.gems[stat] = used
-        assert filedata.tell() == 0x104
-        #0x104: training manuals. Single byte?  (the max number in-game is 200)
-        self.training_manuals = readbytes(filedata, 1)      #Odd that this is one.
-        #HP gems: 0xF4
-        #atk gems: 0xFA (they're 2 bytes each)
-        #Mag: 0xFE
-        #Spd: 0x102
-        #There's 8 gems, then training manuals
-        #The double gems just show up as > 10, i.e. maxed out on double gems = 20 instead of just 10. Pretty sure they increase by the same amount.
-        
-        unknown = readbytes(filedata, 1)
-        if (unknown != 0):
-            print ("Don't know what this is at 0x105, but value is:", unknown)
-            #Is this another sign byte? Is it possible to lose BP?
-        assert filedata.tell() == 0x106
-        #0x106? Is this also 3 bytes?
-        self.BP = readbytes(filedata, 3)
-        
-        #pos 0x109
-        #filedata.seek(0x109)
-        assert filedata.tell() == 0x109
-        mainequip = readbytes(filedata, 2)
-        item1 = readbytes(filedata, 2)
-        item2 = readbytes(filedata, 2)
-        item3 = readbytes(filedata, 2)
-        self.items = [mainequip, item1, item2, item3]
-        #The max item ID is 980. Which probably is a material or special item, but whatever.
-        assert mainequip <= 980
-        assert item1 <= 980
-        assert item2 <= 980
-        assert item3 <= 980
-        #Dealing with items would be a gigantic pain...
-        
         #Everything after this appears to be unused.
         
         #I don't know if this is a common pattern, but if changes are made to the character, they need to be temporary (unless they're saved to disk and the save file is edited)
@@ -312,7 +256,7 @@ class Character:
         
         items = []
         for i in self.items:
-            i = int(i)
+            i = int(self.items[i])
             if i == 0:
                 items.append('None'.rjust(30))
                 continue
@@ -484,7 +428,7 @@ class Character:
         Includes the Maintenance bonus."""
         bonus = 0
         for i in self.items:
-            i = int(i)
+            i = int(self.items[i])
             if i == 0:
                 continue
             if i not in item_stats:
@@ -521,7 +465,7 @@ class Character:
         Filters out empty results. [] means no items equipped with special attributes."""
         results = []
         for i in self.items:
-            i = int(i)
+            i = int(self.items[i])
             if i == 0:
                 continue
             if i not in item_stats:
@@ -1048,4 +992,4 @@ class Character:
         """Change the character's subclass. Also learn all subclass skills, since some modify stats"""
         #TODO: Really need to make a spreadsheet of subclass skills...
     #
-    
+#
