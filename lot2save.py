@@ -33,6 +33,9 @@ class StandaloneData:
             #Call c.saveCharacter (or whatever) on the file handle.
             func(fh)
             #And then that's it.
+    def Finish(self):
+        #Only needed for Steam
+        pass
 #
 class SteamData:
     """ Manager for dealing with the Steam save data.
@@ -140,6 +143,10 @@ class SteamData:
             data = list(fh.read())
             self.writeToDisk(filename, data)
     #
+    def Finish(self):
+        #Do this later; only write the actual file once.
+        #I think the writing is currently in writeToDisk?
+        pass
     def writeToDisk(self, filename, data):
         """Actually write the data to disk.
         Filename is the standalone equivalent filename, e.g. C01. This is used to get the offset to use
@@ -156,15 +163,26 @@ class SteamData:
             dec_data = list(self._decoded_data)
             dec_data[offset:offset+len(data)] = data[:]
             #
+            self._decoded_data = bytes(dec_data)
             encoded_data = bytes(map(xor, self._decoded_data, cycle(xorkey)))
             #TODO: This will write the save 56 times, once for each character. Fix that.
             with open(self.basepath, 'wb') as outf:
                 outf.write(encoded_data)
-            self._decoded_data = bytes(dec_data)
-            
+
         elif letter == 'PEX':
-            #But it should be.
-            raise Exception("Writing not supported.")
+            offset = 0x540c
+            #TODO: I bet the inversion could be handled in the template.
+            data = self._invertPEX(data)
+            #Store into the saved copy; this doesn't go in Finish
+            #It's a common operation so it should probably be done somewhere else?
+            dec_data = list(self._decoded_data)
+            dec_data[offset:offset+len(data)] = data[:]
+            #This is what belongs in finish
+            self._decoded_data = bytes(dec_data)
+            encoded_data = bytes(map(xor, self._decoded_data, cycle(xorkey)))
+            with open(self.basepath, 'wb') as outf:
+                outf.write(encoded_data)
+            
         else:
             raise Exception("Writing not supported.")
     def extractCharacter(self, number):
@@ -356,21 +374,13 @@ class Save:
         if os.path.isdir(basepath):
             print("Using DLSite save format.")
             self.manager = StandaloneData(basepath)
-            #
         elif os.path.isfile(basepath):
             print("Using Steam save format.")
             self.manager = SteamData(basepath)
-            with open(basepath, 'rb') as f:
-                raw_data = f.read()
-                self._decoded_data = bytes(map(xor, raw_data, cycle(xorkey)))
-            #The C## files are basically stored at specific offsets.
-            #There might be endian differences
-            #but otherwise they _should_ be the same.
         else:
             raise Exception(f"{basepath} doesn't exist.")
         for i in character_ids:
             ngdfilename = 'C%02d.ngd' % i
-            #ngdfile = os.path.join(self._folder, ngdfilename)
 
             with self.manager.GetFile(ngdfilename) as f:
                 self.all_characters[i-1] = Character(i, f)
@@ -378,14 +388,14 @@ class Save:
         #Add to dict
         #self.characters[self.all_characters[i-1].name] = self.all_characters[i-1]
         #TODO: Extend this to support short name and full name.
-        #Actually, and a function so I can use case-insensitive.\
+        #Actually, use a function so I can use case-insensitive.
         #
         self.original_characters = copy.deepcopy(self.all_characters)
         self.characters = copy.copy(self.all_characters)
         
         with self.manager.GetFile('PPC01.ngd') as f:
             self.party = self.load_current_party(f)
-        #Should also do items, money.
+        #Should also do items.
         
         with self.manager.GetFile('PEX01.ngd') as f:
             self.misc_data = MiscData(f)
@@ -403,6 +413,10 @@ class Save:
             ret.append("Wrote save data for " + c.name + " to path: " + ngdfile)
         return ret
     #
+    def write_misc(self):
+        #Probably need a better way to call this.
+        
+        self.manager.WriteData('PEX01.ngd', self.misc_data.save_to_file)
     def reset(self):
         """Undoes all changes. Reverts back to the original data read in from the save files"""
         self.all_characters = copy.deepcopy(self.original_characters)

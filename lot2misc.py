@@ -6,7 +6,7 @@ class MiscDataTemplate(DataTemplate):
         self.fields = [
             Field('total_exp', 8)           # Cumulative EXP
             ,Field('total_money', 8)        # Cumulative Money
-            ,Field('curr_money', 8)         # Current money
+            ,Field('money', 8)              # Current money
             ,Field('total_battles', 8)      # Number of battles
             ,Field('gameovers', 4)          # Number of game overs
             ,Field('playtime', 4)           # Play time in seconds
@@ -34,6 +34,7 @@ class MiscDataTemplate(DataTemplate):
             ,BytesField('unk_bytes', 0x26)  # Unknown data
             ,Field('ic_floor', 4)           # IC floor
             ,Field('akyuu_trades', 4)       # Number of akyuu trades
+            ,PositionAssert(0xB6)
         ]
 
 class MiscData:
@@ -44,10 +45,13 @@ class MiscData:
     def __init__(self, filedata):
         MiscData.template.Read(self, filedata)
     
+    def save_to_file(self, fh):
+        MiscData.template.Write(self, fh)
+    
     def print_all(self):
         print(f'Cumulative EXP: {self.total_exp}')
         print(f'Cumulative Money: {self.total_money}')
-        print(f'Current money: {self.curr_money}')
+        print(f'Current money: {self.money}')
         print(f'Number of battles: {self.total_battles}')
         print(f'Number of game overs: {self.gameovers}')
         print(f'Play time in seconds: {self.playtime}')

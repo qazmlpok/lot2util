@@ -69,32 +69,7 @@ class CharacterTemplate(DataTemplate):
 class Character:
     """Represents data loaded from a C file in the save folder. Tracks the raw data and has utility functions for dealing with it"""
     template = CharacterTemplate()
-    #Save data:
-    #level (4)
-    #exp (8)
-    #Library stat ranks (4 per) (24)
-    #Library Affinity ranks (4 per) (32)
-    #level up bonuses (4 per) (24)
-    #skills
-    #subclass skills
-    #0xeb have unspent skillpoints (beware overflow)
-    #0xf0 unspent level up bonuses
-    #BP
-    #0x109 ~ 0x110 are the character's equipment, 2 bytes per slot. 0x10a is the main equip (0x109 is 0x00)
     
-    #Gems should be in here too...
-    
-    #Idea:
-    #Remove all the actual reads from the constructor. Replace with descriptions of what needs to be read
-    # - or written. The intent is that the heavy lifting can be done once, not twice.
-    #Constructor adds a bunch of classes, describing the data needed.
-    #'Get' or whatever takes the bin data and uses it to populate stuff
-    #-Or I guess that's init, but the templating is in another class?
-    #Using all the fields, read the appropriate data. Use reflection to set class properties.
-    #Do some post-processing for stuff like the sign flag.
-    
-    #filedata should be an open file (or bytestream that behaves like a file) containing the save data.
-    #Character name isn't stored in the file, so the name of the file (specifically just the number) is needed as a parameter.
     def __init__(self, id, filedata):
         self.id = id
         #print (character_basestats)
@@ -149,50 +124,32 @@ class Character:
         #Sanity.
         fh.seek(0)
         
-        writebytes(fh, self.level, 4)
-        writebytes(fh, self.exp, 8)
+        #Need to pre-process; the opposite of the post-read post-process.
+        #Unfuck the sign stuff.
+        #Figure out the Boost stuff.
+        self.skp_sign = 0
+        if self.unused_skill_points < 0:
+            self.skp_sign = 1
+            self.unused_skill_points *= -1
+        self.bns_sign = 0
+        if self.unused_bonus_points < 0:
+            self.bns_sign = 1
+            self.unused_bonus_points *= -1
         
-        for stat in stats:
-            #6 total
-            writebytes(fh, self.libstats[stat], 4)
-        for aff in affinities:
-            #8 total
-            writebytes(fh, self.libstats[aff], 4)
-        for stat in stats:
-            #6 total
-            writebytes(fh, self.levelstats[stat], 4)
-        assert fh.tell() == 0x5C
-        #Subclass, skills
-        #I don't want to worry about these. Skip ahead a bit.
-        fh.seek(0xD8)
-        #Boosts. Still don't wanna deal with it.
-        #Note - these are combined into one internal variable. First block should be 'unlocked > 0 ? 1 : 0'
-        #Second should be 'unlocked > 1 ? 0 : unlocked'   -- I _think_
-        #Actually I think I was stomping the first variable, oops. Gotta fix that too... Right now it's JUST boost_2/3
-        #for stat in boost_stats:
-        #    unlocked = self.boosts[stat]
-        #    assert unlocked in (0,1)
-        #    writebytes(fh, unlocked, 1)
-        #for stat in boost_2_stats:
-        #    unlocked = self.boosts[stat]
-        #    assert unlocked in (0,2,3)
-        #    writebytes(fh, unlocked, 1)
-        #assert fh.tell() == 0xEC
-        fh.seek(0xEC)
-        #writebytes(fh, self.unused_skill_points, 3)
-        #unknown single byte
-        fh.seek(0xF0)
-        writebytes(fh, self.unused_bonus_points, 4)    #This one I do modify.
-        for stat in gem_stats:
-            assert self.gems[stat] <= 20
-            writebytes(fh, self.gems[stat], 2)
-        assert fh.tell() == 0x104
-        #writebytes(fh, self.training_manuals, 1)   #Don't modify
-        #1 unknown byte
-        fh.seek(0x106)
-        writebytes(fh, self.BP, 3)        #Dunno if this is really 3 bytes
+        #TODO: If also applied to read, figure out the character's base unlocked boost skills
+        for f in self.boosts:
+            if self.boosts[f] in (0, 1):
+                self.boost_2s[f] = 0
+                self.boost_1s[f] = self.boosts[f]
+            elif self.boosts[f] in (2, 3):
+                #I don't think this should set boost_1 because it's not known if this is a natural unlock or not
+                self.boost_2s[f] = self.boosts[f]
+        #
         
-        #Everything left over is equipment.
+        #TODO: Subclass. I don't think I have a reverse lookup table.
+        #Pretty sure I also can't change skills, so, it probably doesn't matter.
+        
+        Character.template.Write(self, fh)
     #
 
     #NOTE - this is the up-to-date copy, and probably the only one used.
@@ -296,6 +253,8 @@ class Character:
             f"...{items[1]}...............................................",
             f"...{items[2]}...............................................",
             f"...{items[3]}...............................................",
+            "",
+            "",
         ]
 
         #I don't thiiiiink there will ever be decimals in here
