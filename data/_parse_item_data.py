@@ -228,8 +228,8 @@ def find_first_match(inp):
 
 for id in itemdata:
     item = itemdata[id]
-    if (item['Type'] != 'main' and item['Type'] != 'sub'):
-        continue 
+    #if (item['Type'] != 'main' and item['Type'] != 'sub'):
+    #    continue 
     
     itemtext = item['Desc4']
     result = parse_item_string(itemtext)
@@ -271,8 +271,8 @@ with open('_item_data.csv', 'w', encoding='utf-8', newline='') as f:
     ids = itemdata.keys()
     for id in sorted(ids, key=lambda x: int(x)):
         item = itemdata[id]
-        if (item['Type'] != 'main' and item['Type'] != 'sub'):
-            continue
+        #if (item['Type'] != 'main' and item['Type'] != 'sub'):
+        #    continue
         writer.writerow(item)
 #
 
