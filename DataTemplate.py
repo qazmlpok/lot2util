@@ -1,5 +1,3 @@
-from lot2helper import readbytes, writebytes
-
 class DataTemplate():
     """I don't think I need this; I think each file needs its own.
     Is there common behavior?
@@ -37,13 +35,13 @@ class Field(FieldBase):
         if not callable(self.validator):
             raise Exception('validator must be a function/lambda')
     def Read(self, dst, fh):
-        data = readbytes(fh, self.size)
+        data = fh.readbytes(self.size)
         if (not self.validator(data)):
             raise Exception(f"Validator failed for {self.field_name} with value {data}.")
         setattr(dst, self.field_name, data)
     def Write(self, src, fh):
         data = getattr(src, self.field_name)
-        writebytes(fh, data, self.size)
+        fh.writebytes(data, self.size)
         #validate on write too?
 
 class ArrayField(FieldBase):
@@ -60,7 +58,7 @@ class ArrayField(FieldBase):
     def Read(self, dst, fh):
         arr = {}
         for f in self.fields:
-            data = readbytes(fh, self.size)
+            data = fh.readbytes(self.size)
             arr[f] = data
             if (not self.validator(data)):
                 raise Exception(f"Validator failed for {self.field_name}, subfield {f} with value {data}.")
@@ -69,7 +67,7 @@ class ArrayField(FieldBase):
         arr = getattr(src, self.field_name)
         for f in self.fields:
             data = arr[f]
-            writebytes(fh, data, self.size)
+            fh.writebytes(data, self.size)
             #validate on write too?
 
 class BytesField(FieldBase):

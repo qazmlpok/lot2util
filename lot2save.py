@@ -2,6 +2,7 @@ from lot2helper import *
 import lot2data
 from lot2character import Character
 from lot2misc import MiscData
+from lot2items import Items
 
 import os
 import copy
@@ -10,6 +11,45 @@ import re
 import io
 from operator import xor
 from itertools import cycle
+
+class FileHandleWrapper():
+    def __init__(self, fh, endian):
+        """Create a wrapper around a file-like object. This will either be an actual filehandle
+        or a BytesIO object for a block of data within the Steam combined file.
+        This is used to pass in default endian information to the templates.
+        I believe everything uses the same endianness, so there isn't actually any need to specify it in the template.
+        """
+        self.fh = fh
+        self.endianness = endian
+        #Copy methods to act as a wrapper.
+        self.read = self.fh.read
+        self.write = self.fh.write
+        self.tell = self.fh.tell
+        self.seek = self.fh.seek
+
+    def readbytes(self, bytecount, endianness=None):
+        if endianness is None:
+            endianness = self.endianness
+        position = self.tell()
+        bytes = self.read(bytecount)
+        if len(bytes) < bytecount:
+            raise Exception("Couldn't read file. Starting position " + str(position))
+        return converttoint(bytes, bytecount, endian=endianness)
+    #
+    def writebytes(self, value, bytecount, endianness=None):
+        if endianness is None:
+            endianness = self.endianness
+        position = self.tell()
+        bytes = convertfromint(value, bytecount, endian=endianness)
+        written = self.write(bytes)
+        if written < bytecount:
+            raise Exception("Couldn't write to file. Starting position " + str(position))
+        return
+    #
+    def __enter__ (self):
+        return self
+    def __exit__ (self, exc_type, exc_value, traceback):
+        self.fh.close()
 
 class StandaloneData:
     """ Manager for dealing with the Standalone (dlsite) version's save data
@@ -21,7 +61,7 @@ class StandaloneData:
         """ Just opens the file and returns the stream. It is expected the caller will close it. """
         fullpath = os.path.join(self._folder, filename)
         f = open(fullpath, 'rb')
-        return f
+        return FileHandleWrapper(f, BIG_ENDIAN)
     def WriteData(self, filename, func):
         """ Opens the specified file in append mode and writes data. """
         fullpath = os.path.join(self._folder, filename)
@@ -29,7 +69,7 @@ class StandaloneData:
         if (not os.path.exists(fullpath)):
             raise Exception("Path doesn't already exist: " + fullpath)
         #
-        with open(fullpath, 'r+b') as fh:
+        with FileHandleWrapper(open(fullpath, 'r+b'), BIG_ENDIAN) as fh:
             #Call c.saveCharacter (or whatever) on the file handle.
             func(fh)
             #And then that's it.
@@ -74,16 +114,16 @@ class SteamData:
             data = self.extractCharacter(number)
         elif letter == 'EEF':
             #item discovery flags
-            #This is massively more sparse than the original.
-            pass
+            offset = 0x7bd6
+            data = list(self._decoded_data[offset:offset+0x7CF])
         elif letter == 'EEN':
             #item inventory count
-            #Same as EEF
-            pass
+            offset = 0x83a6
+            data = list(self._decoded_data[offset:offset+(0x7CF*2)])
         elif letter == 'EVF':
             #event flags
             #saveFile[0x54c6:0x68b2]
-            pass
+            raise Exception("File not supported")
         elif letter == 'FOE':
             #FOE respawn timers (not in the converter)
             raise Exception("File not used / supported")
@@ -91,42 +131,38 @@ class SteamData:
             #achievement notification status flags
             #saveFile[0x130:0x1d2]
             #(This is split into two sections in the converter, but this isn't necessary)
-            pass
+            raise Exception("File not supported")
         elif letter == 'PAM':
             #achievement status flags
             #saveFile[0x130:0x1d2]
-            pass
+            raise Exception("File not supported")
         elif letter == 'PCF':
             #character unlock flags
             #saveFile[0x5:0x3d] = data[0x1:0x39]
             #i.e. go back 1 character
-            pass
+            raise Exception("File not supported")
         elif letter == 'PEX':
             #misc information
             offset = 0x540c
-            #Size is the same, but it needs to be inverted.
             data = list(self._decoded_data[offset:offset+0xBA])
-            self._invertPEX(data)
-            pass
         elif letter == 'PKO':
             #bestiary information
             #saveFile[0x2c2:0x4c22] = data[0xca:0x4a2a]
             #and then reverse endian
             #Remember to go pad 0xCA to be consistent.
             #I think this could just be copied as well, but why bother
-            pass
+            raise Exception("File not supported")
         elif letter == 'PPC':
             #party formation
             data = self._decoded_data[0x5018:0x5024]
             assert len(data) == 12
-            pass
         elif letter == 'SHD':
             #Save summary data; shows on the load screen, but doesn't affect real values.
             raise Exception("File not used / supported")
         else:
             raise Exception(f"Unrecognized filename: {filename}")
 
-        return io.BytesIO(bytes(data))
+        return FileHandleWrapper(io.BytesIO(bytes(data)), LITTLE_ENDIAN)
     
     def WriteData(self, filename, func):
         """ Creates a filehandle-like object pointing to a block of memory representing
@@ -135,6 +171,7 @@ class SteamData:
         it will then be re-converted to the Steam format,
         and written to disk
         """
+        #This is already using a FileHandleWrapper
         with self.GetFile(filename) as fh:
             #Call c.saveCharacter (or whatever) on the file handle.
             func(fh)
@@ -150,7 +187,7 @@ class SteamData:
     def writeToDisk(self, filename, data):
         """Actually write the data to disk.
         Filename is the standalone equivalent filename, e.g. C01. This is used to get the offset to use
-        data is the data to write, in standalone format. Must be a list of binary values (since it will be inverted, etc)
+        data is the data to write, in standalone format. Must be a list of binary values
         """
         (letter, number) = self._getSaveName(filename)
         if letter == 'C':
@@ -171,8 +208,6 @@ class SteamData:
 
         elif letter == 'PEX':
             offset = 0x540c
-            #TODO: I bet the inversion could be handled in the template.
-            data = self._invertPEX(data)
             #Store into the saved copy; this doesn't go in Finish
             #It's a common operation so it should probably be done somewhere else?
             dec_data = list(self._decoded_data)
@@ -205,9 +240,6 @@ class SteamData:
         data[0xF0:0xF4] = srcData[offset+0xEE:offset+0xF2]
         #Everything after this is just shifted by 2
         data[0xF4:0x111] = srcData[offset+0xF2:offset+0x10F]
-        
-        #Then invert the data. Reminder; when writing, invert first, then shift.
-        self._invertCharacter(data)
         return data
     def storeCharacter(self, data):
         """ One way function; turn Character standalone data into combined data
@@ -216,9 +248,6 @@ class SteamData:
         (this is to enable a sparse write)
         """
         outData = [0] * 0x10F
-        
-        #Same operation as reading; this is reversable. Modifies in-place.
-        self._invertCharacter(data)
 
         #Offsets match for most of the early data, up to the boost2 flags.
         outData[0:0xEC] = data[0:0xEC]
@@ -229,110 +258,6 @@ class SteamData:
         outData[0xF2:0x10F] = data[0xF4:0x111]
         return outData
     #
-    def _invertCharacter(self, data):
-        """ Change the endianness of various values within the character data.
-        This needs to be done in both reading/writing, hence it's a separate function.
-        Modifies data in-place.
-        """
-        #4 bytes: level, exp, library levels, subclass
-        #2 bytes: skills, subskills
-        #Then it inverts some 1 byte blocks, but...
-        #Later on (0xF2, I think), 2 bytes for gems
-        #0x105:0x109 - BP
-        #0x109, 2 bytes: 4 equipment slots
-        
-        #Alternative, shorter approach: list of tuples of (values, size)
-        #and just loop over that until the last few.
-        #Probably not worth it.
-        
-        size = 4
-        offset = 0
-        data[offset:offset+size] = data[offset:offset+size][::-1]#Level
-        offset = 4
-        data[offset:offset+8] = data[offset:offset+8][::-1]#Exp
-        offset = 12
-        #Library bonuses (stats+affin), bonuses (stats), subclass (the +1)
-        for i in range(len(lot2data.stats) + len(lot2data.affinities) + len(lot2data.stats) + 1):
-            data[offset:offset+size] = data[offset:offset+size][::-1]
-            offset += size
-        size = 2
-        assert offset == 0x60
-        for i in range(40 + 20):
-            #TODO: That should be in lot2data. It's SKILL_COUNT + SUBCLASS_SKILL_COUNT
-            data[offset:offset+size] = data[offset:offset+size][::-1]
-            offset += size
-        assert offset == 0xD8
-        #Skip ahead to equipment.
-        offset = 0xEC+1   #Unused skp; but skip the sign
-        # --- bonus stock, skp stock are wrong. BP is correct. Odd.
-        data[offset:offset+size] = data[offset:offset+size][::-1]# Unused skill points
-        offset = 0xF0
-        size = 4
-        data[offset:offset+size] = data[offset:offset+size][::-1]# Unused level up bonus
-        offset = 0xF4
-        size = 2
-        for i in range(len(lot2data.gem_stats)):
-            data[offset:offset+size] = data[offset:offset+size][::-1]
-            offset += size
-        offset = 0x105
-        size = 4
-        data[offset:offset+size] = data[offset:offset+size][::-1]# BP Count
-        size = 2
-        offset = 0x109
-        for i in range(4):
-            #Equipment
-            data[offset:offset+size] = data[offset:offset+size][::-1]
-            offset += size
-    #
-
-    def _invertPEX(self, data):
-        """ Applies byte data inversions as described in Thurler's converter 
-        Basically entirely copied/adapted from there.
-        Should be applied to the extracted bin data to ensure the offsets matchup.
-        """
-
-        #This was just copied from Thurler's converter; I haven't made any attempt to combine
-        #expressions into loops.
-        data[0x00:0x08] = data[0x00:0x08][::-1] # Cumulative EXP
-        data[0x08:0x10] = data[0x08:0x10][::-1] # Cumulative Money
-        data[0x10:0x18] = data[0x10:0x18][::-1] # Current money
-        data[0x18:0x20] = data[0x18:0x20][::-1] # Number of battles
-        data[0x20:0x24] = data[0x20:0x24][::-1] # Number of game overs
-        data[0x24:0x28] = data[0x24:0x28][::-1] # Play time in seconds
-        data[0x28:0x2c] = data[0x28:0x2c][::-1] # Number of treasures
-        data[0x2c:0x30] = data[0x2c:0x30][::-1] # Number of crafts
-        data[0x30:0x34] = data[0x30:0x34][::-1] # Unused data
-        data[0x34] = data[0x34] # Highest floor
-        data[0x35:0x39] = data[0x35:0x39][::-1] # Number of locked treasures
-        data[0x39:0x3d] = data[0x39:0x3d][::-1] # Number of escaped battles
-        data[0x3d:0x41] = data[0x3d:0x41][::-1] # Number of dungeon enters
-        data[0x41:0x45] = data[0x41:0x45][::-1] # Number of item drops
-        data[0x45:0x49] = data[0x45:0x49][::-1] # Number of FOEs killed
-        data[0x49:0x51] = data[0x49:0x51][::-1] # Number of steps taken
-        data[0x51:0x59] = data[0x51:0x59][::-1] # Money spent on shop
-        data[0x59:0x61] = data[0x59:0x61][::-1] # Money sold on shop
-        data[0x61:0x69] = data[0x61:0x69][::-1] # Most EXP from 1 dive
-        data[0x69:0x71] = data[0x69:0x71][::-1] # Most Money from 1 dive
-        data[0x71:0x75] = data[0x71:0x75][::-1] # Most Drops from 1 dive
-        data[0x75] = data[0x75] # Unknown data
-        data[0x76:0x7e] = data[0x76:0x7e][::-1] # Number of library enhances
-        data[0x7e:0x82] = data[0x7e:0x82][::-1] # Highest battle streak
-        data[0x82:0x86] = data[0x82:0x86][::-1] # Highest escape streak
-        data[0x86] = data[0x86] # Hard mode flag
-        data[0x87] = data[0x87] # IC enabled flag
-        data[0x88:0xae] = data[0x88:0xae] # Unknown data
-        data[0xae:0xb2] = data[0xae:0xb2][::-1] # IC floor
-        data[0xb2:0xb6] = data[0xb2:0xb6][::-1] # Number of akyuu trades
-        data[0xb6:0xba] = data[0xb6:0xba][::-1] # Unknown data
-        return data
-    def reverse_endianness_block2(self, block):
-        #Entirely copied from Thurler's converter.
-        even = block[::2]
-        odd = block[1::2]
-        res = []
-        for e, o in zip(even, odd):
-            res += [o, e]
-        return res
 
 class Save:
     """Represents a save folder in <lot2_root>/Save."""
@@ -401,6 +326,10 @@ class Save:
             self.misc_data = MiscData(f)
             self.misc_data.print_all()
             #There's currently no other way to interact with this file.
+        
+        with self.manager.GetFile('EEF01.ngd') as disc_fh:
+            with self.manager.GetFile('EEN01.ngd') as item_fh:
+                self.items = Items(disc_fh, item_fh)
     #
     def write_characters(self):
         #TODO: Add an optional parameter for a filter (using get_characters semantics)
@@ -415,7 +344,6 @@ class Save:
     #
     def write_misc(self):
         #Probably need a better way to call this.
-        
         self.manager.WriteData('PEX01.ngd', self.misc_data.save_to_file)
     def reset(self):
         """Undoes all changes. Reverts back to the original data read in from the save files"""
