@@ -778,11 +778,20 @@ class Character:
             #Max level is 100
         #Else, already threw
     #
-    def get_total_money(self, stat):
+    def get_total_money(self, stat=None):
         """Calculates the total amount of money spent on a single stat
-        (equivalent to using a tome of reincarnation, but only on one stat)"""
-        level = self.libstats[stat]
+        (equivalent to using a tome of reincarnation, but only on one stat)
+        If stat is None, call the function again for every stat and return that sum.
+        """
         total = 0
+        if stat is None:
+            for s in self.libstats:
+                total += self.get_total_money(s)
+            return total
+        level = self.libstats[stat]
+        
+        #TODO: This is going to be non-trivial time for levels in the 10ks, for all stats and all characters...
+        #Is it possible to combine it to a single operation instead of a loop?
         while (level > 0):
             level -= 1
             total += self.get_money_to_next(stat, level)

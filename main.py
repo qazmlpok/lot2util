@@ -11,21 +11,16 @@ from lot2speed import Speed
 import os
 import sys
 
+import copy
+
 #Helper functions
 def reimu_to_target(target):
-    reimu = saveobj.get_character('Reimu')
-    #old_xp = reimu.get_total_xp()
-    reimu.level = 100
+    reimu = copy.copy(saveobj.get_character('Reimu'))
+    old_xp = reimu.get_total_xp()
+    reimu.level = target
     reimu.exp = 0
     xp = reimu.get_total_xp()
-    for c in characters:
-        ch = saveobj.get_character(c)
-        ch.level = 1
-        ch.exp = xp
-        while (ch.level_if_able()):
-            pass
-        print(f'{ch.name} - level {ch.level}')
-    #...and then add money, but that's not supported yet.
+    return xp - old_xp
 #
 def gems_if_below(target):
     for c in saveobj.all_characters:
@@ -43,36 +38,51 @@ else:
     lot2_basepath = input("Enter the save folder to scan: ")
 saveobj = Save(lot2_basepath)
 
+#for c in saveobj.characters:
+#    print(c.character_sheet())
 
-remi = saveobj.get_character('Remilia')
-print(remi.character_sheet())
-remi.exp += 1
-result = saveobj.write_characters()
+#for c in sorted(saveobj.characters, key=lambda x: x.get_total_money(), reverse=True):
+#    print(c.name, ' - ', c.get_total_money())
+#Check BP for all characters
+for x in saveobj.order_by_BP().characters:
+    print(x.name,'-', x.unused_skill_points)
 
-#reimu = saveobj.get_character('Reimu')
-#reimu.level = 100
-#reimu.exp = 0
-#xp = reimu.get_total_xp()
+#add_xp = reimu_to_target(150)
+#for c in saveobj.characters:
+#    c.exp += add_xp
+#saveobj.misc_data.money += int(add_xp // 4)
+#print(f"Adding {add_xp} exp and {int(add_xp // 4)} money.")
+#
+#result = saveobj.write_characters()
+#saveobj.write_misc()
+#Right here is where Finish should be called...
+#print(result)
 
-#for c in characters:
-#    ch = saveobj.get_character(c)
-#    #ch.level = 1
-#    #ch.exp = xp
-#    #while (ch.level_if_able()):
-#    #    pass
-#    print(ch.character_sheet())
+#for c in saveobj.get_characters(saveobj.party).characters:
+#    print(c.character_sheet())
 
+#print(saveobj.items.items)
+#saveobj.items.get('Compact Arm')['Count'] = 3
+#saveobj.items.get('Shuttle Body')['Count'] = 3
 
-exit()
+#TODO: Fix.
+#saveobj.write_items()
+
 #------
-
-
-saveobj.reset()
-
+#remi = saveobj.get_character('Remilia')
+#print(remi.character_sheet())
+#
+#remi.exp += 1
+#saveobj.misc_data.money += 1
+#
+#result = saveobj.write_characters()
+#print(saveobj.write_misc())
+#print("Wrote money:", saveobj.misc_data.money)
 exit()
-
 
 #==================================================
+saveobj.reset()
+exit()
 #Some common things:
 #Convert speed; to/from in-game display and actual ticks values.
 spd = Speed(from_game_speed=1000)
@@ -94,6 +104,20 @@ for c in saveobj.characters:
         print(x)
 
 
+#Level everyone up to Reimu at 100.
+#Don't do this for actual level ups; it should work, but it's safer to just assign xp.
+#reimu = saveobj.get_character('Reimu')
+#reimu.level = 100
+#reimu.exp = 0
+#xp = reimu.get_total_xp()
+
+#for c in characters:
+#    ch = saveobj.get_character(c)
+#    #ch.level = 1
+#    #ch.exp = xp
+#    #while (ch.level_if_able()):
+#    #    pass
+#    print(ch.character_sheet())
 
 #Highest ATK stat
 for x in saveobj.order_by_offense(atkfactor=1).characters:

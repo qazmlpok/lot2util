@@ -50,6 +50,11 @@ class Items():
             item = self.items[i]
             #print(f"{i}: {item['Name']}, {item['Count']}")
     def save_to_file(self, disc_fh, items_fh):
+        for id in Items.item_stats:
+            item = Items.item_stats[id]
+            if item['Count'] is not None:
+                self.itemDiscovery[id] = 1
+            #There's probably no reason to un-discover an item...
         #TODO: Get changes from self.items
         #ItemDiscovery flag needs to be set if Count is anything other than None.
         Items.discTemplate.Write(self, disc_fh)

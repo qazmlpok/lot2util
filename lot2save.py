@@ -345,6 +345,11 @@ class Save:
     def write_misc(self):
         #Probably need a better way to call this.
         self.manager.WriteData('PEX01.ngd', self.misc_data.save_to_file)
+    def write_items(self):
+        #Probably need a better way to call this.
+        #Yeah I can't do this with 2 files.
+        self.manager.WriteData('EEF01.ngd', self.items.save_to_file)
+        self.manager.WriteData('EEN01.ngd', self.items.save_to_file)
     def reset(self):
         """Undoes all changes. Reverts back to the original data read in from the save files"""
         self.all_characters = copy.deepcopy(self.original_characters)
