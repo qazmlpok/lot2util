@@ -146,11 +146,18 @@ def loadCharacterSpells():
     with open(os.path.join('data', filename), 'r', encoding='utf-8-sig') as f:
         reader = csv.DictReader(f)
         for row in reader:
-            #Headers: Character	CharID	Name	ID	awakening	MP	Cost	Max Lvl	Target	Element	Damage Formula	Delay	Special	Notes
+            #Headers: Character	CharID	Name	ID	awakening	MP	Cost	Max Lvl	Target	Element	Damage Formula	ATK	MAG	DEF	MND	T.DEF	T.MND	Multiplier	Accuracy	Delay	Special	Notes
             char_id = int(row['CharID'])
             row['CharID'] = char_id
             row['awakening'] = (row['awakening'] == 'True')
             id = int(row['ID'])
+            row['ATK'] = int(row['ATK'])
+            row['MAG'] = int(row['MAG'])
+            row['DEF'] = int(row['DEF'])
+            row['MND'] = int(row['MND'])
+            row['T.DEF'] = int(row['T.DEF'])
+            row['T.MND'] = int(row['T.MND'])
+            row['Multiplier'] = int(row['Multiplier'])
             row['ID'] = id
 
             if char_id not in csvdata:

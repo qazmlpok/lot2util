@@ -4,6 +4,7 @@ from lot2helper import *
 #from lot2data import *
 from lot2speed import Speed
 from DataTemplate import *
+from SpellData import SpellData
 
 import os
 import copy
@@ -76,6 +77,8 @@ class Character:
         self.basestats = character_basestats[id]
         self.skilldata = character_skills[id]
         self.spelldata = character_spells[id]
+        #print(self.spelldata)
+        self.formatted_spelldata = {id: SpellData(self, self.spelldata[id]) for id in self.spelldata}
         
         if (not id in character_ids):
             raise Exception("Invalid character id - " + id)
@@ -264,11 +267,7 @@ class Character:
     def list_skills(self):
         """List all the skills this character has learned.
         Primarily a debug method to make sure skill IDs match up."""
-        
-        #self.skilldata = character_skills[id]
-        #self.spelldata = character_spells[id]
-        #self.skills
-        
+
         ret = []
         for i in range(len(self.skills)):
             level = self.skills[i]

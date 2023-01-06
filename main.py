@@ -29,6 +29,14 @@ def gems_if_below(target):
                 print("Giving", c.name, target, "gems for",x, ", from", c.gems[x])
                 c.gems[x] = target
 #
+def round_up_ic(saveobj):
+    #It's being reported as "40", for "Start on floor: 41"
+    #So I guess it needs to "round up" to xx9.
+    #I'm not positive ic_avail works correctly. I think I was getting weird data in there once.
+    if saveobj.misc_data.ic_avail and saveobj.misc_data.ic_floor > 0:
+        return (((saveobj.misc_data.ic_floor+10) // 10)*10) - 1
+    else:
+        print("IC doesn't appear to be available.")
 #Main program. Keep any hacky/reporting stuff in here
 
 if (len(sys.argv) > 1):
@@ -37,6 +45,24 @@ else:
     print("Enter the full path to the save folder, such that the C01.ngd etc files exist there")
     lot2_basepath = input("Enter the save folder to scan: ")
 saveobj = Save(lot2_basepath)
+oldfloor = saveobj.misc_data.ic_floor
+newfloor = round_up_ic(saveobj)
+print(f"Floor: {oldfloor} -> {newfloor}")
+if oldfloor != newfloor:
+    saveobj.items.get('Adamantite')['Count'] += 1
+    #saveobj.items.get('Orichalcum')['Count'] += 1
+    #Oops. I never fixed this.
+    saveobj.write_items()
+saveobj.write_misc()
+
+#for c in saveobj.with_mod(lambda c: c.set_library_level('ATK', 1000)) \
+#        .with_mod(lambda c: c.set_library_level('MAG', 1000)) \
+#        .with_mod(lambda c: c.set_bonuses_to_offense())\
+#        .characters:
+#    for i in c.formatted_spelldata:
+#        s = c.formatted_spelldata[i]
+#        print(f"{c.name}, {s.name}, {s.GetDamage(None)}")
+#
 
 #for c in saveobj.characters:
 #    print(c.character_sheet())
@@ -44,8 +70,8 @@ saveobj = Save(lot2_basepath)
 #for c in sorted(saveobj.characters, key=lambda x: x.get_total_money(), reverse=True):
 #    print(c.name, ' - ', c.get_total_money())
 #Check BP for all characters
-for x in saveobj.order_by_BP().characters:
-    print(x.name,'-', x.unused_skill_points)
+#for x in saveobj.order_by_BP().characters:
+#    print(x.name,'-', x.unused_skill_points)
 
 #add_xp = reimu_to_target(150)
 #for c in saveobj.characters:
@@ -118,6 +144,12 @@ for c in saveobj.characters:
 #    #while (ch.level_if_able()):
 #    #    pass
 #    print(ch.character_sheet())
+
+#Maximum potential damage
+for c in saveobj.characters:
+    for i in c.formatted_spelldata:
+        s = c.formatted_spelldata[i]
+        print(f"{c.name}, {s.name}, {s.GetDamage(None)}")
 
 #Highest ATK stat
 for x in saveobj.order_by_offense(atkfactor=1).characters:
