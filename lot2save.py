@@ -103,15 +103,14 @@ class SteamData:
         """ Returns a stream of data sourced from the combined steam save file,
         modified to look/act like a standalone file.
         """
-        (letter, number) = self._getSaveName(filename)
-        
+
         #Set in the if chain
         data = None
-       
+
+        (letter, number) = self._getSaveName(filename)
         if letter == 'C':
             #Only time number matters...
-            number = number - 1
-            data = self.extractCharacter(number)
+            data = self.extractCharacter(number - 1)
         elif letter == 'EEF':
             #item discovery flags
             offset = 0x7bd6
@@ -178,48 +177,43 @@ class SteamData:
             #Now convert the file back to Steam format and write to disk
             fh.seek(0)
             data = list(fh.read())
-            self.writeToDisk(filename, data)
+            self._serializeData(filename, data)
     #
     def Finish(self):
-        #Do this later; only write the actual file once.
-        #I think the writing is currently in writeToDisk?
-        pass
-    def writeToDisk(self, filename, data):
-        """Actually write the data to disk.
+        encoded_data = bytes(map(xor, self._decoded_data, cycle(xorkey)))
+        with open(self.basepath, 'wb') as outf:
+            outf.write(encoded_data)
+    def _serializeData(self, filename, data):
+        """Store the binary data in the class variable. Basically the opposite of what GetFile does.
+        Be sure to call Finish to actually store the data to disk.
         Filename is the standalone equivalent filename, e.g. C01. This is used to get the offset to use
         data is the data to write, in standalone format. Must be a list of binary values
         """
         (letter, number) = self._getSaveName(filename)
+        offsets = {
+            #Pretty much anything that isn't a character file is the same
+            #And the length is effectively saved in the actual data, unlike while reading.
+            'PEX': 0x540c,
+            'EEF': 0x7bd6,
+            'EEN': 0x83a6,
+        }
         if letter == 'C':
             #Assert len(data)? I should know it, but I'm also ignoring a lot of junk that's normally at the end.
-            number = number - 1
-            offset = 0x9346 + 0x10F * number
-
+            offset = 0x9346 + 0x10F * (number - 1)
             #Now remove the 2 padding bytes. This is the opposite of extractCharacter.
             data = self.storeCharacter(data)
             dec_data = list(self._decoded_data)
             dec_data[offset:offset+len(data)] = data[:]
-            #
             self._decoded_data = bytes(dec_data)
-            encoded_data = bytes(map(xor, self._decoded_data, cycle(xorkey)))
-            #TODO: This will write the save 56 times, once for each character. Fix that.
-            with open(self.basepath, 'wb') as outf:
-                outf.write(encoded_data)
-
-        elif letter == 'PEX':
-            offset = 0x540c
+        elif letter in offsets:
+            offset = offsets[letter]
             #Store into the saved copy; this doesn't go in Finish
             #It's a common operation so it should probably be done somewhere else?
             dec_data = list(self._decoded_data)
             dec_data[offset:offset+len(data)] = data[:]
-            #This is what belongs in finish
             self._decoded_data = bytes(dec_data)
-            encoded_data = bytes(map(xor, self._decoded_data, cycle(xorkey)))
-            with open(self.basepath, 'wb') as outf:
-                outf.write(encoded_data)
-            
         else:
-            raise Exception("Writing not supported.")
+            raise Exception(f"Writing {filename} not supported.")
     def extractCharacter(self, number):
         """ One way function; pull the data from the combined save file and create a chunk
         that looks like standalone data.
@@ -340,16 +334,19 @@ class Save:
             ngdfile = 'C%02d.ngd' % c.id
             self.manager.WriteData(ngdfile, c.save_to_file)
             ret.append("Wrote save data for " + c.name + " to path: " + ngdfile)
+        self.manager.Finish()
         return ret
     #
     def write_misc(self):
         #Probably need a better way to call this.
         self.manager.WriteData('PEX01.ngd', self.misc_data.save_to_file)
+        self.manager.Finish()
     def write_items(self):
         #Probably need a better way to call this.
         #Yeah I can't do this with 2 files.
         self.manager.WriteData('EEF01.ngd', self.items.save_to_file)
         self.manager.WriteData('EEN01.ngd', self.items.save_to_file)
+        self.manager.Finish()
     def reset(self):
         """Undoes all changes. Reverts back to the original data read in from the save files"""
         self.all_characters = copy.deepcopy(self.original_characters)
