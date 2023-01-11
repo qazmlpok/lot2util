@@ -53,17 +53,14 @@ class CharacterTemplate(DataTemplate):
             ,PositionAssert(0xE4)
             ,ArrayField('boost_2s', boost_2_stats, 1, validator=lambda x: x in (0,2,3))
             ,PositionAssert(0xEC)
-            ,Field('skp_sign', 1)
-            ,Field('unused_skill_points', 2)
-            ,Field('bns_sign', 1)
-            ,Field('unused_bonus_points', 4)
-            ,PositionAssert(0xF4)
+            ,NegativeNumber('unused_skill_points', 2)
+            ,NegativeNumber('unused_bonus_points', 4)
+            #,PositionAssert(0xF4)      #No longer possible due to the negative number crap.
             ,ArrayField('gems', gem_stats, 2, validator=lambda x: x <= 20)
-            ,PositionAssert(0x104)
+            #,PositionAssert(0x104)
             ,Field('training_manuals', 1)
-            ,Field('unknown', 1)
-            ,Field('BP', 3)
-            ,PositionAssert(0x109)
+            ,Field('BP', 4)
+            #,PositionAssert(0x109)
             ,ArrayField('items', range(0, 4), 2, validator=lambda x: x <= 980)
         ]
 #
@@ -102,14 +99,6 @@ class Character:
         for f in self.boost_2s:
             if self.boost_2s[f] > 0:
                 self.boosts[f] = self.boost_2s[f]
-        
-        #Post-process the weird sign byte.
-        if self.skp_sign:
-            self.unused_skill_points *= -1
-            self.skp_sign = 0
-        if self.bns_sign:
-            self.unused_bonus_points *= -1
-            self.bns_sign = 0
 
         #Everything after this appears to be unused.
         
@@ -128,16 +117,7 @@ class Character:
         fh.seek(0)
         
         #Need to pre-process; the opposite of the post-read post-process.
-        #Unfuck the sign stuff.
         #Figure out the Boost stuff.
-        self.skp_sign = 0
-        if self.unused_skill_points < 0:
-            self.skp_sign = 1
-            self.unused_skill_points *= -1
-        self.bns_sign = 0
-        if self.unused_bonus_points < 0:
-            self.bns_sign = 1
-            self.unused_bonus_points *= -1
         
         #TODO: If also applied to read, figure out the character's base unlocked boost skills
         for f in self.boosts:
@@ -256,7 +236,6 @@ class Character:
             f"...{items[1]}...............................................",
             f"...{items[2]}...............................................",
             f"...{items[3]}...............................................",
-            "",
             "",
         ]
 

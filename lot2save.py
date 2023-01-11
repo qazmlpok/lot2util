@@ -83,6 +83,7 @@ class SteamData:
     This class enables treating the steam data in the same way as the original standalone data,
     by requesting a file with the original name, it will create a temporary stream that emulates the original file.
     """
+    
     #See Thurler's converter for converting data. 
     #https://github.com/Thurler/thlaby2-save-convert/blob/main/convert_save.py
     def __init__(self, basepath):
@@ -200,8 +201,6 @@ class SteamData:
         if letter == 'C':
             #Assert len(data)? I should know it, but I'm also ignoring a lot of junk that's normally at the end.
             offset = 0x9346 + 0x10F * (number - 1)
-            #Now remove the 2 padding bytes. This is the opposite of extractCharacter.
-            data = self.storeCharacter(data)
             dec_data = list(self._decoded_data)
             dec_data[offset:offset+len(data)] = data[:]
             self._decoded_data = bytes(dec_data)
@@ -219,38 +218,16 @@ class SteamData:
         that looks like standalone data.
         The spacing is slightly different, so it can only be done in one direction
         There are also a lot of inversions; try to extract those, since that part is bidirectional.
+        This is no longer necessary due to the offset now being part of the template.
         """
         #Expected Cxx filesize is 373 bytes or 0x175
         #But it looks like nothing after 0x109 is used.
         #0x109 is probably padded up to 0x10f
-        #...F? not 0? Really?
         srcData = self._decoded_data
         offset = 0x9346 + 0x10f * number
         data = [0] * 0x175
-        #Offsets match for most of the early data, up to the boost2 flags.
-        data[0:0xEC] = srcData[offset:offset+0xEC]
-        #0xEC maps to xED, then EE maps to F0
-        data[0xED:0xEF] = srcData[offset+0xEC:offset+0xEE]
-        data[0xF0:0xF4] = srcData[offset+0xEE:offset+0xF2]
-        #Everything after this is just shifted by 2
-        data[0xF4:0x111] = srcData[offset+0xF2:offset+0x10F]
+        data[0:0x10F] = srcData[offset:offset+0x10F]
         return data
-    def storeCharacter(self, data):
-        """ One way function; turn Character standalone data into combined data
-        This is the opposite of extractCharacter
-        The output must not include the "offset"; this will be done by the calling function
-        (this is to enable a sparse write)
-        """
-        outData = [0] * 0x10F
-
-        #Offsets match for most of the early data, up to the boost2 flags.
-        outData[0:0xEC] = data[0:0xEC]
-        #0xEC maps to xED, then EE maps to F0
-        outData[0xEC:0xEE] = data[0xED:0xEF]
-        outData[0xEE:0xF2] = data[0xF0:0xF4]
-        #Everything after this is just shifted by 2
-        outData[0xF2:0x10F] = data[0xF4:0x111]
-        return outData
     #
 
 class Save:
