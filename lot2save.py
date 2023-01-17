@@ -57,22 +57,12 @@ class StandaloneData:
     """
     def __init__(self, basepath):
         self._folder = basepath
-    def GetFile(self, filename):
+    def GetFile(self, filename, writable=False):
         """ Just opens the file and returns the stream. It is expected the caller will close it. """
         fullpath = os.path.join(self._folder, filename)
-        f = open(fullpath, 'rb')
+        mode = 'r+b' if writable else 'rb'
+        f = open(fullpath, mode)
         return FileHandleWrapper(f, BIG_ENDIAN)
-    def WriteData(self, filename, func):
-        """ Opens the specified file in append mode and writes data. """
-        fullpath = os.path.join(self._folder, filename)
-        #Make sure it already exists
-        if (not os.path.exists(fullpath)):
-            raise Exception("Path doesn't already exist: " + fullpath)
-        #
-        with FileHandleWrapper(open(fullpath, 'r+b'), BIG_ENDIAN) as fh:
-            #Call c.saveCharacter (or whatever) on the file handle.
-            func(fh)
-            #And then that's it.
     def Finish(self):
         #Only needed for Steam
         pass
@@ -123,7 +113,7 @@ class SteamData:
             raise Exception(f"Invalid filename: {filename}")
         (letter, number) = m.group(1, 2)
         return (letter, int(number))
-    def GetFile(self, filename):
+    def GetFile(self, filename, writable=False):
         """ Returns a stream of data sourced from the combined steam save file,
         modified to look/act like a standalone file.
         """
@@ -189,20 +179,8 @@ class SteamData:
         else:
             raise Exception(f"Unrecognized filename: {filename}")
 
+        #Writable is currently ignored; the wrapped fh is always writable.
         return SteamData.SteamFileWrapper(self, offset, len(data))
-    
-    def WriteData(self, filename, func):
-        """ Creates a filehandle-like object pointing to a block of memory representing
-        the DLSite-equivalent of a Steam combined save of a specific name.
-        This can then be written to as if it was a file...
-        it will then be re-converted to the Steam format,
-        and written to disk
-        """
-        #This is already using a FileHandleWrapper
-        with self.GetFile(filename) as fh:
-            #Call c.saveCharacter (or whatever) on the file handle.
-            func(fh)
-    #
     def WriteToData(self, newdata, offset):
         """I didn't want to do this but I can't find any alternative.
         Write data at a certain position to the locally stored decrypted copy of the data.
@@ -296,20 +274,23 @@ class Save:
         ret = []
         for c in self.characters:
             ngdfile = 'C%02d.ngd' % c.id
-            self.manager.WriteData(ngdfile, c.save_to_file)
+            with self.manager.GetFile(ngdfile, True) as fh:
+                c.save_to_file(fh)
             ret.append("Wrote save data for " + c.name + " to path: " + ngdfile)
         self.manager.Finish()
         return ret
     #
     def write_misc(self):
         #Probably need a better way to call this.
-        self.manager.WriteData('PEX01.ngd', self.misc_data.save_to_file)
+        with self.manager.GetFile('PEX01.ngd', True) as fh:
+            self.misc_data.save_to_file(fh)
         self.manager.Finish()
     def write_items(self):
         #Probably need a better way to call this.
         #Yeah I can't do this with 2 files.
-        self.manager.WriteData('EEF01.ngd', self.items.save_to_file)
-        self.manager.WriteData('EEN01.ngd', self.items.save_to_file)
+        with self.manager.GetFile('EEF01.ngd', True) as disc_fh:
+            with self.manager.GetFile('EEN01.ngd', True) as item_fh:
+                self.items.save_to_file(disc_fh, item_fh)
         self.manager.Finish()
     def reset(self):
         """Undoes all changes. Reverts back to the original data read in from the save files"""

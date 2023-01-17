@@ -54,9 +54,9 @@ class Items():
             item = Items.item_stats[id]
             if item['Count'] is not None:
                 self.itemDiscovery[id] = 1
+                #Need to copy over any changes to the source array.
+                self.itemCounts[id] = item['Count']
             #There's probably no reason to un-discover an item...
-        #TODO: Get changes from self.items
-        #ItemDiscovery flag needs to be set if Count is anything other than None.
         Items.discTemplate.Write(self, disc_fh)
         Items.itemsTemplate.Write(self, items_fh)
     

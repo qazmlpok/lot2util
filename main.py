@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# E:\qazmlpok\Touhou Project\Labyrinth of Touhou2_PlusDisk\save\save1
+# "E:\qazmlpok\Touhou Project\Labyrinth of Touhou2_PlusDisk\save\save1"
 # C:\Users\Qaz\AppData\Roaming\CUBETYPE\tohoLaby\save1.dat
 
 from lot2character import Character
@@ -49,11 +49,12 @@ oldfloor = saveobj.misc_data.ic_floor
 newfloor = round_up_ic(saveobj)
 print(f"Floor: {oldfloor} -> {newfloor}")
 if oldfloor != newfloor:
-    saveobj.items.get('Adamantite')['Count'] += 1
-    #saveobj.items.get('Orichalcum')['Count'] += 1
-    #Oops. I never fixed this.
+    #saveobj.items.get('Adamantite')['Count'] += 1
+    saveobj.items.get('Orichalcum')['Count'] += 1
     saveobj.write_items()
-saveobj.write_misc()
+    saveobj.misc_data.ic_floor = newfloor
+    saveobj.write_misc()
+exit()
 
 #for c in saveobj.with_mod(lambda c: c.set_library_level('ATK', 1000)) \
 #        .with_mod(lambda c: c.set_library_level('MAG', 1000)) \
@@ -95,14 +96,15 @@ saveobj.write_misc()
 #saveobj.write_items()
 
 #------
-#remi = saveobj.get_character('Remilia')
-#print(remi.character_sheet())
+c = saveobj.get_character('Reimu')
+print(c.character_sheet())
+
+c.exp += 1
+saveobj.misc_data.money += 1
 #
-#remi.exp += 1
-#saveobj.misc_data.money += 1
-#
-#result = saveobj.write_characters()
-#print(saveobj.write_misc())
+result = saveobj.write_characters()
+#print(result)
+saveobj.write_misc()
 #print("Wrote money:", saveobj.misc_data.money)
 exit()
 
