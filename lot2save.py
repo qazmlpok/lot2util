@@ -84,6 +84,29 @@ class SteamData:
     by requesting a file with the original name, it will create a temporary stream that emulates the original file.
     """
     
+    class SteamFileWrapper(FileHandleWrapper):
+        def __init__(self, SteamObj, offset, size):
+            """ Create a wrapper around the Steam decrypted data. Functions a lot like FileHandleWrapper
+            except I couldn't get that to (sensibly) write back to the source.
+            This approach is still not really ideal and has a lot of potential concurrency issues
+            Basically, just don't open a single file _twice_ and it should be good.
+            """
+            self.SteamObj = SteamObj
+            self.offset = offset
+            data = SteamObj._decoded_data[offset:offset+size]
+            fh = io.BytesIO(bytes(data))
+            super().__init__(fh, LITTLE_ENDIAN)
+        def __enter__ (self):
+            return self
+        def __exit__ (self, exc_type, exc_value, traceback):
+            #Read in all the data. Then write back to the original.
+            #Can I have it just write directly to the srcData? I can potentially have multiple "filehandles"
+            #open at once, with different read positions. Is that safe?
+            self.fh.seek(0)
+            newdata = list(self.fh.read())
+            self.SteamObj.WriteToData(newdata, self.offset)
+            self.fh.close()
+    #
     #See Thurler's converter for converting data. 
     #https://github.com/Thurler/thlaby2-save-convert/blob/main/convert_save.py
     def __init__(self, basepath):
@@ -104,22 +127,25 @@ class SteamData:
         """ Returns a stream of data sourced from the combined steam save file,
         modified to look/act like a standalone file.
         """
-
         #Set in the if chain
         data = None
 
         (letter, number) = self._getSaveName(filename)
         if letter == 'C':
             #Only time number matters...
-            data = self.extractCharacter(number - 1)
+            #Expected Cxx filesize is 373 bytes or 0x175
+            #But it looks like nothing after 0x109 is used.
+            #0x109 is probably padded up to 0x10f
+            offset = 0x9346 + 0x10f * (number-1)
+            data = self._decoded_data[offset:offset+0x10F]
         elif letter == 'EEF':
             #item discovery flags
             offset = 0x7bd6
-            data = list(self._decoded_data[offset:offset+0x7CF])
+            data = self._decoded_data[offset:offset+0x7CF]
         elif letter == 'EEN':
             #item inventory count
             offset = 0x83a6
-            data = list(self._decoded_data[offset:offset+(0x7CF*2)])
+            data = self._decoded_data[offset:offset+(0x7CF*2)]
         elif letter == 'EVF':
             #event flags
             #saveFile[0x54c6:0x68b2]
@@ -144,7 +170,7 @@ class SteamData:
         elif letter == 'PEX':
             #misc information
             offset = 0x540c
-            data = list(self._decoded_data[offset:offset+0xBA])
+            data = self._decoded_data[offset:offset+0xBA]
         elif letter == 'PKO':
             #bestiary information
             #saveFile[0x2c2:0x4c22] = data[0xca:0x4a2a]
@@ -154,6 +180,7 @@ class SteamData:
             raise Exception("File not supported")
         elif letter == 'PPC':
             #party formation
+            offset = 0x5018
             data = self._decoded_data[0x5018:0x5024]
             assert len(data) == 12
         elif letter == 'SHD':
@@ -162,7 +189,7 @@ class SteamData:
         else:
             raise Exception(f"Unrecognized filename: {filename}")
 
-        return FileHandleWrapper(io.BytesIO(bytes(data)), LITTLE_ENDIAN)
+        return SteamData.SteamFileWrapper(self, offset, len(data))
     
     def WriteData(self, filename, func):
         """ Creates a filehandle-like object pointing to a block of memory representing
@@ -175,61 +202,21 @@ class SteamData:
         with self.GetFile(filename) as fh:
             #Call c.saveCharacter (or whatever) on the file handle.
             func(fh)
-            #Now convert the file back to Steam format and write to disk
-            fh.seek(0)
-            data = list(fh.read())
-            self._serializeData(filename, data)
     #
+    def WriteToData(self, newdata, offset):
+        """I didn't want to do this but I can't find any alternative.
+        Write data at a certain position to the locally stored decrypted copy of the data.
+        Needs to be a function because bytes objects don't support modification.
+        It needs to create a new bytes object, meaning it needs to be internal.
+        """
+        #Lists support assignment; bytes doesn't. Convert back to a bytes obj by creating a new one.
+        dec_data = list(self._decoded_data)
+        dec_data[offset:offset+len(newdata)] = newdata[:]
+        self._decoded_data = bytes(dec_data)
     def Finish(self):
         encoded_data = bytes(map(xor, self._decoded_data, cycle(xorkey)))
         with open(self.basepath, 'wb') as outf:
             outf.write(encoded_data)
-    def _serializeData(self, filename, data):
-        """Store the binary data in the class variable. Basically the opposite of what GetFile does.
-        Be sure to call Finish to actually store the data to disk.
-        Filename is the standalone equivalent filename, e.g. C01. This is used to get the offset to use
-        data is the data to write, in standalone format. Must be a list of binary values
-        """
-        (letter, number) = self._getSaveName(filename)
-        offsets = {
-            #Pretty much anything that isn't a character file is the same
-            #And the length is effectively saved in the actual data, unlike while reading.
-            'PEX': 0x540c,
-            'EEF': 0x7bd6,
-            'EEN': 0x83a6,
-        }
-        if letter == 'C':
-            #Assert len(data)? I should know it, but I'm also ignoring a lot of junk that's normally at the end.
-            offset = 0x9346 + 0x10F * (number - 1)
-            dec_data = list(self._decoded_data)
-            dec_data[offset:offset+len(data)] = data[:]
-            self._decoded_data = bytes(dec_data)
-        elif letter in offsets:
-            offset = offsets[letter]
-            #Store into the saved copy; this doesn't go in Finish
-            #It's a common operation so it should probably be done somewhere else?
-            dec_data = list(self._decoded_data)
-            dec_data[offset:offset+len(data)] = data[:]
-            self._decoded_data = bytes(dec_data)
-        else:
-            raise Exception(f"Writing {filename} not supported.")
-    def extractCharacter(self, number):
-        """ One way function; pull the data from the combined save file and create a chunk
-        that looks like standalone data.
-        The spacing is slightly different, so it can only be done in one direction
-        There are also a lot of inversions; try to extract those, since that part is bidirectional.
-        This is no longer necessary due to the offset now being part of the template.
-        """
-        #Expected Cxx filesize is 373 bytes or 0x175
-        #But it looks like nothing after 0x109 is used.
-        #0x109 is probably padded up to 0x10f
-        srcData = self._decoded_data
-        offset = 0x9346 + 0x10f * number
-        data = [0] * 0x175
-        data[0:0x10F] = srcData[offset:offset+0x10F]
-        return data
-    #
-
 class Save:
     """Represents a save folder in <lot2_root>/Save."""
     #Data from the wiki:
