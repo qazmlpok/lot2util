@@ -7,6 +7,7 @@
 from lot2character import Character
 from lot2save import Save
 from lot2speed import Speed
+import lot2data
 
 import os
 import sys
@@ -24,7 +25,7 @@ def reimu_to_target(target):
 #
 def gems_if_below(target):
     for c in saveobj.all_characters:
-        for x in lot2util.gem_stats:
+        for x in lot2data.gem_stats:
             if c.gems[x] < target:
                 print("Giving", c.name, target, "gems for",x, ", from", c.gems[x])
                 c.gems[x] = target
@@ -45,16 +46,23 @@ else:
     print("Enter the full path to the save folder, such that the C01.ngd etc files exist there")
     lot2_basepath = input("Enter the save folder to scan: ")
 saveobj = Save(lot2_basepath)
-oldfloor = saveobj.misc_data.ic_floor
-newfloor = round_up_ic(saveobj)
-print(f"Floor: {oldfloor} -> {newfloor}")
-if oldfloor != newfloor:
-    #saveobj.items.get('Adamantite')['Count'] += 1
-    saveobj.items.get('Orichalcum')['Count'] += 1
-    saveobj.write_items()
-    saveobj.misc_data.ic_floor = newfloor
-    saveobj.write_misc()
+#oldfloor = saveobj.misc_data.ic_floor
+#newfloor = round_up_ic(saveobj)
+#print(f"Floor: {oldfloor} -> {newfloor}")
+#if oldfloor != newfloor:
+#    #saveobj.items.get('Adamantite')['Count'] += 1
+#    saveobj.items.get('Orichalcum')['Count'] += 1
+#    #Current: 11 adam, 7 ori
+#    saveobj.write_items()
+#    saveobj.misc_data.ic_floor = newfloor
+#    saveobj.write_misc()
+
+#saveobj.items.get('Infinity Gem')['Count'] = 200
+#saveobj.write_items()
 exit()
+gems_if_below(20)
+saveobj.write_characters()
+
 
 #for c in saveobj.with_mod(lambda c: c.set_library_level('ATK', 1000)) \
 #        .with_mod(lambda c: c.set_library_level('MAG', 1000)) \
@@ -74,16 +82,16 @@ exit()
 #for x in saveobj.order_by_BP().characters:
 #    print(x.name,'-', x.unused_skill_points)
 
-#add_xp = reimu_to_target(150)
-#for c in saveobj.characters:
-#    c.exp += add_xp
-#saveobj.misc_data.money += int(add_xp // 4)
-#print(f"Adding {add_xp} exp and {int(add_xp // 4)} money.")
-#
-#result = saveobj.write_characters()
-#saveobj.write_misc()
-#Right here is where Finish should be called...
-#print(result)
+add_xp = reimu_to_target(1250)
+if add_xp > 0:
+    for c in saveobj.characters:
+        c.exp += add_xp
+    saveobj.misc_data.money += int(add_xp // 4)
+    print(f"Adding {add_xp} exp and {int(add_xp // 4)} money.")
+    #
+    result = saveobj.write_characters()
+    saveobj.write_misc()
+exit()
 
 #for c in saveobj.get_characters(saveobj.party).characters:
 #    print(c.character_sheet())

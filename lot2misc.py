@@ -77,3 +77,4 @@ class MiscData:
         #IC floor appears to be working but I'm getting odd results for ic_available.
         print(f'IC floor: {self.ic_floor}')
         print(f'Number of akyuu trades: {self.akyuu_trades}')
+        print("Something:", self.unk_bytes)
