@@ -176,6 +176,25 @@ def loadCharacterTitles():
             csvdata[row['ID']] = row
     return csvdata
 #
+class Item():
+    """ Data class for items. Needed because I want to use it in a set.
+    """
+    def __init__(self, data):
+        self.data = data
+    def __getitem__(self, key):
+        return self.data[key]
+    def __setitem__(self, key, val):
+        self.data[key] = val
+    def __str__(self):
+        return f"{self['ID']}: {self.data['Name']} "
+    #Items are considered the same if their IDs are the same.
+    def __eq__(self, other):
+        return other and self['ID'] == other['ID']
+    def __ne__(self, other):
+        return not self.__eq__(other)
+    def __hash__(self):
+        return hash(self['ID'])
+
 #(Just main/sub equip, for stats. It's filtered)
 def loadItemData():
     """Load a CSV file named titles.csv in the data directory."""
@@ -186,7 +205,7 @@ def loadItemData():
         reader = csv.DictReader(f)
         for row in reader:
             row['ID'] = int(row['ID'])
-            csvdata[row['ID']] = row
+            csvdata[row['ID']] = Item(row)
     return csvdata
 #
 

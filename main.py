@@ -46,22 +46,37 @@ else:
     print("Enter the full path to the save folder, such that the C01.ngd etc files exist there")
     lot2_basepath = input("Enter the save folder to scan: ")
 saveobj = Save(lot2_basepath)
-#oldfloor = saveobj.misc_data.ic_floor
-#newfloor = round_up_ic(saveobj)
-#print(f"Floor: {oldfloor} -> {newfloor}")
-#if oldfloor != newfloor:
-#    #saveobj.items.get('Adamantite')['Count'] += 1
-#    saveobj.items.get('Orichalcum')['Count'] += 1
-#    #Current: 11 adam, 7 ori
-#    saveobj.write_items()
-#    saveobj.misc_data.ic_floor = newfloor
-#    saveobj.write_misc()
+oldfloor = saveobj.misc_data.ic_floor
+newfloor = round_up_ic(saveobj)
+print(f"Floor: {oldfloor} -> {newfloor}")
+if oldfloor != newfloor:
+    adam = saveobj.items.get('Adamantite')
+    ori = saveobj.items.get('Orichalcum')
+    if adam['Count'] > ori['Count']:
+        print(f"Orichalcum: {ori['Count']} -> {ori['Count']+1}")
+        ori['Count'] += 1
+    else:
+        print(f"Adamantite: {adam['Count']} -> {adam['Count']+1}")
+        adam['Count'] += 1
+    saveobj.write_items()
+    saveobj.misc_data.ic_floor = newfloor
+    saveobj.write_misc()
+
+#q = saveobj.items.Query('Tome')
+#q = saveobj.items.Query('Tome of Insight')
+#q.Add("Veteran's Tome")
+#q.Add("Spartan's Tome")
+#for x in q.Contents():
+#    print(f"{x['Name']}: {x['Count']}")
+#q.SetCountIfBelow(56)
+#for x in q.Contents():
+#    print(f"{x['Name']}: {x['Count']}")
 
 #saveobj.items.get('Infinity Gem')['Count'] = 200
-#saveobj.write_items()
+saveobj.write_items()
 exit()
-gems_if_below(20)
-saveobj.write_characters()
+#gems_if_below(20)
+#saveobj.write_characters()
 
 
 #for c in saveobj.with_mod(lambda c: c.set_library_level('ATK', 1000)) \
