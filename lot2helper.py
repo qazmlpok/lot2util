@@ -37,7 +37,6 @@ def converttoint(bytes, size=4, endian=BIG_ENDIAN):
 
 def convertfromint(value, size=4, endian=BIG_ENDIAN):
     #This was a helper method back from python 2 but 3 seems to have better handling.
-    return value.to_bytes(size, endian)
     #result = ""
     #for i in range(size):
     #    if endian == LITTLE_ENDIAN :
@@ -50,6 +49,7 @@ def convertfromint(value, size=4, endian=BIG_ENDIAN):
     #        raise Exception('convertfromint: Unknown endian specification')
     #    result += chr(temp)
     #return result
+    return value.to_bytes(size, endian)
 
 def readbytes(infile, bytecount):
     position = infile.tell()
@@ -186,7 +186,10 @@ class Item():
     def __setitem__(self, key, val):
         self.data[key] = val
     def __str__(self):
-        return f"{self['ID']}: {self.data['Name']} "
+        #return f"{self['ID']}: {self.data['Name']} "
+        return f"{self.data['Name']}"
+    def __repr__(self):
+        return f"{self.data['Name']}:{self.data['Count']}"
     #Items are considered the same if their IDs are the same.
     def __eq__(self, other):
         return other and self['ID'] == other['ID']
@@ -208,6 +211,25 @@ def loadItemData():
             csvdata[row['ID']] = Item(row)
     return csvdata
 #
+def loadEvents():
+    """Load a CSV file named events.csv in the same directory."""
+    filename = 'events.csv'
+    csvdata = {}
+    with open(os.path.join('data', filename), 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            if row['Address'] == '':
+                continue
+            #Headers: Address	Event	Floor	Type	Notes
+            #Notes won't have anything useful.
+            row['Address'] = row['Address'].strip()
+            row['Event'] = row['Event'].strip()
+            row['Floor'] = row['Floor'].strip()
+            row['Type'] = row['Type'].strip()
+            csvdata[int(row['Address'], 16)] = row
+    return csvdata
+#
+
 
 #This should be replaced with a spreadsheet but I can't be bothered to make one.
 def hardcoded_subskill_boosts(id, skill, stat):

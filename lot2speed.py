@@ -6,8 +6,8 @@ import copy
 
 class Speed:
     """An attempt to handle the different values of speed;
-    there's the in-game displayed value and the underlying "ticks" value
-    has a constructor that will create a value from either, 
+    there's the in-game displayed value and the underlying "gain per tick" value.
+    Has a constructor that will create a value from either, 
     and some functions for handling division."""
     def __init__(self, *, from_real_speed=None, from_game_speed=None):
         self._speed = 0
@@ -53,7 +53,8 @@ class Speed:
         #Division with assignment is not meaningful
         return NotImplemented
     #
-    #Comparisons: These all use Ticks. 200 speed and 201 speed are the same.
+    #I don't think add/sub is worth implementing. Multiplication at least corresponds to buffs.
+    #Comparisons: These all use db-time. 200 speed and 201 speed are the same.
     def __eq__(self, other):
         return Speed.game_to_db(self._speed) == Speed.game_to_db(other._speed)
     def __lt__(self, other):
@@ -65,12 +66,11 @@ class Speed:
     def __ge__(self, other):
         return Speed.game_to_db(self._speed) >= Speed.game_to_db(other._speed)
     #
-    #I don't think add/sub is worth implemented. Multiplication at least corresponds to buffs.
     def GetGameValue(self):
         """Gets the speed value, as displayed in-game"""
         return self._speed
     def GetRealValue(self):
-        """Gets the speed value, as used internally (i.e. ATB-per-tick)"""
+        """Gets the speed value, as used internally (i.e. gauge-per-tick)"""
         return Speed.game_to_db(self._speed)
     #
     def __str__(self):

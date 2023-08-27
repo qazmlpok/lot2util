@@ -30,6 +30,44 @@ def gems_if_below(target):
                 print("Giving", c.name, target, "gems for",x, ", from", c.gems[x])
                 c.gems[x] = target
 #
+def check_stones():
+    events = saveobj.events.all_events()
+    as_dict = {}
+    for e in events:
+        event = events[e]
+        name = event['Event']
+        if name != 'Stone of Awakening':
+            continue
+        as_dict[event['Floor']] = event
+    #There's no other way to sort 11F/10F correctly.
+    order = [
+        '6F',
+        '7F',
+        '8F',
+        '9F',
+        '10F',
+        '11F',
+        '12F',
+        '13F',
+        '14F',
+        '15F',
+        '11F Extra',
+        '10F Extra',
+    ]
+    meanings = {
+        0: 'Hidden',
+        1: 'Available',
+        2: 'Obtained',
+    }
+    counter = 0
+    for o in order:
+        event = as_dict[o]
+        
+        print(f"{event['Floor']}: {meanings[event['value']]}")
+        if event['value'] == 2:
+            counter += 1
+    print(f"Obtained: {counter} / 12 Stones of Awakening")
+#
 def round_up_ic(saveobj):
     #It's being reported as "40", for "Start on floor: 41"
     #So I guess it needs to "round up" to xx9.
@@ -46,6 +84,9 @@ else:
     print("Enter the full path to the save folder, such that the C01.ngd etc files exist there")
     lot2_basepath = input("Enter the save folder to scan: ")
 saveobj = Save(lot2_basepath)
+check_stones()
+exit()
+
 oldfloor = saveobj.misc_data.ic_floor
 newfloor = round_up_ic(saveobj)
 print(f"Floor: {oldfloor} -> {newfloor}")
@@ -61,6 +102,39 @@ if oldfloor != newfloor:
     saveobj.write_items()
     saveobj.misc_data.ic_floor = newfloor
     saveobj.write_misc()
+exit()
+
+#
+flan = saveobj.get_character('Flandre')
+yuugi = saveobj.get_character('Yuugi')
+#saveobj.misc_data.step_count = 5000
+
+#flan.exp  = 1000000000
+#saveobj.write_characters()
+
+#q = saveobj.items.Query('Reincarnation')
+#print(q)
+#q.SetCount(90)
+#saveobj.write_items()
+#saveobj.write_misc()
+exit()
+
+
+#Utsuho, Wriggle : 120 BP.
+#Cirno, Nitori, Chen: 200 BP.
+#Meiling, Patchouli, Sakuya, Remilia: 300 BP.
+#Minoriko, Komachi, Nazrin: 400 BP.
+
+#Get specific characters
+#for c in saveobj.get_characters(['Suika', 'Yuugi', 'Kasen']).characters:
+#    print(c.name)
+#    for l in c.list_spells():
+#        print(l)
+#    for i in c.formatted_spelldata:
+#        s = c.formatted_spelldata[i]
+#        print(f"{c.name}, {s.name}, {s.GetDamage(None)}")
+#
+#exit()
 
 #q = saveobj.items.Query('Tome')
 #q = saveobj.items.Query('Tome of Insight')
@@ -97,7 +171,7 @@ exit()
 #for x in saveobj.order_by_BP().characters:
 #    print(x.name,'-', x.unused_skill_points)
 
-add_xp = reimu_to_target(1250)
+add_xp = reimu_to_target(2400)
 if add_xp > 0:
     for c in saveobj.characters:
         c.exp += add_xp
@@ -144,6 +218,20 @@ print(f"1k real spd is {spd.GetGameValue()}")
 #Check BP for all characters
 for x in saveobj.order_by_BP().characters:
     print(x.name,'-', x.BP)
+    
+#Show spellcards - and how much speed is needed to reach the next "speed threshold"
+for x in saveobj.characters:
+    for l in x.list_skills():
+        print(l)
+        
+#Get specific characters
+for x in saveobj.get_characters(['Suika', 'Yuugi', 'Kasen']):
+    print(x.name)
+    for l in x.list_skills():
+        print(l)
+    for i in c.formatted_spelldata:
+        s = c.formatted_spelldata[i]
+        print(f"{c.name}, {s.name}, {s.GetDamage(None)}")
 
 #Get party
 #for c in saveobj.get_characters(saveobj.party).characters:

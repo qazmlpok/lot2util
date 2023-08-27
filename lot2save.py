@@ -1,6 +1,7 @@
 from lot2helper import *
 import lot2data
 from lot2character import Character
+from lot2events import EventData
 from lot2misc import MiscData
 from lot2items import Items
 
@@ -138,8 +139,11 @@ class SteamData:
             data = self._decoded_data[offset:offset+(0x7CF*2)]
         elif letter == 'EVF':
             #event flags
+            offset = 0x54c6
+            data = self._decoded_data[offset:offset+(0x13EC)]
+            #File should be 10,000 bytes but maybe the rest just isn't used.
+            #The last non-zero byte I have in my save1 is at 0x13EB
             #saveFile[0x54c6:0x68b2]
-            raise Exception("File not supported")
         elif letter == 'FOE':
             #FOE respawn timers (not in the converter)
             raise Exception("File not used / supported")
@@ -266,6 +270,13 @@ class Save:
         with self.manager.GetFile('EEF01.ngd') as disc_fh:
             with self.manager.GetFile('EEN01.ngd') as item_fh:
                 self.items = Items(disc_fh, item_fh)
+        
+        with self.manager.GetFile('EVF01.ngd') as f:
+            #with open('EVF-extract.FILE', 'wb') as outfile:
+            #    outfile.write(f.read())
+            #print("Wrote to 'EVF-extract.FILE'")
+            self.events = EventData(f)
+            #self.events.print_all()
     #
     def write_characters(self):
         #TODO: Add an optional parameter for a filter (using get_characters semantics)

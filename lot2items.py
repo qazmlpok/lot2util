@@ -92,6 +92,9 @@ class ItemCollection():
         self.selection = set()
         self.Add(query, errorOnEmpty)
     
+    def __repr__(self):
+        return f"(Items:  {repr(self.selection)})"
+    
     def Add(self, query, errorOnEmpty=False):
         """ Add all items matching query to this collection.
         Duplicates will be removed.

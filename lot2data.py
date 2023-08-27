@@ -89,7 +89,7 @@ subclasses = {
     118 : "Ninja",
     119 : "Oracle",
     120 : "Holy Blessing",
-    121 : "Dragon God's Power",     #Can't verify personally...
+    121 : "Dragon God's Power",
     122 : "WINNER",
 }
 
