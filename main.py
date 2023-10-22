@@ -82,9 +82,23 @@ if (len(sys.argv) > 1):
     lot2_basepath = sys.argv[1]
 else:
     print("Enter the full path to the save folder, such that the C01.ngd etc files exist there")
-    lot2_basepath = input("Enter the save folder to scan: ")
+    lot2_basepath = input("Enter the save folder to scan: ").strip()
 saveobj = Save(lot2_basepath)
-check_stones()
+#check_stones()
+
+xp = 10000000
+for c in saveobj.characters:
+    c.level = 1
+    c.exp = xp
+    while (c.level_if_able()):
+        pass
+    #print(c.character_sheet())
+for x in saveobj \
+        .with_mod(lambda c: c.set_library_money('HP', 100000))\
+        .order_by_stat('HP') \
+        .characters:
+    print(x.name,'-', x.get_stat('HP'), '   - HP:', x.libstats['HP'], 'Level:', x.level)
+
 exit()
 
 oldfloor = saveobj.misc_data.ic_floor
@@ -146,7 +160,7 @@ exit()
 #for x in q.Contents():
 #    print(f"{x['Name']}: {x['Count']}")
 
-#saveobj.items.get('Infinity Gem')['Count'] = 200
+saveobj.items.get('Infinity Gem')['Count'] = 200
 saveobj.write_items()
 exit()
 #gems_if_below(20)

@@ -236,6 +236,21 @@ class Save:
         self._folder = basepath
         self.all_characters = [None] * (len(character_ids))
         
+        if basepath is None or basepath == '':
+            #If no path provided, can still "load" character data. This should be initialized
+            #to roughly match a newly created save file.
+            #There's no point in trying to do this with other files.
+            for i in character_ids:
+                self.all_characters[i-1] = Character(i)
+        else:
+            self._load_files()
+        #
+        self.original_characters = copy.deepcopy(self.all_characters)
+        self.characters = copy.copy(self.all_characters)
+    #
+    def _load_files(self, basepath):
+        """ Separate function to actually load in character/etc data from the provided file.
+        """
         if os.path.isdir(basepath):
             print("Using DLSite save format.")
             self.manager = StandaloneData(basepath)
@@ -249,15 +264,7 @@ class Save:
 
             with self.manager.GetFile(ngdfilename) as f:
                 self.all_characters[i-1] = Character(i, f)
-
-        #Add to dict
-        #self.characters[self.all_characters[i-1].name] = self.all_characters[i-1]
-        #TODO: Extend this to support short name and full name.
-        #Actually, use a function so I can use case-insensitive.
         #
-        self.original_characters = copy.deepcopy(self.all_characters)
-        self.characters = copy.copy(self.all_characters)
-        
         with self.manager.GetFile('PPC01.ngd') as f:
             self.party = self.load_current_party(f)
         #Should also do items.
@@ -387,6 +394,11 @@ class Save:
         if deffactor == 0 and mndfactor == 0:
             raise Exception("Def and Mnd factors cannot both be 0.")
         func = lambda c: c.get_stat('DEF') * deffactor + c.get_stat('MND') * mndfactor
+        self.characters.sort(key=func, reverse=True)
+        return self
+    #
+    def order_by_stat(self, stat):
+        func = lambda c: c.get_stat(stat) 
         self.characters.sort(key=func, reverse=True)
         return self
     #

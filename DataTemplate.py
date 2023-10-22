@@ -11,6 +11,9 @@ class DataTemplate():
     def Write(self, src, fh):
         for f in self.fields:
             f.Write(src, fh)
+    def Init(self, src):
+        for f in self.fields:
+            f.Init(src)
 
     
 class FieldBase():
@@ -20,6 +23,8 @@ class FieldBase():
     def Read(self, dst, fh):
         raise Exception('Implement in subclass.')
     def Write(self, src, fh):
+        raise Exception('Implement in subclass.')
+    def Init(self, src):
         raise Exception('Implement in subclass.')
     @staticmethod
     def noop(x):
@@ -46,6 +51,9 @@ class Field(FieldBase):
         data = getattr(src, self.field_name)
         fh.writebytes(data, self.size)
         #validate on write too?
+    def Init(self, dst):
+        data = 0
+        setattr(dst, self.field_name, data)
 
 class ArrayField(FieldBase):
     """ Represents a collection of fields, each with the same size
@@ -72,6 +80,11 @@ class ArrayField(FieldBase):
             data = arr[f]
             fh.writebytes(data, self.size)
             #validate on write too?
+    def Init(self, dst):
+        arr = {}
+        for f in self.fields:
+            arr[f] = 0
+        setattr(dst, self.field_name, arr)
 
 class BytesField(FieldBase):
     """Represents a sequence of unknown bytes.
@@ -87,35 +100,10 @@ class BytesField(FieldBase):
         data = getattr(src, self.field_name)
         assert len(data) == self.size
         fh.write(data)
-
-#Just ignore this; it wasn't the issue
-class ConditionalPadding(FieldBase):
-    """ Probably not the best idea.
-    This is like a BytesField, except the data is one of two different lengths.
-    i.e. read x bytes if in little_endian mode, read y bytes if in big.
-    Characters (and nothing else?) have small changes to the format.
-    (Reminder; dlsite is big, steam is little)
-    """
-    def __init__(self, field_name, size_little, size_big):
-        self.field_name = field_name
-        self.size_little = size_little
-        self.size_big = size_big
-        #endianness isn't available in init.
-    def Read(self, dst, fh):
-        if fh.endianness == BIG_ENDIAN:
-            size = self.size_big
-        else:
-            size = self.size_little
-        data = fh.read(size)
+    def Init(self, src):
+        data = 0
         setattr(dst, self.field_name, data)
-    def Write(self, src, fh):
-        if fh.endianness == BIG_ENDIAN:
-            size = self.size_big
-        else:
-            size = self.size_little
-        data = getattr(src, self.field_name)
-        assert len(data) == size
-        fh.write(data)
+
 class NegativeNumber(FieldBase):
     """ 3peso did some really weird shit with potentially-negative numbers in the dlsite version
     Cubetype fixed it. This also means that the size of the data is different.
@@ -151,6 +139,9 @@ class NegativeNumber(FieldBase):
         else:
             b = data.to_bytes(self.size, byteorder=fh.endianness, signed=True)
             fh.write(b)
+    def Init(self, dst):
+        data = 0
+        setattr(dst, self.field_name, data)
     #
 
 class PositionAssert(FieldBase):
@@ -168,4 +159,6 @@ class PositionAssert(FieldBase):
         currpos = fh.tell()
         if currpos != self.pos:
             raise Exception(f"Position validation failed on write: Expected {self.pos}, actually at {currpos}.")
+    def Init(self, src):
+        pass
 #

@@ -68,24 +68,17 @@ class Character:
     """Represents data loaded from a C file in the save folder. Tracks the raw data and has utility functions for dealing with it"""
     template = CharacterTemplate()
     
-    def __init__(self, id, filedata):
-        self.id = id
-        #print (character_basestats)
-        self.basestats = character_basestats[id]
-        self.skilldata = character_skills[id]
-        self.spelldata = character_spells[id]
-        #print(self.spelldata)
-        self.formatted_spelldata = {id: SpellData(self, self.spelldata[id]) for id in self.spelldata}
+    def __init__(self, id, filedata=None):
         
-        if (not id in character_ids):
-            raise Exception("Invalid character id - " + id)
-        self.name = character_ids[id]
-        
-        #"name" is easier to work with most of the time.
-        self.full_name = character_titles[id]['Name']
-        self.title = character_titles[id]['Title']
-        
-        Character.template.Read(self, filedata)
+        self._initialize(id)
+
+        if filedata is None:
+            Character.template.Init(self)
+            self.boosts = {}
+            for f in self.boost_1s:
+                self.boosts[f] = 0
+        else:
+            Character.template.Read(self, filedata)
 
         self.subclass = subclasses[self.subclass_id]
 
@@ -107,7 +100,29 @@ class Character:
         #But if a copy is made, that can be modified, so set mutable=True
         #ok I think I do need to manually copy all data from __copy__ which I don't wanna do.
         #Figure this out later...
-        #self._mutable = False
+        self._mutable = False
+    def _initialize(self, id):
+        """Alternate "constructor" with no source data. Initialize all the properties to 0 or 1
+        Should be equivalent to loading in a brand-new save file.
+        """
+        self.id = id
+        #print (character_basestats)
+        self.basestats = character_basestats[id]
+        self.skilldata = character_skills[id]
+        self.spelldata = character_spells[id]
+        #print(self.spelldata)
+        
+        self.formatted_spelldata = {id: SpellData(self, self.spelldata[id]) for id in self.spelldata}
+        
+        if (not id in character_ids):
+            raise Exception("Invalid character id - " + id)
+        self.name = character_ids[id]
+        
+        #"name" is easier to work with most of the time.
+        self.full_name = character_titles[id]['Name']
+        self.title = character_titles[id]['Title']
+        
+        self.level = 1
     def save_to_file(self, fh):
         """Writes character data to a file. Save hacking. Basically the opposite of the constructor."""
         #Assumes that the file already exists. If something isn't supported (e.g. items), it won't be modified
@@ -821,6 +836,17 @@ class Character:
         """Changes the library bonus level for all stats to the given value."""
         for x in stats:
             self.set_library_level(x, value)
+    #
+    @mods
+    def set_library_money(self, stat, money):
+        #Use get_money_to_next to apply as many library updates as can be afforded
+        #Only for a single stat.
+        while (True):
+            n = self.get_money_to_next(stat)
+            if n > money:
+                break
+            self.libstats[stat] += 1
+            money -= n
     #
     @mods
     def set_bonuses_to_stat(self, stat):
