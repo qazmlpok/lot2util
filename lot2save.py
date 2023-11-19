@@ -4,6 +4,7 @@ from lot2character import Character
 from lot2events import EventData
 from lot2misc import MiscData
 from lot2items import Items
+from lot2formation import CharacterList, Formation
 
 import os
 import copy
@@ -240,17 +241,20 @@ class Save:
             #If no path provided, can still "load" character data. This should be initialized
             #to roughly match a newly created save file.
             #There's no point in trying to do this with other files.
+            characters = [None] * (len(character_ids))
             for i in character_ids:
-                self.all_characters[i-1] = Character(i)
+                characters[i-1] = Character(i)
+            self.characters = CharacterList(characters)
         else:
-            self._load_files()
+            #will set self.characters.
+            self._load_files(basepath)
         #
-        self.original_characters = copy.deepcopy(self.all_characters)
-        self.characters = copy.copy(self.all_characters)
+        
     #
     def _load_files(self, basepath):
         """ Separate function to actually load in character/etc data from the provided file.
         """
+        characters = [None] * (len(character_ids))
         if os.path.isdir(basepath):
             print("Using DLSite save format.")
             self.manager = StandaloneData(basepath)
@@ -261,9 +265,9 @@ class Save:
             raise Exception(f"{basepath} doesn't exist.")
         for i in character_ids:
             ngdfilename = 'C%02d.ngd' % i
-
             with self.manager.GetFile(ngdfilename) as f:
-                self.all_characters[i-1] = Character(i, f)
+                characters[i-1] = Character(i, f)
+        self.characters = CharacterList(characters)
         #
         with self.manager.GetFile('PPC01.ngd') as f:
             self.party = self.load_current_party(f)
@@ -312,10 +316,9 @@ class Save:
         self.manager.Finish()
     def reset(self):
         """Undoes all changes. Reverts back to the original data read in from the save files"""
-        self.all_characters = copy.deepcopy(self.original_characters)
-        self.characters = self.all_characters
+        #TODO: This should undo other files too, I guess. Except the modification really was only for characters...
+        self.characters.reset()
     #
-    #(This doesn't need its own class)
     def load_current_party(self, filedata):
         """Gets the current party, from PPC01.ngd. Returns a list of ids.
         This is just 12 bytes, one for each character, laid out:
@@ -324,92 +327,13 @@ class Save:
         1234"""
         
         data = filedata.read(12)
-        return list(data)
+        return Formation(list(data), self.characters)
     #
     def get_character(self, name):
-        id = 0
-        m = re.match(r'\d+', str(name))
-        if m:
-            id = int(name)
-        else:
-            name = name.capitalize()
-            
-            #Nicknames...
-            if name == 'Rin' or name == 'Orin' or name == 'Orinrin':
-                id = 23
-            elif name == 'Okuu':
-                id = 24
-            else:
-                if name in character_lookup:
-                    id = character_lookup[name]
-                else:
-                #This should then scan character full_name for a match, but I haven't grabbed that yet...
-                    pass
-        #
-        if id == 0:
-            #raise Exception("Couldn't match " + str(name) + " to a character's name.")
-            return None
-        return self.all_characters[id-1]
+        return self.characters.get_character(name)
     #
     def get_characters(self, names):
         #This should be *args
-        self.characters = [self.get_character(name) for name in names if self.get_character(name) is not None]
-        return self
-    #
-    #Filtering
-    def all(self):
-        for c in self.all_characters:
-            if c not in self.characters:
-                self.characters.append(c)
-        return self
-    #
-    def top(self, number):
-        self.characters = self.characters[0:number]
-        return self
-    #
-    
-    #Sorting
-    #TODO: Change the order functions to work in-place.
-    #Then add a top(x) / bottom(x) function.
-    def order_by_BP(self):
-        """Returns a list of all characters sorted by BP"""
-        #Mostly just a test to make sure sorting works.
-        self.characters.sort(key=lambda c: c.BP, reverse=True)
-        return self
-    #
-    def order_by_offense(self, atkfactor=0, magfactor=0):
-        #I thought Holy Blessing's subskills were composite too. Oops.
-        #If it isn't composite there's little point, since it's just ordering by stat directly.
-        #--and every subclass composite spell has equal weight, so there's doubly no point in this.
-        #Dragon God's Sigh: 156.25%(ATK+MAG)
-        #Ame-no-Murakumo Slash: 241% ATK
-        #Start of Heavenly Demise: 353% MAG
-        if atkfactor == 0 and magfactor == 0:
-            raise Exception("Atk and Mag factors cannot both be 0.")
-        func = lambda c: c.get_stat('ATK') * atkfactor + c.get_stat('MAG') * magfactor
-        self.characters.sort(key=func, reverse=True)
-        return self
-    #
-    def order_by_defense(self, deffactor=0, mndfactor=0):
-        if deffactor == 0 and mndfactor == 0:
-            raise Exception("Def and Mnd factors cannot both be 0.")
-        func = lambda c: c.get_stat('DEF') * deffactor + c.get_stat('MND') * mndfactor
-        self.characters.sort(key=func, reverse=True)
-        return self
-    #
-    def order_by_stat(self, stat):
-        func = lambda c: c.get_stat(stat) 
-        self.characters.sort(key=func, reverse=True)
-        return self
-    #
-    
-    ###
-    def with_mod(self, func):
-        #Calls the provided function on all characters.
-        #Should be a lambda
-        for x in self.all_characters:
-            func(x)
-        
-        return self
+        return self.characters.get_characters(names)
     #
 #
