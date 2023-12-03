@@ -151,6 +151,23 @@ boost_stats = [
     'AFF',  #Affinities
     'RES',  #(status) Resistances
 ]
+
+monster_types = [
+    'HUM',
+    'YOU',
+    'GST',
+    'PNT',  #Plant
+    'BST',
+    'FLY',
+    'INS',  #Insect
+    'AQA',  #Aquatic
+    'INO',  #Inorganic
+    'ONI',
+    'DRG',
+    'DVN',  #Divine
+    'OTH',  #Other
+]
+
 #Note - Boost2 skills aren't available for the last 4. This list is coincidentally the same as gem_stats
 boost_2_stats = gem_stats
 

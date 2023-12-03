@@ -69,7 +69,6 @@ class Character:
     template = CharacterTemplate()
     
     def __init__(self, id, filedata=None):
-        
         self._initialize(id)
 
         if filedata is None:
@@ -102,8 +101,8 @@ class Character:
         #Figure this out later...
         self._mutable = False
     def _initialize(self, id):
-        """Alternate "constructor" with no source data. Initialize all the properties to 0 or 1
-        Should be equivalent to loading in a brand-new save file.
+        """Set some data that is shared between the two constructors; with save data and without
+        This basically loads in constant data from the spreadsheets and massages the data.
         """
         self.id = id
         #print (character_basestats)
@@ -112,7 +111,7 @@ class Character:
         self.spelldata = character_spells[id]
         #print(self.spelldata)
         
-        self.formatted_spelldata = {id: SpellData(self, self.spelldata[id]) for id in self.spelldata}
+        self.formatted_spelldata = {id: SpellData(self.spelldata[id]) for id in self.spelldata}
         
         if (not id in character_ids):
             raise Exception("Invalid character id - " + id)
@@ -258,7 +257,7 @@ class Character:
         #The periods just make it easier to visualize within template.txt
         return "\n".join(ret).replace('.', ' ')
     #
-    def list_skills(self):
+    def format_skill_list(self):
         """List all the skills this character has learned.
         Primarily a debug method to make sure skill IDs match up."""
 
@@ -287,12 +286,25 @@ class Character:
                 data = self.skilldata[i]
                 name = data['Name']
                 maxlvl = data['Max Lvl']
-            s += name + (" - level %d" % level)
+            s += name + f" - level {level}"
             if maxlvl is not None:
                 s += '/' + str(maxlvl)
             ret.append(s)
         
         return ret
+    #
+    def get_skill_level(self, skill_name):
+        """ Tries to find a skill by name. If the character has it, returns the current level.
+        Spellcards are basically skills so this will work on both.
+        """
+        #TODO: Need to add subclass support.
+        #Do I need to be able to search for anything else?
+        for i in range(len(self.skills)):
+            if i in self.skilldata and self.skilldata[i]['Name'] == skill_name:
+                return self.skills[i]
+            if i in self.spelldata and self.spelldata[i]['Name'] == skill_name:
+                return self.skills[i]
+        return None
     #
     def list_spells(self, override_speed=None):
         """List all of the character's spellcards. Uses the speed stat and compares against delay to
@@ -313,7 +325,7 @@ class Character:
         
         #Longest spell name should be 31 characters.
         
-        if (override_speed is None):
+        if (override_speed is None or override_speed <= 0):
             speed = self.get_stat('SPD')
         else:
             speed = override_speed
@@ -341,6 +353,26 @@ class Character:
         
         return ret
     #
+    def list_skills(self):
+        ret = []
+        for i in range(SKILL_COUNT):
+            level = self.skills[i]
+            if i >= 30:
+                #Spells. Should do a better job of filtering this.
+                break
+            if level == 0 or i not in self.skilldata:
+                #This includes skipping all the placeholders.
+                continue
+            skill = self.skilldata[i]
+            
+            skillname = skill['Name']
+
+            #Do I want anything else?
+            ret.append(skillname)
+        #for i in range(SUBCLASS_SKILL_COUNT)
+        #i >= 10 -> break
+        return ret
+        #
     def get_adjusted_delay(self, spell):
         #Actually post-use
         """Returns the effective delay of the given spell. In most cases this is just the spreadsheet row.
@@ -640,9 +672,7 @@ class Character:
         raise Exception("Not implemented.")
     #
     def get_stat(self, stat):
-        """Get the actual value of a stat. Ignores items"""
-        #(It technically shouldn't ignore items due to maintenance, but items are otherwise the same for everyone.)
-        #Oh, and the +stat growth main equips. Those would vary based on level. Oh well.
+        """Get the actual value of a stat."""
         stat = stat.upper()
         
         #Sufficiently different that they don't belong in here.

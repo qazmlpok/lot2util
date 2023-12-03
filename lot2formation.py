@@ -12,12 +12,18 @@ class CharacterList:
         self.all_characters = copy.copy(characters)
         #Modifiable collection. Can be filtered.
         self.characters = characters
+        
+        #Can't import reference. Cheat instead.
+        self.chara_type = type(characters[0])
     def reset(self):
         """Undoes all changes. Reverts back to the original data read in from the save files"""
         self.all_characters = copy.deepcopy(self.original_characters)
         self.characters = self.all_characters
     #
     def get_character(self, name):
+        #Allow this to be an echo. No reason not to.
+        if type(name) == self.chara_type:
+            return name
         id = 0
         m = re.match(r'\d+', str(name))
         if m:
@@ -108,13 +114,18 @@ class CharacterList:
 # 1234   (Frontline)
 # L  R
 
+from lot2skill import get_skill, SkillCollection, Noop
+
+
 class Formation:
     #To iterate over the formation data in order.
     order = list(range(8, 12)) + list(range(4, 8)) + list(range(0, 4))
     def __init__(self, ids, character_list):
-        #I don't think I need to save the full list.
+        self.character_list = character_list
         self.characters = [character_list.get_character(x) for x in ids]
         self.allow_duplicates = False
+    def GetCharacter(self, name):
+        return self.character_list.GetCharacter(name)
     def GetCharacterList(self):
         """ Returns the current characters. Effectively `self.characters`,
         except it trims out None
@@ -128,9 +139,68 @@ class Formation:
         Returns None if the character isn't in the current formation
         If you have duplicates, returns the first position.
         """
+        if c is None:
+            return None
         for index in range(12):
             i = Formation.order[index]
             if self.characters[i] == c:
                 return index
         return None
+    def SetCharacters(self, clist, reverse=True):
+        #I guess this should always have a length of exactly 12.
+        self.characters = [None] * 12
+        if reverse:
+            for i in range(len(clist)):
+                rev_i = Formation.order[i]
+                self.characters[rev_i] = self.character_list.get_character(clist[i])
+        else:
+            for i in range(len(clist)):
+                self.characters[i] = self.character_list.get_character(clist[i])
+        #self.characters = [self.character_list.get_character(x) for x in clist]
+    def GetCharacterSkills(self, user):
+        """ Fetches the skill data for all characters in the current formation.
+        Filters out any inapplicable skills, e.g. because the user is in the back row
+        This needs to be called once per user, since many skills are "self only"
+        """
+        all_chara = self.GetCharacterList()
+        all_skills = {}
+        #2. Get every skill from these characters. Remove duplicates
+        for ch in all_chara:
+            #level 0 skills are already removed.
+            for s_name in ch.list_skills():
+                #TODO: I don't need both 'formation' and 'position'
+                obj = get_skill(s_name, ch)
+                if type(obj) is Noop:
+                    print(f"Skill '{s_name}' has no implementation.")
+                    continue
+                pos = self.GetPosition(ch)
+                #print('TEST', s_name, ' -- ', type(obj), pos)
+                if not obj.IsActive(user, pos, True):
+                    #print(f"{s_name} is not active.")
+                    continue
+                key = obj.UniqueKey()
+                print(obj, key)
+                if key in all_skills:
+                    if all_skills[key].level > obj.level:
+                        #print(f"{s_name} is lower level.")
+                        continue
+                    #else:
+                    #    print(f"{s_name} is same or higher level.")
+                all_skills[key] = obj
+        return SkillCollection(all_skills)
+#
+class FakeFormation(Formation):
+    """Intended to act as a placeholder for if real formation isn't available
+    Used by skills. The user can't be outside of the active party, so as long as you have a user,
+    you have a "formation"
+    """
+    def __init__(self, c):
+        self.c = c
+        self.characters = [c]
+    def GetCharacterList(self):
+        return self.characters
+    def GetPosition(self, c):
+        #ok this isn't quite right, because ideally it should be "whatever damn position you want"
+        #both Suwako and Kanako's skills should be active, but that can't be done with a single return.
+        return 1
 #

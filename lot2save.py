@@ -237,6 +237,12 @@ class Save:
         self._folder = basepath
         self.all_characters = [None] * (len(character_ids))
         
+        #Initialize; for the case of no save data
+        self.party = None
+        self.misc_data = None
+        self.items = None
+        self.events = None
+        
         if basepath is None or basepath == '':
             #If no path provided, can still "load" character data. This should be initialized
             #to roughly match a newly created save file.

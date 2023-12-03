@@ -86,6 +86,59 @@ else:
 saveobj = Save(lot2_basepath)
 #check_stones()
 
+flan = saveobj.get_character('Flandre')
+yuugi = saveobj.get_character('Yuugi')
+kanako = saveobj.get_character('Kanako')
+
+#Get specific characters
+character_list = ['Meiling', yuugi, 'Kasen', 'Kanako', 'Reimu']
+saveobj.party.SetCharacters(character_list)
+for c in character_list:
+    chara = saveobj.get_character(c)
+    print(chara.name, saveobj.party.GetPosition(chara))
+#exit()
+
+for c in saveobj.party.GetCharacterList():
+    print(c.name)
+    all_skills = saveobj.party.GetCharacterSkills(c)
+    print("Skill counters:")
+    for x in all_skills.GetCounters():
+        print(x)
+    all_skills.SetCounter('LastFortress', 11)
+    #So I guess I want to set the counters on the SkillCollection?
+    #The individual skills would need to query that
+    #Or I guess calling it on the coll could forward to every skill
+    #That would solve the trr/psn/par issue. Kinda.
+    #It would work for "I've inflicted trr, so I don't need to say they have an ailment"
+    #The generic ailment skill could just also check trr and everything else.
+    for l in c.list_spells():
+        print(l)
+    for i in c.formatted_spelldata:
+        s = c.formatted_spelldata[i]
+        print(f"{c.name}, {s.name}, {s.GetDamage(c, all_skills, None)}")
+    #print(c.character_sheet())
+    print()
+
+#Yuugi, Knockout in Three Steps, 32698710
+#Yuugi, Knockout in Three Steps, 42508323   [With Ruinous]
+#Yuugi, Knockout in Three Steps, 42508323
+#python main.py C:\Users\Qaz\AppData\Roaming\CUBETYPE\tohoLaby\save1.dat
+
+#Kasen {'Name': 'Kasen', 'ATK': 5041096, 'DEF': 561000, 'MAG': 20344, 'MND': 614788, 'SPD': 17747}
+#Kasen, Higekiri's Cursed Arm, 13724383
+#Adversity should boost damage but not stats; no ailment should boost stats
+#With healthy:
+#Kasen, Higekiri's Cursed Arm, 15096820
+
+print(yuugi.get_skill_level('Last Fortress'))
+print(yuugi.get_skill_level('Physical Counter'))
+print(yuugi.get_skill_level('Supernatural Phenomenon'))
+print(yuugi.get_skill_level('etc'))
+exit()
+
+
+
+
 xp = 10000000
 for c in saveobj.characters:
     c.level = 1
@@ -119,8 +172,7 @@ if oldfloor != newfloor:
 exit()
 
 #
-flan = saveobj.get_character('Flandre')
-yuugi = saveobj.get_character('Yuugi')
+
 #saveobj.misc_data.step_count = 5000
 
 #flan.exp  = 1000000000
@@ -131,6 +183,16 @@ yuugi = saveobj.get_character('Yuugi')
 #q.SetCount(90)
 #saveobj.write_items()
 #saveobj.write_misc()
+#exit()
+
+from lot2skill import skill_to_class_name
+from lot2character import character_skills, character_spells
+for x in character_skills:
+    ch = character_skills[x]
+    for i in ch:
+        skl = ch[i]
+        print(skill_to_class_name(skl['Name']))
+
 exit()
 
 
@@ -139,16 +201,7 @@ exit()
 #Meiling, Patchouli, Sakuya, Remilia: 300 BP.
 #Minoriko, Komachi, Nazrin: 400 BP.
 
-#Get specific characters
-#for c in saveobj.get_characters(['Suika', 'Yuugi', 'Kasen']).characters:
-#    print(c.name)
-#    for l in c.list_spells():
-#        print(l)
-#    for i in c.formatted_spelldata:
-#        s = c.formatted_spelldata[i]
-#        print(f"{c.name}, {s.name}, {s.GetDamage(None)}")
-#
-#exit()
+
 
 #q = saveobj.items.Query('Tome')
 #q = saveobj.items.Query('Tome of Insight')
@@ -173,7 +226,7 @@ exit()
 #        .characters:
 #    for i in c.formatted_spelldata:
 #        s = c.formatted_spelldata[i]
-#        print(f"{c.name}, {s.name}, {s.GetDamage(None)}")
+#        print(f"{c.name}, {s.name}, {s.GetDamage(c, None)}")
 #
 
 #for c in saveobj.characters:
@@ -235,24 +288,24 @@ for x in saveobj.order_by_BP().characters:
     
 #Show spellcards - and how much speed is needed to reach the next "speed threshold"
 for x in saveobj.characters:
-    for l in x.list_skills():
+    for l in x.format_skill_list():
         print(l)
         
 #Get specific characters
 for x in saveobj.get_characters(['Suika', 'Yuugi', 'Kasen']):
     print(x.name)
-    for l in x.list_skills():
+    for l in x.format_skill_list():
         print(l)
     for i in c.formatted_spelldata:
         s = c.formatted_spelldata[i]
-        print(f"{c.name}, {s.name}, {s.GetDamage(None)}")
+        print(f"{c.name}, {s.name}, {s.GetDamage(c, None)}")
 
 #Get party
 #for c in saveobj.get_characters(saveobj.party).characters:
 #Get everyone
 for c in saveobj.characters:
     print(c.character_sheet())
-    skills = c.list_skills()
+    skills = c.format_skill_list()
     for x in skills:
         print(x)
 
@@ -276,7 +329,7 @@ for c in saveobj.characters:
 for c in saveobj.characters:
     for i in c.formatted_spelldata:
         s = c.formatted_spelldata[i]
-        print(f"{c.name}, {s.name}, {s.GetDamage(None)}")
+        print(f"{c.name}, {s.name}, {s.GetDamage(c, None)}")
 
 #Highest ATK stat
 for x in saveobj.order_by_offense(atkfactor=1).characters:
