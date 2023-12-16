@@ -4,7 +4,7 @@ from lot2character import Character
 from lot2events import EventData
 from lot2misc import MiscData
 from lot2items import Items
-from lot2formation import CharacterList, Formation
+from lot2formation import CharacterList, Formation, ExtremelyFakeFormation
 
 import os
 import copy
@@ -251,9 +251,12 @@ class Save:
             for i in character_ids:
                 characters[i-1] = Character(i)
             self.characters = CharacterList(characters)
+            self.party = ExtremelyFakeFormation(characters)
+            self.fake_party = self.party
         else:
             #will set self.characters.
             self._load_files(basepath)
+            self.fake_party = ExtremelyFakeFormation(self.characters.all_characters)
         #
         
     #

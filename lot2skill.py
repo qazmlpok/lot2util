@@ -39,7 +39,7 @@ def skillname(func):
     
     return func
 
-def get_skill(full_name, owner):
+def get_skill(full_name, owner, formation):
     """ Perform a lookup on the skill name to find the appropriate class.
     This should be a static method in Skill but whatever.
     """
@@ -51,6 +51,7 @@ def get_skill(full_name, owner):
     #Or add it as a parameter.
     ret.name = full_name
     ret.level = owner.get_skill_level(full_name)
+    ret.formation = formation
     return ret
 
 def skill_to_class_name(name):
@@ -100,7 +101,6 @@ class Skill:
         #Most skills only affect the user. The ones that don't are almost all front only.
         self.self_only = True
         self.front_only = True
-    
     def PreApply(self, spell):
         """A small number of skills do need to be processed first.
         Specifically, anything that alters the spell's elements _must_ be done here
@@ -130,32 +130,17 @@ class Skill:
         #_maybe_ add a handful of special cases, like setting hp=1 also sets "low_hp"
         #or setting target_trr also sets target_ailment.
         self.counters[name] = value
-    def GetCounterValue(self, name):
-        val = 0
-        if name in self.counters:
-            val = self.counters[name]
-        if val < self.min_counter:
-            val = self.min_counter
-        if val > self.max_counter:
-            val = self.max_counter
-        return val
-    def IsActive(self, user, position, attacking=True):
+    def IsActive(self, user, attacking=True):
         #This only needs to be overridden for the fixed-position skills (e.g. Kanako)
         #attacking is a TODO; I don't have any defense stuff even planned.
         if self.owner is not user and self.self_only:
             return False
-        #Reminder: position is 0 indexed.
-        if position > 3 and self.front_only:
+        if self.front_only and not self.formation.IsInFront(user):
             return False
         return True
     def CounterActive(self):
-        #If has a counter, use this to filter it out.
-        #Counters are vaguely dynamic, which is why this was extracted from 
-        counter = self.CounterName()
-        if (counter is not None):
-            val = self.GetCounterValue(counter)
-            if val < self.counter_active_min:
-                return False
+        #TODO: It should be safe to delete this and do everything in IsActive
+        #I shouldn't be filtering out IsActive pre-emptively.
         return True
     def IsApplicable(self, spell, target):
         """ Returns true if the skill is applicable to the selected spell.
@@ -163,7 +148,7 @@ class Skill:
         If the skill has an element, spell must include that. etc.
         """
         return True
-    def Render(self, user, position):
+    def Render(self, user):
         """ Return a text description of what this skill will do,
         with the current skill level applied. Position is used to filter conditions,
         but not spell type.
@@ -180,17 +165,7 @@ class Skill:
         return str(type(self))
     def __repr__(self):
         return f"Skill {self.name}, owner {self.owner.name} level {self.level}"
-    #Minor convenience method; increase the spell's multiplier by factor%.
-    def _spell_mult(self, spell, factor, counter):
-        spell['Multiplier'] *= (1 + ((factor/100) * counter))
-    def _boost_stat(self, stat, c, factor, counter):
-        if stat == 'ALL':
-            stat = ['ATK','DEF','MAG','MND','SPD']
-        if type(stat) == str:
-            stat = [stat]
-        for s in stat:
-            c[s] *= (1 + ((factor/100) * counter))
-            c[s] = int(c[s])
+
 class CounterSkill(Skill):
     def __init__(self, owner):
         Skill.__init__(self, owner)
@@ -217,10 +192,64 @@ class CounterSkill(Skill):
             if val < self.counter_active_min:
                 return False
         return True
+    def GetCounterValue(self, name):
+        val = 0
+        if name in self.counters:
+            val = self.counters[name]
+        if val < self.min_counter:
+            val = self.min_counter
+        if val > self.max_counter:
+            val = self.max_counter
+        return val
+class StatSkill(Skill):
+    """ A skill that boosts stats; conditionally, so not shown on the character screen
+    (unlike the Boost skills, or the other non-conditional skills, which _do_ show)
+    This class is mostly just to signal what the skill does.
+    """
+    def __init__(self, owner):
+        Skill.__init__(self, owner)
+        #These are always self-only, but that's the default
+        #frontline only is iffy. It only matters if they boost SPD
+        #But I'm pretty sure they _are_ active even in the back.
+        self.front_only = False
+        
+        #Not implemented. But these should always be attack+defense.
+        self.attacking = True
+        self.defending = True
+    def _boost_stat(self, stat, c, factor, counter):
+        if stat == 'ALL':
+            stat = ['ATK','DEF','MAG','MND','SPD']
+        if type(stat) == str:
+            stat = [stat]
+        for s in stat:
+            c[s] *= (1 + ((factor/100) * counter))
+            c[s] = int(c[s])
+class StatReductionSkill(Skill):
+    """ Like stat skill but modifies the target's stat instead.
+    These are not always self=true; Kaguya, I think, has one that lowers def while she's in front
+    """
+    def __init__(self, owner):
+        #I don't think there's an atk/def difference; but it'd only matter for speed.
+        #Not implemented. But these should always be attack+defense.
+        self.attacking = True
+        self.defending = True
+    def _lower_stat(self, stat, target, factor, counter):
+        if stat == 'ALL':
+            stat = ['ATK','DEF','MAG','MND','SPD']
+        if type(stat) == str:
+            stat = [stat]
+        for s in stat:
+            c[s] *= (1 - ((factor/100) * counter))
+            c[s] = int(c[s])
+class DamageBoost(Skill):
+    """ Skill boosts spell damage directly.
+    """
+    def _spell_mult(self, spell, factor):
+        spell['Multiplier'] *= (1 + ((factor/100)))
 #
 
 class Noop(Skill):
-    def IsActive(self, user, position, attacking=True):
+    def IsActive(self, user, attacking=True):
         return False
 
 #How to evaluate a skill? It will do one of these:
@@ -235,25 +264,56 @@ class Noop(Skill):
 #6. Buff a specific spellcard
 
 @skillname
-class Bloodsuck(Skill):
+class Bloodsuck(DamageBoost):
     #Additionally, if the attack was single-target, buff user's all stats by 8% and increase the damage done by 16%.
     #Skip the hp regen.
     def IsApplicable(self, spell, target):
         return spell['Target'] == 'Enemy'
     def Apply(self, user, spell, target, attacking=True):
         mult = 16
-        self._spell_mult(spell, mult, 1)
-
+        self._spell_mult(spell, mult)
 @skillname
-class AssaultPoint(CounterSkill):
+class HakkeroChargeMode(DamageBoost, CounterSkill):
     def __init__(self, owner):
         CounterSkill.__init__(self, owner)
+        DamageBoost.__init__(self, owner)
+        self.counter_name = 'HakkeroCharge'
+        self.max_counter = 25
+        self.min_counter = 1
+    #Charge works on everything.
+    #Charge wins if both are learned.
+    def Apply(self, user, spell, target, attacking=True):
+        counter = self.GetCounterValue(self.CounterName())
+        self._spell_mult(spell, counter * 4)
+@skillname
+class HakkeroCustomMode(DamageBoost):
+    personal_skills = ['Magic Missile', 'Asteroid Belt', 'Master Spark']
+    #This only works on personal skills.
+    def IsApplicable(self, spell, target):
+        s = super(spell, target)
+        if not s:
+            return False
+        return spell['Name'] in HakkeroCustomMode.personal_skills
+    def IsActive(self, user, attacking=True):
+        charge = owner.get_skill_level('Hakkero Charge Mode')
+        if charge > 0:
+            return False
+        return super(user, attacking)
+    def Apply(self, user, spell, target, attacking=True):
+        self._spell_mult(spell, 25)
+
+@skillname
+class AssaultPoint(CounterSkill, DamageBoost):
+    def __init__(self, owner):
+        CounterSkill.__init__(self, owner)
+        DamageBoost.__init__(self, owner)
         self.counter_name = 'AssaultPoint'
+        self.front_only = False
     #When the user inflicts damage on an enemy, inflict the special effect ""Assault Point"". Enemies with this effect suffer 25% more damage from allies. This effect has a 50% chance of wearing off when the afflicted enemy takes a turn.
     #okay, so this is going to be weird. If it's active, it doesn't even require the user to be in the front.
     def Apply(self, user, spell, target, attacking=True):
         mult = 25
-        self._spell_mult(spell, mult, 1)
+        self._spell_mult(spell, mult)
 #Grand Incantation - no idea what to do about this. I guess average it out?
 
 #-----------------------
@@ -308,9 +368,7 @@ class ShinigamiScythe(Skill):
 #Kokoro also has Fighting Spirit from a _spellcard_ not a skill.
 
 
-#These skills are mutually exclusive. "Charge" wins if both are learned.
-#Hakkero Charge Mode
-#Hakkero Custom Mode 
+
 #History Accumulation - this has two tokens...
 #SwordSpirit
     #When Youmu concentrates, gain the ""Sword Spirit"" effect. If she attacks while having full HP and this effect, remove the effect and reduce her HP by 20% to increase the damage by 50%. (Plus Disk only)
@@ -342,9 +400,10 @@ class ShinigamiScythe(Skill):
 #Conditional stat boosts
 #-----------------------
 @skillname
-class LastFortress(CounterSkill):
+class LastFortress(CounterSkill, StatSkill):
     def __init__(self, owner):
         CounterSkill.__init__(self, owner)
+        StatSkill.__init__(self, owner)
         self.counter_name = 'LastFortress'
         self.max_counter = 11
     #Increases Yuugi's stats for every character downed in battle. (~4% stat increase per character)
@@ -357,9 +416,10 @@ class LastFortress(CounterSkill):
         counter = self.GetCounterValue(self.CounterName())
         self._boost_stat('ALL', user, modifier, counter)
 @skillname
-class ShikigamiHeavyAccelAttack(CounterSkill):
+class ShikigamiHeavyAccelAttack(CounterSkill, StatSkill):
     def __init__(self, owner):
         CounterSkill.__init__(self, owner)
+        StatSkill.__init__(self, owner)
         self.max_counter = 10
         self.min_counter = 2
         self.counter_name = 'HeavyAccel'
@@ -367,9 +427,10 @@ class ShikigamiHeavyAccelAttack(CounterSkill):
         counter = self.GetCounterValue(self.CounterName())
         self._boost_stat('ATK', user, 5, counter)
 @skillname
-class BishamontenWrath(CounterSkill):
+class BishamontenWrath(CounterSkill, StatSkill):
     def __init__(self, owner):
         CounterSkill.__init__(self, owner)
+        StatSkill.__init__(self, owner)
         self.max_counter = 50
         self.min_counter = 0
         self.counter_name = 'BishamontenWrath'
@@ -377,9 +438,11 @@ class BishamontenWrath(CounterSkill):
         counter = self.GetCounterValue(self.CounterName())
         self._boost_stat('ATK', user, 5, counter)
 @skillname
-class FantasySealBlink(CounterSkill):
+class FantasySealBlink(CounterSkill, StatSkill, DamageBoost):
     def __init__(self, owner):
         CounterSkill.__init__(self, owner)
+        StatSkill.__init__(self, owner)
+        DamageBoost.__init__(self, owner)
         self.max_counter = 25
         self.counter_name = 'FantasySealBlink'
     def Apply(self, user, spell, target, attacking=True):
@@ -389,15 +452,16 @@ class FantasySealBlink(CounterSkill):
         counter = self.GetCounterValue(self.CounterName())
         if counter > self.level:
             counter = self.level
-        self._spell_mult(spell, 5, counter)
+        self._spell_mult(spell, 5 * counter)
         #Figure the speed thing out later.
 #-----------------------
 #Ailment based skills
 #-----------------------
 @skillname
-class Adversity(CounterSkill):
+class Adversity(CounterSkill, DamageBoost):
     def __init__(self, owner):
         CounterSkill.__init__(self, owner)
+        DamageBoost.__init__(self, owner)
         self.counter_name = 'ailment'
     #This is effectively a counter skill - active if a ailment is present
     #It is also modified by another skill - Adversity+
@@ -405,24 +469,26 @@ class Adversity(CounterSkill):
         mult = 10
         #I'm assuming this is just additive.
         lvl = self.level + self.owner.get_skill_level('Adversity+')
-        self._spell_mult(spell, mult, lvl)
+        self._spell_mult(spell, mult * lvl)
 @skillname
-class TwoWayCurse(CounterSkill):
+class TwoWayCurse(CounterSkill, DamageBoost):
     def __init__(self, owner):
         CounterSkill.__init__(self, owner)
+        DamageBoost.__init__(self, owner)
         self.counter_name = 'ailment'
     #Defensive as well.
     def Apply(self, user, spell, target, attacking=True):
         mult = 12
         if attacking:
-            self._spell_mult(spell, mult, self.level)
+            self._spell_mult(spell, mult * self.level)
         else:
             #I don't have a defensive equivalent.
             pass
 @skillname
-class HealthySpirit(CounterSkill):
+class HealthySpirit(CounterSkill, StatSkill):
     def __init__(self, owner):
         CounterSkill.__init__(self, owner)
+        StatSkill.__init__(self, owner)
         self.counter_name = 'ailment'
     #This is basically !'ailment'. Except also !debuff
     def CounterActive(self):
@@ -435,9 +501,10 @@ class HealthySpirit(CounterSkill):
     def Apply(self, user, spell, target, attacking=True):
         self._boost_stat(['ATK', 'DEF', 'MAG', 'MND'], user, 10, 1)
 @skillname
-class FinalBlow(CounterSkill):
+class FinalBlow(CounterSkill, DamageBoost):
     def __init__(self, owner):
         CounterSkill.__init__(self, owner)
+        DamageBoost.__init__(self, owner)
         self.counter_name = 'target_ailment'
     #This is effectively a counter skill - but if the target has a ailment.
     #Boosted by Jealousy-Fueled Final Blow
@@ -445,12 +512,14 @@ class FinalBlow(CounterSkill):
         mult = 16
         if self.owner.get_skill_level('Jealousy-Fueled Final Blow') > 0:
             mult = 32
-        self._spell_mult(spell, mult, self.level)
+        self._spell_mult(spell, mult * self.level)
 @skillname
-class WaterproofGhostUmbrella(Skill):
+class WaterproofGhostUmbrella(DamageBoost):
+    def __init__(self, owner):
+        DamageBoost.__init__(self, owner)
     def Apply(self, user, spell, target, attacking=True):
         mult = 33
-        self._spell_mult(spell, mult, self.level)
+        self._spell_mult(spell, mult * self.level)
     #Which should (somehow) imply "target_ailment"...
     def CounterName(self):
         return 'target_terror'
@@ -462,12 +531,13 @@ class AstonishingGhostUmbrella(CounterSkill):
     def Apply(self, user, spell, target, attacking=True):
         mult = 40
         #This is defensive.
-        #self._spell_mult(spell, mult, self.level)
+        #self._spell_mult(spell, mult * self.level)
 @skillname
-class TerrorUntoDeath(CounterSkill):
+class TerrorUntoDeath(CounterSkill, DamageBoost):
     kogasa_spells = ['Karakasa Surprising Flash', "A Rainy Night's Ghost Story", 'Drizzling Large Raindrops']
     def __init__(self, owner):
         CounterSkill.__init__(self, owner)
+        DamageBoost.__init__(self, owner)
         self.counter_name = 'target_terror'
     def IsApplicable(self, spell, target):
         #Since these needs to be False for a subclass skill, or basic attack.
@@ -475,7 +545,7 @@ class TerrorUntoDeath(CounterSkill):
         return spell['Name'] in TerrorUntoDeath.kogasa_spells
     def Apply(self, user, spell, target, attacking=True):
         mult = 10
-        self._spell_mult(spell, mult, self.level)
+        self._spell_mult(spell, mult * self.level)
 @skillname
 class SilentSingingVoice(CounterSkill):
     def __init__(self, owner):
@@ -495,9 +565,10 @@ class CursedHinaDoll(CounterSkill):
 #HP/MP/TP based skills
 #-----------------------
 @skillname
-class Desperation(CounterSkill):
+class Desperation(CounterSkill, StatSkill):
     def __init__(self, owner):
         CounterSkill.__init__(self, owner)
+        StatSkill.__init__(self, owner)
         #Low HP
         self.counter_name = 'hp'
     def CounterActive(self):
@@ -509,9 +580,10 @@ class Desperation(CounterSkill):
     def Apply(self, user, spell, target, attacking=True):
         self._boost_stat('ALL', user, 25, 1)
 @skillname
-class PandemonicSprinkle(CounterSkill):
+class PandemonicSprinkle(CounterSkill, DamageBoost):
     def __init__(self, owner):
         CounterSkill.__init__(self, owner)
+        DamageBoost.__init__(self, owner)
         #Full hp
         self.counter_name = 'hp'
     def CounterActive(self):
@@ -521,7 +593,7 @@ class PandemonicSprinkle(CounterSkill):
             return True
         return False
     def Apply(self, user, spell, target, attacking=True):
-        self._spell_mult(spell, 5, self.level)
+        self._spell_mult(spell, self.level * 5)
 @skillname
 class AbilityCausePhenomena(CounterSkill):
     def __init__(self, owner):
@@ -565,23 +637,25 @@ class HoshigumaDish(CounterSkill):
 #Modified by Ability to Judge Morality. Except it might not work? I can't remember.
 
 @skillname
-class SacredAuthorityGods(CounterSkill):
+class SacredAuthorityGods(CounterSkill, DamageBoost):
     def __init__(self, owner):
         CounterSkill.__init__(self, owner)
+        DamageBoost.__init__(self, owner)
         self.max_counter = 5
         self.counter_name = 'Onbashira'
     #When the user uses Mad Dance on Medoteko, increase Onbashira counter by 1. Increase user's damage output by (counter * 10)% and decrease user's damage intake by (counter * 5)%. The counter maxes at 5.
     def Apply(self, user, spell, target, attacking=True):
         counter = self.GetCounterValue(self.CounterName())
         if attacking:
-            self._spell_mult(spell, 10, counter)
+            self._spell_mult(spell, counter * 10)
         else:
             pass
 
 @skillname
-class ChinaQigong(CounterSkill):
+class ChinaQigong(CounterSkill, DamageBoost):
     def __init__(self, owner):
         CounterSkill.__init__(self, owner)
+        DamageBoost.__init__(self, owner)
         self.max_counter = 8
         self.min_counter = 1
         self.counter_name = 'ChinaQigong'
@@ -593,15 +667,16 @@ class ChinaQigong(CounterSkill):
         superQigong = self.owner.get_skill_level("Chinese Girl's Super Qigong")
         if superQigong is not None and superQigong > 0:
             mult = 20
-        self._spell_mult(spell, mult, counter)
+        self._spell_mult(spell, mult * counter)
     def CounterName(self):
         #Modified by Chinese Girl's Super Qigong
         #Also this should just be hardcoded to be 1, lol.
         return 'ChinaQigong'
 @skillname
-class Overheating(CounterSkill):
+class Overheating(CounterSkill, DamageBoost):
     def __init__(self, owner):
         CounterSkill.__init__(self, owner)
+        DamageBoost.__init__(self, owner)
         self.max_counter = 5
         self.min_counter = 0
         self.counter_name = 'Overheating'
@@ -612,13 +687,14 @@ class Overheating(CounterSkill):
         if extra > 0:
             mult = 20
         counter = self.GetCounterValue(self.CounterName())
-        self._spell_mult(spell, mult, counter)
+        self._spell_mult(spell, mult * counter)
 @skillname
-class FightingSpirit(CounterSkill):
+class FightingSpirit(CounterSkill, DamageBoost):
     #Whenever the skill holder takes an action, she gains a "Fighting Spirit level" that reduces damage taken and increases damage dealt by (Fighting Spirit level * 5)%, up to a maximum of (SLv * 3) stacks. Wears off if she switches out.
     #Can be modified by Morale Maintenance. But doesn't really matter.
     def __init__(self, owner):
         CounterSkill.__init__(self, owner)
+        DamageBoost.__init__(self, owner)
         self.max_counter = 15
         self.min_counter = 0
         self.counter_name = 'FightingSpirit'
@@ -627,11 +703,12 @@ class FightingSpirit(CounterSkill):
         if counter > self.level * 3:
             counter = self.level * 3
         if attacking:
-            self._spell_mult(spell, 5, counter)
+            self._spell_mult(spell, counter * 5)
 @skillname
-class HighBlazing(CounterSkill):
+class HighBlazing(CounterSkill, DamageBoost):
     def __init__(self, owner):
         CounterSkill.__init__(self, owner)
+        DamageBoost.__init__(self, owner)
         self.max_counter = 15
         self.min_counter = 0
         #Uses fighting spirit. Despite 'blazing' in name, self-only.
@@ -694,25 +771,31 @@ class FroggyHibernation(CounterSkill):
 #Destruction Roulette another pita one.
 
 @skillname
-class SkyCreation(Skill):
+class SkyCreation(DamageBoost):
+    def __init__(self, owner):
+        DamageBoost.__init__(self, owner)
     def Apply(self, user, spell, target, attacking=True):
-        self._spell_mult(spell, 16, self.level)
-    def IsActive(self, user, position, attacking=True):
+        self._spell_mult(spell, 16 * self.level)
+    def IsActive(self, user, attacking=True):
         #Always call super - this is to get the is_self stuff.
-        s = Skill.IsActive(self, user, position, attacking)
+        s = Skill.IsActive(self, user, attacking)
         if s is False:
             return False
-        return position == 3
+        return self.formation.IsInPosition(user, lambda x: x == 3)
+        #return position == 3
 @skillname
-class EarthCreation(Skill):
+class EarthCreation(DamageBoost):
+    def __init__(self, owner):
+        DamageBoost.__init__(self, owner)
     def Apply(self, user, spell, target, attacking=True):
-        self._spell_mult(spell, 12, self.level)
-    def IsActive(self, user, position, attacking=True):
+        self._spell_mult(spell, 12 * self.level)
+    def IsActive(self, user, attacking=True):
         #Always call super - this is to get the is_self stuff.
-        s = Skill.IsActive(self, user, position, attacking)
+        s = Skill.IsActive(self, user, attacking)
         if s is False:
             return False
-        return position == 0
+        return self.formation.IsInPosition(user, lambda x: x == 0)
+        #return position == 0
 
 #-----------------------
 # Target modifying skills
@@ -747,14 +830,14 @@ class RoyalPeopleMoon(CounterSkill):
 # Kinship
 #-----------------------
 @skillname
-class GoingAlone(Skill):
+class GoingAlone(StatSkill):
     def __init__(self, owner):
-        Skill.__init__(self, owner)
+        StatSkill.__init__(self, owner)
     def Apply(self, user, spell, target, attacking=True):
         self._boost_stat('ALL', user, 16, 1)
-    def IsActive(self, user, position, attacking=True):
+    def IsActive(self, user, attacking=True):
         #Always call super - this is to get the is_self stuff.
-        s = Skill.IsActive(self, user, position, attacking)
+        s = Skill.IsActive(self, user, attacking)
         if s is False:
             return False
         #What this needs to do is check the frontline to see if anyone is part of team 9.
@@ -806,9 +889,9 @@ type_off_lookup = {
 }
 #https://stackoverflow.com/questions/15247075
 #Dynamically create some very-similar skills.
-class ElementBoost(Skill):
+class ElementBoost(DamageBoost):
     def __init__(self, owner):
-        Skill.__init__(self, owner)
+        DamageBoost.__init__(self, owner)
         self.self_only = False
         self.element = None
     def IsApplicable(self, spell, target):
@@ -817,10 +900,10 @@ class ElementBoost(Skill):
             return True
         return False
     def Apply(self, user, spell, target, attacking=True):
-        self._spell_mult(spell, 15, self.level)
-class TypeBoost(Skill):
+        self._spell_mult(spell, 15 * self.level)
+class TypeBoost(DamageBoost):
     def __init__(self, owner):
-        Skill.__init__(self, owner)
+        DamageBoost.__init__(self, owner)
         self.self_only = False
         self.typ = None
     def IsApplicable(self, spell, target):
@@ -831,7 +914,7 @@ class TypeBoost(Skill):
         #Both are bad.
         return False
     def Apply(self, user, spell, target, attacking=True):
-        self._spell_mult(spell, 10, self.level)
+        self._spell_mult(spell, 10 * self.level)
     def UniqueKey(self):
         #Only one of these skills can be active at a time.
         return 'TypeBoost'
@@ -856,6 +939,34 @@ for element in ele_off_lookup:
 for t in type_off_lookup:
     sk = type_boost_factory(t)
     skill_list[sk.__name__] = sk
+#------
+#Skills that are implemented in other skills. Classes exist just to hide the "Not implemented" message
+
+@skillname
+class LastFortressPlus(Noop):
+    pass
+@skillname
+class AdversityPlus(Noop):
+    pass
+@skillname
+class JealousyFueledFinalBlow(Noop):
+    pass
+@skillname
+class ChineseGirlSuperQigong(Noop):
+    pass
+@skillname
+class EnhancedVersatileMachine(Noop):
+    pass
+#Not implemented, but should be.
+#@skillname
+#class SuperYoukaiBuster(Noop):
+#    pass
+#Deaf to All but the Song
+@skillname
+class MoraleMaintenance(Noop):
+    #Modifies fighting spirit, but not in a useful way.
+    pass
+
 #------
 
 #print(skill_list)

@@ -98,9 +98,12 @@ for c in character_list:
     print(chara.name, saveobj.party.GetPosition(chara))
 #exit()
 
-for c in saveobj.party.GetCharacterList():
+#for c in saveobj.party.GetCharacterList():
+for c in saveobj.fake_party.GetCharacterList():
     print(c.name)
-    all_skills = saveobj.party.GetCharacterSkills(c)
+    #I shouldn't need to swap both of these.
+    #all_skills = saveobj.party.GetCharacterSkills(c)
+    all_skills = saveobj.fake_party.GetCharacterSkills(c)
     print("Skill counters:")
     for x in all_skills.GetCounters():
         print(x)

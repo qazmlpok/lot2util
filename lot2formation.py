@@ -146,6 +146,24 @@ class Formation:
             if self.characters[i] == c:
                 return index
         return None
+    def IsInPosition(self, c, lamb):
+        """ Executes lambda lamb against the given character's position
+        This is used for testing if a skill is active.
+        Use this instead of checking position directly so the fake formations can override it.
+        """
+        pos = self.GetPosition(c)
+        if pos is None:
+            #Can't compare int and None. This should be reliable in most situations.
+            pos = -1
+        return lamb(pos)
+    def IsInFront(self, c):
+        """ Convenience method: IsInPosition(0-3)
+        """
+        return self.IsInPosition(c, lambda x: 0 <= x <= 3)
+    def IsInBack(self, c):
+        """ Convenience method: IsInPosition(4-11)
+        """
+        return self.IsInPosition(c, lambda x: 4 <= x <= 11)
     def SetCharacters(self, clist, reverse=True):
         #I guess this should always have a length of exactly 12.
         self.characters = [None] * 12
@@ -169,13 +187,11 @@ class Formation:
             #level 0 skills are already removed.
             for s_name in ch.list_skills():
                 #TODO: I don't need both 'formation' and 'position'
-                obj = get_skill(s_name, ch)
+                obj = get_skill(s_name, ch, self)
                 if type(obj) is Noop:
-                    print(f"Skill '{s_name}' has no implementation.")
+                    #print(f"Skill '{s_name}' has no implementation.")
                     continue
-                pos = self.GetPosition(ch)
-                #print('TEST', s_name, ' -- ', type(obj), pos)
-                if not obj.IsActive(user, pos, True):
+                if not obj.IsActive(user, True):
                     #print(f"{s_name} is not active.")
                     continue
                 key = obj.UniqueKey()
@@ -199,8 +215,25 @@ class FakeFormation(Formation):
         self.characters = [c]
     def GetCharacterList(self):
         return self.characters
+    def SetCharacters(self, clist, reverse=True):
+        #Make a new one instead.
+        pass
     def GetPosition(self, c):
         #ok this isn't quite right, because ideally it should be "whatever damn position you want"
         #both Suwako and Kanako's skills should be active, but that can't be done with a single return.
         return 1
+    def IsInPosition(self, c, l):
+        """ Don't even check - assume that the character is always in their "ideal" spot.
+        """
+        return True
 #
+class ExtremelyFakeFormation(FakeFormation):
+    """ A formation that contains every character in the front row.
+    Extremely fake. For when you just want to try out every skill at once.
+    """
+    def __init__(self, character_list):
+        self.characters = list(character_list)
+        self.character_list = self.characters
+    def SetCharacters(self, clist, reverse=True):
+        #Okay, this one _should_ allow changing the character list.
+        pass
